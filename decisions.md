@@ -24,3 +24,14 @@
         - Y rotation: TODO
         - Z rotation: TODO
 - TODO: English uses commas to separate sentences, but we may have more than 2 different levels of indentation. How can we manage that?
+- Root sourcing: prefer the language whose everyday word for the concept matches. Don't pull a Latin root if the word people actually use is Germanic (or vice-versa). Goal is recognizability for real speakers, not etymological neatness.
+- Roots are concept-level, not part-of-speech-level. The same root spawns verb / act-noun / agent / patient / adjective via systematic markers. (See history.md 2026-05-15.)
+- Part-of-speech / derivation marker is a **suffix**, not a prefix. Rationale: keeps the root at the word's onset so listeners lock onto the concept first; matches the cross-linguistic suffixing preference (~70%+ of world languages).
+- Universal word shape: **CVC-root + V[C]**. Suffix always starts with a vowel, guaranteeing no consonant clusters and no irregular buffer-vowel cases. Verbs are the "bare" case (root + tense vowel only); other derivations are root + vowel + consonant.
+- **No mandatory grammatical marking.** Lexor never forces speakers to commit to information they haven't decided on. Spanish gender, English number, etc. are anti-features. Every grammatical category is optional and only attached when the speaker actually has and cares about that info.
+- **Plural is not a noun inflection.** Number is dropped from the word shape entirely. Quantity lives in a separate optional modifier system that can express exact counts, ranges, and distributions — not just singular/plural. Frees `s` for the adjective marker slot.
+- Derivation consonants:
+    - `r` — agent ("eater"). English `-er`, Latin `-or`.
+    - `n` — act/event noun ("eating"). English `-tion`/`-ing`, Spanish `-ción`.
+    - `t` — patient ("food", the thing acted on). English past participle `-ed`. Unvoiced for cleaner clusters than `d`.
+    - `s` — adjective ("edible"). English `-ous`/`-ish`, Latin `-osus`.

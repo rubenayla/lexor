@@ -90,6 +90,7 @@
     - Generic? How to express without needing to specify whether the other person is included. Some questions would include or exclude the person in the set depending on the answer, so it’s annoying.
 - Specify existence vs quantity naturally.
     - Example: I have 3 pens. I say “I have 2 pens”. Is that true or false? If I have 3 pens, then I do also have 2. But the total amount is not 2. Does it mean “The amount of pens I have is equal to 3” or “I have 2 pens”, in the sense that “I have them, you don’t know which ones I’m referring to”.
+    - Example: “I have 10 dollars.” Does it mean “my total money is exactly $10” or “I have (at least) $10” (e.g., I have $1000, so it’s also true that I have $10)?
     - language: "Yo voy el sábado", eso quiere decir que, el día que vas es el sábado, o que el sábado irás seguro, aunque vayas otro día antes? Es diferente de decir: "Yo el sábado voy"?
 - Distinguish easily the source of the information I’m transmitting.
     - Like in Cherokee language: A suffix is added to the verb, to express whether I saw the info directly or I’ve been told that is the case.

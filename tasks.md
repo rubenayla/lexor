@@ -1,0 +1,29 @@
+# Tasks
+
+Open design questions parked here so we can address them one at a time.
+
+## Design decisions to resolve
+- [x] **Part-of-speech marking** — resolved: suffix, vowel-initial, universal word shape `CVC + V[C]`. Derivation consonants: `r` agent, `n` act, `t` patient, `s` adjective. See decisions.md and history.md 2026-05-15.
+- [x] **Plural rule** — resolved: no plural inflection. Number is unspecified by default; quantity is a separate optional modifier system. See history.md 2026-05-15.
+- [ ] **Quantifier / quantity system design** — separate module covering exact counts, ranges (2–8), and distributions (gaussian μ=15 σ=5), per the no-mandatory-marking principle. Connects to checklist.md:97, :120.
+- [ ] **Trailing vowel for non-verb forms** — for nouns/adjectives (e.g. `loman`, `lomer`, `lomet`, `lomes`), the word currently ends in a consonant. Decide: does it end there, or does an optional final vowel carry something (definiteness? case? something else)? Verbs use the final vowel for tense; nouns/adjectives may or may not need a parallel slot.
+- [ ] **Verb shape** — confirm CVC-root + vowel-for-tense (roots.md:40 currently marked TODO).
+- [ ] **Negation** — how to negate adjectives and verbs (TODO.md:15).
+- [ ] **Literal vs variable marker** — "my name is very stupid" vs my name is `"very stupid"` (TODO.md:7).
+- [ ] **"is" overload** — distinguish "the password is [the string] incorrect" vs "the password has property incorrect" (TODO.md:13).
+- [ ] **Synonym/equivalence grouping** — comma-like marker for "scalar-first, wxyz, Hamilton convention" being three names for one thing (TODO.md:9).
+- [ ] **Rotation names** — names for X/Y/Z rotations (decisions.md:23-25).
+- [ ] **Multi-level sentence punctuation** — beyond comma, for nested clauses (decisions.md:26).
+
+## Vocabulary buildout (after decisions above)
+- [ ] Fill empty categories in roots.md: prepositions, conjunctions, adverbs, demonstratives, relatives, interrogatives, indefinites, nouns, modifiers, logical operators, probabilistic operators, directions, states, emotions.
+- [ ] Build a reservation map of CVC space (which roots are taken vs free) to prevent collisions.
+- [ ] Populate dictionary.md from roots.md (currently empty).
+
+## Validation
+- [ ] Write `examples.md` with 20–50 worked translations covering questions, conditionals, negation, plurals, nested clauses. Use it to expose gaps before committing more roots.
+
+## Repo restructuring
+- [ ] Split the root tables out of roots.md (prose stays; data moves to dictionary.md or a roots/ folder by category).
+- [ ] Disambiguate TODO.md vs checklist.md vs decisions.md: TODO = open questions, checklist = features the language must support, decisions = settled. Items currently drift between them.
+- [ ] Eventually: machine-readable form (YAML/JSON) for roots so collisions can be scripted and the dictionary auto-generated.

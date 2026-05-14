@@ -1,0 +1,87 @@
+# Pain — why current languages are shit
+
+Short, concrete examples of things natural languages get wrong. The "why" behind Lexor.
+
+## Ambiguity you can't fix without rephrasing
+
+- **"only uses" vs "uses only"** — "WIF bitcoin keys only use uppercase K and L to start the keys."
+  - Reading A: K and L appear *only* at the start (nowhere else).
+  - Reading B: the start is *only* K or L (no other letters there; K/L may appear elsewhere too).
+  - English forces you to rewrite the sentence to disambiguate.
+
+- **"A and B or C"** — is it `(A and B) or C`, or `A and (B or C)`?
+  - In Spanish class: *"Determinar el empuje específico, el impulso específico y el rendimiento isentrópico del difusor"* — does "del difusor" modify all three, or only the last? Had to ask classmates.
+
+- **"The 12 cities marked in red have the same population as NYC."**
+  - Each city ≈ NYC? Or the sum of the 12 ≈ NYC?
+
+- **"I have 10 dollars."**
+  - Exactly $10? Or at least $10 (I actually have $1000, statement is still "true")?
+
+- **"I have 3 pens" / "I have 2 pens"** — if I have 3, is "I have 2" true? Existence vs exact quantity collapsed into one phrasing.
+
+- **"Returns a list of rotations between 001, the z axis in object frame, and the origin system."**
+  - Three entities? Or two, with "the z axis in object frame" being an apposition for 001? A comma can't carry that weight.
+
+- **"Write a password with no spaces and |"** — no spaces *and* no `|`? Or "no spaces, and also `|` is something else entirely"? The elided verb makes "and"/"or" flip meaning.
+
+- **"I bet I can do between three and four hundred pushups."** — 3–400, or 300–400?
+
+- **"Mean sea level"** — mean over what dimension? Most people assume spatial mean over the globe; it's actually a temporal mean at each point. Language doesn't force you to say which axis the mean is over.
+
+## Negation scope
+
+- **"not (a = b)"** in English collapses to "a is not equal to b" — but the intended meaning is often *"a doesn't have to equal b"* (it might, it might not). English can't distinguish:
+  - `a ≠ b` (never equal)
+  - `¬(always a = b)` (not necessarily equal)
+  - `possibly a = b` (no reason to rule it out)
+
+- **"The masses can be different"** vs **"the masses are different"** — physics problems with m1, m2: people read "different" and assume m1 ≠ m2, missing the valid case m1 = m2.
+
+## Mandatory commitments you haven't made
+
+- **Spanish gender** — you can't refer to a friend without picking *amigo* or *amiga*. If you don't know or don't care, tough.
+- **English number** — "I saw a dog / dogs." You must commit to singular or plural even when the count is irrelevant or unknown.
+- **Tense when uncertain** — something is happening, happened, or will happen, and you're not sure which. Every major language forces a tense anyway.
+
+## Missing distinctions
+
+- **SER vs ESTAR** — English merges them into "to be". In quantum physics a particle *is* (ser) a particle, but doesn't *está* (estar) at a specific location until measured. English can't say that cleanly.
+
+- **Top ≠ Up, Bottom ≠ Down** — direction vs location, often the same word.
+
+- **Length / width / height / depth / thickness** — all orientation-dependent. No clean way to say "longest dimension, second-longest, shortest" without picking an orientation.
+
+- **"Taper ratio" λ = c_tip / c_root** — a *more* tapered wing has a *smaller* λ. The name implies the opposite of what it measures. Real engineering confusion in textbooks.
+
+- **Fat vs thin, hot vs cold** — no neutral noun for the axis. "Weight" and "temperature" exist; "fatness" and "hotness" carry a direction. Can't say "uncool the yogurt to room temp" without sounding wrong.
+
+- **"We"** — just-you-and-me / you-me-and-others / me-and-others-not-you. English collapses all three.
+
+- **Source of information** — Cherokee marks whether you saw it yourself or were told. English makes you tack on "I heard that…" or "apparently…" optionally and inconsistently.
+
+- **Direction sense along an axis** — English has no single word for Spanish *sentido* (front vs back along the same axis). "Direction" overloads both.
+
+## Clunky workarounds for things that should be cheap
+
+- **Probability words** — "somewhat likely", "very likely", "more or less likely". Why not just "90% likely it'll rain"? Sounds robotic in English; shouldn't.
+
+- **Ranges and distributions** — "from 2 to 9, usually around 7, with a long tail." Easy concept, painful to say. Should be as cheap as `7 +2-5`.
+
+- **Approximation marker** — "I get 4h of sunlight in 1h" sounds like a lie when it's just eyeballed. No compact way to flag "rough estimate" like `s` flags plural.
+
+- **Eyeballed % / ratio** — `%` always implies ×100. No clean symbol for a bare ratio.
+
+- **Pronoun-less statements** — "Se ha decidido hacer esto" / "It has been decided." Most languages make this awkward; should be default-easy when the agent is irrelevant.
+
+- **Placeholders** — when you write `<path>` twice, is it the same value or two independent ones? No convention. Same for variable `X` repeated in a sentence.
+
+- **Literal vs interpreted** — *"my name is very stupid"* vs *my name is "very stupid"*. Quotes work in writing, nothing works in speech.
+
+- **Anti-adjective / inclusive marker** — "a lot or a little", "more or less aligned", "like it or not". Needs to be one short word.
+
+## Writing / encoding costs
+
+- **Accents** — double the character set on computers; break pen flow when handwriting.
+- **He/she** — forced gender on every third-person reference. Default should be neutral; specify only when relevant.
+- **"You" singular vs plural** — English lost the distinction. *Tú* ≠ *vosotros*.
