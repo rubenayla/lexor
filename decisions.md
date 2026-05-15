@@ -78,3 +78,13 @@
     - `zo` 0, `pa` 1, `du` 2, `re` 3, `ko` 4, `fi` 5, `sa` 6, `chi` 7, `bo` 8, `ne` 9
     - `ja` A (10, dozenal only), `gi` B (11, dozenal only)
 - Distribution-shape roots (gaussian, uniform, bimodal) parked for later.
+- **Precise temporal-modifier system** — parallel to the quantifier system. Inner-vowel tense handles coarse frame; this system adds precision via composable expressions.
+    - **Calendar is numeric, not named.** Days of week = `[day-root] 1..7`. Months = `[month-root] 1..12`. No "Monday"/"January" roots. Avoids 19+ arbitrary memorizations, allows arithmetic on dates, culturally universal (matches Mandarin convention).
+    - **Time-relation prepositions** (CVC closed class): `tep` at/in (point), `pen` during (span), `sin` since (start), `lim` until (end), `ant` before, `pos` after. Approximation reuses `pir`.
+    - **Frequency operator**: `kex` ("every / each") attaches to any duration. `kex dim` = every day, `kex re dim` = every 3 days. No irregular plural.
+    - **Reference frame defaults to time-of-utterance.** "Now" = root `nun` (Latin *nunc*). Yesterday/tomorrow are compositions: `ant pa dim` / `pos pa dim`. No dedicated relative-time roots.
+    - **Tense vowel and time modifier must semantically agree.** Inner vowel sets coarse frame; time modifier refines. Mismatch is a semantic error.
+    - **Position**: time modifier sits at sentence end by default (`verb obj subj time`). Can be fronted for topicalization.
+- **Time-unit roots** (placeholders — may refine in vocab buildout):
+    - `mom` second, `mit` minute, `xor` hour, `dim` day, `sem` week, `mes` month, `vet` year
+    - `xor` and `vet` are the weakest mnemonics; replace if better surfaces.

@@ -286,3 +286,55 @@ Worked examples:
 - approximately 15 → `pir pa fi dem`
 
 Risk flagged: digit 6 `sa` is a substring of operator `sam` (equal); digit 4 `ko` is a substring of verb root `kom`. CV digits will sometimes overlap with CVC roots they're contained in. Resolution: needs a prosodic convention (likely "CVC carries final-consonant stress; CV doesn't") to disambiguate in running speech. Parked as a parsing/prosody question, not a reason to redesign digits.
+
+## 2026-05-15 — Precise temporal-modifier system framework
+Question opened: how does Lexor express precise time, given that inner-vowel tense only covers coarse frames (present/past/future/etc.)?
+
+Parallel to the quantifier system in structure: coarse handling is built into word morphology (inner vowel for tense, dropped plural for quantity); precise handling is a *separate composable layer* invoked only when needed. Same architectural pattern, different domain.
+
+Three opportunities to do better than English/Spanish were identified:
+1. **Named days/months are pure overhead.** Memorizing 7+12 arbitrary names is rote work that buys nothing — numeric calendar works (Mandarin: 星期一 = week-day-1 = Monday) and is culturally universal.
+2. **Irregular plural for frequency.** English "every 3 days" vs "every day" use different morphology; Lexor doesn't need this if frequency is a dedicated operator.
+3. **Redundant relative-time roots.** Languages have separate words for yesterday/today/tomorrow when those are trivially derivable from "day" + "before/after now."
+
+Decisions locked:
+
+1. **Numeric calendar.** Day-of-week = `[day] 1..7`, month = `[month] 1..12`. No named-day roots.
+
+2. **Time-relation prepositions** (closed class, CVC, parallel to quantifier operators):
+   - `tep` — at / in / on (point in time)
+   - `pen` — during (within a span)
+   - `sin` — since (start point)
+   - `lim` — until (end point)
+   - `ant` — before
+   - `pos` — after
+   - `pir` reused — approximately (in time)
+
+3. **Frequency operator: `kex`** ("every / each"). Attaches to any duration uniformly. `kex dim` = every day, `kex re dim` = every 3 days, `kex sem` = every week.
+
+4. **Reference frame defaults to time-of-utterance.** Now = root `nun` (Latin nunc, German nun, obvious mnemonic). Yesterday and tomorrow are compositions:
+   - yesterday = `ant pa dim` (before 1 day)
+   - tomorrow = `pos pa dim` (after 1 day)
+   - last week = `ant pa sem`
+   - in 3 hours = `pos re xor`
+
+5. **Tense vowel and time modifier must semantically agree.** Saying "I will-eat yesterday" is a semantic error (matching English/Spanish behavior). Inner vowel = coarse frame, time modifier = precision; consistency required.
+
+6. **Position**: time modifier at sentence end by default, fronted for topicalization. Matches the general "thing first, modifiers after" Lexor pattern (verb first, role markers after the noun, etc.).
+
+Time-unit roots (placeholders, may revise in vocab buildout):
+- `mom` second, `mit` minute, `xor` hour, `dim` day, `sem` week, `mes` month, `vet` year
+- Note: many obvious roots (`min`, `sek`, `hor`, `dur`) were already taken by operators or verbs or were phonetically illegal (`h`+vowel forbidden). `xor` and `vet` are weak mnemonics — flagged for possible revision.
+
+Worked examples:
+- "I ate yesterday" → `lomo y ant pa dim` (eat-past I before-1-day)
+- "She will arrive in 3 hours" → `veni e pos re xor`
+- "Since 2020" → `sin du zo du zo dem` (year as digit-stream, decimal-marked)
+- "Around noon" → `pir tep [noon-expression]` — noon is "hour 12 in dozenal" or `xor pa du dem` (hour 12 decimal)
+
+Parked sub-questions:
+- 12-hour vs 24-hour clock convention (recommend 24-hour to match ISO and dozenal-friendliness)
+- Dedicated roots vs compositions for noon / midnight / dawn / dusk
+- Time zones
+- Event-relative ("when X happens") — needs subordinate-clause construction first
+- Whether the weakly-mnemonic time-unit roots (`xor`, `vet`) get replaced

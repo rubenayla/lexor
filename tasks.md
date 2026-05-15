@@ -15,7 +15,12 @@ Open design questions parked here so we can address them one at a time.
     - [x] Which specific vowel = "atemporal / temporal-frame unspecified"? Resolved: `a`. Other tense vowels reassigned around it (see history.md 2026-05-15).
     - [x] Specific role-vowel assignments for outer slot — resolved: `a` default, `e` subject, `o` object, `u` recipient, `i` instrument. See decisions.md / history.md 2026-05-15.
     - [ ] Pronoun behavior with role vowels — likely take them too (`y-e` "I-subj", `y-o` "me-obj") but needs explicit confirmation as pronouns are sub-CVC and don't fit the standard derivation pattern.
-    - [ ] Temporal-modifier system for precise time ("yesterday", "since 2020", "every Tuesday"). Parallels the quantifier system — both layer optional precision on top of coarse word-internal marking.
+    - [x] Temporal-modifier system framework — resolved: numeric calendar, time-relation prepositions (`tep`/`pen`/`sin`/`lim`/`ant`/`pos`), frequency operator `kex`, reference frame defaults to now (root `nun`), relative time by composition. See decisions.md / history.md 2026-05-15. Sub-questions still open:
+        - [ ] 12-hour vs 24-hour clock convention.
+        - [ ] Dedicated roots vs compositions for noon / midnight / dawn / dusk.
+        - [ ] Time zone representation.
+        - [ ] Event-relative time ("when X happens") — needs subordinate-clause grammar first.
+        - [ ] Weak placeholder roots `xor` (hour), `vet` (year) flagged for possible replacement.
 - [ ] **Verb shape** — confirm CVC-root + vowel-for-tense (roots.md:40 currently marked TODO).
 - [x] **Negation** — resolved: prefix `no-`, phonologically bound to its host. See decisions.md and history.md 2026-05-15. Related sub-questions parked:
     - [ ] Lexical opposite marker (`love` → `hate`) — distinct from logical negation. Decide whether Lexor wants one and how it differs from `no-`.
