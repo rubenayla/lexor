@@ -213,3 +213,46 @@ Worked examples (verb `lom` eat, root-based nouns):
 - With recipient: `supe libra-u y-e lomera` — "give book-to-RECIPIENT I-SUBJ the eater" → "I give the book to the eater." (`sup` = supply/give; `lib` as stand-in for "book".)
 
 Doesn't lock pronoun behavior — open question whether pronouns also take role vowels (likely yes for consistency: `y-e` "I-subj", `y-o` "me-obj").
+
+## 2026-05-15 — Quantifier system framework
+Question opened: how does Lexor express quantity, given that we dropped plural as a mandatory noun inflection?
+
+User constraints raised this round:
+- Must be compatible with both decimal AND dozenal. Lexor doesn't pick a side; both bases are first-class. (User is a dozenal advocate; ~/vault/ideas/dozenal/ + ~/vault/standards.md formalize their dozenal notation conventions: `;` as dozenal radix point, `[base]_[number]` for arbitrary bases.)
+- Numbers are digit-streams ("two-four-three"), not place-value words ("two hundred forty-three"). Faster, fully regular, no irregular teens.
+- Big numbers via scientific-notation-style scale expression, not a "million/billion/trillion" word ladder.
+- Quantifier follows the noun (`apple 3`, not `3 apple`) — consistent with Lexor's "thing first, modifiers after" pattern at every other level (VOS sentence order, concept-root first in words, tense/role vowels at the end). Also gives smaller working-memory load: listener builds the noun referent before refining its quantity.
+
+System designed (specific roots picked by me with delegation from user):
+
+**Base markers** (CVC, sit at the written radix-point position):
+- `dem` — decimal (mnemonic: DECimal)
+- `doz` — dozenal (mnemonic: DOZenal)
+
+Both required by grammar. No default — every number expression carries an explicit base marker. Can be elided pragmatically when context sets the base for a run of numbers, but grammar always allows explicit marking. Achieves the "both first-class" goal cleanly.
+
+**Scale marker** (CVC):
+- `pem` — "times-base-to-the-power-of" (mnemonic: Power/Exponent of Mantissa)
+- Form: `[mantissa] pem [exponent] [base-marker]`. Mantissa and exponent share the base.
+
+**Comparison/bounds operators** (CVC closed class):
+- `min` — < (minimum)
+- `mag` — > (Latin magnus, max)
+- `sam` — = (same)
+- `tom` — range "to" (from English "to")
+- `pir` — ≈ (approximately, no strong cross-language mnemonic, picked for distinctness)
+
+Negation by existing `no-` prefix:
+- `no-sam` = ≠, `no-min` = ≥, `no-mag` = ≤
+
+Plus-or-minus, ranges, distributions are *compositions* of these. No special syntax. Examples sketched (specific digit-roots TBD):
+- "around 15" → `pir pi fi`
+- "between 2 and 8" → uses `tom` between the two numbers
+- "≥ 10" → `no-min` + the number
+- gaussian/uniform/bimodal distributions → eventually need distribution-shape roots; parked.
+
+Deliberately deferred:
+- The 12 digit-roots themselves (10 used in decimal mode). They need careful acoustic-distinctness work and mnemonic tuning. Frequent enough to deserve dedicated design.
+- Distribution-shape roots.
+- Arbitrary-base notation in spoken form (user's written `9_12.5` syntax).
+- Whether pronoun-like quantifiers ("some", "all", "none", "many", "few") are part of this system or a separate operator class.

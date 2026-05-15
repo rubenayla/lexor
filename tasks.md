@@ -5,7 +5,11 @@ Open design questions parked here so we can address them one at a time.
 ## Design decisions to resolve
 - [x] **Part-of-speech marking** — resolved: suffix, vowel-initial, universal word shape `CVC + V[C]`. Derivation consonants: `r` agent, `n` act, `t` patient, `s` adjective. See decisions.md and history.md 2026-05-15.
 - [x] **Plural rule** — resolved: no plural inflection. Number is unspecified by default; quantity is a separate optional modifier system. See history.md 2026-05-15.
-- [ ] **Quantifier / quantity system design** — separate module covering exact counts, ranges (2–8), and distributions (gaussian μ=15 σ=5), per the no-mandatory-marking principle. Connects to checklist.md:97, :120.
+- [x] **Quantifier / quantity system framework** — resolved: digit-stream numbers, base markers `dem`/`doz` for decimal/dozenal first-class compatibility, scale via `pem` scientific notation, comparison operators `min`/`mag`/`sam`/`tom`/`pir` as CVC closed class. Quantifier follows noun. See decisions.md / history.md 2026-05-15. Sub-questions still open:
+    - [ ] **12 digit roots** (10 used in decimal mode). Need careful acoustic-distinctness design and mnemonics. CV shape, non-`l`-initial (to avoid pronoun collision).
+    - [ ] **Distribution-shape roots** (gaussian, uniform, bimodal, etc.) for richer probabilistic quantifiers.
+    - [ ] **Arbitrary-base spoken notation** (user's written `9_12.5` syntax — base-N representation of numbers).
+    - [ ] **Vague quantifiers** ("some", "all", "none", "many", "few"): part of this system or a separate operator class?
 - [x] **Trailing vowel for non-verb forms** — resolved: all words end in vowels (`CVCV(CV)`). Inner vowel reuses tense system; outer vowel is the role/case slot. See decisions.md and history.md 2026-05-15. Sub-questions still open:
     - [x] Which specific vowel = "atemporal / temporal-frame unspecified"? Resolved: `a`. Other tense vowels reassigned around it (see history.md 2026-05-15).
     - [x] Specific role-vowel assignments for outer slot — resolved: `a` default, `e` subject, `o` object, `u` recipient, `i` instrument. See decisions.md / history.md 2026-05-15.

@@ -67,3 +67,11 @@
     - `i` — instrument (optional fourth slot, "by means of")
     - `y`, `c` /æ/ — reserved
 - Roles beyond these (location, time, source, goal, beneficiary) handled by prepositions, because they take *expressions* ("under the table", "since 2020") that don't reduce to a single-noun suffix.
+- **Quantifier system:** Lexor expresses quantity through a productive layered system, not a singular/plural binary on nouns. Layers, in order of composition:
+    - **Bare digit-stream** for exact counts.
+    - **Base markers** `dem` (decimal) and `doz` (dozenal) — Lexor is first-class compatible with both bases. Marker sits between integer and fractional digits, at the position of the written radix point (`.` or `;`).
+    - **Scale via scientific notation**: root `pem` between mantissa and exponent. Universal across magnitudes; no "million/billion/trillion" arms race.
+    - **Comparison/bounds operators** (CVC closed class): `min` (<), `mag` (>), `sam` (=), `tom` (range "to"), `pir` (≈). Negation by `no-` prefix gives the rest (`no-sam` ≠, etc.).
+    - **Ranges, approximations, plus-or-minus, distributions** are *compositions* of the above, not special syntax.
+- **Quantifier order: after the noun.** Matches Lexor's general "thing first, modifiers after" pattern (verb-first sentence, concept-root first in words, role/tense vowels at the end).
+- Digit-roots themselves (12 needed for dozenal, 10 used in decimal mode) and distribution-shape roots are parked for separate design — they need careful acoustic-distinctness work.
