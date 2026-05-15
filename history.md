@@ -338,3 +338,31 @@ Parked sub-questions:
 - Time zones
 - Event-relative ("when X happens") — needs subordinate-clause construction first
 - Whether the weakly-mnemonic time-unit roots (`xor`, `vet`) get replaced
+
+## 2026-05-15 — Pronoun behavior with role vowels
+Question: pronouns are sub-CVC (V or CV shape), so they don't fit the standard CVCV(CV) word shape where the outer vowel is the role marker. Do they take role vowels, and how?
+
+Three options considered:
+- **A. Suffix role vowel directly** (chosen). Add the role vowel after the pronoun. Simple, parallel to noun behavior.
+- **B. Dedicated forms per pronoun×role.** Like English I/me/my. Rejected — 11 pronouns × 4 roles = 44 memorizations, way too much overhead for a slot meant to be optional.
+- **C. No role marking on pronouns, position only.** Rejected — VOS sentences with two pronouns get ambiguous exactly when marking is most needed.
+
+Mechanism locked:
+- Bare pronoun = default role (position determined).
+- Suffix `-e` subject, `-o` object, `-u` recipient, `-i` instrument when explicit.
+- Collision case (pronoun-final-vowel = role-vowel): doubled vowel pronounced as long vowel (held twice). Phonetics.md permits 2 consecutive vowels and forbids only repeated *consonants*, so this is legal. Long vowels are a clear distinction in many languages (Japanese, Latin, Finnish), so listeners parse fine.
+
+Worked table (selected):
+- `y` (I) → `ye/yo/yu/yi` for subject/object/recipient/instrument
+- `u` (you) → `ue/uo/uu(long)/ui`
+- `e` (he/she) → `ee(long)/eo/eu/ei`
+- `i` (it) → `ie/io/iu/ii(long)`
+- `la` (we-generic) → `lae/lao/lau/lai` (default already ends in `a`, marker adds a second vowel)
+- `lo` (they) → `loe/loo(long)/lou/loi`
+- `li` (they-objects) → `lie/lio/liu/lii(long)`
+
+Notes:
+- `l-` series pronouns produce two-vowel endings (`lae`, `loe`, etc.). These are within the phonotactic limit and pronounceable as diphthong-like glides.
+- The convention "bare pronoun = default role" mirrors "bare noun outer slot = `a` default" — same principle, different mechanism (vowel-final pronoun doesn't need an extra `a`).
+
+Doesn't affect existing pronoun roots in roots.md (the table is preserved); just adds the role-marker layer on top.

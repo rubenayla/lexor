@@ -88,3 +88,4 @@
 - **Time-unit roots** (placeholders — may refine in vocab buildout):
     - `mom` second, `mit` minute, `xor` hour, `dim` day, `sem` week, `mes` month, `vet` year
     - `xor` and `vet` are the weakest mnemonics; replace if better surfaces.
+- **Pronouns take role vowels by suffix.** Bare pronoun = default role (position-determined). Add `-e` subject / `-o` object / `-u` recipient / `-i` instrument when explicit marking is wanted. When pronoun-final-vowel matches the role-vowel (e.g. `uu`, `ee`, `ii`, `loo`), the doubled vowel is pronounced as a long vowel held twice the duration — phonetics.md allows 2 consecutive vowels and forbids only repeated consonants, so this is legal.

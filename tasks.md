@@ -14,7 +14,7 @@ Open design questions parked here so we can address them one at a time.
 - [x] **Trailing vowel for non-verb forms** — resolved: all words end in vowels (`CVCV(CV)`). Inner vowel reuses tense system; outer vowel is the role/case slot. See decisions.md and history.md 2026-05-15. Sub-questions still open:
     - [x] Which specific vowel = "atemporal / temporal-frame unspecified"? Resolved: `a`. Other tense vowels reassigned around it (see history.md 2026-05-15).
     - [x] Specific role-vowel assignments for outer slot — resolved: `a` default, `e` subject, `o` object, `u` recipient, `i` instrument. See decisions.md / history.md 2026-05-15.
-    - [ ] Pronoun behavior with role vowels — likely take them too (`y-e` "I-subj", `y-o` "me-obj") but needs explicit confirmation as pronouns are sub-CVC and don't fit the standard derivation pattern.
+    - [x] Pronoun behavior with role vowels — resolved: suffix role vowel, doubled-vowel collisions pronounced as long vowels. See decisions.md / history.md 2026-05-15.
     - [x] Temporal-modifier system framework — resolved: numeric calendar, time-relation prepositions (`tep`/`pen`/`sin`/`lim`/`ant`/`pos`), frequency operator `kex`, reference frame defaults to now (root `nun`), relative time by composition. See decisions.md / history.md 2026-05-15. Sub-questions still open:
         - [ ] 12-hour vs 24-hour clock convention.
         - [ ] Dedicated roots vs compositions for noon / midnight / dawn / dusk.
