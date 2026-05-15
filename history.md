@@ -164,3 +164,27 @@ Limitation accepted: 6-vowel tense system is coarse. Real temporal precision ("y
 Vowel-echo phenomenon noted: mono-temporal sentences with explicit inner vowels on every noun produce repeated vowels (`loma lomata lomara` for "the current eater eats current food"). Not a bug — when present, it carries real cross-word temporal-alignment info, and speakers can suppress it via the atemporal default. Mixed-temporal sentences naturally produce distinct vowels marking the contrast.
 
 **The outer vowel** of derived forms is reserved as the optional role/case slot (subject / object / other), addressing the VOS subject-marking question from decisions.md. Specific vowel assignments parked.
+
+## 2026-05-15 — Tense-vowel reassignment
+Question raised: which vowel should mean "atemporal / temporal-frame unspecified"?
+
+Analysis: the most-versatile vowel cross-linguistically is /a/ — most sonorous, most universal (in nearly every language), most articulatorily independent of preceding consonants, maximum acoustic distance from neighbors. By the principle "most frequent slot gets the easiest vowel," /a/ should serve whatever role is most common.
+
+Frequency: in real speech, content nouns outnumber finite verbs ~1.5–2× per sentence, and most nouns most of the time don't carry temporal frame. So *atemporal* is plausibly more frequent than *present-tense*. The old assignment gave `a` to present; the new one gives it to atemporal.
+
+Other vowels reassigned to add a mnemonic: front vowel `i` = future (forward in time), back vowel `o` = past (behind in time). The old `e`=past, `i`=future swap had no logic; new pairing is teachable.
+
+New table:
+- `a` = atemporal / unspecified (most universal vowel, most frequent slot)
+- `e` = present (neutral mid front, second-most-common)
+- `i` = future (front = forward)
+- `o` = past (back = behind)
+- `u` = imperative (deep, strong)
+- `y` = conditional (marked vowel for less frequent meaning)
+- `c` /æ/ = perfect/completed (marked vowel for aspect distinction)
+- `x` = continuous (consonant aspect combiner)
+- ∅ = infinitive (verbs only)
+
+Cost: disturbs the earlier tense table in roots.md. Acceptable — no vocabulary is locked in yet, the rationale is now documented, and retrofitting later (after vocab exists) would be much more expensive.
+
+This decision validates the meta-principle "no mandatory marking" in a concrete case: even temporal frame is optional — `a` is *unspecified*, not just *unmarked-present*. A speaker can convey an action or property without committing to when it happens.

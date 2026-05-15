@@ -89,25 +89,35 @@ TODO DECIDE WHETHER CONSONANT-VOWEL-CONSONANT AND THE TENSE IS A VOWEL AT THE EN
 | `dur`    | last/endure       | Matches /d/ and /r/, inspired by "durare." |
 
 
-## Tense markers - Express tense without conjugation
-Verb suffixes to express present, past, future, continuous (i'm doing, i was doing, i will be doing) (combined with the previous ones), order, hypothetical (so if we were to do, then i would do) (if then else condition)
+## Tense / temporal-frame markers
+The inner vowel of a content word encodes its temporal frame. On verbs it acts as tense; on derived non-verbs (`lomara` = current eater, `lomera` = present eater, etc.) it expresses *when* the property or role applies. Same system, both word classes.
+
+Assignment chosen so the most cross-linguistically natural vowel serves the most frequent slot, with a front-vs-back mnemonic for forward-vs-backward time direction.
 
 | **Vowel** | **Meaning**          | **Rationale**                                                                 |
 |-----------|----------------------|-------------------------------------------------------------------------------|
-| `a`       | **Present**          | Open and central, symbolizing immediacy and neutrality (the "now").           |
-| `e`       | **Past**             | Slightly closed, reflecting something that has "closed" or "ended" (the past).|
-| `i`       | **Future**           | High and forward, symbolizing forward thinking and progression (the future).  |
-| `o`       | **Conditional**      | Rounded and thoughtful, reflecting hypothetical or conditional scenarios.     |
-| `u`       | **Imperative**       | Deep and strong, emphasizing commands or requests.                            |
-| `y`       | **Perfect/Completed**| To-Do (absence of vowel might be extra option)                                |
-| `x`       | **Continuous**       | Easy to pronounce after vowels, while sounding different, and can produce sound without vowels later. |
-| Nothing   | **Infinitive**       | No vowel, just the root.                                                      |
+| `a`       | **Atemporal / unspecified** | Most sonorous, most universal vowel — given to the most frequent slot (most nouns most of the time don't carry temporal frame). Default when the speaker isn't committing to a frame. |
+| `e`       | **Present**          | Neutral mid front vowel; second-most-common slot. |
+| `i`       | **Future**           | Front vowel = forward in time. Mnemonic pairs with `o`=past. |
+| `o`       | **Past**             | Back vowel = behind in time. Pairs with `i`=future. |
+| `u`       | **Imperative**       | Deep and strong, emphasizing commands or requests. |
+| `y`       | **Conditional**      | Marked, exotic vowel for a less-frequent meaning (hypothetical / would-be scenarios). |
+| `c`       | **Perfect / completed** | /æ/. Marked vowel, used for the aspect distinction between completed and ongoing. |
+| `x`       | **Continuous**       | Consonant aspect marker, combines after a tense vowel. |
+| Nothing   | **Infinitive**       | No vowel, just the root. Verbs only. |
 
-x goes combined after the other ones.
+`x` (continuous) combines after a tense vowel: `lomex` = currently in the act of eating.
 
 ### Examples
-'I am eating' → 'lomax i'
-'I am eating an apple' → 'lomax {apple} i' (Notice how the object looks more relevant now, comes first. It's actually like that.)
+With root `lom` (eat-concept) and pronoun `y` (I):
+
+- 'I eat' (atemporal / general statement) → `loma y` (root + `a` atemporal)
+- 'I eat (right now)' (present) → `lome y` (root + `e` present)
+- 'I am eating' (present continuous) → `lomex y` (root + present + `x` continuous)
+- 'I ate' (past) → `lomo y` (root + `o` past)
+- 'I will eat' (future) → `lomi y` (root + `i` future)
+- 'Eat!' (imperative) → `lomu y` (or addressed to listener `lomu u`)
+- 'I would eat' (conditional) → `lomy y` (root + `y` conditional)
 
 ## Prepositions - Show relationship between words
 > to, of, in, on, at, with, from, for, by, about, between, against, under, over, through, without, within, along, across, behind, near, among, inside, outside, around, before, after, during, until, above, below, except, towards, upon, concerning, against, regarding, among, throughout, despite...

@@ -38,5 +38,24 @@
 - **Hybrid morphology: prefixes for scope/operators, suffixes for derivation/inflection.** Different cognitive jobs deserve different positions. Suffixes keep the root at the onset so listeners chunk the concept first (good for derivation, where the suffix only refines a known concept). Prefixes put the modifier first so listeners enter the modified frame *before* processing the root (essential for scope operators like negation, where late-arriving info causes processing leaks). Cross-linguistically attested (Bantu, Quechua).
 - **Negation is a prefix: `no-`.** Rationale: negation is a scope operator, not a derivation — the listener needs to be in negated frame before processing the verb, or the affirmative meaning leaks through (Kaup et al. on negation processing). `no-` matches Spanish/English/Latin/many for maximum learnability. Prefix is phonologically bound to its host (one stress group, no pause).
 - **All content words end in vowels.** Universal shape: `(prefix-)CVCV(CV)`. Verbs are CVCV (root + tense vowel). Derived non-verbs are CVCVCV (root + inner vowel + derivation consonant + outer vowel). Rationale: word-final vowels carry better through noise than final consonants; vowel-final words concatenate cleanly with following words (no boundary clusters, no sandhi rules); the outer vowel slot is the natural home for optional role/case marking needed by VOS.
-- **Inner vowel of derived non-verbs reuses the tense vowel system.** A noun or adjective derived from a root carries the same temporal-frame vowel as a verb would. `lomara` = current eater, `lomera` = former eater, `lomira` = future eater; `lomesa` = currently edible, `lomese` = was edible. Speakers who don't want to commit to temporal frame use an atemporal-default vowel (specific vowel TBD). Coarse temporal precision only; finer-grained "yesterday / since 2020 / every Tuesday" handled by a separate temporal-modifier system (parked).
+- **Inner vowel of derived non-verbs reuses the tense vowel system.** A noun or adjective derived from a root carries the same temporal-frame vowel as a verb would. Speakers who don't want to commit to temporal frame use the atemporal-default vowel. Coarse temporal precision only; finer-grained "yesterday / since 2020 / every Tuesday" handled by a separate temporal-modifier system (parked).
+- **Tense / temporal-frame vowel assignments** (revised — see history.md 2026-05-15):
+    - `a` — atemporal / unspecified frame (the default; most universal vowel for the most frequent slot)
+    - `e` — present
+    - `i` — future (front vowel = forward in time)
+    - `o` — past (back vowel = behind in time)
+    - `u` — imperative
+    - `y` — conditional
+    - `c` /æ/ — perfect/completed
+    - `x` — continuous (consonant aspect marker, combines after a tense vowel)
+    - No vowel — infinitive (verbs only)
+- **Worked examples** with `lom` (eat-concept):
+    - `loma` — eat (atemporal / general)
+    - `lome` — eats (present)
+    - `lomo` — ate (past)
+    - `lomi` — will eat (future)
+    - `lomex` — is eating (present continuous)
+    - `lomera` — current eater (subject role)
+    - `lomora` — former eater (subject role)
+    - `lomira` — future eater (subject role)
 - **Outer vowel of non-verb forms is the role/case slot.** Marks subject / object / other roles, only when ambiguity needs resolving. Default vowel (TBD) means "role unspecified." Specific role-vowel assignments parked.

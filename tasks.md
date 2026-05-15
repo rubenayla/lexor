@@ -7,7 +7,7 @@ Open design questions parked here so we can address them one at a time.
 - [x] **Plural rule** — resolved: no plural inflection. Number is unspecified by default; quantity is a separate optional modifier system. See history.md 2026-05-15.
 - [ ] **Quantifier / quantity system design** — separate module covering exact counts, ranges (2–8), and distributions (gaussian μ=15 σ=5), per the no-mandatory-marking principle. Connects to checklist.md:97, :120.
 - [x] **Trailing vowel for non-verb forms** — resolved: all words end in vowels (`CVCV(CV)`). Inner vowel reuses tense system; outer vowel is the role/case slot. See decisions.md and history.md 2026-05-15. Sub-questions still open:
-    - [ ] Which specific vowel = "atemporal / temporal-frame unspecified" for the inner slot? (`y` is candidate but currently means "perfect/completed".)
+    - [x] Which specific vowel = "atemporal / temporal-frame unspecified"? Resolved: `a`. Other tense vowels reassigned around it (see history.md 2026-05-15).
     - [ ] Specific role-vowel assignments for outer slot (subject, object, indirect, "role unspecified" default).
     - [ ] Temporal-modifier system for precise time ("yesterday", "since 2020", "every Tuesday"). Parallels the quantifier system — both layer optional precision on top of coarse word-internal marking.
 - [ ] **Verb shape** — confirm CVC-root + vowel-for-tense (roots.md:40 currently marked TODO).
