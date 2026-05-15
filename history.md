@@ -188,3 +188,28 @@ New table:
 Cost: disturbs the earlier tense table in roots.md. Acceptable — no vocabulary is locked in yet, the rationale is now documented, and retrofitting later (after vocab exists) would be much more expensive.
 
 This decision validates the meta-principle "no mandatory marking" in a concrete case: even temporal frame is optional — `a` is *unspecified*, not just *unmarked-present*. A speaker can convey an action or property without committing to when it happens.
+
+## 2026-05-15 — Role-vowel assignments (outer slot)
+Decided: outer vowel of derived non-verbs carries optional role/case marking. Shape 2 chosen — core argument roles get vowels, everything else is prepositional.
+
+Reasoning for scope (Shape 2 vs minimal vs full):
+- Minimal (subject + object only) — tempting but recipient ("I gave it *to him*") is the third-most-common role and falling back to a preposition felt arbitrary.
+- Full thematic role inventory — over-commits the vowel inventory. Location/time/source/goal genuinely benefit from prepositions because they take *expressions* (e.g. "under the table", "since 2020"), not single nouns.
+- Shape 2 hits the sweet spot.
+
+Assignments:
+- `a` = default (position carries role). Most universal vowel for most common case, consistent with the atemporal-default principle in the inner slot.
+- `e` = subject / agent. Front vowel = active.
+- `o` = object / patient. Back vowel = passive, receives.
+- `u` = recipient / dative. Deeper back = directed inward, "to whom."
+- `i` = instrument (optional, 4th slot). Front high = "by means of."
+- `y`, `c` /æ/ = reserved.
+
+The same letter at the inner vs outer slot means different things (e.g. `a` = atemporal inner, default-role outer), and the positionally-fixed slot disambiguates. Pronounceable two-`e` words like `lomere` (`lom` + `e` present + `r` agent + `e` subject = "present eater [SUBJ]") are expected; should be monitored as vocab grows for any real confusion.
+
+Worked examples (verb `lom` eat, root-based nouns):
+- Canonical VOS: `lome lometa lomera` — "the (current) eater eats (current) food." Default outer vowels, position carries roles.
+- Topicalized object: `lome lometo lomere` — "FOOD the eater eats." Explicit markers override broken order.
+- With recipient: `supe libra-u y-e lomera` — "give book-to-RECIPIENT I-SUBJ the eater" → "I give the book to the eater." (`sup` = supply/give; `lib` as stand-in for "book".)
+
+Doesn't lock pronoun behavior — open question whether pronouns also take role vowels (likely yes for consistency: `y-e` "I-subj", `y-o` "me-obj").

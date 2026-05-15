@@ -58,4 +58,12 @@
     - `lomera` — current eater (subject role)
     - `lomora` — former eater (subject role)
     - `lomira` — future eater (subject role)
-- **Outer vowel of non-verb forms is the role/case slot.** Marks subject / object / other roles, only when ambiguity needs resolving. Default vowel (TBD) means "role unspecified." Specific role-vowel assignments parked.
+- **Outer vowel of non-verb forms is the role/case slot.** Marks core argument roles, only when ambiguity needs resolving. Default = role-by-position.
+- **Role-vowel assignments** (Shape 2 — core argument roles get vowels, everything else handled by prepositions):
+    - `a` — default (role determined by VOS position)
+    - `e` — subject / agent (front vowel = active, forward-acting)
+    - `o` — object / patient (back vowel = passive, receives action)
+    - `u` — recipient / dative (deep back = "to whom")
+    - `i` — instrument (optional fourth slot, "by means of")
+    - `y`, `c` /æ/ — reserved
+- Roles beyond these (location, time, source, goal, beneficiary) handled by prepositions, because they take *expressions* ("under the table", "since 2020") that don't reduce to a single-noun suffix.
