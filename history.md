@@ -564,3 +564,45 @@ Depth rule made explicit:
 Closure rule made explicit: a clause introduced by `ke` is grammatically closed when all argument slots of its head verb are filled (the gap counts as one filled slot) AND no coordinator follows. Next word goes to next-outer open clause.
 
 Edge case acknowledged: coordinated relative clauses where the gap fills different slots in each clause (e.g., "the man whom I see and who saw the dog" — gap is object of first verb, subject of second). Naive chaining loads role-vowel disambiguation onto the listener. Solution: named binding restructures into atomic sentences. Same pattern as deep nesting — when complexity threatens working memory, name and split.
+
+## 2026-05-15 — Question system: universal particle `ka`, position determines type
+Foundational gap: Lexor had no way to ask anything. Embedded questions ("what she said") were also blocked.
+
+Design principle: same as every other Lexor operator — one particle, position determines meaning. Avoids the English/Spanish clutter of having ~6 wh-words (who/what/when/where/why/how / quién/qué/cuándo/dónde/por qué/cómo).
+
+Locked: **`ka`** — universal question particle.
+- Mnemonic: Japanese か (well-known interrogative). CV, distinct from existing operators and pronouns.
+- Adjacent to digit `ko` (4) in /k/-initial space but different vowel and different syntactic position.
+
+Position pins type:
+- **Sentence-initial** → yes/no question over the whole proposition. `ka golo e` = "Did she leave?"
+- **In an argument slot** → wh-question about that slot. `golo ka` = "Who left?" `lome ka e` = "What did she eat?"
+- **After a preposition** → wh-question about that role. `tep ka` = "When?" `lok ka` = "Where?"
+- **Inside a `ke`-clause** → embedded question. `[wonder] y ke dik ka e` = "I wonder what she said."
+
+Choice questions compose from existing pieces: `ka X vel Y` — yes/no over a disjunction. "Coffee or tea?" needs no new mechanism.
+
+Spatial preposition added in passing: **`lok`** — at/in (spatial location). Mnemonic: Latin *locus*. Pairs with `tep` (temporal "at") as the spatial counterpart. Needed because previously `tep` was time-only, so "where?" had no preposition to compose with `ka`. Full spatial-preposition family (under, over, near, beside, etc.) parked.
+
+Person vs object distinction: `ka` is generic. Context (verb selectional preferences, slot position) usually disambiguates: `vise ka e` = "she sees what/whom?" is interpreted in context. Mandarin works similarly (`什么 shénme` covers both depending on construction). For rare cases where context fails, an explicit person-marker / thing-marker is needed; parked.
+
+Worked examples:
+- `ka golo e` → "Did she leave?"
+- `ka lome lometa e` → "Did she eat the food?"
+- `golo ka` → "Who left?"
+- `lome ka e` → "What did she eat?"
+- `golo e tep ka` → "When did she leave?"
+- `golo e lok ka` → "Where did she go?"
+- `ka coffee vel tea` → "Coffee or tea?"
+- `[wonder] y ke dik ka e` → "I wonder what she said."
+- `[tell-imperative] u y ke golo ka` → "Tell me who left."
+
+Considered and rejected: dedicated wh-roots (who/what/when/where/why/how as separate words). Cost: 6+ memorizations, no compositional value. Benefit: minor brevity. Compositional `ka` is more Lexor-like and the verbose-ness (1-2 syllables longer) is a small price.
+
+Parked sub-questions:
+- Manner preposition for "how?" questions.
+- Causation preposition for "why?" questions (tied to "because/since" gap).
+- Person vs object disambiguation marker on `ka` when context fails.
+- Tag questions ("she left, didn't she?") — likely composable from yes/no + negation.
+- Rhetorical questions — register distinction, not grammar.
+- Full spatial-preposition family (under, over, near, beside, etc.).

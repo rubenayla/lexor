@@ -129,3 +129,11 @@
     - Depth decreases automatically when a clause's verb has all its arguments filled and no coordinator continues it.
     - No terminator words; depth ascent is signaled by argument-completion, not by an explicit closer.
 - **Clause-closure rule** (explicit): a clause introduced by `ke` is grammatically closed when all argument slots of its head verb are filled (counting the gap as one filled slot) AND no coordinator (`kun` / `vel`) follows. The next word goes to the next-outer open clause.
+- **Question system: universal particle `ka`, position determines type.** No dedicated wh-roots. One particle covers all interrogatives, with position pinning meaning:
+    - Sentence-initial: yes/no question over the whole proposition.
+    - In an argument slot: wh-question about that slot ("who" / "what" by context).
+    - After a preposition: wh-question about that role (`tep ka` = when, `lok ka` = where, etc.).
+    - Inside a `ke`-clause: embedded question.
+- **Spatial preposition `lok`** — at / in / on (spatial location). Mnemonic: Latin *locus*. Pairs with `tep` as the spatial counterpart to the temporal "at." Full spatial-preposition family (under, over, near, beside, etc.) parked.
+- **Choice questions** compose: `ka X vel Y` — yes/no question over a disjunction.
+- **Person vs object distinction for `ka`** is contextual; explicit disambiguation marker parked for cases where context fails.
