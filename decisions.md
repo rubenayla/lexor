@@ -74,4 +74,7 @@
     - **Comparison/bounds operators** (CVC closed class): `min` (<), `mag` (>), `sam` (=), `tom` (range "to"), `pir` (≈). Negation by `no-` prefix gives the rest (`no-sam` ≠, etc.).
     - **Ranges, approximations, plus-or-minus, distributions** are *compositions* of the above, not special syntax.
 - **Quantifier order: after the noun.** Matches Lexor's general "thing first, modifiers after" pattern (verb-first sentence, concept-root first in words, role/tense vowels at the end).
-- Digit-roots themselves (12 needed for dozenal, 10 used in decimal mode) and distribution-shape roots are parked for separate design — they need careful acoustic-distinctness work.
+- **Digit roots** (CV, designed for max adjacency-distinctness — every adjacent pair differs in both consonant and vowel):
+    - `zo` 0, `pa` 1, `du` 2, `re` 3, `ko` 4, `fi` 5, `sa` 6, `chi` 7, `bo` 8, `ne` 9
+    - `ja` A (10, dozenal only), `gi` B (11, dozenal only)
+- Distribution-shape roots (gaussian, uniform, bimodal) parked for later.

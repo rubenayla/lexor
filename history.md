@@ -256,3 +256,33 @@ Deliberately deferred:
 - Distribution-shape roots.
 - Arbitrary-base notation in spoken form (user's written `9_12.5` syntax).
 - Whether pronoun-like quantifiers ("some", "all", "none", "many", "few") are part of this system or a separate operator class.
+
+## 2026-05-15 — 12 digit roots assigned
+Same 10 roots serve decimal (0–9); dozenal adds 2 more (A=10, B=11). All single CV, all initial-consonant unique across the set.
+
+Design priority: maximum acoustic distinctness between *adjacent* digits, because confusing 3↔4 is far worse than confusing 3↔9. Every adjacent pair differs in both consonant and vowel.
+
+| Value | Root | Mnemonic |
+|---|---|---|
+| 0 | `zo` | English **z**ero |
+| 1 | `pa` | distinctness-driven; no strong cross-language match |
+| 2 | `du` | Latin/Italian **du**o, Spanish **do**s |
+| 3 | `re` | Spanish t**re**s (/r/ carries it) |
+| 4 | `ko` | Latin **q**uattuor / Spanish **c**uatro |
+| 5 | `fi` | English **fi**ve |
+| 6 | `sa` | English **s**ix, Spanish **s**eis |
+| 7 | `chi` | Mandarin **qī** /tɕʰ/ → `ch` |
+| 8 | `bo` | Spanish o**ch**o (vowel /o/, /b/ for distinctness from 7) |
+| 9 | `ne` | English **n**ine, Spanish **n**ueve |
+| A (10) | `ja` | dozenal only; arbitrary, picked for distinctness |
+| B (11) | `gi` | dozenal only; arbitrary, /g/ otherwise unused |
+
+Worked examples:
+- decimal 243 → `du ko re dem`
+- decimal 12.5 → `pa du dem fi`
+- dozenal 14;6 (= decimal 16.5) → `pa ko doz sa`
+- dozenal "A0B" (= decimal 1451) → `ja zo gi doz`
+- 3 × 10⁹ → `re pem ne dem`
+- approximately 15 → `pir pa fi dem`
+
+Risk flagged: digit 6 `sa` is a substring of operator `sam` (equal); digit 4 `ko` is a substring of verb root `kom`. CV digits will sometimes overlap with CVC roots they're contained in. Resolution: needs a prosodic convention (likely "CVC carries final-consonant stress; CV doesn't") to disambiguate in running speech. Parked as a parsing/prosody question, not a reason to redesign digits.

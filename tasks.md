@@ -6,7 +6,8 @@ Open design questions parked here so we can address them one at a time.
 - [x] **Part-of-speech marking** — resolved: suffix, vowel-initial, universal word shape `CVC + V[C]`. Derivation consonants: `r` agent, `n` act, `t` patient, `s` adjective. See decisions.md and history.md 2026-05-15.
 - [x] **Plural rule** — resolved: no plural inflection. Number is unspecified by default; quantity is a separate optional modifier system. See history.md 2026-05-15.
 - [x] **Quantifier / quantity system framework** — resolved: digit-stream numbers, base markers `dem`/`doz` for decimal/dozenal first-class compatibility, scale via `pem` scientific notation, comparison operators `min`/`mag`/`sam`/`tom`/`pir` as CVC closed class. Quantifier follows noun. See decisions.md / history.md 2026-05-15. Sub-questions still open:
-    - [ ] **12 digit roots** (10 used in decimal mode). Need careful acoustic-distinctness design and mnemonics. CV shape, non-`l`-initial (to avoid pronoun collision).
+    - [x] **12 digit roots** — resolved: `zo pa du re ko fi sa chi bo ne` (0–9) plus `ja gi` (A, B for dozenal). See decisions.md / history.md 2026-05-15.
+    - [ ] **Prosodic disambiguation rule** for CV-vs-CVC overlap (e.g., digit `sa` 6 vs operator `sam` equal, digit `ko` 4 vs verb `kom` move). Likely a stress-and-timing convention.
     - [ ] **Distribution-shape roots** (gaussian, uniform, bimodal, etc.) for richer probabilistic quantifiers.
     - [ ] **Arbitrary-base spoken notation** (user's written `9_12.5` syntax — base-N representation of numbers).
     - [ ] **Vague quantifiers** ("some", "all", "none", "many", "few"): part of this system or a separate operator class?
