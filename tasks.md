@@ -37,8 +37,16 @@ Open design questions parked here so we can address them one at a time.
 - [x] **Subordinate clauses** — resolved: single universal complementizer `ke`, function determined by what precedes it. Conditional uses dedicated particle `is`. See decisions.md / history.md 2026-05-15. Sub-questions still open:
     - [ ] Causation particle for "because/since".
     - [ ] Embedded-question marker — needs broader question system first.
-    - [ ] Nested-clause disambiguation — does `ke` stack cleanly or need parentheses?
+    - [x] Nested-clause disambiguation — resolved: strict adjacency for ~2 levels; named binding (`def`) for deeper or for clause-closure-back-to-main. No terminator words. See history.md 2026-05-15.
     - [ ] Comma/pause prosodic conventions between main and subordinate clauses.
+- [x] **Precision-by-default meta-principle** — locked: every sentence has exactly one meaning. Vague allowed, ambiguous forbidden. See AGENTS.md, decisions.md, history.md 2026-05-15.
+- [x] **Reasoning-particle set** — locked: `dat` (premise), `erg` (therefore), `imp` (logical implication, distinct from `is` causal conditional). Multi-step reasoning uses staged sentences, not nested conditionals. See decisions.md / history.md 2026-05-15. Sub-questions still open:
+    - [ ] Scope-of-premise: when does a `dat`-asserted premise expire?
+    - [ ] Other proof-structuring particles ("suppose for contradiction", QED-marker, case-splitting).
+    - [ ] Sibling implication operators (necessary vs sufficient, biconditional).
+- [x] **Named binding for compositional clarity** — locked as concept (`def`-style construction for long expressions). Sub-questions still open:
+    - [ ] Specific `def`-construction syntax — exact form of "Let X = ..." in Lexor.
+    - [ ] Scope of named bindings — discourse-local vs sentence-local vs explicit retraction.
 
 ## Vocabulary buildout (after decisions above)
 - [ ] Fill empty categories in roots.md: prepositions, conjunctions, adverbs, demonstratives, relatives, interrogatives, indefinites, nouns, modifiers, logical operators, probabilistic operators, directions, states, emotions.

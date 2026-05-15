@@ -110,3 +110,12 @@
     - Three forms, three distinct meanings (one being explicit vagueness). No interpretation.
 - **Prosody is for focus and parsing aid, not scope resolution.** Stress marks the constituent in focus; pause + pitch reset matches written punctuation. Scope is already pinned by the strict positional rules and explicit markers above; prosody adds emphasis, not disambiguation.
 - **Named binding** (`def`-style construction, exact syntax TBD) is for compositional clarity of long expressions. Not an escape hatch for otherwise-ambiguous sentences (which shouldn't exist). Used for legal text, formal proofs, multi-level nested expressions where clause-stacking would overload working memory.
+- **Nested-clause depth via `ke`**: grammar permits arbitrary recursion (each `ke` pairs with its immediately preceding host). Style rule (from working-memory limits, not grammar): use named binding instead of stacking past ~2 levels of `ke`, or any time the relative clause needs to close and the outer clause continues with a new predication. Named binding does the disambiguation work without terminator particles, which keeps Lexor non-programmer-y.
+- **Causal-conditional vs logical-implication are distinct.** English's "if" overloads both; Lexor splits them.
+    - `is A, B` — causal/temporal conditional. "If A happens, B happens." Everyday use.
+    - `A imp B` — logical implication. "A entails B." Formal/proof use, axiom-like.
+- **Reasoning-particle set for multi-step inference** (closed class, discourse-level markers, not subordinators):
+    - `dat` — premise / "given that" / axiom assertion. Marks the sentence as a premise held available for subsequent reasoning. Mnemonic: Latin *datum* / Spanish *dado*.
+    - `erg` — therefore / inference marker. Marks the sentence as a conclusion derived from prior premises. Mnemonic: Latin *ergo*.
+    - `imp` — logical implication (above).
+- **Multi-step reasoning uses staged sentences, not nested conditionals.** Each premise / observation / conclusion is its own sentence. Modus tollens: `dat A imp B. no-B. erg no-A.` Three crisp sentences instead of one awkward nested one.

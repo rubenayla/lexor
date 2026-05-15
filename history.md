@@ -470,3 +470,64 @@ What this does NOT solve (honest residuals):
 - Idiom/figuration — Lexor probably rejects idioms entirely (compositional only) plus a literal-vs-figurative marker for metaphor.
 
 The "user-the-jerk" failure mode is structurally prevented. Sloppy speech becomes visibly imprecise (the marker would be there if precision were intended, and isn't) rather than disguising failure as natural ambiguity.
+
+## 2026-05-15 — Nested clauses and the staged-reasoning particle set
+Two related questions resolved together.
+
+### Nested clauses
+User asked for a definitive answer on how deep `ke` can stack.
+
+Mechanism: each `ke` pairs with its immediately preceding host. Strict adjacency. The grammar permits arbitrary recursion in principle (no depth limit in the rules).
+
+Style rule (not grammar): humans can track ~2 levels of nesting in real time. Beyond that, OR any time the relative clause needs to close and the outer clause continues, use named binding instead.
+
+Example showing why named binding is needed:
+- "The man who saw the dog [then] bit the cat" — man bit cat, not dog.
+- Adjacency-only: `man ke vise dog ke bite cat` would put the biting on the dog. Wrong.
+- Named binding: `def M = man ke vise dog. M bite cat.` Closes the relative clause by naming the result; fresh sentence claims the next predication.
+
+No terminator words (Lojban-style closers feel programmer-y; named binding does the disambiguation work and is useful regardless). Prosody helps parsing in real time but isn't load-bearing.
+
+### Reasoning-particle set (from the modus tollens test case)
+User asked: how would Lexor express modus tollens `(A → B) ∧ ¬B ⊢ ¬A`?
+
+English and Spanish both struggle: trying to fit it in one sentence creates 3-level nested logical structure that's awkward to parse. "If A implies B and B is not true, then A is not true" / "Si A implica B, y B no es cierto, entonces A no es cierto" — both stack an implication inside a conjunction inside a conditional. Listeners stumble.
+
+Both languages can do better by *staging* — multiple sentences, each holding one piece of the argument. "Take it as given that A leads to B. Now: B did not happen. So A did not happen." This works, but the connectives ("take as given", "so") are lexical bandaids on top of an inadequate grammar.
+
+User's insight: the cognitive structure of this proposition is *sequential*, not nested. Lexor should make staging the grammatically natural form, not nesting.
+
+Locked: three new closed-class particles for multi-step reasoning, plus a causal/logical implication distinction.
+
+- **`dat`** — premise marker. Asserts a sentence as a premise available for subsequent reasoning. Mnemonic: Latin *datum*, English *data*, Spanish *dado*. CVC.
+- **`erg`** — inference marker / "therefore." Marks a sentence as derived from prior premises. Mnemonic: Latin *ergo*. CVC.
+- **`imp`** — logical implication. Mnemonic: English *implies*. Distinct from `is` (causal/temporal conditional).
+
+Modus tollens in Lexor:
+```
+dat A imp B.    ← Given: A logically implies B.
+no-B.           ← Not B.
+erg no-A.       ← Therefore, not A.
+```
+
+Three sentences, each with one meaning, each parseable independently. The logical relationship between them is explicit (premise / observation / conclusion) rather than encoded in nested structure.
+
+Proof-by-cases extension:
+```
+dat A imp B.                ← Given: A → B.
+is B, [unconstrained].       ← When B holds, A may or may not. (forward direction underconstrained)
+is no-B, no-A.               ← When B doesn't hold, A doesn't either. (modus tollens)
+```
+
+Each case parallel, neither nested in the other.
+
+The causal-vs-logical distinction is a real Lexor advantage:
+- `is A, B` — causal/temporal: "if A happens, B happens." Everyday use.
+- `A imp B` — logical: "A entails B." Formal/proof use, axiom-like.
+
+English's "if" overloads both. Lexor splits them — speakers can now distinguish "if you press the button, the light turns on" (causal `is`) from "all even numbers imply divisibility by 2" (logical `imp`).
+
+Parked sub-questions:
+- Scope-of-premise: when does a `dat`-asserted premise expire? Until end of paragraph? Until explicit retraction? Probably until discourse turn ends, but needs design.
+- Other proof-structuring particles: "suppose for contradiction," QED-marker, case-splitting marker. Defer until they arise.
+- Whether `imp` needs siblings for necessary vs sufficient implication, biconditional, etc.
