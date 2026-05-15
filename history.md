@@ -111,3 +111,28 @@ Worked examples with `lom`:
 - `no-lomes` — inedible
 
 Note: this is *logical negation* (the event didn't happen / the property doesn't hold). A separate question — whether Lexor also wants a distinct *lexical opposite* marker (e.g., `love` → `hate`, not just `not love`) — is parked. The two are cognitively different and most languages conflate them.
+
+## 2026-05-15 — Speech speed concern: CVCV pattern, sticking with it
+Concern raised: the regular CVC-root + V[C] pattern may make Lexor slow to speak compared to languages with denser syllables (English `strengths` = 1 syllable / 8 phonemes vs Lexor's 2-syllable words for similar concepts).
+
+What the literature says (Pellegrino et al. 2011, *Language*): across languages, information rate converges to ~39 bits/sec. Languages with simple syllables (Japanese, Spanish) compensate with higher syllables/sec; languages with complex syllables (English) compensate with lower syllables/sec but more info per syllable. The product is roughly constant. Lexor's CVC+V[C] is moderate complexity, so by this prediction speakers will naturally adjust syllable rate.
+
+Real costs accepted:
+- Per-syllable density lower than English. 1-syllable English verbs ("eat") become 2-syllable Lexor (`loma`).
+- Strict phonotactics resist the vowel-reduction tricks fast English uses (`gonna`, `prolly`).
+- Highly regular shape risks Japanese-style "machine-gun" perception (aesthetic, not speed).
+
+Real compensations from other decisions:
+- No mandatory plural / gender / article / tense → fewer wasted morphemes per utterance than Spanish or English.
+- Concept-level roots → one root spawns the whole derivation family, fewer separate words to retrieve.
+- VOS → action arrives in syllable 1–2; no auxiliary/copula buildup.
+- Optional precision → speakers only pay for info they actually intend to transmit.
+
+Decision: stick with the approach. Per-meaning rate is plausibly neutral or favorable; per-syllable rate is worse than English but better than Japanese. Real verdict requires actual spoken usage. Premature redesign is a bigger risk than the speed cost.
+
+If speed becomes a real problem later, cheap retrofits exist:
+- Sub-CVC shapes for high-frequency closed-class words (already done for pronouns: `y`, `u`, `e`).
+- Optional vowel reduction in unstressed syllables for fluent speakers.
+- Contractions for very common verb+pronoun combinations.
+
+None of these break the structural design; they layer on top of it.
