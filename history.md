@@ -366,3 +366,37 @@ Notes:
 - The convention "bare pronoun = default role" mirrors "bare noun outer slot = `a` default" — same principle, different mechanism (vowel-final pronoun doesn't need an extra `a`).
 
 Doesn't affect existing pronoun roots in roots.md (the table is preserved); just adds the role-marker layer on top.
+
+## 2026-05-15 — Subordinate clauses: single universal complementizer `ke`
+Foundational gap: precise temporal expressions need "when X happens" constructions; complex sentences need relative and complement clauses; conditionals need an "if" construction. English uses ~10 different subordinators (who/which/that/when/while/although/because/since/whereas/unless) — that's pure clutter.
+
+Design principle: ONE universal clause-introducer particle, function determined by what *precedes* it. Avoids subordinator-memorization and matches Lexor's general "context selects meaning" preference (e.g. same vowel positions carry different info depending on word class).
+
+Particle: **`ke`** — universal subordinating complementizer. Mnemonic: Spanish/French/Italian/Portuguese *que/che* converge here; very high cross-Romance recognition. Single CV.
+
+Function depends on context:
+- Noun + `ke` + clause → relative ("the X that…")
+- Cognitive/speech verb + `ke` + clause → complement ("say/think/know that…")
+- Time preposition (`tep`/`pen`/`ant`/`pos`) + `ke` + clause → temporal ("when/during/before/after…")
+- Causation particle (TBD) + `ke` + clause → reason ("because/since…")
+
+Conditional gets its own particle because the structure is genuinely different (paired antecedent/consequent, not a clause hanging off a single host):
+- **`is`** — conditional "if" (mnemonic: English "if", Spanish "si"). Sub-CVC, like pronouns. Pairs with conditional inner-vowel `y` on the consequent verb for proper alignment.
+
+Relative-clause gap mechanism: when `ke` opens a relative clause attached to a noun, the embedded clause has one missing argument slot. The modified noun fills that gap semantically. If the gap's role is non-default (subject when object position is empty, etc.), the role-vowel pattern signals it; otherwise position handles disambiguation.
+
+Position: subordinate clause comes after its host (consistent with "thing first, modifiers after"). Main clause precedes the subordinate when both appear in a sentence.
+
+Worked examples (using current root set):
+- "the eater who eats apples" → `lomera ke lome [apple]a` — embedded clause `lome [apple]a` is missing its subject, which is filled semantically by `lomera`.
+- "the apple that the eater eats" → `[apple]a ke lome lomera` — embedded clause missing its object.
+- "I know that she left" → `vise y ke golo e`
+- "Bring the book before she arrives" → `feru u libra, ant ke veni e`
+- "When she arrives, I will leave" → `goli y, tep ke veni e`
+- "If it rains, I'll stay home" → `[stay]y y, is [rain]e`
+
+Parked sub-questions:
+- Causation particle for "because/since"
+- Embedded-question marker ("what she said") — needs the broader question system designed first
+- Multiple nested clauses — does `ke` stack cleanly, or do we need parenthesis-equivalent disambiguators?
+- Comma/pause prosodic conventions between main and subordinate

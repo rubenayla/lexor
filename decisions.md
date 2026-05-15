@@ -89,3 +89,11 @@
     - `mom` second, `mit` minute, `xor` hour, `dim` day, `sem` week, `mes` month, `vet` year
     - `xor` and `vet` are the weakest mnemonics; replace if better surfaces.
 - **Pronouns take role vowels by suffix.** Bare pronoun = default role (position-determined). Add `-e` subject / `-o` object / `-u` recipient / `-i` instrument when explicit marking is wanted. When pronoun-final-vowel matches the role-vowel (e.g. `uu`, `ee`, `ii`, `loo`), the doubled vowel is pronounced as a long vowel held twice the duration — phonetics.md allows 2 consecutive vowels and forbids only repeated consonants, so this is legal.
+- **Subordinate clauses use a single universal complementizer: `ke`.** Mnemonic from Spanish/French/Italian/Portuguese *que/che*. The semantic type of the clause (relative, complement, temporal, etc.) is determined by what *precedes* `ke`, not by varying the particle itself. Avoids the English clutter of who/which/that/when/while/whereas/although.
+    - Noun + `ke` + clause = relative ("the X that…")
+    - Cognitive/speech verb + `ke` + clause = complement ("say/think that…")
+    - Time preposition + `ke` + clause = temporal ("when/during/before/after…")
+    - Conditional particle `is` + clause = conditional ("if…"). Pairs with conditional inner-vowel `y` on the consequent's verb.
+    - Causation particle (TBD) + clause = reason ("because…")
+- **Relative-clause gap**: the modified noun fills the missing-position slot in the embedded clause. If the gap's role is non-default, role-vowel marks it; otherwise position handles it.
+- **Subordinate clause position**: after its host. Matches "thing first, modifiers after." Main clause first, subordinate hangs off.

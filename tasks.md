@@ -2,6 +2,9 @@
 
 Open design questions parked here so we can address them one at a time.
 
+## Inbox
+- you agree VOS was the right choice?
+
 ## Design decisions to resolve
 - [x] **Part-of-speech marking** — resolved: suffix, vowel-initial, universal word shape `CVC + V[C]`. Derivation consonants: `r` agent, `n` act, `t` patient, `s` adjective. See decisions.md and history.md 2026-05-15.
 - [x] **Plural rule** — resolved: no plural inflection. Number is unspecified by default; quantity is a separate optional modifier system. See history.md 2026-05-15.
@@ -19,7 +22,7 @@ Open design questions parked here so we can address them one at a time.
         - [ ] 12-hour vs 24-hour clock convention.
         - [ ] Dedicated roots vs compositions for noon / midnight / dawn / dusk.
         - [ ] Time zone representation.
-        - [ ] Event-relative time ("when X happens") — needs subordinate-clause grammar first.
+        - [x] Event-relative time ("when X happens") — unblocked. Use `tep ke [clause]` ("at WHEN she arrives"). See subordinate-clause framework 2026-05-15.
         - [ ] Weak placeholder roots `xor` (hour), `vet` (year) flagged for possible replacement.
 - [ ] **Verb shape** — confirm CVC-root + vowel-for-tense (roots.md:40 currently marked TODO).
 - [x] **Negation** — resolved: prefix `no-`, phonologically bound to its host. See decisions.md and history.md 2026-05-15. Related sub-questions parked:
@@ -31,6 +34,11 @@ Open design questions parked here so we can address them one at a time.
 - [ ] **Synonym/equivalence grouping** — comma-like marker for "scalar-first, wxyz, Hamilton convention" being three names for one thing (TODO.md:9).
 - [ ] **Rotation names** — names for X/Y/Z rotations (decisions.md:23-25).
 - [ ] **Multi-level sentence punctuation** — beyond comma, for nested clauses (decisions.md:26).
+- [x] **Subordinate clauses** — resolved: single universal complementizer `ke`, function determined by what precedes it. Conditional uses dedicated particle `is`. See decisions.md / history.md 2026-05-15. Sub-questions still open:
+    - [ ] Causation particle for "because/since".
+    - [ ] Embedded-question marker — needs broader question system first.
+    - [ ] Nested-clause disambiguation — does `ke` stack cleanly or need parentheses?
+    - [ ] Comma/pause prosodic conventions between main and subordinate clauses.
 
 ## Vocabulary buildout (after decisions above)
 - [ ] Fill empty categories in roots.md: prepositions, conjunctions, adverbs, demonstratives, relatives, interrogatives, indefinites, nouns, modifiers, logical operators, probabilistic operators, directions, states, emotions.
