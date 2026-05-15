@@ -606,3 +606,78 @@ Parked sub-questions:
 - Tag questions ("she left, didn't she?") — likely composable from yes/no + negation.
 - Rhetorical questions — register distinction, not grammar.
 - Full spatial-preposition family (under, over, near, beside, etc.).
+
+## 2026-05-16 — Survey of senses collapsed by English "is" / Spanish ser-estar
+Before designing Lexor's replacement, mapping out what natural-language copulas actually do. Each is a distinct semantic relation; collapsing them all into one word creates the ambiguities catalogued in pain.md.
+
+The nine senses of English "is":
+
+1. **Identity / equation**: "Mark Twain is Samuel Clemens." X = Y (symmetric; refer to the same entity). Math: `=`.
+2. **Property attribution**: "The sky is blue." X has-property P (asymmetric).
+3. **Set membership**: "A whale is a mammal." X ∈ Y (X is one element of set Y).
+4. **Set inclusion / subset**: "Mammals are animals." X ⊆ Y (all members of X are also members of Y). Different from membership: mammals-as-a-set aren't an element of animals.
+5. **Existence**: "There is a problem." ∃X.
+6. **Permanent vs temporary state**: "She is a doctor" vs "She is tired." Spanish marks (ser/estar); English collapses.
+7. **Literal content / quotation**: "My name is 'John'". X's content is literally the string Y, not a property.
+8. **Auxiliary in aspect**: "She is going." Continuous aspect. Already handled by Lexor's `x` aspect marker.
+9. **Passive voice marker**: "She is loved." Not needed in Lexor because role-vowels make passive unnecessary.
+
+Senses 1–7 are real distinctions Lexor needs to express separately. 8 and 9 are already handled or eliminated by prior design.
+
+Decided: split into multiple distinct verbs / particles. One copula per relation. The user's intuition is that `password = 'incorrect'` (literal) is genuinely not the same as `password has-property incorrect` (predication), and the design should reflect that.
+
+Minimal new inventory (proposed shape, specific roots TBD next round):
+- **Identity** (sense 1): reuse `sam` (already the `=` comparison operator).
+- **Predication** (sense 2): new copula verb. State/property distinction (sense 6) rides on the inner tense vowel — atemporal `a` for essential property, present `e` for current state. (Pending user confirmation on whether to split further into permanent/temporary as Spanish does.)
+- **Membership** (sense 3): new particle, math `∈`.
+- **Subset** (sense 4): either a new particle or composed from universal-quantifier + membership ("every X mem Y"). (Pending user choice.)
+- **Existence** (sense 5): either composed from existential-quantifier ("some X exists") or a dedicated existence-verb. Likely the former.
+- **Literal content** (sense 7): paired open/close quotation markers, mirroring how speakers say "quotes … quotes" in spoken English.
+
+Three sub-questions to settle before locking specific roots:
+- Sense 6 (permanent vs temporary): split via separate copulas (Spanish-style) or via the tense-vowel system on a single predication copula?
+- Sense 4 (subset): dedicated particle or composition?
+- Sense 7 (quotation): paired open/close (like spoken English "quotes...quotes") — yes per user.
+
+## 2026-05-16 — "Is"-overload replacement set locked
+User decisions on the three sub-questions:
+1. Permanent vs temporary state: split via separate copulas, Spanish-style. (User intuition leaned Spanish.) The argument: real ambiguities in English ("the patient is depressed" — chronic or today? "he is reliable" — trait or recent behavior?) are eliminated by splitting.
+2. Subset: composition, not dedicated particle. Matches Lexor's pattern of composing from primitives. `tot X mem Y` ("every X is-member-of Y") expresses ⊆.
+3. Quotation: paired open/close markers, matching how spoken English uses "quotes…quotes" — but with distinct words for open vs close so nested quotations remain unambiguous.
+
+Locked inventory:
+- **`sam`** — identity (X = Y, symmetric, refer to the same entity). Reused from existing `=` comparison operator. Math: `=`.
+- **`est`** — essential predication. Spanish *ser*. Latin *esse*. "X has essential property P" / "X is essentially Y." Permanent traits, classifications, definitions.
+- **`sta`** — state predication. Spanish *estar*. Latin *stare*. "X is currently in state P." Temporary states, current situations, transient properties. Note: `sta` is CCV — valid per phonetics.md (2-consonant clusters allowed).
+- **`mem`** — set membership (X ∈ Y). "X is one element of set Y."
+- **Subset by composition**: `tot X mem Y` ("every X is member-of Y") expresses X ⊆ Y. No dedicated subset particle — the universal quantifier `tot` plus `mem` does the work.
+- **Existence by composition**: `kel X` ("some X exists") expresses ∃X. No dedicated existence-verb — the existential quantifier `kel` plus context does the work.
+- **`lit … fin`** — paired quotation markers. Open with `lit` (literal), close with `fin` (finish). Inside the pair, content is treated as raw string, not parsed as Lexor predications. Distinct open and close words ensure nested quotations remain unambiguous (which a same-word-both-times convention couldn't).
+
+Worked examples:
+- "Mark Twain is Samuel Clemens" → `[MarkTwain] sam [SamuelClemens]` (identity)
+- "The sky is blue (essentially)" → `est sky blue` or `[blue-property] est sky` — predication of essential property
+- "She is tired (right now)" → `sta she tired` — predication of current state
+- "A whale is a mammal" → `[whale] mem [mammals]` — set membership
+- "Mammals are animals" → `tot [mammal] mem [animal]` — every mammal is member of animals (subset)
+- "There is a problem" → `kel [problem]` — some problem exists (existence)
+- "The password is 'incorrect'" → `[password] sam lit incorrect fin` — identity with literal string content (sense 7 — literal not predication)
+- "The password is incorrect" (it's wrong) → `sta [password] [incorrect-property]` — predication of a current-state error (sense 2 + 6, temporary)
+- "My name is 'very stupid'" → `[name-mine] sam lit very stupid fin` — literal-content identity, not predication
+
+The password example specifically motivated the `sam`+`lit/fin` vs `sta`+adjective split. Two completely different facts about the password; two completely different sentence forms.
+
+Also locked the rest of the universal-quantifier operator family that had been informally proposed:
+- `sol` — only / restriction (previously locked).
+- `tot` — all / every (∀).
+- `nul` — none.
+- `kel` — some (∃).
+
+Plus the previously-locked `pad` (distributive) and `mas` (collective).
+
+Phonotactic note: `est` is V-C-C (vowel-initial, ends in 2-consonant cluster). `sta` is C-C-V (starts with 2-consonant cluster). Both legal per phonetics.md (2-consonant clusters allowed; only 3+ forbidden). These are unusual root shapes compared to the standard CVC, but the cross-language recognizability (English/Spanish/Italian/Latin all use est-/sta- roots for being) is worth the irregularity.
+
+Parked sub-questions:
+- A "variable" marker distinct from `lit` for cases where a name stands for something computed/derived (TODO.md "literal vs variable"). `lit/fin` handles the literal case; the variable case may need its own marker.
+- Tag questions ("she left, didn't she?") — sanity check that they compose from yes/no + negation.
+- Other copula-like senses: "X seems Y" (epistemic), "X becomes Y" (transition). Probably regular verbs, not copulas.

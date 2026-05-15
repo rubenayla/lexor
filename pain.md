@@ -55,6 +55,29 @@ Short, concrete examples of things natural languages get wrong. The "why" behind
   > "No, it *can be* measured at x. It isn't *at* anywhere until you look."
   - English merges Spanish *ser* (essence) and *estar* (state/location) into one verb, so "is at" smuggles in a claim about location that the speaker didn't intend.
 
+- **"The password is incorrect."**
+  > "What's the password? Incorrect?"
+  - The password *has the property* of being wrong, not the literal value "incorrect." Predication vs identity-with-string collapse.
+
+- **"My name is very stupid."**
+  > "Did your parents really name you that, or do you just dislike your name?"
+  - Could be predication (name has property "very stupid") or literal content (name = the string "very stupid"). One copula, two meanings.
+
+- **"A whale is a mammal."**
+  > "So whales and mammals are the same thing?"
+  - It's set membership (`whale ∈ mammals`), not identity. English "is" hides which relation is meant. Most people don't notice until you ask "is mammal-ness the same as whale-ness?"
+
+- **"Mammals are animals."**
+  > "I have 4 mammals. Therefore I have 4 animals. But also: I have 1 animal group, mammals, in my house."
+  - Subset relation (`mammals ⊆ animals`) vs membership of the *group* in some classification. English collapses these.
+
+- **"There is a god."**
+  > "Where? Show me which god."
+  - Existence claim, not identity. English "is" overloads the existential with predication.
+
+- **"She is a doctor" vs "She is tired."**
+  - Permanent property vs current state. Spanish marks this (ser/estar); English doesn't. Medical/hiring/character-judgment ambiguities follow: "the patient is depressed" — clinical or just today? "He is reliable" — permanent trait or recent behavior?
+
 - **"Taper ratio: λ = c_tip / c_root."**
   > "A higher taper ratio means more taper, right?"
   - No — higher λ means *less* taper (a rectangular wing has λ = 1). The name implies the opposite of what it measures.

@@ -13,7 +13,8 @@ Open design questions parked here so we can address them one at a time.
     - [ ] **Prosodic disambiguation rule** for CV-vs-CVC overlap (e.g., digit `sa` 6 vs operator `sam` equal, digit `ko` 4 vs verb `kom` move). Likely a stress-and-timing convention.
     - [ ] **Distribution-shape roots** (gaussian, uniform, bimodal, etc.) for richer probabilistic quantifiers.
     - [ ] **Arbitrary-base spoken notation** (user's written `9_12.5` syntax — base-N representation of numbers).
-    - [ ] **Vague quantifiers** ("some", "all", "none", "many", "few"): part of this system or a separate operator class?
+    - [x] **Vague quantifiers** — partially resolved: `sol`/`tot`/`nul`/`kel` cover only/all/none/some. "Many"/"few" still open as fuzzy magnitude quantifiers.
+    - [ ] "Many" / "few" / "most" — fuzzy magnitude quantifiers, distinct from the precise `tot`/`kel`.
 - [x] **Trailing vowel for non-verb forms** — resolved: all words end in vowels (`CVCV(CV)`). Inner vowel reuses tense system; outer vowel is the role/case slot. See decisions.md and history.md 2026-05-15. Sub-questions still open:
     - [x] Which specific vowel = "atemporal / temporal-frame unspecified"? Resolved: `a`. Other tense vowels reassigned around it (see history.md 2026-05-15).
     - [x] Specific role-vowel assignments for outer slot — resolved: `a` default, `e` subject, `o` object, `u` recipient, `i` instrument. See decisions.md / history.md 2026-05-15.
@@ -29,8 +30,9 @@ Open design questions parked here so we can address them one at a time.
     - [ ] Lexical opposite marker (`love` → `hate`) — distinct from logical negation. Decide whether Lexor wants one and how it differs from `no-`.
     - [ ] Canonical stacking order for multiple prefixes (negation + interrogative + intensity, etc.) when more prefixes get added.
     - [ ] Reserve the prefix phonological inventory (which CV shapes are prefixes vs root onsets) so future prefixes don't collide.
-- [ ] **Literal vs variable marker** — "my name is very stupid" vs my name is `"very stupid"` (TODO.md:7).
-- [ ] **"is" overload** — distinguish "the password is [the string] incorrect" vs "the password has property incorrect" (TODO.md:13).
+- [x] **Literal marker** — resolved: `lit … fin` paired quotation markers. See decisions.md 2026-05-16. Sub-question still open:
+    - [ ] **Variable / placeholder marker** — distinct from literal: when `<path>` appears twice, is it the same value? When variable `X` is reused, do we treat it as a bound name? (TODO.md:88; checklist.md placeholders.)
+- [x] **"is" overload** — resolved: split into `sam` (identity), `est` (essential predication / ser), `sta` (state predication / estar), `mem` (membership), `tot+mem` (subset, composed), `kel` (existence, composed), `lit/fin` (paired quotation markers). Universal quantifier family also locked: `sol`/`tot`/`nul`/`kel`. See decisions.md and history.md 2026-05-16.
 - [ ] **Synonym/equivalence grouping** — comma-like marker for "scalar-first, wxyz, Hamilton convention" being three names for one thing (TODO.md:9).
 - [ ] **Rotation names** — names for X/Y/Z rotations (decisions.md:23-25).
 - [ ] **Multi-level sentence punctuation** — beyond comma, for nested clauses (decisions.md:26).

@@ -137,3 +137,17 @@
 - **Spatial preposition `lok`** — at / in / on (spatial location). Mnemonic: Latin *locus*. Pairs with `tep` as the spatial counterpart to the temporal "at." Full spatial-preposition family (under, over, near, beside, etc.) parked.
 - **Choice questions** compose: `ka X vel Y` — yes/no question over a disjunction.
 - **Person vs object distinction for `ka`** is contextual; explicit disambiguation marker parked for cases where context fails.
+- **"Is"-overload replacement set.** English/Spanish copulas collapse 7+ distinct semantic relations. Lexor splits them. Each speaks one relation, none speaks more than one.
+    - **`sam`** — identity (X = Y, symmetric). Reused from comparison operator. "Mark Twain `sam` Samuel Clemens."
+    - **`est`** — essential predication (X has-essential-property P). Spanish *ser*. "The sky `est` blue (always)."
+    - **`sta`** — state predication (X has-current-state P). Spanish *estar*. "She `sta` tired (right now)."
+    - **`mem`** — set membership (X ∈ Y). "A whale `mem` mammals."
+    - **Subset** (X ⊆ Y) is composed: `tot X mem Y` ("every X is-member-of Y"). No dedicated subset particle.
+    - **Existence** (∃X) is composed via the quantifier system: `kel X` ("some X") + verb-of-being or context. No dedicated existence-verb.
+    - **`lit … fin`** — paired open/close quotation markers for literal content. Mnemonics: "literal" / "finish." `name est lit very stupid fin` = "the name has the literal content 'very stupid'." Inside `lit … fin`, words are treated as raw string content, not parsed as Lexor predications.
+- **Universal-quantifier operator family** (closed class, CVC, locked):
+    - **`sol`** — only / restriction.
+    - **`tot`** — all / every (universal quantifier ∀).
+    - **`nul`** — none (no X has property P).
+    - **`kel`** — some (existential quantifier ∃).
+    - Plus the previously locked `pad` (distributive, each) and `mas` (collective, together).
