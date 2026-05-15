@@ -20,16 +20,19 @@ Lexor is a constructed language designed from first principles to maximize preci
 
 ## Working conventions
 - **Plan before building.** For non-trivial design decisions, debate one question at a time. Don't try to settle everything in one pass.
-- **Record decisions immediately.** Once a design call is made, append it to `decisions.md` and `history.md` so the reasoning survives.
-- **Park open questions in `tasks.md`.** Don't let unresolved questions clutter the active discussion.
+- **Every decision logs its rationale to `history.md`.** Not just *what* was decided — *why*, what alternatives were considered, what tradeoffs were accepted. `decisions.md` records the call; `history.md` records the reasoning. Future sessions and future-you need the rationale to evaluate edge cases and to know whether a past decision is still load-bearing when circumstances change. This is non-negotiable — if a round of work produced a decision, the rationale must be in `history.md` before the work is "done."
+- **Park open questions in `tasks.md`.** Don't let unresolved sub-questions clutter the active discussion. Tick boxes when resolved; add sub-questions when a decision spawns new ones.
+- **Update this file when you notice a missing rule.** If you find yourself repeatedly doing something that isn't documented here — re-explaining a convention, re-deriving a principle from prior decisions, or correcting yourself for forgetting a habit — that's a signal the rule belongs in `AGENTS.md`. Add it. The user shouldn't have to remind you twice.
 - **Root sourcing rule.** When picking a root, prefer the language whose everyday word for the concept matches the target meaning. Don't pull a Latin root if real speakers use a Germanic word (and vice-versa).
-- **Roots are concept-level.** A root represents the underlying concept, not a specific part of speech. Verb/noun/adjective forms come from markers on top. (See `history.md` 2026-05-15.)
+- **Roots are concept-level.** A root represents the underlying concept, not a specific part of speech. Verb/noun/adjective forms come from markers on top.
+- **Meta-principle: no mandatory grammatical marking.** Lexor never forces a speaker to commit to information they haven't decided on. Every grammatical category (number, gender, tense, definiteness, role) is opt-in. When designing any new feature, default to *optional with a neutral-default option* unless there's a strong reason otherwise.
 
 ## How to make progress
-The biggest blocker right now is the **part-of-speech / derivation marker system** — without it, the empty categories in `roots.md` (prepositions, conjunctions, nouns, adjectives, etc.) can't be filled responsibly. See `tasks.md` for the full list of parked decisions.
-
 When resolving an open question:
 1. Read `history.md` for prior reasoning on adjacent decisions.
 2. Lay out 2–4 concrete options with tradeoffs.
-3. Pick one, append the decision + rationale to `decisions.md` and `history.md`.
-4. Tick the corresponding box in `tasks.md`.
+3. Pick one. Append the decision to `decisions.md` and the full rationale (alternatives considered, tradeoffs accepted, links to related decisions) to `history.md`.
+4. Tick the corresponding box in `tasks.md`. Add any new sub-questions the decision spawned.
+5. Commit. Then either pause or pick another `tasks.md` item.
+
+The biggest current gaps are in vocabulary buildout (most root categories in `roots.md` are still empty headers) and in the precise temporal-modifier system (parallel to the quantifier system, also parked). See `tasks.md` for the full list.
