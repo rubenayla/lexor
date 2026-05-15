@@ -8,7 +8,10 @@ Open design questions parked here so we can address them one at a time.
 - [ ] **Quantifier / quantity system design** — separate module covering exact counts, ranges (2–8), and distributions (gaussian μ=15 σ=5), per the no-mandatory-marking principle. Connects to checklist.md:97, :120.
 - [ ] **Trailing vowel for non-verb forms** — for nouns/adjectives (e.g. `loman`, `lomer`, `lomet`, `lomes`), the word currently ends in a consonant. Decide: does it end there, or does an optional final vowel carry something (definiteness? case? something else)? Verbs use the final vowel for tense; nouns/adjectives may or may not need a parallel slot.
 - [ ] **Verb shape** — confirm CVC-root + vowel-for-tense (roots.md:40 currently marked TODO).
-- [ ] **Negation** — how to negate adjectives and verbs (TODO.md:15).
+- [x] **Negation** — resolved: prefix `no-`, phonologically bound to its host. See decisions.md and history.md 2026-05-15. Related sub-questions parked:
+    - [ ] Lexical opposite marker (`love` → `hate`) — distinct from logical negation. Decide whether Lexor wants one and how it differs from `no-`.
+    - [ ] Canonical stacking order for multiple prefixes (negation + interrogative + intensity, etc.) when more prefixes get added.
+    - [ ] Reserve the prefix phonological inventory (which CV shapes are prefixes vs root onsets) so future prefixes don't collide.
 - [ ] **Literal vs variable marker** — "my name is very stupid" vs my name is `"very stupid"` (TODO.md:7).
 - [ ] **"is" overload** — distinguish "the password is [the string] incorrect" vs "the password has property incorrect" (TODO.md:13).
 - [ ] **Synonym/equivalence grouping** — comma-like marker for "scalar-first, wxyz, Hamilton convention" being three names for one thing (TODO.md:9).

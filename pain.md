@@ -4,28 +4,34 @@ Short, concrete examples of things natural languages get wrong. The "why" behind
 
 ## Ambiguity you can't fix without rephrasing
 
-- **"only uses" vs "uses only"** — "WIF bitcoin keys only use uppercase K and L to start the keys."
-  - Reading A: K and L appear *only* at the start (nowhere else).
+- **"only uses" vs "uses only"** — "This password only uses the letters K and L at the start."
+  - > "Wait, so I can't use K or L anywhere else in the password?"
+  - Reading A: K and L appear *only* at the start (nowhere else in the password).
   - Reading B: the start is *only* K or L (no other letters there; K/L may appear elsewhere too).
   - English forces you to rewrite the sentence to disambiguate.
 
 - **"A and B or C"** — is it `(A and B) or C`, or `A and (B or C)`?
+  - > "I spent an hour computing the specific thrust of the diffuser. Turns out only the efficiency was about the diffuser."
   - In Spanish class: *"Determinar el empuje específico, el impulso específico y el rendimiento isentrópico del difusor"* — does "del difusor" modify all three, or only the last? Had to ask classmates.
 
 - **"The 12 cities marked in red have the same population as NYC."**
+  - > "So each of those cities is the size of New York?? That can't be right."
   - Each city ≈ NYC? Or the sum of the 12 ≈ NYC?
 
 - **"I have 10 dollars."**
-  - Exactly $10? Or at least $10 (I actually have $1000, statement is still "true")?
-
-- **"I have 3 pens" / "I have 2 pens"** — if I have 3, is "I have 2" true? Existence vs exact quantity collapsed into one phrasing.
+  - > "It's impossible to have $100 without also having $10."
+  - Exactly $10? Or at least $10?
 
 - **"Returns a list of rotations between 001, the z axis in object frame, and the origin system."**
   - Three entities? Or two, with "the z axis in object frame" being an apposition for 001? A comma can't carry that weight.
 
-- **"Write a password with no spaces and |"** — no spaces *and* no `|`? Or "no spaces, and also `|` is something else entirely"? The elided verb makes "and"/"or" flip meaning.
+- **"Write a password with no spaces and |"**
+  - > "Why is `|` not allowed? It's a normal character." (the rule was: no spaces, *and* `|` is the separator — totally different meaning.)
+  - No spaces *and* no `|`? Or "no spaces, and also `|` is something else entirely"? The elided verb makes "and"/"or" flip meaning.
 
-- **"I bet I can do between three and four hundred pushups."** — 3–400, or 300–400?
+- **"I bet I can do between three and four hundred pushups."**
+  - > "Three to four hundred? Bro you can't even do 50." (he meant 3 to 400.)
+  - 3–400, or 300–400?
 
 - **"Mean sea level"** — mean over what dimension? Most people assume spatial mean over the globe; it's actually a temporal mean at each point. Language doesn't force you to say which axis the mean is over.
 
@@ -46,17 +52,23 @@ Short, concrete examples of things natural languages get wrong. The "why" behind
 
 ## Missing distinctions
 
-- **SER vs ESTAR** — English merges them into "to be". In quantum physics a particle *is* (ser) a particle, but doesn't *está* (estar) at a specific location until measured. English can't say that cleanly.
+- **SER vs ESTAR**
+  - > "The electron *is* at position x." — "No, it *can be* measured at x. It isn't *at* anywhere until you look."
+  - English merges them into "to be". In quantum physics a particle *is* (ser) a particle, but doesn't *está* (estar) at a specific location until measured. English can't say that cleanly.
 
 - **Top ≠ Up, Bottom ≠ Down** — direction vs location, often the same word.
 
 - **Length / width / height / depth / thickness** — all orientation-dependent. No clean way to say "longest dimension, second-longest, shortest" without picking an orientation.
 
-- **"Taper ratio" λ = c_tip / c_root** — a *more* tapered wing has a *smaller* λ. The name implies the opposite of what it measures. Real engineering confusion in textbooks.
+- **"Taper ratio" λ = c_tip / c_root**
+  - > "A higher taper ratio means more taper, right?" (no — it means less.)
+  - A *more* tapered wing has a *smaller* λ. The name implies the opposite of what it measures. Real engineering confusion in textbooks.
 
 - **Fat vs thin, hot vs cold** — no neutral noun for the axis. "Weight" and "temperature" exist; "fatness" and "hotness" carry a direction. Can't say "uncool the yogurt to room temp" without sounding wrong.
 
-- **"We"** — just-you-and-me / you-me-and-others / me-and-others-not-you. English collapses all three.
+- **"We"**
+  - > "Are we going to the party?" — "Wait, am I included in that 'we', or are you just asking if you and your roommate are going?"
+  - Just-you-and-me / you-me-and-others / me-and-others-not-you. English collapses all three.
 
 - **Source of information** — Cherokee marks whether you saw it yourself or were told. English makes you tack on "I heard that…" or "apparently…" optionally and inconsistently.
 
