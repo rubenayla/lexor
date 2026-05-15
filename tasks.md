@@ -6,7 +6,10 @@ Open design questions parked here so we can address them one at a time.
 - [x] **Part-of-speech marking** — resolved: suffix, vowel-initial, universal word shape `CVC + V[C]`. Derivation consonants: `r` agent, `n` act, `t` patient, `s` adjective. See decisions.md and history.md 2026-05-15.
 - [x] **Plural rule** — resolved: no plural inflection. Number is unspecified by default; quantity is a separate optional modifier system. See history.md 2026-05-15.
 - [ ] **Quantifier / quantity system design** — separate module covering exact counts, ranges (2–8), and distributions (gaussian μ=15 σ=5), per the no-mandatory-marking principle. Connects to checklist.md:97, :120.
-- [ ] **Trailing vowel for non-verb forms** — for nouns/adjectives (e.g. `loman`, `lomer`, `lomet`, `lomes`), the word currently ends in a consonant. Decide: does it end there, or does an optional final vowel carry something (definiteness? case? something else)? Verbs use the final vowel for tense; nouns/adjectives may or may not need a parallel slot.
+- [x] **Trailing vowel for non-verb forms** — resolved: all words end in vowels (`CVCV(CV)`). Inner vowel reuses tense system; outer vowel is the role/case slot. See decisions.md and history.md 2026-05-15. Sub-questions still open:
+    - [ ] Which specific vowel = "atemporal / temporal-frame unspecified" for the inner slot? (`y` is candidate but currently means "perfect/completed".)
+    - [ ] Specific role-vowel assignments for outer slot (subject, object, indirect, "role unspecified" default).
+    - [ ] Temporal-modifier system for precise time ("yesterday", "since 2020", "every Tuesday"). Parallels the quantifier system — both layer optional precision on top of coarse word-internal marking.
 - [ ] **Verb shape** — confirm CVC-root + vowel-for-tense (roots.md:40 currently marked TODO).
 - [x] **Negation** — resolved: prefix `no-`, phonologically bound to its host. See decisions.md and history.md 2026-05-15. Related sub-questions parked:
     - [ ] Lexical opposite marker (`love` → `hate`) — distinct from logical negation. Decide whether Lexor wants one and how it differs from `no-`.
