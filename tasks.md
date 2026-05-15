@@ -3,7 +3,7 @@
 Open design questions parked here so we can address them one at a time.
 
 ## Inbox
-- you agree VOS was the right choice?
+(empty — VOS question addressed; see history.md 2026-05-15)
 
 ## Design decisions to resolve
 - [x] **Part-of-speech marking** — resolved: suffix, vowel-initial, universal word shape `CVC + V[C]`. Derivation consonants: `r` agent, `n` act, `t` patient, `s` adjective. See decisions.md and history.md 2026-05-15.

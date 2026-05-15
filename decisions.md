@@ -97,3 +97,16 @@
     - Causation particle (TBD) + clause = reason ("because…")
 - **Relative-clause gap**: the modified noun fills the missing-position slot in the embedded clause. If the gap's role is non-default, role-vowel marks it; otherwise position handles it.
 - **Subordinate clause position**: after its host. Matches "thing first, modifiers after." Main clause first, subordinate hangs off.
+- **Meta-principle: vague is allowed, ambiguous is forbidden.** Every well-formed Lexor sentence has exactly one meaning. That meaning may include underspecified parameters — *vagueness* (one claim, some details unspecified) is a positive feature and is grammatically cheap (no extra marking). What's forbidden is *ambiguity* (two distinct meanings competing for the same syntactic form). When two readings would otherwise exist, structural rules force one or the speaker must mark / restructure to express the other; the unmarked form has *one* canonical meaning, which is often "speaker is not committing to that parameter." Listeners do not interpret — they take the structurally-given meaning at face value. Misalignment is the speaker's responsibility, not the listener's charity.
+- **Strict positional rules pin scope** (the structural side of the above principle):
+    - Modifier attachment: a modifier attaches to only the immediately adjacent unit. For wider scope, restructure (front the modifier as topic, or use named binding).
+    - Operator scope (`sol`, `no-`, `tot`, etc.): scopes over the immediately adjacent argument. Three positions = three distinct meanings.
+    - Quantifier scope: linear surface order = logical scope order. First quantifier has widest scope.
+    - Conjunction: pure AND sequences and pure OR sequences are flat and unambiguous. Mixed AND/OR is grammatically forbidden in flat form; speaker must use named binding to group.
+- **Distributive vs collective** (and other inherently positional-cue-free disambiguators):
+    - Unmarked = "speaker not committing" — vagueness, valid.
+    - `pad` = distributive (each individually).
+    - `mas` = collective (together as group).
+    - Three forms, three distinct meanings (one being explicit vagueness). No interpretation.
+- **Prosody is for focus and parsing aid, not scope resolution.** Stress marks the constituent in focus; pause + pitch reset matches written punctuation. Scope is already pinned by the strict positional rules and explicit markers above; prosody adds emphasis, not disambiguation.
+- **Named binding** (`def`-style construction, exact syntax TBD) is for compositional clarity of long expressions. Not an escape hatch for otherwise-ambiguous sentences (which shouldn't exist). Used for legal text, formal proofs, multi-level nested expressions where clause-stacking would overload working memory.

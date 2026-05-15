@@ -400,3 +400,73 @@ Parked sub-questions:
 - Embedded-question marker ("what she said") — needs the broader question system designed first
 - Multiple nested clauses — does `ke` stack cleanly, or do we need parenthesis-equivalent disambiguators?
 - Comma/pause prosodic conventions between main and subordinate
+
+## 2026-05-15 — VOS reflection (kept, not changed)
+User asked: was VOS the right choice?
+
+Honest assessment recorded so the question is settled rather than recurring:
+
+Facts:
+- VOS is rare cross-linguistically (~1–3% of natural languages — Malagasy, Tzotzil, some Philippine languages).
+- SOV ~45%, SVO ~42%, VSO ~9%. Most verb-initial languages are VSO, not VOS.
+
+Coherent arguments *for* keeping VOS in Lexor:
+- Predictable verb-object skeleton at the front means the subject is a clean optional tail. Drop the subject and nothing breaks — matches the no-mandatory-marking principle better than SVO would.
+- Object adjacent to verb keeps the patient/affected next to the action that operates on it.
+- Action-first matches "what happened?" priority in many situations.
+
+Real friction VOS introduces:
+- Heavy subject NPs bury the action at the far end.
+- Two animate nouns force role-vowel marking more often than SVO would (SVO has positional disambiguation between the nouns).
+- Runs against the L1 intuitions of ~87% of probable learners (SVO + SOV speakers).
+
+Honest alternative considered: **VSO** (verb-subject-object).
+- More common (~9%, well-attested: Welsh, Classical Arabic, Hawaiian, Tagalog, Biblical Hebrew).
+- Preserves verb-first action-prominence.
+- Matches natural agent→patient cognitive flow (the doer comes immediately after the verb; the patient lands at the end where heavy NPs typically prefer).
+- The "processing space after the verb" — listener processes the action with only the subject as additional info, then the object arrives last — is the structural reason VSO works in practice.
+
+Decision: **keep VOS, eyes open about the trade.** VSO is a low-cost retrofit if friction emerges in practice (only the relative position of subject vs object changes; role-vowel system handles either). This is not re-decided every time — see this entry instead.
+
+## 2026-05-15 — Scope, ambiguity, and the precision-by-default principle
+User raised the hardest design problem in the language: how do you eliminate ambiguity (multiple distinct meanings for the same sentence form) without making the language tedious? Bad laws and contract disputes are downstream of this failure across many natural languages.
+
+First proposal (rejected by user): a four-layer system with default positional rules + grammatical prosody + explicit operators + named binding. Critique was sharp and correct: the layered system left layers 2–4 *optional*, so sloppy speakers stay in Layer 1 and produce ambiguous sentences. Listeners then do the "interpret the obvious meaning" dance — exactly the rot we're trying to eliminate. The structure permits failure; "obvious interpretation" claims the failures as features.
+
+Revised principle (locked):
+
+**Every well-formed Lexor sentence has exactly one meaning. Vagueness allowed (one meaning with unspecified parameters); ambiguity forbidden (multiple distinct meanings competing for the same form).**
+
+Crucial distinction surfaced in clarification:
+- *Vague* = single meaning, parameters unspecified. "Some people came." Speaker doesn't say how many. ONE claim, with a gap. Cheap and natural — no extra morphology required.
+- *Ambiguous* = multiple distinct meanings. "The 12 cities have NYC's population." Could mean each-city or all-combined. The grammar must forbid this.
+
+This corrects an earlier overreach where I proposed mandatory `pad`/`mas` markers on every plural predication. That would force speakers to commit when they may genuinely not know. The correct rule: unmarked = "speaker is explicitly not committing" (vague, valid, short). Marked = one specific reading. Three forms, three distinct meanings (one of which is vagueness-as-a-statement).
+
+Listeners do not "interpret" — they take the grammar at face value. If the speaker said something vague, the listener knows it's vague. If the speaker wanted to commit, they would have marked. Misalignment is the speaker's responsibility for using wrong syntax, not the listener's burden to charitably guess intent.
+
+Structural mechanisms that achieve this:
+
+1. **Strict positional rules** pin scope:
+   - Modifier attachment: only to immediately adjacent unit. Wide scope requires restructuring (front the modifier) or named binding.
+   - Operator scope (`sol`, `no-`, `tot`): scopes over its adjacent argument. Three positions = three distinct meanings.
+   - Quantifier scope: linear order = logical scope. First mentioned has widest scope.
+   - Mixed AND/OR is grammatically forbidden in flat form; named binding required for grouping.
+
+2. **Optional disambiguation markers** for inherently positional-cue-free cases:
+   - `pad` (distributive) / `mas` (collective).
+   - "Is"-overload copula family (separate sub-question).
+   - Future: modal-scope markers when modals are designed.
+   - Unmarked = vagueness, single meaning.
+
+3. **Prosody is for focus and parsing aid, not scope.** Demoted from scope-resolution. Grammar already pins meaning; prosody adds emphasis and tracks phrase boundaries in real-time speech.
+
+4. **Named binding** for compositional clarity of long/complex expressions. Used in legal text, formal proofs, multi-level nesting. Not an escape hatch — those structures shouldn't exist; named binding helps when natural complexity overloads working memory.
+
+What this does NOT solve (honest residuals):
+- Reference resolution ("which man?" when context has multiple).
+- Genericity ("dogs bark" — all dogs, typical dogs, this kind of dog?).
+- Word-level vagueness ("tall" — how tall?). Numeric precision is available but speakers can't be forced to use it.
+- Idiom/figuration — Lexor probably rejects idioms entirely (compositional only) plus a literal-vs-figurative marker for metaphor.
+
+The "user-the-jerk" failure mode is structurally prevented. Sloppy speech becomes visibly imprecise (the marker would be there if precision were intended, and isn't) rather than disguising failure as natural ambiguity.
