@@ -119,3 +119,13 @@
     - `erg` — therefore / inference marker. Marks the sentence as a conclusion derived from prior premises. Mnemonic: Latin *ergo*.
     - `imp` — logical implication (above).
 - **Multi-step reasoning uses staged sentences, not nested conditionals.** Each premise / observation / conclusion is its own sentence. Modus tollens: `dat A imp B. no-B. erg no-A.` Three crisp sentences instead of one awkward nested one.
+- **Coordinators** (closed-class, for same-depth predication chaining):
+    - `kun` — AND. Latin *cum* ("with"). CVC.
+    - `vel` — OR. Latin *vel*. CVC.
+    - Pure-AND and pure-OR sequences are flat and unambiguous. Mixed AND/OR is grammatically forbidden in flat form; named binding required for grouping.
+- **Depth rule** for clause nesting and coordination:
+    - `ke` increases depth by 1 (descends into a subordinate clause on its host).
+    - `kun` / `vel` keep depth constant — they continue the current clause with another predication.
+    - Depth decreases automatically when a clause's verb has all its arguments filled and no coordinator continues it.
+    - No terminator words; depth ascent is signaled by argument-completion, not by an explicit closer.
+- **Clause-closure rule** (explicit): a clause introduced by `ke` is grammatically closed when all argument slots of its head verb are filled (counting the gap as one filled slot) AND no coordinator (`kun` / `vel`) follows. The next word goes to the next-outer open clause.

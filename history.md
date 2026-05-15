@@ -531,3 +531,36 @@ Parked sub-questions:
 - Scope-of-premise: when does a `dat`-asserted premise expire? Until end of paragraph? Until explicit retraction? Probably until discourse turn ends, but needs design.
 - Other proof-structuring particles: "suppose for contradiction," QED-marker, case-splitting marker. Defer until they arise.
 - Whether `imp` needs siblings for necessary vs sufficient implication, biconditional, etc.
+
+## 2026-05-15 — Coordinators (`kun`, `vel`) and the depth rule
+User asked: how does a listener parse multiple predications at the same depth inside a subordinate clause? Would you repeat `ke`?
+
+Repeating `ke` doesn't work — the adjacency rule says each `ke` attaches to its immediately preceding noun, so a second `ke` would descend further (relative clause on the previous noun), not stay at the current level.
+
+Real cases for same-depth multi-predication:
+- "The man who saw the dog and bit the cat" — both predications about the man.
+- "The eater who eats food or drinks water" — disjunction at the same depth.
+
+Solution: dedicated coordinators that signal "same depth, another predication."
+
+Locked:
+- **`kun`** — AND. Latin *cum* ("with, together"). CVC, free.
+- **`vel`** — OR. Latin *vel*. CVC, free.
+
+Mixed AND/OR remains forbidden in flat form (already decided); named binding required to group.
+
+Worked example: "The man who saw the dog and bit the cat"
+- `man ke vise dog kun bite cat`
+- Parse: `man` outer noun, `ke` opens relative clause on man, `vise dog` first predication (gap=subject, object=dog) closes, `kun` says same-depth continuation, `bite cat` second predication (gap=subject, object=cat) closes, no more coordinators → ascend.
+
+Contrast: "The man who saw the dog that bit the cat" — `man ke vise dog ke bite cat`. Second `ke` descends (attaches to `dog`). Different particle, different depth.
+
+Depth rule made explicit:
+- `ke` → +1 depth.
+- `kun` / `vel` → same depth (continue current clause).
+- Verb-argument completion + no following coordinator → automatic ascent.
+- No terminator words; ascent is signaled by argument-counting, not by an explicit closer.
+
+Closure rule made explicit: a clause introduced by `ke` is grammatically closed when all argument slots of its head verb are filled (the gap counts as one filled slot) AND no coordinator follows. Next word goes to next-outer open clause.
+
+Edge case acknowledged: coordinated relative clauses where the gap fills different slots in each clause (e.g., "the man whom I see and who saw the dog" — gap is object of first verb, subject of second). Naive chaining loads role-vowel disambiguation onto the listener. Solution: named binding restructures into atomic sentences. Same pattern as deep nesting — when complexity threatens working memory, name and split.
