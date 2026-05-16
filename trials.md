@@ -263,6 +263,16 @@ See A5.
 Three structurally distinct shapes; no overload.
 **How:** decisions.md axis system (2026-05-16).
 
+### G6. Compact angle expression [feature, passes]
+**Capability:** Express any angle around any axis, compactly, in fractions of a revolution.
+**Lexor:**
+- 90° left: `rot zo doz re aks sur e` (= 1/4 around Z, +)
+- 30° forward tilt: `rot zo doz pa aks lat e`
+- 180° turnabout: `rot zo doz sa aks sur e`
+- Noun form: `rota <amount> aks <ax>`
+- Reference "12 o'clock" = `aks fas mag` (forward). Positive Z-rotation = leftward (counterclockwise from above).
+**How:** decisions.md angle convention (2026-05-16). Builds on the axis system, no new roots.
+
 ### G5. Neutral axis names (length / width / height) [feature, passes]
 **Capability:** Talk about "longest dimension," "shortest dimension" without picking an orientation.
 **Lexor:** Object-frame ranks `aks pa` (longest), `aks du` (middle), `aks re` (shortest). Magnitude via `mez aks pa bra X ket` = "the longest dimension of X."

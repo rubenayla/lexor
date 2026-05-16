@@ -184,3 +184,8 @@
     - Polarity reuses comparison operators: `mag` (+ end) / `min` (− end). Mnemonic: positive end is the greater coordinate.
     - Agent-frame axes match the locked `rot fas/lat/sur` rotation pattern; no new axis roots needed for X/Y/Z.
     - Closes trials.md G3 (sentido), G4 (direction vs location), G5 (orientation-free dimension names). See history.md 2026-05-16 for alternatives considered.
+- **Angle convention.** Angles expressed as fractions of a full revolution (number in any base, no new units). Dozenal is the natural base: `zo doz pa` = 1/12 (30°), `zo doz re` = 1/4 (90°), `zo doz sa` = 1/2 (180°), `zo doz pa sa` = 0.16 doz = 1/8 (45°). Decimal works too: `zo dem du fi` = 0.25 = quarter turn. Sign: positive amount = right-handed rotation around the named axis (counterclockwise looking from + end of axis). For agent's `aks sur` (Z), positive rotation goes leftward from forward — consistent with the locked coord system (X forward, Y left, Z up, right-handed). Axis stated explicitly; no implicit default. Reference direction (for "starting where") = agent's +X (forward). Surface forms:
+    - Verb (action): `rot <amount> aks <ax> <subj>` — "rotate by amount around axis."
+    - Noun (quantity): `rota <amount> aks <ax>` — "rotation of amount around axis." (Uses the existing atemporal-derived form of `rot`.)
+    - Cardinal directions remain compact via `aks <ax> <pol>`; non-cardinal directions compose with `rota` over `aks fas mag` reference.
+    - No new roots. Closes trials.md G6 (compact angle expression). See history.md 2026-05-16.

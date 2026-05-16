@@ -1306,3 +1306,41 @@ All three checked against lexicon: no collisions.
 - **Direction from `dir` (toward)** as a verb — current `dir` is a preposition (toward); could derive a verbal "head toward" form, but parked.
 - **"Width" specifically** as opposed to "the Y dimension" — English has cultural overlay on width (often shorter horizontal). Not modeled; speakers use object-rank or agent-Y as appropriate.
 - **Negative magnitudes** — `mez` produces a non-negative number. Signed magnitudes (like in physics displacement) compose with `mag`/`min` on top. Convention parked.
+
+---
+
+## 2026-05-16 — Angle convention
+
+### What was decided
+Angles expressed as fractions of a full revolution; no dedicated angle unit, no new roots. Sign by right-handed convention around the named axis. Reference direction (for starting "where") = agent's +X (forward), per the locked coord system (X forward, Y left, Z up). Verb form `rot <amount> aks <ax>`; noun form `rota <amount> aks <ax>` using the atemporal derivation.
+
+### Why no new roots
+The existing infrastructure carries the load:
+- `rot` (verb root: rotate) — derivation gives `rota` for the noun "rotation/angle."
+- `aks <ax>` — names the rotation axis.
+- digit-stream + `dem`/`doz` — gives any numeric magnitude in any base.
+- `min`/`mag` — sign on the magnitude.
+
+Adding a unit root (like `rev` or `tur`) was considered and rejected: the number IS the unit count, by convention. Same principle as Lexor not having "second/minute/hour" suffixed to numbers — the type-context tells you what the number measures.
+
+### Why fractions of a revolution (not degrees, not radians)
+- Degrees (1/360) are arbitrary (Babylonian sexagesimal artifact) and 360 is awkward in dozenal.
+- Radians are mathematically nice but require π for any cardinal angle — speakers can't say "quarter turn" without invoking π/2.
+- Revolutions are universal, intuitive, base-agnostic, and dozenal-friendly: 1/12 = `zo doz pa`, 1/4 = `zo doz re`, 1/2 = `zo doz sa`. Every cardinal angle has a finite expansion in dozenal.
+
+### Sign convention rationale
+Right-handed rotation around the named axis is the physics/math standard and matches the locked coord system. For everyday rotations around Z (looking down at a horizontal plane), positive = counterclockwise = "turning left" for an agent facing +X. The user's "9 o'clock = 0.25 revolutions" check passes: 9 o'clock (left side of a viewer-facing clock) = +Y = quarter turn counterclockwise from +X = +0.25 around +Z. ✓
+
+The "3 o'clock" = right side is `-0.25` (or `+0.75`). The clock analogy is *flipped* relative to physics convention; speakers used to clocks will need to remember this. Documented; accepted.
+
+### Reference direction
+Locked: when the angle is given without a "from where" specifier, the implicit reference is the agent's +X (forward). This handles the "12 o'clock = 0" case naturally. Speakers wanting a different reference (e.g., compass north) must state it explicitly.
+
+### Closes
+- trials.md **G6 compact angle expression** [feature, passes].
+
+### Parked
+- Compass / geographic directions (N/S/E/W) — still need a separate convention if Earth-frame is ever required. Not blocking; defer.
+- Solid angles (steradians) — 3D angular measure, parked. Same fraction-of-sphere convention would extend naturally.
+- Spherical coordinates (longitude + latitude for a direction in 3D) — composable from two angle expressions, but the ergonomic shorthand is parked.
+- Angular velocity / acceleration — composable from `rot` + temporal derivatives, but no specific syntax locked.

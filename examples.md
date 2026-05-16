@@ -112,6 +112,20 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 49p. `aks fas mag bra trafik ket` — "the (forward) direction of the traffic flow" (sentido, polarized).
 49q. Object-frame ranks: `mez aks pa` (longest dimension), `mez aks du` (middle), `mez aks re` (shortest). Doesn't presume orientation.
 
+## 9d. Angles (fractions of a revolution)
+
+49r. `rot zo doz re aks sur e` — "She turns 90° left." (Rotate by 1/4 = `zo doz re` = 0.25 around Z, positive direction.)
+49s. `rot zo doz sa aks sur e` — "She turns around (180°)." (1/2 revolution around Z.)
+49t. `rot zo doz pa aks lat e` — "She tilts forward 30°." (1/12 revolution around Y, the lateral axis.)
+49u. `rot min zo doz re aks sur e` — "She turns 90° right." (Negative quarter rev around Z.)
+49v. `sam zo doz sa rota bra his approach ket aks sur` — "His angle of approach is 180° around Z." (Noun form via `rota`.)
+49w. Cardinal vs angular reference points around Z, starting from forward (+X = "12 o'clock"):
+   - 12 o'clock (forward): `aks fas mag` (cardinal) or `rota zo aks sur` (angle 0).
+   - 9 o'clock (left): `aks lat mag` (cardinal) or `rota zo doz re aks sur` (angle 1/4 = 0.25 dec = 0.3 doz).
+   - 6 o'clock (back): `aks fas min` (cardinal) or `rota zo doz sa aks sur` (angle 1/2).
+   - 3 o'clock (right): `aks lat min` (cardinal) or `rota min zo doz re aks sur` (angle −1/4).
+49x. Non-cardinal "1:30 o'clock" (45° clockwise from 12) = `rota min zo doz pa sa aks sur` ≈ "rotation of −1/8 around Z."
+
 ## 10. Reasoning chain
 
 49. `dat pluvo` — "Given that it rained." (premise)

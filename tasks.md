@@ -56,6 +56,10 @@ Open design questions parked here so we can address them one at a time.
     - [ ] Compass directions (N/S/E/W) — need dedicated roots or compositional Earth-frame system.
     - [ ] Gravity-as-axis vs Z-axis distinction — defer until a trial exposes the need (vehicles, spacecraft).
     - [ ] Signed magnitudes (physics displacement, negative values) — compose `mag`/`min` on top of `mez`; convention not yet locked.
+- [x] **Angle convention** — resolved 2026-05-16: angles as fractions of a revolution, right-handed sign around the named axis, reference +X. No new roots; reuses `rot`/`rota` + `aks` + digit-stream. Closed trial G6. See decisions.md / history.md 2026-05-16. Sub-questions parked:
+    - [ ] Solid angles (3D angular measure).
+    - [ ] Spherical-coordinate shorthand for arbitrary 3D directions.
+    - [ ] Angular velocity / acceleration syntax (composable but not formalized).
 - [x] **Named binding for compositional clarity** — locked as concept (`def`-style construction for long expressions). Sub-questions still open:
     - [x] Specific `def`-construction syntax — resolved: `def var <name> <expression>`. Bare `def` is the binding op; explicit retraction `nul def var <name>`; shadowing on re-`def`. See decisions.md / history.md 2026-05-16.
     - [x] Scope of named bindings — resolved (default): discourse-local. Sentence-local and explicit-block scopes parked; revisit only if examples.md exposes a need.
