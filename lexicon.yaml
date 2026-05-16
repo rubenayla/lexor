@@ -76,6 +76,11 @@
 - {root: kan,   kind: marker, concept: "epistemic possibility (may/can/possibly)", source: "English can / German kann / Dutch kan / Swedish kan", notes: "Sentence-initial; scopes over the rest of the clause. Composes with `no-`. Dual of `mus` but locked directly to avoid forced composition. Epistemic flavor only — deontic permission parked."}
 - {root: mus,   kind: marker, concept: "epistemic necessity (must/necessarily)",   source: "English must / German muss",                                  notes: "Sentence-initial; scopes over the rest of the clause. Composes with `no-`. Dual of `kan`. Epistemic flavor only — deontic obligation parked."}
 
+# Axis system (G3/G4/G5 closures, 2026-05-16)
+- {root: aks,   kind: marker, concept: "axis (1D directed line, unsigned)",        source: "English axis / Latin axis",     notes: "Composes with spatial preposition for agent-frame axis (`aks fas` = X, `aks lat` = Y, `aks sur` = Z); with digit for object-frame rank (`aks pa` = longest, `aks du` = middle, `aks re` = shortest). Polarity added via `mag` (+) / `min` (-)."}
+- {root: tip,   kind: marker, concept: "endpoint / extremum along an axis",        source: "English tip",                   notes: "Composes with `aks <axis> <polarity>` to locate the extreme point. `tip aks sur mag bra X ket` = the top of X. Distinguishes 'top' (location) from 'up' (direction)."}
+- {root: mez,   kind: marker, concept: "dimensional magnitude (length along axis)", source: "Spanish/Latin medir/metiri", notes: "Composes with `aks <axis>` to produce the size-along-that-axis as a number. `mez aks pa bra X ket` = the longest dimension of X. Bridges geometric axes to numeric magnitudes."}
+
 # =============================================================================
 # COORDINATORS
 # =============================================================================

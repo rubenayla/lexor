@@ -249,19 +249,24 @@ See A5.
 **Trial:** `rot fas` (roll), `rot lat` (pitch), `rot sur` (yaw).
 **How:** decisions.md rotation names (2026-05-16).
 
-### G3. Direction-sense ("sentido") [feature, open]
-**Capability:** Two-direction-along-one-axis distinction without two separate words.
-**Trial goal:** "Forward" and "backward" share a root; vowel distinguishes the sense.
-**Status:** Open; no axis-with-polarity-marker root family yet.
+### G3. Direction-sense ("sentido") [feature, passes]
+**Capability:** Two-direction-along-one-axis distinction sharing a root.
+**Lexor:** `aks fas mag` (forward) / `aks fas min` (backward) — same axis root, polarity from `mag`/`min`.
+**How:** decisions.md axis system (2026-05-16).
 
-### G4. Direction vs location [feature, open]
-**Capability:** "Up" (direction) ≠ "top" (location), but possibly same root.
-**Status:** Open. Probably composes from existing spatial preps + a direction-marker, but the marker isn't designed yet.
+### G4. Direction vs location [feature, passes]
+**Capability:** "Up" (direction) ≠ "top" (location).
+**Lexor:**
+- Direction: `aks sur mag` — Z-axis with + polarity.
+- Location: `tip aks sur mag bra X ket` — the extreme point at the + end of X's Z axis.
+- Relational location (already locked): `sur X` — somewhere above X.
+Three structurally distinct shapes; no overload.
+**How:** decisions.md axis system (2026-05-16).
 
-### G5. Neutral axis names (length / width / height) [feature, open]
+### G5. Neutral axis names (length / width / height) [feature, passes]
 **Capability:** Talk about "longest dimension," "shortest dimension" without picking an orientation.
-**Trial goal:** "Longest-axis 3 m, shortest 1 m" works for any object regardless of how it's standing.
-**Status:** Open. Needs an axis-by-rank-not-by-orientation root.
+**Lexor:** Object-frame ranks `aks pa` (longest), `aks du` (middle), `aks re` (shortest). Magnitude via `mez aks pa bra X ket` = "the longest dimension of X."
+**How:** decisions.md axis system (2026-05-16). Convention: "longest is rank 1."
 
 ---
 

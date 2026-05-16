@@ -1244,3 +1244,65 @@ Alternative considered: modal-as-trailing-suffix on the verb (like Turkish/Japan
 - **Alethic modality**: split from epistemic if a logical/metaphysical trial exposes the need.
 - **Probability operator surface form**: D6 stays open; the modal infrastructure is necessary but not sufficient. Needs a separate round to pick the syntax.
 - **Counterfactual conditionals**: "If she had eaten, she would not be hungry now" — distinct from the locked `is` (real conditional) and `imp` (formal implication). Parked, no trial yet.
+
+---
+
+## 2026-05-16 — Axis system (G3/G4/G5 closures)
+
+### Why this round
+User handed design autonomy again after the modal-operators round. Direction family was the highest-leverage remaining cluster on the trials inventory: G3 (sentido), G4 (direction vs location), G5 (neutral axis names) all blocked on the same missing structural concept — a way to talk about *axes themselves* (as abstract directed lines) independent of relational location.
+
+### Conceptual factoring
+English collapses these four distinct concepts:
+1. **An axis** — a 1D directed line through space (Z axis, longest axis).
+2. **A direction** — axis + polarity ("upward," "leftward").
+3. **An endpoint / extremum** — the extreme point at one end of an axis ("top of the box").
+4. **A magnitude** — the length of an object along an axis ("height").
+
+"Up" in English drifts between (2) and (3). "Top" hides (3) and a relational reading. "Height" is (4) but assumes vertical-orientation. Lexor needs distinct surface shapes for all four.
+
+### What was decided
+Three closed-class composable roots:
+- `aks` — axis. Composes with spatial preposition for agent-frame axis (`aks fas` X, `aks lat` Y, `aks sur` Z) or with digit for object-frame rank (`aks pa` longest, `aks du` middle, `aks re` shortest).
+- `tip` — endpoint / extremum. `tip aks <ax> <pol>` gives the extreme point in that direction along an axis.
+- `mez` — dimensional magnitude. `mez aks <ax>` gives the length-along-that-axis as a number.
+
+Polarity reuses the existing comparison operators `mag` (+) / `min` (−). No new polarity root needed.
+
+Agent-frame axes reuse spatial prepositions `fas`/`lat`/`sur` — same as the locked rotation names `rot fas/lat/sur` (2026-05-16). No new axis roots needed; the structural cue ("preposition after `aks`") generalizes the existing pattern.
+
+### Surface forms
+- `aks` — VCC. Closed-class shape OK. Mnemonic: English/Latin *axis*.
+- `tip` — CVC. Mnemonic: English *tip* (end of anything).
+- `mez` — CVC. Mnemonic: Spanish/Latin *medir/metiri* (to measure).
+
+Initial proposal had `pek` for endpoint, but caught by the phonetics check: `pek` ends in /k/, which phonetics.md rule 1 forbids. Swapped to `tip` — better mnemonic anyway (general "endpoint" rather than vertical-biased "peak").
+
+All three checked against lexicon: no collisions.
+
+### Alternatives considered and rejected
+- **Single direction roots, no `aks`** (use `fas mag` for forward, `sur min` for downward, etc.) — rejected: collides with the relational reading of spatial prepositions. `sur X` already means "above X"; adding `sur mag` as a separate noun-phrase reading creates ambiguity.
+- **Vowel-encoded polarity on the preposition** (`fas-e` forward, `fas-o` backward) — rejected: clashes with the existing role-vowel suffix system.
+- **Compose with `dir` (toward)** to derive directions (`dir fas` forward, `dir sub` downward) — rejected because the lateral (Y) axis lacks paired left/right prepositions; the system would have a gap.
+- **Drop `mez`, let `aks` carry magnitude by metonymy** (like English "length" doubles as direction + magnitude) — rejected: violates precision-by-default. An axis (geometric) and its length (numeric) are different types; the type-coercion would be ambiguous in unobvious cases.
+- **Drop `aks`, just use `tip` and `mez` over prepositions directly** — rejected: same relational-vs-axis ambiguity as the first alternative.
+- **Use `lon`/`med`/`kor` (long/middle/short) for object-frame ranks** — rejected in favor of digit reuse. `aks pa/du/re` falls out of the existing digit system, no new roots, and matches the "longest is rank 1" convention.
+- **`pek` for endpoint** — rejected at phonetics check (/k/-final). Replaced by `tip`.
+
+### Closes
+- **G3 sentido** — `aks fas mag` (forward) vs `aks fas min` (backward). Same axis root, polarity distinguishes.
+- **G4 direction vs location** — `aks sur mag` (direction) vs `tip aks sur mag bra X ket` (location at X's top) vs `sur X` (relational, somewhere above). Three structurally distinct shapes.
+- **G5 neutral axis names** — `aks pa/du/re` for object-frame ranks; `mez aks pa` for "longest dimension." Orientation-free.
+
+### What this unblocks
+- Coordinate-system expressions for navigation and physics.
+- "Height of an object lying on its side" without contradiction.
+- "Sentido del tráfico" cleanly expressible (`aks fas mag/min` over the traffic compound).
+- Geometric / engineering vocabulary that needs axis-talk: vectors, gradients, slopes.
+
+### Parked
+- **Compass directions** (N, S, E, W) — need dedicated roots or compositional from an Earth-frame system. Punt.
+- **Gravity-as-axis vs Z-axis** — sometimes "up" means "against gravity" (frame-of-reference matters in vehicles, spacecraft). Defer until a trial exposes the need.
+- **Direction from `dir` (toward)** as a verb — current `dir` is a preposition (toward); could derive a verbal "head toward" form, but parked.
+- **"Width" specifically** as opposed to "the Y dimension" — English has cultural overlay on width (often shorter horizontal). Not modeled; speakers use object-rank or agent-Y as appropriate.
+- **Negative magnitudes** — `mez` produces a non-negative number. Signed magnitudes (like in physics displacement) compose with `mag`/`min` on top. Convention parked.

@@ -52,6 +52,10 @@ Open design questions parked here so we can address them one at a time.
     - [ ] Alethic vs epistemic split — refine if a logical/metaphysical trial exposes the need.
     - [ ] Probability operator surface form (trial D6) — infrastructure exists via `kan` + numeric; specific shape pending.
     - [ ] Counterfactual conditionals ("if she had eaten...") — distinct from `is`/`imp`. Parked.
+- [x] **Axis system: aks / tip / mez** — resolved 2026-05-16. Closed trials.md G3 (sentido), G4 (direction vs location), G5 (neutral axis names). Three new closed-class composable markers; agent-frame axes reuse spatial prepositions, object-frame ranks reuse digits, polarity reuses `mag`/`min`. See decisions.md / history.md 2026-05-16. Sub-questions parked:
+    - [ ] Compass directions (N/S/E/W) — need dedicated roots or compositional Earth-frame system.
+    - [ ] Gravity-as-axis vs Z-axis distinction — defer until a trial exposes the need (vehicles, spacecraft).
+    - [ ] Signed magnitudes (physics displacement, negative values) — compose `mag`/`min` on top of `mez`; convention not yet locked.
 - [x] **Named binding for compositional clarity** — locked as concept (`def`-style construction for long expressions). Sub-questions still open:
     - [x] Specific `def`-construction syntax — resolved: `def var <name> <expression>`. Bare `def` is the binding op; explicit retraction `nul def var <name>`; shadowing on re-`def`. See decisions.md / history.md 2026-05-16.
     - [x] Scope of named bindings — resolved (default): discourse-local. Sentence-local and explicit-block scopes parked; revisit only if examples.md exposes a need.

@@ -98,6 +98,20 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 49e. `kan lok-x i kun kan lok-y i kun no- mes` — "Possibly at-x AND possibly at-y AND no measurement." (quantum superposition without smuggling in a definite location)
 49f. `dik e ke kan pluve` — "She says that it might rain." (modal inside a complement clause)
 
+## 9c. Axis system (aks / tip / mez)
+
+49g. `aks fas` — "the X axis (forward-back axis, agent-frame)."
+49h. `aks sur mag` — "upward direction" (Z axis, + polarity).
+49i. `aks sur min` — "downward direction" (Z axis, − polarity).
+49j. `gol aks fas mag e` — "She goes forward." (motion verb + direction)
+49k. `tip aks sur mag bra box ket` — "the top of the box" (extreme point at +Z end of the box).
+49l. `sta sus tip aks sur mag bra box ket` — "the top of the box is dirty."
+49m. Contrast: `sur box` (relational: somewhere above the box) vs `tip aks sur mag bra box ket` (intrinsic: the top extreme of the box itself).
+49n. `mez aks sur bra box ket` — "the height of the box" (magnitude along Z axis).
+49o. `sam re metr mez aks pa bra box ket` — "the longest dimension of the box equals 3 meters." (Object-frame, orientation-free.)
+49p. `aks fas mag bra trafik ket` — "the (forward) direction of the traffic flow" (sentido, polarized).
+49q. Object-frame ranks: `mez aks pa` (longest dimension), `mez aks du` (middle), `mez aks re` (shortest). Doesn't presume orientation.
+
 ## 10. Reasoning chain
 
 49. `dat pluvo` — "Given that it rained." (premise)
