@@ -770,3 +770,101 @@ Worked examples:
 ### Parked
 - Cause-vs-purpose split on `kaw` — only if real ambiguity surfaces during examples.md validation.
 - "Mode" in the statistical sense, "modal" in the modal-logic sense — compose from `mod` + qualifiers rather than dedicate new roots, unless examples.md forces a split.
+
+## 2026-05-16 — Variable marker `var`, no lexical opposite, `def` syntax locked
+
+Closed the second sub-batch of Session N+1: the variable/placeholder marker (item 4 in the plan), the lexical-opposite question (item 11), and the exact form of named-binding `def` (item 6). These three were grouped because they touch the same conceptual region (markers that flag a word as something other than a plain content reference) and decisions on one constrain the others.
+
+### Variable/placeholder marker: `var`
+
+Question opened: how does Lexor flag a word as a placeholder or bound variable, distinct from a regular noun and distinct from a literal string?
+
+Already-locked context: `lit … fin` is paired open/close quotation for *literal* content — the inside is raw string, not a parsed predication. The remaining case is the *variable* one: "go to `<path>` and read `<path>`" (template slot, both occurrences refer to the same unfilled position) or "let X = ..., then X..." (bound name standing for a computed expression). Neither is literal — the slot/name *will be* substituted with real content.
+
+Two cases — but they collapse to one marker. In both, the function is: "treat the marked word as a slot-or-name, not as its regular meaning." Whether that slot is filled later by context (template) or by an explicit binding (formal expression) is a separate question handled by `def` (below).
+
+Options considered:
+- `var` — transparent English/Latin (*variabilis*). Clean CVC. Immediately recognizable to anyone with programming or math exposure.
+- `nom` — Latin *nomen* "name". Too generic; "name" as a regular noun is already needed in everyday vocabulary, will collide.
+- `pla` — from "placeholder". Weak mnemonic outside English; "place" is also a likely future root.
+- A vowel-prefix like `i-` or `a-` — too short, collides with role vowels and conditional-prefix slots.
+
+Picked **`var`**. Single-word scope (the immediately following word). Composable: `var path` is a slot/name named "path". Two occurrences of `var path` in the same discourse refer to the same slot. Distinct from regular `path`, which means the actual noun.
+
+Worked examples:
+- `golo u tep var path. kompo u var path` → "Go to var-path. Fix var-path." Both `var path` refer to the same slot; the listener understands they get filled with the same value.
+- `def var x sam [biggest prime ant 100]. mag var x 50` → "Let var-x be the biggest prime before 100. Var-x is greater than 50." (See `def` below for the binding syntax.)
+- `koma var [food-item] e` → "She eats var-food-item." A template where var-food-item is unfilled, awaiting context.
+
+Interaction with other markers:
+- `var` + `lit/fin`: distinct, no overlap. `lit incorrect fin` is the literal string "incorrect"; `var x` is a placeholder named x.
+- `var` + `no-`: composes. `no-var x` = "not var-x" (logical negation of the bound value).
+- `var` + role vowels: composes. `var x-e` = subject-marked slot.
+
+### Lexical opposite marker: rejected
+
+Question opened: should Lexor have a productive prefix like Esperanto's `mal-` that derives a lexical opposite of an adjective/state (love → hate, hot → cold), distinct from logical negation `no-`?
+
+The real distinction this would capture: English "I don't love her" (logical neg, neutral about positive/negative feeling) vs "I hate her" (specific positive antipathy). Spanish makes the same distinction. A productive opposite-marker on `am` (love) would give `mal-am` = hate, saving the root.
+
+Options considered:
+- Adopt `kon` (Latin *contra* / English *contra-, counter-*) — neutral connotation, recognizable.
+- Adopt `mal` (Esperanto-style) — proven cross-linguistic but connotation-loaded (mal = "bad" in Romance, biases the marker).
+- Reject the marker entirely. Use separate roots for each antonym.
+
+Picked **reject**. Rationale:
+
+1. "Opposite" is sharply defined only for binary/scalar concepts. For "red" the additive opposite is cyan, the subtractive is green — vague. For "house", "run", "sleep" — undefined. A productive marker with a fuzzy domain creates fake words.
+
+2. Per the precision-by-default meta-principle, every productive operator should have one canonical meaning. Lexical-opposite doesn't pass this bar. The "vague is allowed" half of the principle says speakers can underspecify — but here the *operator itself* would be underspecified, not the speaker's choice. That's different. Vagueness should be a speaker move, not baked into grammar.
+
+3. Lexor's root-sourcing rule already lets each antonym pull from its natural language source (`am` love / Latin *amare*; `od` hate / Latin *odisse*). Separate roots are cheap given the 2000+ CVC slot space; root-saving is not a priority.
+
+4. The English/Spanish distinction (don't-love vs hate) is preserved compositionally: `no-am` (logical negation, neutral) vs `od` (separate root, specific antipathy). The semantic difference is real and Lexor expresses it — just without a productive opposite-marker.
+
+Tradeoffs accepted: 20-50 additional roots in the scalar-adjective vocabulary buildout. Worth it for the conceptual cleanness.
+
+This decision is reversible: if examples.md validation reveals frequent cases where speakers reach for a missing opposite-marker, the question reopens. For now, no.
+
+### Named-binding `def` syntax
+
+Question opened: what is the exact form of "Let X = ..." in Lexor, given that `var` now flags the variable name?
+
+Options considered:
+- A: `def var x sam [expression]` — explicit equality via `sam`. Verbose but transparent (reads as "define var-x equal [expr]").
+- B: `def var x [expression]` — `def` itself is the binding operator. Shorter.
+- C: `var x def [expression]` — infix. Reads more like math (`x := ...`) but breaks Lexor's pattern of leading operators.
+
+Picked **B**: `def var x [expression]`. The bare `def` introduces the binding; no `sam` is needed because `def` already says "this name takes this value." Saves a word per binding and matches Lexor's prefix-operator pattern (negation, quantifiers, premise markers all lead their scope).
+
+Syntax:
+- **Introduce**: `def var <name> <expression>` — binds `var <name>` to the expression's value.
+- **Reference**: `var <name>` — anywhere in scope, refers to the bound value.
+- **Retract**: `nul def var <name>` — explicitly ends the binding. Composes from existing `nul` (none/no) + `def` + the variable.
+
+Worked examples:
+- `def var x sam [biggest-prime ant 100]. mag var x 50` — "Let x = biggest prime before 100. x > 50." (Here `sam` is the identity copula inside the bound expression, not part of the `def` syntax itself.)
+- `def var path lit /home/user/data fin. golo y tep var path` — "Let path = '/home/user/data'. I go to path." Binding to a literal string.
+- `def var f [function-expression]. kompe y var f mod var x` — "Let f = [function]. I apply f to x." Functional binding.
+- `nul def var x` — "x is no longer bound."
+
+Scope (default and minimum spec for now):
+- **Discourse-local**: a binding persists from the `def` statement until either explicit retraction (`nul def var <name>`) or end-of-discourse (speaker stops or changes topic).
+- Sentence-local and explicit-block-scoped variants are parked. The discourse default is enough for everyday and most formal use; tighter scoping rules can be designed later if they turn out to be needed (likely for nested `def`s in formal proofs).
+- Shadowing: a second `def` on the same `var <name>` replaces the prior binding. Listeners should hear the new binding as the live one.
+
+Interaction with already-locked machinery:
+- `def` + `ke`-clauses: a `def` statement can appear before a complex sentence to make the sentence shorter. The bound name is used inside the sentence's clauses. This is exactly the use case named-binding was introduced for (decisions.md: "compositional clarity of long expressions").
+- `def` + reasoning particles: `def var p [some-premise]. dat var p. ...` — premise-marking on a bound name works the same as on any other proposition.
+- `def` + quantifiers: `def var s [tot X mem Y]. erg var s imp [conclusion]` — bind a complex quantified statement, then reason about it.
+
+### What this unblocks
+- Formal expressions and proofs: `def` is the missing piece for clean expression of named entities in long arguments.
+- Templates / examples: `var` lets us write instructions with unfilled slots.
+- The variable-vs-literal distinction (`var x` vs `lit x fin`) is now fully expressible, closing the TODO.md "literal vs variable" question.
+- examples.md validation no longer blocked on these — every sentence type previously requiring named-binding can now be written.
+
+### Parked
+- Sentence-local vs discourse-local scope for `def`. Currently discourse-local by default. May need formal scoping rules for nested proofs; revisit only if examples.md exposes a need.
+- Multi-name binding: "Let X = ..., Y = ..." — can either chain `def`s or use a coordinator. Specifics not locked.
+- `def` interaction with `kun`/`vel` (binding inside a coordinated chain) — defer until concrete examples surface a problem.

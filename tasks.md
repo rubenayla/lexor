@@ -27,11 +27,11 @@ Open design questions parked here so we can address them one at a time.
         - [ ] Weak placeholder roots `xor` (hour), `vet` (year) flagged for possible replacement.
 - [ ] **Verb shape** — confirm CVC-root + vowel-for-tense (roots.md:40 currently marked TODO).
 - [x] **Negation** — resolved: prefix `no-`, phonologically bound to its host. See decisions.md and history.md 2026-05-15. Related sub-questions parked:
-    - [ ] Lexical opposite marker (`love` → `hate`) — distinct from logical negation. Decide whether Lexor wants one and how it differs from `no-`.
+    - [x] Lexical opposite marker (`love` → `hate`) — resolved: rejected. Antonyms get separate roots; `no-` is the only "not" operator. See decisions.md / history.md 2026-05-16.
     - [ ] Canonical stacking order for multiple prefixes (negation + interrogative + intensity, etc.) when more prefixes get added.
     - [ ] Reserve the prefix phonological inventory (which CV shapes are prefixes vs root onsets) so future prefixes don't collide.
 - [x] **Literal marker** — resolved: `lit … fin` paired quotation markers. See decisions.md 2026-05-16. Sub-question still open:
-    - [ ] **Variable / placeholder marker** — distinct from literal: when `<path>` appears twice, is it the same value? When variable `X` is reused, do we treat it as a bound name? (TODO.md:88; checklist.md placeholders.)
+    - [x] **Variable / placeholder marker** — resolved: `var` prefix, single-word scope. Covers both template-slot and bound-variable cases. Pairs with `def` for bindings. See decisions.md / history.md 2026-05-16.
 - [x] **"is" overload** — resolved: split into `sam` (identity), `est` (essential predication / ser), `sta` (state predication / estar), `mem` (membership), `tot+mem` (subset, composed), `kel` (existence, composed), `lit/fin` (paired quotation markers). Universal quantifier family also locked: `sol`/`tot`/`nul`/`kel`. See decisions.md and history.md 2026-05-16.
 - [ ] **Synonym/equivalence grouping** — comma-like marker for "scalar-first, wxyz, Hamilton convention" being three names for one thing (TODO.md:9).
 - [ ] **Rotation names** — names for X/Y/Z rotations (decisions.md:23-25).
@@ -47,8 +47,8 @@ Open design questions parked here so we can address them one at a time.
     - [ ] Other proof-structuring particles ("suppose for contradiction", QED-marker, case-splitting).
     - [ ] Sibling implication operators (necessary vs sufficient, biconditional).
 - [x] **Named binding for compositional clarity** — locked as concept (`def`-style construction for long expressions). Sub-questions still open:
-    - [ ] Specific `def`-construction syntax — exact form of "Let X = ..." in Lexor.
-    - [ ] Scope of named bindings — discourse-local vs sentence-local vs explicit retraction.
+    - [x] Specific `def`-construction syntax — resolved: `def var <name> <expression>`. Bare `def` is the binding op; explicit retraction `nul def var <name>`; shadowing on re-`def`. See decisions.md / history.md 2026-05-16.
+    - [x] Scope of named bindings — resolved (default): discourse-local. Sentence-local and explicit-block scopes parked; revisit only if examples.md exposes a need.
 - [x] **Coordinators kun (AND) / vel (OR)** and **depth rule** — locked. See decisions.md / history.md 2026-05-15.
 - [x] **Question system** — locked: universal `ka`, position determines yes/no vs wh vs role-question vs embedded. Spatial preposition `lok` added. See decisions.md / history.md 2026-05-15. Sub-questions still open:
     - [x] Manner preposition for "how?" questions — resolved: `mod`. See decisions.md / history.md 2026-05-16.

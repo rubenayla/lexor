@@ -156,3 +156,6 @@
 - **Tag questions** compose from existing parts; no new particle:
     - **Bare `ka?` tag** (default): `[assertion], ka?` — "right?" / polarity-neutral confirmation request.
     - **Echo tag** (when explicit polarity is wanted): `[assertion], ka no-[verb] [subj]?` — "didn't she?"
+- **Variable/placeholder marker `var`** — flags the next word as a slot or bound name, not a regular content reference. Single-word scope. Covers both template-slot use (`var path` referenced twice = same slot) and bound-variable use (paired with `def`). Distinct from `lit … fin` (literal string content). Composable with `no-`, role vowels, and quantifiers.
+- **No lexical-opposite marker.** Rejected after debate: "opposite" is sharply defined only for binary/scalar concepts, and a productive marker with a fuzzy domain creates fake words. Antonyms get their own roots (`am` love / `od` hate). Logical negation `no-` is the only "not" operator. Decision is reversible if examples.md validation surfaces a need.
+- **Named-binding `def`** — binding introducer with form `def var <name> <expression>`. The bare `def` is the binding operator; no `sam` is needed. Discourse-local scope by default; explicit retraction via `nul def var <name>`; a second `def` on the same name shadows. Sentence-local / explicit-block scopes parked.

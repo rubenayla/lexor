@@ -139,6 +139,23 @@ Locked so far (closed class, CVC):
 ## Conjunctions - Connect sentences or words
 > and, but, or, if, when, while, although, so, unless, until, whether (note: "because" / "since [reason]" is the preposition `kaw` above, not a conjunction)
 
+## Markers (closed-class operators on words or clauses)
+
+| **Root**     | **Meaning**                                       | **Notes** |
+|--------------|---------------------------------------------------|-----------|
+| `no-`        | logical negation (prefix)                         | Phonologically bound to its host. Only "not" operator — no lexical-opposite marker exists. |
+| `ka`         | universal question particle                       | Position pins meaning: initial = yes/no, in-slot = wh, after-preposition = role-question, in `ke`-clause = embedded. |
+| `ke`         | universal complementizer                          | Function determined by what precedes it. |
+| `is`         | conditional particle                              | Pairs with conditional inner-vowel `y`. |
+| `dat`        | premise / "given that"                            | Reasoning-chain marker. |
+| `erg`        | therefore / inference                             | Reasoning-chain marker. |
+| `imp`        | logical implication (formal)                      | Distinct from `is` (causal conditional) and `kaw` (real-world cause). |
+| `kun`        | coordinator AND                                   | Keeps clause depth constant. |
+| `vel`        | coordinator OR                                    | Keeps clause depth constant. |
+| `lit … fin`  | paired literal-content brackets                   | Inside is raw string, not parsed predication. |
+| `var`        | variable/placeholder (prefix on one word)         | Flags slot or bound-name; pairs with `def`. |
+| `def`        | named-binding introducer                          | Form: `def var <name> <expression>`. Discourse-local scope; retract with `nul def var <name>`; re-`def` shadows. |
+
 
 
 ## Adverbs (generalized adjectives, act on anything, like very, quickly, etc.)
