@@ -47,7 +47,7 @@ TODO DECIDE WHETHER CONSONANT-VOWEL-CONSONANT AND THE TENSE IS A VOWEL AT THE EN
 | `zan`    | exist/be          | Retains invented nature, compatible with /z/ and /n/. |
 | `bat`    | start/begin       | Fits phonetics, derived from "begin." |
 | `dit`    | finish/end        | Adjusted to /d/ and /t/, closer to "dict." |
-| `mod`    | modify/change     | Compatible with /m/ and /d/. |
+| `mut`    | change/modify     | Latin *mutare* "to change". Replaces earlier draft `mod`, which was reassigned to the manner-preposition slot (Latin *modus* = "manner/way"). |
 | `sup`    | supply/give       | Matches /s/ and /p/ structure. |
 | `tak`    | take/receive      | Matches /t/ and /k/; intuitive in form. |
 | `dom`    | do/action         | /d/ and /m/ are phonetically valid. |
@@ -122,9 +122,22 @@ With root `lom` (eat-concept) and pronoun `y` (I):
 ## Prepositions - Show relationship between words
 > to, of, in, on, at, with, from, for, by, about, between, against, under, over, through, without, within, along, across, behind, near, among, inside, outside, around, before, after, during, until, above, below, except, towards, upon, concerning, against, regarding, among, throughout, despite...
 
+Locked so far (closed class, CVC):
+
+| **Root** | **Meaning**                                       | **Notes** |
+|----------|---------------------------------------------------|-----------|
+| `tep`    | at / in (point in time)                           | Composes: `tep ka` = "when?", `tep ke [clause]` = "when [X happens]". |
+| `pen`    | during (span of time)                             |  |
+| `sin`    | since (start of interval)                         |  |
+| `lim`    | until (end of interval)                           |  |
+| `ant`    | before                                            |  |
+| `pos`    | after                                             |  |
+| `lok`    | at / in / on (spatial location)                   | Latin *locus*. Composes: `lok ka` = "where?", `lok ke [clause]` = "where [X is]". Full spatial-prep family (under, over, near, beside…) still parked. |
+| `mod`    | manner / way / by means of                        | Latin *modus*. Composes: `mod ka` = "how?", `mod [adj]` = manner-adverbial, `mod ke [clause]` = "by [doing X]". Distinct from instrument role-vowel `-i` (which is for tools). |
+| `kaw`    | cause / because / why                             | From English *cause*. Composes: `kaw ka` = "why?", `kaw ke [clause]` = "because [clause]". Distinct from `imp` (formal implication), `is` (causal conditional), `dat`/`erg` (reasoning-chain markers). |
 
 ## Conjunctions - Connect sentences or words
-> because, and, but, or, if, when, while, although, since, so, unless, until, whether, 
+> and, but, or, if, when, while, although, so, unless, until, whether (note: "because" / "since [reason]" is the preposition `kaw` above, not a conjunction)
 
 
 

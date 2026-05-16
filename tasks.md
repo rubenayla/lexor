@@ -37,7 +37,7 @@ Open design questions parked here so we can address them one at a time.
 - [ ] **Rotation names** — names for X/Y/Z rotations (decisions.md:23-25).
 - [ ] **Multi-level sentence punctuation** — beyond comma, for nested clauses (decisions.md:26).
 - [x] **Subordinate clauses** — resolved: single universal complementizer `ke`, function determined by what precedes it. Conditional uses dedicated particle `is`. See decisions.md / history.md 2026-05-15. Sub-questions still open:
-    - [ ] Causation particle for "because/since".
+    - [x] Causation particle for "because/since" — resolved: `kaw` (also serves "why?" question). See decisions.md / history.md 2026-05-16.
     - [x] Embedded-question marker — resolved: `ka` inside a `ke`-clause does the work. See history.md 2026-05-15.
     - [x] Nested-clause disambiguation — resolved: strict adjacency for ~2 levels; named binding (`def`) for deeper or for clause-closure-back-to-main. No terminator words. See history.md 2026-05-15.
     - [ ] Comma/pause prosodic conventions between main and subordinate clauses.
@@ -51,10 +51,10 @@ Open design questions parked here so we can address them one at a time.
     - [ ] Scope of named bindings — discourse-local vs sentence-local vs explicit retraction.
 - [x] **Coordinators kun (AND) / vel (OR)** and **depth rule** — locked. See decisions.md / history.md 2026-05-15.
 - [x] **Question system** — locked: universal `ka`, position determines yes/no vs wh vs role-question vs embedded. Spatial preposition `lok` added. See decisions.md / history.md 2026-05-15. Sub-questions still open:
-    - [ ] Manner preposition for "how?" questions.
-    - [ ] Causation preposition for "why?" questions (also tied to "because/since" subordinator).
+    - [x] Manner preposition for "how?" questions — resolved: `mod`. See decisions.md / history.md 2026-05-16.
+    - [x] Causation preposition for "why?" questions — resolved: `kaw` (same root serves as "because/since" subordinator). See decisions.md / history.md 2026-05-16.
     - [ ] Person vs object disambiguation marker on `ka` for rare context-failure cases.
-    - [ ] Tag questions sanity check.
+    - [x] Tag questions sanity check — resolved: compose from existing parts. Bare `ka?` tag is the default; echo form `ka no-[verb] [subj]?` is available when explicit polarity is wanted. No new particle. See decisions.md / history.md 2026-05-16.
     - [ ] Full spatial-preposition family (under, over, near, beside, etc.).
 
 ## Vocabulary buildout (after decisions above)

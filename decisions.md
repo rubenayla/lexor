@@ -151,3 +151,8 @@
     - **`nul`** — none (no X has property P).
     - **`kel`** — some (existential quantifier ∃).
     - Plus the previously locked `pad` (distributive, each) and `mas` (collective, together).
+- **Manner preposition `mod`** — "how / by means of / in such-and-such manner". Latin *modus*. Composes: `mod ka` ("how?"), `mod [adjective]` (manner adverbial), `mod ke [clause]` ("by [doing X]"). Distinct from instrument role-vowel `-i`, which covers "with [tool]"; `mod` covers manner-of-action and adverbial manner.
+- **Causation preposition `kaw`** — "why / because / since". From English *cause*. Composes: `kaw ka` ("why?"), `kaw ke [clause]` ("because [clause]"). One root covers both question and subordinator, matching the `tep`/`lok` pattern. Distinct from `imp` (formal logical implication), `is` (causal conditional), `dat`/`erg` (reasoning-chain markers).
+- **Tag questions** compose from existing parts; no new particle:
+    - **Bare `ka?` tag** (default): `[assertion], ka?` — "right?" / polarity-neutral confirmation request.
+    - **Echo tag** (when explicit polarity is wanted): `[assertion], ka no-[verb] [subj]?` — "didn't she?"

@@ -681,3 +681,92 @@ Parked sub-questions:
 - A "variable" marker distinct from `lit` for cases where a name stands for something computed/derived (TODO.md "literal vs variable"). `lit/fin` handles the literal case; the variable case may need its own marker.
 - Tag questions ("she left, didn't she?") — sanity check that they compose from yes/no + negation.
 - Other copula-like senses: "X seems Y" (epistemic), "X becomes Y" (transition). Probably regular verbs, not copulas.
+
+## 2026-05-16 — Manner preposition `mod`, causation preposition `kaw`, tag-question composition
+
+Closed three linked items from the question-system parking lot (tasks.md). The question system was already locked around universal `ka` whose meaning is pinned by position, with `tep` (time) and `lok` (space) as the prepositions composing with `ka` for "when?" / "where?". Two slots were missing: **manner** ("how?", "by means of [doing X]") and **causation** ("why?", "because/since"). Closing both unblocks full use of the question system and unblocks the causation subordinator.
+
+### Manner preposition: `mod`
+
+Question opened: what preposition does `ka` compose with for "how?" and adverbially for manner ("by doing X", "in such-and-such way")?
+
+Distinction first. The instrument role-vowel `-i` already covers "with [tool]" — "she opened it with a key" → `[key]-i` on the noun. Manner is the *non-tool* axis: "how did she fix it?" can be answered by "carefully" (manner adverb) or "by hammering" (manner-of-action), neither of which is a tool. So manner-preposition takes a manner expression (adjective, gerund clause, or full clause via `ke`), distinct from the instrument vowel.
+
+Options considered:
+- `mod` — Latin *modus* ("manner, way"). Survives in English mode, modal, modus operandi; Spanish modo; Italian modo; French mode. Cross-Romance recognizability is unusually strong for a 3-letter CVC. Clean phonotactically.
+- `med` — Latin *medium* ("by means of"). Weaker because *medium* in modern usage is more "middle/medium" than "manner". Likely collides with a future "middle" or "average" root.
+- `man` — surface form of English *manner*. Strong English mnemonic but the CV `ma-` and CVC `man` are likely needed for a future "hand" root (universal across Romance, also Germanic *hand*); reserving `man` for body-parts is better.
+- `via` — Latin *via* ("by way of"). Phonotactically wrong: V-V-V (or C-V-V depending on analysis of /j/), doesn't fit the CVC closed-class shape used by other prepositions (`tep`, `lok`, `ant`, etc.).
+
+Picked **`mod`**. Tradeoffs accepted: minor risk of confusion with future "mode" (in the statistical sense — most frequent value) or "modal" (in the modal-logic sense), both of which can compose from `mod` plus other markers rather than need their own root.
+
+Compositions enabled:
+- `mod ka` — "how?" / "in what manner?" (question)
+- `mod [manner]` — "in [such-and-such] manner" (adverbial)
+- `mod ke [clause]` — "by [doing X]" (manner clause: "by hammering it" = `mod ke [hammer-verb] o`)
+
+Worked examples:
+- `kompo e mod ka` → "How did she fix it?" — VOS with `e` marking subject, manner-question at the end.
+- `kompo e mod ke martelo o` → "She fixed it by hammering it." — Literally: fixed[past] she manner that hammer[past] it.
+- `koma e mod [careful-adjective]` → "She eats carefully." — manner-adverbial with no clause.
+- `koma e [chopstick]-i mod [careful-adjective]` → "She eats with chopsticks carefully." — instrument-vowel and manner-preposition co-occur cleanly without collision.
+
+### Causation preposition: `kaw`
+
+Question opened: what preposition does `ka` compose with for "why?", and is the "because/since" subordinator the same root?
+
+Decision: one root does both. `kaw ka` = "why?" (question), `kaw ke [clause]` = "because [clause]" (causal subordinator). Matches the established pattern: time gets `tep` (with `tep ka` = "when?", `tep ke X` = "when X happens"); space gets `lok` (with `lok ka` = "where?", `lok ke X` = "where X is"). Causation should not be a special case.
+
+This also keeps the *epistemic* "why" (purpose / motivation) and the *physical* "why" (cause) under one root, which the user may later split if a real ambiguity surfaces. For now, vagueness on the cause-vs-purpose axis is allowed (per the precision-by-default meta-principle); only structural ambiguity is forbidden, and there is none here.
+
+Options considered:
+- `kaw` — surface form of English *cause*. Spelled with `w` to avoid the V-V-V shape that `kau` would have. Phonotactically clean CVC. Strong English mnemonic.
+- `kos` — from Latin *causa* / Spanish *porque*. Risk of collision with a future "thing" (Spanish *cosa*) root.
+- `kuz` — from English colloquial *'cuz*. Vivid but informal-feeling; weaker for the formal-reasoning use case where `kaw` will appear alongside `dat`/`erg`/`imp`.
+- `kar` — irregular sourcing. Weak mnemonic.
+
+Picked **`kaw`**. Tradeoffs accepted: only English-leaning of the candidates; Romance speakers won't immediately recognize it. But Lexor already has Romance-heavy roots elsewhere (`ant`, `pos`, `sin`, `lim`, `mod`), so picking up an English-leaning one for causation balances the lexicon slightly. The phonotactic cleanness (clear CVC, distinct from any existing root) is the bigger win.
+
+Relationship to existing reasoning particles:
+- `kaw` — preposition for *real-world* causation. "She left because it was raining."
+- `imp` — logical implication. Formal-proof use. "Rain entails wet ground."
+- `is` — causal/temporal conditional. "If it rains, the ground gets wet." Pairs with conditional inner-vowel `y`.
+- `dat` — premise marker. "Given that it was raining."
+- `erg` — conclusion marker. "Therefore the ground got wet."
+
+These five cover the real-world / formal / hypothetical / premise-stating / conclusion-stating axes without overlap. `kaw` slots in cleanly: it's the everyday "because" that doesn't claim formal entailment.
+
+Worked examples:
+- `golo e kaw ka` → "Why did she leave?"
+- `golo e kaw ke pluvex` → "She left because it was raining." — Literally: left[past] she cause that rain[present-continuous].
+- `dat pluvox. golo e kaw ke pluvox. erg [floor-wet-state]` → A staged reasoning chain: given that it rained; she left because it rained; therefore the floor is wet. Mixed `kaw` (causation in the world) and `dat`/`erg` (reasoning structure) coexist without conflict.
+
+### Tag questions (sanity check)
+
+Question opened: do tag questions ("she left, didn't she?", "you're coming, right?") need a dedicated particle, or do they compose from already-locked parts?
+
+The English/Spanish tag pattern is "make an assertion, then briefly request confirmation." Lexor already has:
+- Assertion: normal VOS sentence, no marker needed.
+- Yes/no question: sentence-initial `ka` covers the whole proposition.
+
+Two compositional options give a tag without a new particle:
+1. **Bare `ka?` tag**: assertion, comma, `ka?`. "She left, right?" → `golo e, ka?`. The bare `ka` after a comma reads as "yes/no question about the just-asserted proposition" — confirmation-seeking. Short, ergonomic.
+2. **Echo question**: assertion, comma, mini yes/no question echoing the verb. "She left, didn't she leave?" → `golo e, ka no-golo e?`. Verbose but maximally explicit.
+
+Locked: both are grammatical. The bare `ka?` form (option 1) is the default; the echo form (option 2) is available when extra emphasis is wanted ("you didn't *actually* leave, did you?"). No new particle introduced.
+
+Polarity note: English/Spanish tag-question polarity matches the speaker's expectation (positive assertion → negative tag if expecting "yes": "she left, didn't she?"). Lexor's bare `ka?` is polarity-neutral — it just requests confirmation, leaving the speaker's expectation unstated. This is consistent with the no-mandatory-marking meta-principle: speakers who *want* to convey expectation can use the echo form with explicit `no-`.
+
+Worked examples:
+- `golo e, ka?` → "She left, right?"
+- `golo e, ka no-golo e?` → "She left, didn't she?" (with explicit negative-polarity tag conveying speaker expects "yes")
+- `pluvex, ka?` → "It's raining, right?"
+
+### What this unblocks
+- Full "how/why" question coverage — the question system is now feature-complete for the standard wh-set (who/what/when/where/why/how) without any dedicated wh-roots.
+- Causation subordinator — closes one of the remaining gaps in the subordinate-clause system (`ke`-clauses on `kaw` now work the same way as on `tep`, `lok`).
+- Tag questions don't need a Session N+2 round of their own.
+
+### Parked
+- Cause-vs-purpose split on `kaw` — only if real ambiguity surfaces during examples.md validation.
+- "Mode" in the statistical sense, "modal" in the modal-logic sense — compose from `mod` + qualifiers rather than dedicate new roots, unless examples.md forces a split.
