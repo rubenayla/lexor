@@ -1344,3 +1344,59 @@ Locked: when the angle is given without a "from where" specifier, the implicit r
 - Solid angles (steradians) — 3D angular measure, parked. Same fraction-of-sphere convention would extend naturally.
 - Spherical coordinates (longitude + latitude for a direction in 3D) — composable from two angle expressions, but the ergonomic shorthand is parked.
 - Angular velocity / acceleration — composable from `rot` + temporal derivatives, but no specific syntax locked.
+
+---
+
+## 2026-05-16 — Graded probability `chan`
+
+### Why this round
+User: "be able to sprinkle probability markers on what we say easily ... for facts not amounts, we would still need the probability markers, which is different from a precision one in an amount." That's trial D6. The modal-operator round (`kan`/`mus`) handled binary modality; the missing piece was *graded* probability — attaching a specific number to a proposition's truth.
+
+### What was decided
+One new closed-class marker:
+- `chan` — graded epistemic probability. Form: `chan <number> <proposition>`. Number in [0, 1].
+- Sentence-initial, matching the position rule of other modal/discourse operators (`kan`, `mus`, `is`, `dat`, `erg`).
+
+Mnemonic: English/French/Spanish *chance* (`ch` = /tʃ/ in Lexor phonetics). The word "chance" carries the probability meaning across Romance and Germanic, making it broadly recognizable.
+
+### Why a new marker, not an extension of `kan`
+Considered overloading `kan` to take an optional numeric argument: bare `kan X` = "possibly X (unspecified)"; `kan <num> X` = "X with probability <num>." Rejected because the parser disambiguation between "number-as-probability" and "proposition-starting-with-number" would require contextual interpretation — exactly the precision-by-default failure mode. With a dedicated marker, the grammar is clean: `chan` *requires* a numeric expression before the proposition; `kan`/`mus` *forbid* one.
+
+### Why fraction in [0, 1], not percent / odds
+- Percent (×100) carries cultural overhead and a built-in scale factor that's awkward in dozenal.
+- Odds (X:Y form) need additional syntax for the ratio.
+- Probability as a bare fraction is universal, base-agnostic, and composes with the existing digit-stream + base-marker system without anything new. `zo dem ne zo` = 0.90 decimal. `zo doz ne` = 0;9 dozenal = 9/12 ≈ 0.75 decimal.
+
+### Why number-first, proposition-after
+Matches the existing pattern of other operators that take a quantitative argument: `tom <a> <b>`, `sam <a> <b>`, `pir <num>`, `mag <num>`, `min <num>`. The argument comes before the operand. Reverse order (`chan <prop> <num>`) was considered for English-ergonomics ("the probability of rain is 0.9") but rejected for inconsistency.
+
+### Why no fuzzy probability words ("likely", "unlikely", "very likely")
+Rejected adding `lik` (likely), `lim` (unlikely — also collides with `lim` for "until"), or similar fuzzy magnitude words. Reasons:
+- Violates precision-by-default. The whole point of `chan` is to make probability *explicit* and numeric.
+- Speakers who want fuzziness can compose: `chan zo dem ne zo` ("0.9") = very likely; `chan zo dem pa` ("0.1") = unlikely; `chan mag zo dem fi` (">0.5") = more likely than not.
+- Or fall back on the binary modals: `kan X` for "possible" (any positive probability), `mus X` for "certain."
+
+### Surface form alternatives considered
+- `chan` (chosen) — English/French/Spanish *chance*; pan-Romance and Germanic recognizability; clean CVC where `ch` is the /tʃ/ digraph.
+- `prob` — Latin/English *probable*. CCVC shape (closed-class allows). Slightly longer; mnemonic OK but slightly more abstract.
+- `pos` — taken (after-in-time preposition).
+- `cer` — `c` is the vowel /æ/; `cer` would be VVC shape and weak mnemonic.
+- `lik` — `k`-final forbidden by phonetics rule 1.
+
+`chan` checked against lexicon: no collision. Distinct from `chi` (digit 7) by the prosodic word-boundary break.
+
+### Closes
+- trials.md **D6 plug-in probability** [feature, passes].
+
+### What this unblocks
+- Probabilistic reasoning chains: combining `dat`, `erg`, `imp`, `kan`, `mus`, `chan` in a single discourse for proof-grade hedged arguments.
+- Conditional probability cleanly via `chan X dat Y` ("P(X|Y) = …").
+- Bayes-style updates by stating prior, likelihood, and posterior as sequential `chan` sentences.
+- Decision-theoretic talk: "expected value is X with probability Y" composes naturally.
+
+### Parked
+- **Probability distribution roots** (gaussian, uniform, bimodal, beta, etc.) — trial D5 still open. `chan` handles point-probabilities; distributions over a domain need more machinery. Defer until a trial concretizes the need.
+- **Continuous probability densities** — same as above.
+- **Fuzzy probability words** — rejected on principle; if a use case emerges that the composed forms can't handle, revisit.
+- **Probabilistic versions of `dat`/`erg`** — for "given that with probability P" / "therefore with probability P." Composable but not formalized.
+- **Frequentist vs Bayesian flavors** — Lexor's `chan` is interpretation-neutral; if a trial requires distinguishing "P(X) in the long run" from "my degree of belief in X," add then.

@@ -81,6 +81,9 @@
 - {root: tip,   kind: marker, concept: "endpoint / extremum along an axis",        source: "English tip",                   notes: "Composes with `aks <axis> <polarity>` to locate the extreme point. `tip aks sur mag bra X ket` = the top of X. Distinguishes 'top' (location) from 'up' (direction)."}
 - {root: mez,   kind: marker, concept: "dimensional magnitude (length along axis)", source: "Spanish/Latin medir/metiri", notes: "Composes with `aks <axis>` to produce the size-along-that-axis as a number. `mez aks pa bra X ket` = the longest dimension of X. Bridges geometric axes to numeric magnitudes."}
 
+# Graded probability (closes D6, 2026-05-16)
+- {root: chan,  kind: marker, concept: "graded epistemic probability — P(X) = N",  source: "English/French/Spanish chance",  notes: "Sentence-initial; scopes over the rest of the clause. Takes a numeric expression first (the probability in [0,1]), then the proposition. `chan zo dem ne zo pluve` = 'it will rain with probability 0.90.' Scalar version of `kan` (◇) and `mus` (□): `chan zo` ≡ `no- kan`, `chan pa` ≡ `mus`. Composes with comparison operators inside the numeric slot: `chan mag zo dem fi X` = 'P(X) > 0.5.'"}
+
 # =============================================================================
 # COORDINATORS
 # =============================================================================

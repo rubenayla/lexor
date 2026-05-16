@@ -279,6 +279,26 @@ For dense reference, see `examples.md`. For the test suite by capability, see `t
 
 ---
 
+## L13b — Graded probability
+
+**Lexor:** `chan zo dem ne zo pluve` — it will rain with probability 0.90
+**Lexor:** `chan zo dem fi sam a b` — a equals b with probability 0.5
+**Lexor:** `chan mag zo dem fi pluve` — probability of rain is greater than 0.5
+**Lexor:** `chan zo dem ne zo X dat Y` — P(X | Y) = 0.9 (conditional probability via `dat`)
+
+**Gloss:**
+- `chan` — graded probability marker, sentence-initial.
+- Form: `chan <number> <proposition>`. Number in [0, 1] = the probability.
+- Scalar version of `kan` (◇) and `mus` (□): `chan zo` ≡ `no- kan` (impossible), `chan pa` ≡ `mus` (certain).
+- Mnemonic: English/French *chance*.
+
+**What this demonstrates:**
+- Probability "sprinkles" onto any proposition. The infrastructure handles point probabilities, ranges (compose with `mag`/`min`/`tom`), and conditional probabilities (compose with `dat`).
+- Distinct from amount-precision markers (`pir`/`tom`/`pem`) which scope over a *single magnitude*. `chan` scopes over the *whole proposition*. Different positions, no overload.
+- No fuzzy probability words ("likely," "unlikely"). Speakers compose with explicit numbers or fall back on the binary modals.
+
+---
+
 ## L14 — Axis system (direction, location, dimension)
 
 **Lexor:** `gol aks fas mag e` — she goes forward

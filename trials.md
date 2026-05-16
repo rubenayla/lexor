@@ -163,10 +163,12 @@ Same shape as C2.
 **Capability:** Probabilistic distributions (gaussian, uniform, bimodal) compositional.
 **Status:** Parked. tasks.md distribution-shape roots.
 
-### D6. Plug-in probability [feature, open]
+### D6. Plug-in probability [feature, passes]
 **Capability:** "90% likely to rain" reads as cleanly as "5 cm."
-**Status:** Path clearer after modal-operators land. Possible surface forms: `kan pir [number]` (possibly to approximate degree N) or `[number] dem kan X` (X with degree-N possibility). Specific shape parked for follow-up round.
-**Related:** D5, modal operators 2026-05-16.
+**Lexor:** `chan zo dem ne zo pluve` — "P(rain) = 0.90." Sentence-initial graded probability marker `chan` takes a numeric expression in [0, 1] followed by the proposition.
+**How:** decisions.md `chan` (2026-05-16). Composes with comparison operators for ranges (`chan mag zo dem fi X` = "P(X) > 0.5") and with `dat` for conditional probability.
+**Distinct from amount-precision** (`pir`/`tom`/`pem`): probability scopes over the whole proposition; amount-precision scopes over a single magnitude. Different positions, no overload.
+**Related:** modal operators 2026-05-16. Closes the D6 trial.
 
 ### D7. Exactly vs at-least [feature, passes]
 See A5.

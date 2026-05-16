@@ -50,7 +50,7 @@ Open design questions parked here so we can address them one at a time.
 - [x] **Epistemic modal operators** — resolved 2026-05-16: `kan` (possibility ◇), `mus` (necessity □). Closed class, sentence-initial. Compose with `no-`. Closed trials B1/B2/I2. See decisions.md / history.md 2026-05-16. Sub-questions parked:
     - [ ] Deontic modality (permission / obligation) — split from epistemic when a trial requires it.
     - [ ] Alethic vs epistemic split — refine if a logical/metaphysical trial exposes the need.
-    - [ ] Probability operator surface form (trial D6) — infrastructure exists via `kan` + numeric; specific shape pending.
+    - [x] Probability operator surface form (trial D6) — resolved 2026-05-16: `chan <number> <proposition>` sentence-initial, scalar version of `kan`/`mus`. See decisions.md / history.md 2026-05-16.
     - [ ] Counterfactual conditionals ("if she had eaten...") — distinct from `is`/`imp`. Parked.
 - [x] **Axis system: aks / tip / mez** — resolved 2026-05-16. Closed trials.md G3 (sentido), G4 (direction vs location), G5 (neutral axis names). Three new closed-class composable markers; agent-frame axes reuse spatial prepositions, object-frame ranks reuse digits, polarity reuses `mag`/`min`. See decisions.md / history.md 2026-05-16. Sub-questions parked:
     - [ ] Compass directions (N/S/E/W) — need dedicated roots or compositional Earth-frame system.

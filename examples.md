@@ -126,6 +126,27 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
    - 3 o'clock (right): `aks lat min` (cardinal) or `rota min zo doz re aks sur` (angle −1/4).
 49x. Non-cardinal "1:30 o'clock" (45° clockwise from 12) = `rota min zo doz pa sa aks sur` ≈ "rotation of −1/8 around Z."
 
+## 9e. Graded probability (chan)
+
+49y. `chan zo dem ne zo pluve` — "It will rain with probability 0.90." (90% likely)
+49z. `chan zo dem fi sam a b` — "a equals b with probability 0.5." (Coin-flip uncertainty.)
+49aa. `chan zo dem pa pluve` — "It'll rain with probability 0.1." (Unlikely.)
+49bb. Equivalences:
+    - `chan zo X` ≡ `no- kan X` — P = 0 = impossible.
+    - `chan pa X` ≡ `mus X` — P = 1 = certain.
+    - `kan X` ≈ `chan <unspecified positive> X` — speaker not committing to a specific value.
+49cc. Probability ranges (compose with comparison operators):
+    - `chan mag zo dem fi pluve` — "P(rain) > 0.5" (more likely than not)
+    - `chan min zo dem du fi pluve` — "P(rain) < 0.25"
+    - `chan tom zo dem du fi zo dem chi fi pluve` — "P(rain) is between 0.25 and 0.75"
+49dd. Probability comparison: `mag chan pluve chan ne` — "rain is more likely than snow" (chance-of-rain > chance-of-snow).
+49ee. Conditional probability: `chan zo dem ne zo pluve dat sta nub-s [sky]` — "P(rain | sky is cloudy) = 0.9" (conditional via `dat`).
+49ff. `kan sam re metr mez aks pa bra box ket. chan zo dem chi fi sam re metr. no-vis y i` — "The longest dimension of the box might be 3 meters. It's probably 3 meters (P = 0.75). I haven't seen it." (Hedging with mixed modals.)
+49gg. Distinction from amount-precision:
+    - `hav pir pa zo [apple] e` — "She has approximately 10 apples." (`pir` on the amount.)
+    - `chan zo dem chi fi hav pa zo [apple] e` — "She probably has 10 apples." (`chan` on the proposition.)
+    - These are different claims. `pir` says the amount is uncertain; `chan` says the whole statement is uncertain.
+
 ## 10. Reasoning chain
 
 49. `dat pluvo` — "Given that it rained." (premise)

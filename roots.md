@@ -173,6 +173,7 @@ Locked so far (closed class, CVC):
 | `aks`        | axis (1D directed line, unsigned)                 | Composes with spatial preposition for agent-frame axis (`aks fas` X, `aks lat` Y, `aks sur` Z); with digit for object-frame rank (`aks pa` longest, `aks du` middle, `aks re` shortest). Polarity via `mag` (+) / `min` (−). Mnemonic: English/Latin *axis*. |
 | `tip`        | endpoint / extremum along an axis                 | Composes: `tip aks <ax> <pol>` for the extreme point. `tip aks sur mag bra box ket` = "the top of the box." Distinguishes location-at-extreme from relational `sur X` (above X) and from direction `aks sur mag` (upward). Mnemonic: English *tip*. |
 | `mez`        | dimensional magnitude (length along an axis)      | Composes: `mez aks <ax> bra X ket` = "the length of X along axis." Bridges geometric axes to numeric magnitudes. `mez aks pa` = longest dimension (object-frame, orientation-free). Mnemonic: Spanish/Latin *medir/metiri*. |
+| `chan`       | graded epistemic probability                      | Sentence-initial. Form: `chan <number> <proposition>`. Number in [0, 1] = probability. `chan zo dem ne zo pluve` = "P(rain) = 0.90." Composes with comparison operators inside the numeric slot for ranges (`chan mag zo dem fi X` = "P(X) > 0.5"). Scalar version of `kan` (◇) and `mus` (□). Mnemonic: English/French *chance*. |
 
 
 
