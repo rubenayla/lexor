@@ -31,6 +31,11 @@ Lexor is a constructed language designed from first principles to maximize preci
 - **Roots are concept-level.** A root represents the underlying concept, not a specific part of speech. Verb/noun/adjective forms come from markers on top.
 - **Meta-principle: no mandatory grammatical marking.** Lexor never forces a speaker to commit to information they haven't decided on. Every grammatical category (number, gender, tense, definiteness, role) is opt-in. When designing any new feature, default to *optional with a neutral-default option* unless there's a strong reason otherwise.
 - **Meta-principle: vague is allowed, ambiguous is forbidden.** Every well-formed sentence has exactly one meaning. Vagueness (one meaning with unspecified parameters) is welcome and cheap; ambiguity (two distinct meanings competing for the same syntactic form) is structurally eliminated. Listeners don't interpret; they take the grammar at face value. If two readings would exist, the unmarked form has *one* canonical meaning (often "speaker not committing on that axis") and the other reading requires explicit marking or restructuring. When designing any feature, the test is: "can two distinct meanings fit into the same surface form?" If yes, the design is wrong — either pin one by structure or require a marker for one.
+- **Writing style for learner-facing material.** When writing any document a learner or evaluator reads (the walkthrough, README, future tutorials, onboarding pages), follow these rules:
+    - Define every abbreviation the first time you use it. CVC, VOS, modal-logic symbols, and so on must be introduced before they appear in glosses.
+    - Prefer plain words over math or logic symbols in prose. "Possibly" beats ◇; "all" beats ∀. The symbol can appear alongside the word for readers who know it, but the word carries the meaning.
+    - Avoid stacking multiple adjectives in front of a noun. If you're writing two or more modifiers before a noun and the result requires the reader to parse which modifies which, refactor into a sentence.
+    - Be precise about what a feature commits to *and* what it deliberately leaves open. "Doesn't say what gender" is different from "is undefined."
 
 ## How to make progress
 When resolving an open question:

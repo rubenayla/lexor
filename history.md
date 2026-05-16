@@ -1431,3 +1431,28 @@ This rule deserves to be permanent — it'll come up again in the README, any fu
 
 ### What the fix doesn't address
 - The user said "i have a few issues to fix" — plural. They named two issues explicitly (acronyms, friendliness) plus the stacked-adjective example. The rewrite addresses these three. If there are more issues they spot on a re-read, they're invited to flag.
+
+---
+
+## 2026-05-16 — walkthrough.md second pass + writing-style rule
+
+### Issues raised on the rewrite
+After my first readability pass, the user flagged three more issues on re-read:
+
+1. **Visual consonant clusters between words look hard to pronounce.** Examples like `chan zo dem ne zo pluve` look stuck together — `n` at the end of `chan` next to `z` at the start of `zo`, `m` next to `n` between `dem` and `ne`, etc. A reader unfamiliar with Lexor's prosody can't tell that the space between words is a real short pause (~50–100 ms), which keeps adjacent consonants out of being a real cluster. The walkthrough never said this.
+
+2. **The L1 explanation of pronoun `e` was misleading.** I wrote that `e` means "he, she, or they (one person)," which conflated the modern English singular *they* (one person, gender unknown) with plural *they* (multiple people). Plural "they" is a separate Lexor pronoun: `lo`. The user pushed back: "they is very different from he/she/it. it's plural. it's really undefined? then what does e even mean?" The point was sharp: by listing three English glosses without specifying which scope they each cover, I made `e` sound vague rather than precise. `e` is in fact precise about person/number/third-person and only vague about gender — that's the one and only thing it leaves open.
+
+3. **The "X-Y Z noun" example in the proposed AGENTS.md rule was awkward.** Lifted out of context, the symbolic example didn't communicate what kind of construction the rule was forbidding.
+
+### Fix
+1. **walkthrough.md preface** — added a "A note on pronunciation" subsection. States explicitly that the space between words is a real pause, that adjacent consonants across spaces are not a cluster, that single Lexor words have stricter rules (max 2 consonants in a row, a few combinations forbidden) so no real Lexor word is hard to pronounce. Also flagged that placeholder forms like `pluve` are not yet locked.
+
+2. **walkthrough.md L1** — rewrote the pronoun explanation. Split what `e` is precise about (person, singular, third-person) from what it deliberately leaves open (gender). Made the English mapping explicit: `e` covers the modern singular *they*, not the plural. Added a fuller pronoun table including `lc` (we inclusive of everyone) and a note that "we" splits into several distinct forms in Lexor.
+
+3. **AGENTS.md** — added the writing-style rule under working conventions, without the symbolic example. Four bullets: define abbreviations on first use; prefer words over symbols; avoid stacked adjectives; be precise about what a feature commits to vs leaves open. The last bullet is new and comes directly from the pronoun-`e` mistake.
+
+### Lesson worth keeping
+When explaining a feature that *deliberately leaves something open* (gender on `e`, time on `a`, definiteness on bare nouns), be explicit about the asymmetry: "this commits to X and Y but deliberately not to Z." Just listing the multiple English translations side-by-side ("he, she, or they") makes the feature read as vague-overall, when it's actually vague-on-exactly-one-axis. The reader needs to see the axis named.
+
+This is a writing-rule, captured in AGENTS.md's new fourth bullet.

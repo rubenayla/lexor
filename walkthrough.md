@@ -32,6 +32,16 @@ Lexor sentences put the verb first. The order is:
 
 Some textbooks abbreviate this as **VOS** ("verb-object-subject"). This abbreviation will come up later. Most other modifiers (counts, place markers, time markers) come after the noun they refer to.
 
+### A note on pronunciation
+
+The space between two Lexor words is not just visual — it's a real, short pause when spoken (about a tenth of a second, or a quick stop in the throat). So when you see two consonants meeting across a space, like the `n` and `z` in `chan zo`, they are *not* pronounced as a cluster. They are two separate sounds with a brief pause between them.
+
+Read `chan zo` as "chan, zo" — not "chanzo." Same for any other pair: `dem ne` is "dem, ne," not "demne." This rule is what lets Lexor pack short words next to each other without making the speech a tongue-twister.
+
+(Inside a single word, the rules are stricter. No more than two consonants in a row are allowed, and a few specific combinations are forbidden — you'll never see a real Lexor word that's hard to pronounce.)
+
+A separate point: some example sentences below use placeholder forms like `pluve` for "rain." These are not yet locked Lexor words. They follow Latin-style shapes that don't fit the language's strict consonant-vowel-consonant pattern. When the vocabulary for "rain" is chosen, the real form will replace `pluve`.
+
 ---
 
 ## L0 — The bare verb
@@ -57,29 +67,45 @@ So `loma` is the eat-root plus the no-time vowel, and the whole word means "to e
 
 **Lexor:** `loma e`
 
-**What it means:** "She eats." (or "He eats," or "They eat" — the speaker isn't committing to a gender.)
+**What it means:** "She eats." Or "He eats." The pronoun `e` refers to *one* other person whose gender the speaker doesn't want to specify.
+
+**What `e` does and doesn't say:**
+
+The pronoun `e` is precise about three things and deliberately vague about one:
+
+- **Precise:** it refers to a *person*, not an object. (For "it," the pronoun is `i`.)
+- **Precise:** it refers to *one* person, not several. (For multiple people, the pronoun is `lo`.)
+- **Precise:** it refers to a *third party* — not the speaker, not the listener. (For "I" use `y`; for "you" use `u`.)
+- **Vague:** gender. The speaker is choosing not to commit to "he" or "she." That's the only thing `e` leaves open.
+
+In modern English, the word "they" is sometimes used in the singular when the speaker doesn't know or want to specify gender ("someone left their bag — they came back for it"). That singular "they" is what `e` matches. The *plural* "they" (multiple people) is a different Lexor word: `lo`.
 
 **How it's built:**
 - `loma` is the verb you already know: "eat" with no specific time.
-- `e` is a one-letter pronoun meaning "he, she, or they (one person)." Lexor doesn't force the speaker to commit to a gender.
+- `e` is the third-person singular pronoun, gender unspecified.
 
 **What this level shows:**
 - The subject (who is doing the verb) comes *after* the verb. There's no object yet, so the order is just verb then subject.
-- Pronouns are very short — usually one letter — because they're used so often.
-- The language never forces you to commit to information you haven't decided on. Gender is one example.
+- Pronouns are very short — often one letter — because they're used so often.
+- The language never forces you to commit to information you haven't decided on. Gender is one example of this principle.
 
-**Other pronouns you can use in the same slot:**
+**The full set of pronouns:**
 
-| Lexor | Meaning |
-|---|---|
-| `y` | I, me (the speaker) |
-| `u` | you (one listener) |
-| `e` | he / she / they (one other person) |
-| `i` | it (one object or concept) |
-| `le` | we (you and me, just us two) |
-| `lo` | they (multiple other people) |
-| `ly` | you (multiple listeners) |
-| `la` | we (some group including the speaker, members unspecified) |
+| Lexor | Refers to | Number |
+|---|---|---|
+| `y` | the speaker ("I, me") | one |
+| `u` | the listener ("you") | one |
+| `e` | one other person ("he, she, singular they") | one |
+| `i` | one object or concept ("it") | one |
+| `le` | speaker + listener ("we, just us two") | two |
+| `lu` | speaker + one other person ("me and her/him") | two |
+| `ly` | multiple listeners ("you all") | plural |
+| `lo` | multiple other people ("they") | plural |
+| `li` | multiple objects ("they" for things) | plural |
+| `la` | some unspecified group including the speaker | unspecified |
+| `lc` | speaker + listener + others ("we, inclusive of everyone") | plural |
+
+Notice that "we" splits into several distinct forms depending on who exactly is included. Lexor refuses to collapse these into one ambiguous "we" the way English does.
 
 ---
 
