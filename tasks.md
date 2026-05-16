@@ -70,5 +70,5 @@ Open design questions parked here so we can address them one at a time.
 
 ## Repo restructuring
 - [ ] Split the root tables out of roots.md (prose stays; data moves to `lexicon.yaml`, which now exists). Tables in roots.md become read-only views or get deleted entirely.
-- [ ] Disambiguate TODO.md vs checklist.md vs decisions.md: TODO = open questions, checklist = features the language must support, decisions = settled. Items currently drift between them.
+- [x] Disambiguate TODO.md vs checklist.md vs decisions.md — partly resolved 2026-05-16: `checklist.md` removed; its content restructured into `trials.md` (a test-suite of trap/feature/stretch/stress entries with passes/open/parked status). `decisions.md` remains the settled-decisions log. TODO.md vs tasks.md merge still pending.
 - [x] Machine-readable form for roots — resolved: `lexicon.yaml` at repo root. Schema documented in-file. Collision-checker at `scripts/check_collisions.py`. See AGENTS.md.

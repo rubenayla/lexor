@@ -7,7 +7,7 @@ Lexor is a constructed language designed from first principles to maximize preci
 ## Repo layout
 - `README.md` — public-facing intro.
 - `decisions.md` — settled design decisions. Append here once something is locked in.
-- `checklist.md` — features the language must support (capability list, not tasks).
+- `trials.md` — language design test suite. Each entry is a `[trap]` (known ambiguity from natural languages) or `[feature]`/`[stretch]`/`[stress]` (capability target). Tagged with `passes`/`open`/`parked` status. Grep `[.*, open]` to find every unmet design goal. Replaces the older `checklist.md`. Append a trial when a new capability target or trap surfaces; close one by changing its status when a decision lands.
 - `pain.md` — concrete examples of what current languages get wrong. The "why" behind Lexor.
 - `TODO.md` — older open-questions list. Being merged into `tasks.md` over time.
 - `tasks.md` — current open design questions and work items, parked for later.

@@ -1147,3 +1147,39 @@ User asked: could tonality make the brackets unnecessary in speech? Honest answe
 ### Parked
 - Whether to add a third prosodic-level reinforcement (a ~150 ms tighter phrase inside brackets) as a *style* recommendation, not a grammatical requirement. Probably yes, but document later under "spoken-style guide" rather than `phonetics.md` proper.
 - Multi-character/Unicode written form for the brackets (parentheses `( )`, square `[ ]`, angle `⟨ ⟩`). Defer until a written-form section is written.
+
+---
+
+## 2026-05-16 — `trials.md` consolidates checklist + pain into a test suite
+
+### What was decided
+`checklist.md` removed. Its content (and the pain.md trap inventory) restructured into `trials.md` as a tagged test suite. Each entry has the shape:
+- `### Name [tag, status]`
+- one-line setup (English problem or capability target)
+- Lexor rendering when one exists
+- `How:` pointer to the decision that disarms it (for `passes`) or `Status:` pointer to tasks.md (for `open`)
+
+Tags: `[trap]` (known natural-language ambiguity), `[feature]` (required capability), `[stretch]` (ambitious case), `[stress]` (open-question probe). Status: `passes` / `open` / `parked`. Grep `\[.*, open\]` returns every unmet design goal.
+
+### Why one file, not two
+Original sketch had a separate `regressions.md` paired with pain.md. User pushed back ("regressions.md is too specific... I want more ambitious tests"), then observed that `checklist.md` is already half-trial: half of its entries were concrete English sentences ("password K and L," "taper ratio," "1080p vs 1km"). The right move was merge, not multiply. One file is now both the wishlist (what should be possible) and the validation (each case worked or marked open). Drift between feature spec and trial coverage is structurally eliminated because they're the same artifact.
+
+### Initial inventory
+61 entries seeded:
+- 18 [trap, passes] — natural-language ambiguities Lexor has formally disarmed.
+- 15 [feature, passes] — required capabilities the design meets.
+- 12 [feature, open] — capabilities still needing decisions (anti-adjective, evidentiality, direction-sense, neutral axis names, % bare ratio, eyeballed marker, probability operator, distribution shapes, unspecified-addressee, taper-ratio neutralization, direction-vs-location).
+- 6 [stretch, open] — ambitious cases waiting on vocabulary or modal operators.
+- 3 [trap, open] — traps with no mechanism yet (mean-sea-level modifier attachment, not(a=b) modal, masses-can-be-different modal).
+- 4 [stress, open] — probes of open design questions (deep nesting, long digit streams, mixed bases, ambiguity-by-omission).
+- 2 [stretch, passes] — pronoun-less paragraph, long mathematical statement (mechanism passes, full text not yet written).
+- 1 [stretch, partly-passes] — quantum superposition (waits on modal operators).
+
+### What this unblocks
+- Auditing the language design empirically: `grep '\[.*, open\]' trials.md` lists every design gap with a concrete trial that motivates closing it.
+- Each new decision can be linked back to the trial(s) it closes — the trial is the regression test, the decision is the fix.
+- Future trap discoveries get tagged `[trap, open]` immediately, becoming a queue for design rounds.
+
+### Parked
+- TODO.md vs tasks.md merge (separate concern from checklist removal).
+- A script that auto-checks every `[*, passes]` trial against the decision/lexicon it cites (catches drift if a decision changes).

@@ -35,6 +35,12 @@ Short, concrete examples of things natural languages get wrong. The "why" behind
 - **"Mean sea level."**
   Mean over what dimension? Most people assume spatial mean over the globe; it's actually a temporal mean at each point.
 
+- **"Its tube ends were round."**
+  > "Its tube ends [what]?"
+  - Parse A (intended): `[its [tube ends]]` were round — `tube` is a noun-adjunct modifying `ends`; the *ends* are round.
+  - Parse B (live in other contexts): `[its tube] ends [...]` — `ends` is a verb meaning *terminates*. Compare "its tube ends here." Only the verb agreement on `were` kills B here; with a different head verb, the ambiguity is decided by chance.
+  - English lets nouns sit next to nouns and silently flip one into a modifier. Listener disambiguates by inferring which word is the verb.
+
 ## Negation scope
 
 - **"not (a = b)"** collapses in English to "a is not equal to b" — but often the intended meaning is *"a doesn't have to equal b."* English can't distinguish:
