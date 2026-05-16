@@ -1,14 +1,36 @@
 # Walkthrough — Lexor by progressive complexity
 
-Read top-to-bottom to learn the language. Each level introduces one new piece of grammar; later levels assume the earlier ones. Examples use bracketed placeholders like `[apple]` for content words whose roots haven't been formally assigned yet — the grammar is the focus, not the vocabulary.
+Read this top-to-bottom to learn the language. Each level introduces one new piece of grammar, and later levels assume you've seen the earlier ones.
 
-**Conventions used below:**
-- `lexicon entry` for locked roots (lowercase, no markup).
-- `[bracketed]` for unlocked placeholders.
-- Verb root + tense vowel: `lom` (eat-concept) + `a` (atemporal) = `loma`.
-- VOS sentence order: verb, object, subject — but most modifiers (quantifiers, prepositional phrases) follow the noun they modify.
+Examples use bracketed placeholders like `[apple]` for content words whose Lexor forms haven't been chosen yet. The grammar is the focus here, not the vocabulary.
 
-For dense reference, see `examples.md`. For the test suite by capability, see `trials.md`.
+---
+
+## What you need to know before Level 0
+
+A few terms you'll see throughout. Don't worry about memorizing them — they'll make sense after a few examples.
+
+### Word shapes
+
+Lexor words follow predictable shapes built from two kinds of sounds:
+
+- A **vowel** — `a e i o u y c`. (The letter `c` represents one of the vowel sounds, written that way for keyboard convenience.)
+- A **consonant** — everything else: `b d f g h j k l m n p r s t v z x` plus the digraph `ch`.
+
+The two main shapes you'll meet are:
+
+- **CV** ("consonant-vowel") — a single consonant followed by a single vowel. Two letters, one syllable. Used for very common words like pronouns and digits: `e` (he/she), `pa` (the digit 1), `ka` (question particle).
+- **CVC** ("consonant-vowel-consonant") — consonant, vowel, consonant. Three letters, one syllable. Used for all content roots like verbs, nouns, and adjectives: `lom` (eat), `pot` (make), `vis` (see).
+
+Words built on a CVC root usually grow vowels on the end to mark tense or role, so you'll often see longer forms like `lome`, `loma e`, `lomera`. The starting consonant-vowel-consonant is the *root*, and the rest is grammatical information attached to it.
+
+### Sentence order
+
+Lexor sentences put the verb first. The order is:
+
+> **verb · object · subject** — what is happening, what it happens to, who does it.
+
+Some textbooks abbreviate this as **VOS** ("verb-object-subject"). This abbreviation will come up later. Most other modifiers (counts, place markers, time markers) come after the noun they refer to.
 
 ---
 
@@ -16,19 +38,18 @@ For dense reference, see `examples.md`. For the test suite by capability, see `t
 
 **Lexor:** `loma`
 
-**Gloss:**
-- `lom` — eat-concept (root)
-- `a` — atemporal-frame inner vowel (the default, meaning "no specific time")
+**What it means:** "eat (in general)."
 
-**English:** "(to) eat" / "eats (in general)"
+**How it's built:**
+- `lom` is the root for the concept of eating.
+- `a` is a vowel added to the root. This particular vowel means "no specific time" — the speaker isn't saying when the eating happens. It's the default choice when time doesn't matter.
 
-**What this demonstrates:**
-- Every content word is a CVC root plus a vowel.
-- The inner vowel is the temporal frame. `a` is the universal default — speaker not committing to any specific time.
-- A bare verb with no subject is a statement of the action in the abstract. The listener fills in the subject from context if needed.
+So `loma` is the eat-root plus the no-time vowel, and the whole word means "to eat" or "eats in general."
 
-**What's missing yet:**
-- No "who's doing it" yet — that's the next level.
+**What this level shows:**
+- Lexor words are made by combining a root with one or more vowels.
+- The vowel right after the root tells you when the action happens. Other vowels would say "past," "future," "right now," and so on — you'll see those in Level 2.
+- You can have a complete verb with no subject. The listener can fill in "who" from context if it matters.
 
 ---
 
@@ -36,43 +57,64 @@ For dense reference, see `examples.md`. For the test suite by capability, see `t
 
 **Lexor:** `loma e`
 
-**Gloss:**
-- `loma` — eat (atemporal)
-- `e` — third-person singular pronoun (he/she/they, gender-neutral)
+**What it means:** "She eats." (or "He eats," or "They eat" — the speaker isn't committing to a gender.)
 
-**English:** "She eats." / "He eats." / "They eat (one person)." — the pronoun doesn't commit to gender.
+**How it's built:**
+- `loma` is the verb you already know: "eat" with no specific time.
+- `e` is a one-letter pronoun meaning "he, she, or they (one person)." Lexor doesn't force the speaker to commit to a gender.
 
-**What this demonstrates:**
-- VOS order: with no object, the subject follows the verb.
-- Pronouns are CV or V shape (shorter than content roots) — `e` is one of 11 pronouns.
-- No mandatory gender. The language never forces a commitment the speaker hasn't made.
+**What this level shows:**
+- The subject (who is doing the verb) comes *after* the verb. There's no object yet, so the order is just verb then subject.
+- Pronouns are very short — usually one letter — because they're used so often.
+- The language never forces you to commit to information you haven't decided on. Gender is one example.
 
-**Other pronouns in this slot:**
-- `y` (I), `u` (you-singular), `e` (he/she/they-person), `i` (it)
-- Plurals: `le` (you+me), `lo` (they-people), `ly` (you-plural), `la` (we, generic)
+**Other pronouns you can use in the same slot:**
+
+| Lexor | Meaning |
+|---|---|
+| `y` | I, me (the speaker) |
+| `u` | you (one listener) |
+| `e` | he / she / they (one other person) |
+| `i` | it (one object or concept) |
+| `le` | we (you and me, just us two) |
+| `lo` | they (multiple other people) |
+| `ly` | you (multiple listeners) |
+| `la` | we (some group including the speaker, members unspecified) |
 
 ---
 
-## L2 — Tense
+## L2 — When the action happens (tense)
 
-**Lexor:** `lomo e` — she ate
-**Lexor:** `lome e` — she eats right now
-**Lexor:** `lomi e` — she will eat
-**Lexor:** `lomex e` — she is eating (present continuous)
-**Lexor:** `lomy e` — she would eat (conditional)
-**Lexor:** `lomu` — eat! (imperative, subject often elided)
+The vowel at the end of the root tells you when the action takes place. Swap the vowel, get a different time.
 
-**Gloss:**
-- The inner vowel of the verb encodes tense.
-- `a` atemporal, `e` present, `o` past, `i` future, `u` imperative, `y` conditional, `c` perfect.
-- `x` after a tense vowel = continuous aspect.
+| Lexor | Meaning |
+|---|---|
+| `loma e` | she eats (general / no specific time) |
+| `lome e` | she is eating (right now) |
+| `lomo e` | she ate (in the past) |
+| `lomi e` | she will eat (in the future) |
+| `lomex e` | she is eating (ongoing right now — the `x` adds "is in the middle of") |
+| `lomy e` | she would eat (hypothetical / if-then condition) |
+| `lomu` | eat! (a command — the subject is usually left out) |
 
-**What this demonstrates:**
-- Tense lives in one vowel, not in conjugation tables. Same vowel works on derived non-verbs too (a "current eater" vs a "former eater").
-- Tense is opt-out, not opt-in: `a` means "I'm not committing to a time."
+**The full set of these vowels:**
 
-**What's missing yet:**
-- What if you don't know the tense? Use `a` — atemporal is the principled choice when uncertain.
+| Vowel | Meaning |
+|---|---|
+| `a` | no specific time (general truth, default) |
+| `e` | present (right now) |
+| `o` | past |
+| `i` | future |
+| `u` | imperative (a command) |
+| `y` | conditional (hypothetical, "would") |
+| `c` | perfect (completed action — sounds like "æ") |
+
+The extra letter `x` after one of these adds "in the middle of" (ongoing). So `lomex` is "is right now in the middle of eating."
+
+**What this level shows:**
+- One vowel does the work of English's whole tense system (eat / ate / will eat / would eat / etc.).
+- If you don't know or don't care about when, use `a`. Lexor doesn't force you to pick a tense.
+- Same vowels work later on nouns derived from verbs — for example, a "current eater" vs a "past eater" uses the same vowel system.
 
 ---
 
@@ -80,352 +122,428 @@ For dense reference, see `examples.md`. For the test suite by capability, see `t
 
 **Lexor:** `loma [apple] e`
 
-**Gloss:**
-- `loma` — eat
-- `[apple]` — the thing eaten (placeholder; the apple-root isn't locked yet)
-- `e` — she
+**What it means:** "She eats an apple."
 
-**English:** "She eats an apple."
+**How it's built:**
+- `loma` — eat (general).
+- `[apple]` — the thing being eaten. (We're using brackets because the real Lexor word for apple hasn't been picked yet.)
+- `e` — she.
 
-**What this demonstrates:**
-- VOS order: verb, then object, then subject. The object sits between the verb and the subject by default — no preposition needed.
-- No article (`a`/`the`). Definiteness is opt-in; bare nouns are unspecified by default.
-- No plural. "An apple" / "apples" / "the apple" all surface as `[apple]` unless number or definiteness matters.
-
----
-
-## L4 — Role vowels (when position alone is ambiguous)
-
-**Lexor:** `loma [apple]-o e-e` — same meaning, explicit roles
-**Lexor:** `dake [apple]-o e-e u-u` — she gives an apple to you (three arguments)
-**Lexor:** `apre [door]-o e-e [key]-i` — she opens the door with a key (instrument)
-
-**Gloss:**
-- Outer vowel on a noun marks its role.
-- `-e` subject, `-o` object, `-u` recipient (dative), `-i` instrument.
-- Attached only when default position doesn't fully pin the roles.
-
-**What this demonstrates:**
-- Lexor's grammar pins roles by position *or* by morphology. Position works for two-argument verbs; explicit role-vowels handle three-or-more.
-- Doubled vowels (like `e-e` where the pronoun already ends in `e`) are pronounced as a long vowel.
+**What this level shows:**
+- With an object in the sentence, the order is verb, then object, then subject. The object sits between the verb and the subject.
+- There's no word for "a" or "the." If you don't care whether it's "an apple" or "the apple" or just "apples in general," you don't say it.
+- There's no plural mark either. "An apple," "apples," and "the apples" all surface as `[apple]` unless you specifically want to add a number or a definiteness marker.
 
 ---
 
-## L5 — Quantifiers and counts
+## L4 — Marking roles when position alone isn't enough
 
-**Lexor:** `loma [apple] re e` — she eats three apples
-**Lexor:** `loma [apple] tot e` — she eats every apple
-**Lexor:** `loma [apple] kel e` — she eats some apple
-**Lexor:** `loma [apple] nul e` — she eats no apple
-**Lexor:** `loma [apple] sol re e` — she eats only three apples
+For sentences with two arguments (eater and food), the order is enough — verb, object, subject. But for verbs that take three arguments (like "give X to Y") or where the order could be ambiguous, you can stick a small vowel on the end of each noun to mark its role.
 
-**Gloss:**
-- `re` digit 3 (digits: `zo pa du re ko fi sa chi bo ne` = 0–9)
-- `tot` universal (∀), `kel` existential (∃), `nul` none, `sol` only
-- Quantifier follows the noun.
+**Lexor:** `loma [apple]-o e-e` — she eats an apple, with explicit roles
+**Lexor:** `dake [apple]-o e-e u-u` — she gives an apple to you
+**Lexor:** `apre [door]-o e-e [key]-i` — she opens the door with a key
 
-**What this demonstrates:**
-- Number is a separate optional modifier system, not a noun inflection.
-- Quantifier order is locked: it follows the noun, like all modifiers.
-- "Every" / "some" / "none" / "only" are single CVC roots, not multi-word.
+**The role vowels:**
 
-**Distributive vs collective:**
-- `loma [apple] re pad e` — three apples, each individually (distributive)
-- `loma [apple] re mas e` — three apples, together as a group (collective)
-- Unmarked = speaker not committing to either reading.
+| Vowel | Role | English equivalent |
+|---|---|---|
+| `-e` | subject (the doer) | she |
+| `-o` | object (the thing acted on) | the apple |
+| `-u` | recipient | to you |
+| `-i` | instrument | with a key |
+
+You only need these when the default order doesn't make the meaning clear. For ordinary two-argument sentences, just rely on word order.
+
+When a pronoun already ends in `e` and you add `-e`, you get a doubled vowel like `e-e`. Pronounce that as one longer vowel.
 
 ---
 
-## L6 — Prepositions (time, place, manner)
+## L5 — Counting and quantifying
+
+To say how many of something, put a number or quantity word *after* the noun.
+
+| Lexor | Meaning |
+|---|---|
+| `loma [apple] re e` | she eats three apples |
+| `loma [apple] tot e` | she eats every apple |
+| `loma [apple] kel e` | she eats some apple |
+| `loma [apple] nul e` | she eats no apple |
+| `loma [apple] sol re e` | she eats only three apples |
+
+**The pieces:**
+
+- `re` is the digit 3. The full digit list is `zo pa du re ko fi sa chi bo ne` for 0 through 9.
+- `tot` means "all" or "every." (Logicians sometimes call this the *universal* quantifier and write it as ∀.)
+- `kel` means "some." (Logicians call this the *existential* quantifier and write it as ∃.)
+- `nul` means "none, zero of."
+- `sol` means "only, restricted to."
+
+**Choosing between "each" and "together":**
+
+When three people share three apples, English can be ambiguous — does each person get one, or do all three eat the apples together? Lexor has two small markers to make this explicit:
+
+- `loma [apple] re pad e` — three apples, each one separately (distributive)
+- `loma [apple] re mas e` — three apples, all together as a group (collective)
+
+If you don't add either marker, you're saying "three apples" without committing to which reading — that's allowed and means exactly that.
+
+---
+
+## L6 — Place, time, and how-it's-done (prepositions)
+
+Lexor uses small connector words to attach extra information like *where*, *when*, or *how*. These come at the end of the sentence by default.
 
 **Lexor:** `loma e tep dim` — she eats during the day
 **Lexor:** `loma e lok bra [kitchen] ket` — she eats in the kitchen
 **Lexor:** `kompo e mod ke martelo o` — she fixes it by hammering it
 
-**Gloss:**
-- `tep` at/in (point in time), `lok` at/in/on (spatial)
-- `mod` manner / by means of
-- The preposition takes its argument as a noun phrase or clause.
+**The connector words used here:**
 
-**What this demonstrates:**
-- Prepositions are closed-class CVC roots.
-- Time / place / manner modifiers sit at the end of the sentence by default (after verb, object, subject).
-- For complex arguments, group with `bra … ket` (Level 16).
+- `tep` — "at" or "during" (for points in time). `tep dim` = "during the day."
+- `lok` — "at," "in," or "on" (for places). `lok bra [kitchen] ket` = "in the kitchen." The `bra … ket` is a pair of brackets you'll meet in Level 16; here they just group the place word.
+- `mod` — "by," "by means of." `mod ke martelo o` = "by hammering it." The `ke` introduces a small sub-sentence as the way it was done.
 
-**Full spatial set:** `lok sub sur pok lat dor fas int kir dir oks tra` — 12 closed-class spatial relations covering under/over/near/beside/behind/front/between/around/toward/from/through.
+**The full set of place connectors** (closed list — these are the only ones):
 
-**Full temporal set:** `tep pen sin lim ant pos` — at/during/since/until/before/after.
+`lok` (at/in/on), `sub` (under), `sur` (over), `pok` (near), `lat` (beside), `dor` (behind), `fas` (in front of), `int` (between), `kir` (around), `dir` (toward), `oks` (from), `tra` (through).
 
----
+**The full set of time connectors:**
 
-## L7 — Negation
-
-**Lexor:** `no-loma e` — she doesn't eat (whole-predicate negation)
-**Lexor:** `loma no-[apple] e` — she eats not-an-apple (object-scoped negation)
-**Lexor:** `no-mag e [him]` — she is not greater than him
-
-**Gloss:**
-- `no-` is a prefix, phonologically bound to its host.
-- Scopes over the immediately adjacent unit. Three positions = three meanings.
-
-**What this demonstrates:**
-- Negation is positionally explicit. No ambiguity between "she doesn't eat apples" and "she eats non-apples."
-- One operator, not many. Lexor has no separate "anti-" / "non-" / "un-" — just `no-`.
-
-**No lexical antonyms:**
-- Lexor doesn't have an "opposite" marker. Antonyms like love/hate get distinct roots (`am` / `od`); `no-am` means "doesn't love," which is not the same as "hates."
+`tep` (at), `pen` (during), `sin` (since), `lim` (until), `ant` (before), `pos` (after).
 
 ---
 
-## L8 — Questions
+## L7 — Saying "not"
 
-**Lexor:** `ka loma e` — does she eat? (yes/no)
-**Lexor:** `loma ka` — what does she eat? (`ka` in the object slot)
-**Lexor:** `loma [apple] ka` — who eats apples?
-**Lexor:** `loma e tep ka` — when does she eat?
-**Lexor:** `loma e lok ka` — where does she eat?
-**Lexor:** `loma e mod ka` — how does she eat?
-**Lexor:** `loma e kaw ka` — why does she eat?
-**Lexor:** `loma e, ka` — she eats, right? (tag question)
+To negate a word, attach `no-` directly in front of it. The hyphen shows it's stuck to the next word, not a separate word.
 
-**Gloss:**
-- `ka` is the universal question particle.
-- Position determines question type: initial = yes/no, in-slot = wh, after-preposition = role-question.
+| Lexor | Meaning |
+|---|---|
+| `no-loma e` | she doesn't eat (the whole action is negated) |
+| `loma no-[apple] e` | she eats not-an-apple (only the *thing eaten* is negated — she eats, but not an apple) |
+| `no-mag e [him]` | she is not greater than him (the comparison is negated) |
 
-**What this demonstrates:**
-- One particle covers all interrogatives — no `who`/`what`/`when`/`where`/`why`/`how` lexical sprawl.
-- Tag questions just append `, ka` to an assertion.
+**What this level shows:**
+- `no-` always scopes over the *one* word it's attached to. To negate a different part of the sentence, move `no-` to a different word. Three positions, three meanings.
+- Lexor doesn't have separate negation prefixes like English "un-," "non-," "anti-." There's just `no-` for everything.
+- Lexor has no built-in opposite marker either. "Love" and "hate" get their own separate roots (`am` and `od`). `no-am` means "doesn't love," which is not the same as "hates."
 
 ---
 
-## L9 — Subordinate clauses
+## L8 — Asking questions
 
-**Lexor:** `[man] ke loma [apple]` — the man who eats apples (relative clause)
-**Lexor:** `[apple] ke loma e` — the apple that she eats (relative, gap = object)
-**Lexor:** `dike e ke loma u` — she says that you eat (complement clause)
-**Lexor:** `golo e tep ke pluvex` — she left when it was raining (temporal clause)
-**Lexor:** `golo e kaw ke pluvo` — she left because it rained (causal clause)
+All questions in Lexor use the same little word: `ka`. Where you put `ka` determines what kind of question you're asking.
 
-**Gloss:**
-- `ke` is the universal complementizer.
-- Function determined by what *precedes* `ke`: a noun → relative clause; a speech verb → complement; a preposition → adverbial.
+| Lexor | Meaning |
+|---|---|
+| `ka loma e` | does she eat? (yes/no — `ka` at the start) |
+| `loma ka` | what does she eat? (`ka` in the object slot) |
+| `loma [apple] ka` | who eats apples? (`ka` in the subject slot) |
+| `loma e tep ka` | when does she eat? (`ka` after the time-connector `tep`) |
+| `loma e lok ka` | where does she eat? (`ka` after the place-connector `lok`) |
+| `loma e mod ka` | how does she eat? |
+| `loma e kaw ka` | why does she eat? (`kaw` is the cause-connector) |
+| `loma e, ka` | she eats, right? (tag question — comma plus `ka` at the end) |
 
-**What this demonstrates:**
-- One subordinator covers what English uses 8+ words for (who/which/that/when/while/whereas/because/although).
-- Relative-clause "gap" (the missing role in the embedded clause) is the modified noun. Role-vowel marks the gap when it's non-default.
+**What this level shows:**
+- One word, `ka`, replaces all of English's "who, what, when, where, why, how, does, is, are…"
+- The position of `ka` tells you which slot is being asked about. No memorizing a separate word for each question type.
 
 ---
 
-## L10 — Conditionals
+## L9 — Building bigger sentences (subordinate clauses)
+
+To put a small sentence inside a bigger one — like "the man who eats apples" or "she says that you eat" — Lexor uses one word: `ke`. What `ke` means depends on what comes right before it.
+
+| Lexor | Meaning | What's before `ke` |
+|---|---|---|
+| `[man] ke loma [apple]` | the man who eats apples | a noun → relative clause |
+| `[apple] ke loma e` | the apple that she eats | a noun (object) → relative clause |
+| `dike e ke loma u` | she says that you eat | a speech verb → complement clause |
+| `golo e tep ke pluvex` | she left when it was raining | a time word → time clause |
+| `golo e kaw ke pluvo` | she left because it rained | a cause word → reason clause |
+
+**What this level shows:**
+- One word, `ke`, replaces English's "who, which, that, when, while, because, although…"
+- Whatever sits *before* `ke` tells you what role the sub-sentence is playing: a noun gives you a relative clause, a verb gives a complement, a connector word gives an adverbial.
+
+---
+
+## L10 — "If…then" sentences (conditionals)
 
 **Lexor:** `is pluve, lomy e [inside]` — if it's raining, she would eat inside
 **Lexor:** `is no-pluve, goly e` — if it isn't raining, she would go
 
-**Gloss:**
-- `is` is the conditional particle (causal/temporal "if").
-- The consequent verb takes the conditional vowel `y`.
+**How it's built:**
+- `is` means "if." It introduces the condition.
+- The verb after the comma takes the vowel `y` (the conditional vowel from Level 2). So `lomy` is "would eat" and `goly` is "would go."
 
-**What this demonstrates:**
-- Causal conditional (`is`) is a different beast from logical implication (`imp`, see L12) — English's "if" overloads both; Lexor splits them.
+**What this level shows:**
+- Causal "if" (the everyday kind, where one thing makes another happen) uses `is`. There's also a separate word `imp` for formal logical implication (used in proofs and math). You'll see `imp` in Level 12.
+- The conditional vowel `y` on the result-verb signals that this isn't an assertion — it's a hypothetical.
 
 ---
 
-## L11 — Coordination
+## L11 — Linking with "and" / "or"
+
+Two simple connectors:
 
 **Lexor:** `loma [apple] e kun bibe [water] e` — she eats an apple and drinks water
 **Lexor:** `loma [apple] e vel loma [pear] e` — she eats an apple or a pear
 
-**Gloss:**
-- `kun` AND, `vel` OR (Latin *cum* / *vel*).
-- Coordinators keep clause depth constant — they continue the current clause with another predication.
+**The words:**
+- `kun` = "and" (from Latin *cum*, "with")
+- `vel` = "or" (from Latin *vel*, "or")
 
-**What this demonstrates:**
-- Pure-AND and pure-OR sequences are flat and unambiguous.
-- Mixed AND/OR (`A and B or C`) is **forbidden in flat form** — speakers must group with `bra … ket` (Level 16) to disambiguate.
-
----
-
-## L12 — Reasoning chains
-
-**Lexor:** `dat pluvo. golo e kaw ke pluvo. erg sta sus-s [floor]` — Given it rained. She left because it rained. Therefore the floor is wet.
-**Lexor:** `dat pluvo imp sta sus-s [floor]. no-sta sus-s [floor]. erg no-pluvo` — Modus tollens: given rain implies wet-floor; the floor is not wet; therefore it didn't rain.
-
-**Gloss:**
-- `dat` premise / given that
-- `erg` therefore / inference
-- `imp` formal logical implication (distinct from `is` causal conditional)
-
-**What this demonstrates:**
-- Multi-step reasoning uses *staged sentences* — each premise / observation / conclusion is its own sentence. No nested conditionals.
-- The three reasoning markers (`dat`, `erg`, `imp`) are discourse-level — they're how Lexor does proofs, arguments, and structured thought.
+**What this level shows:**
+- You can chain any number of "and"s together, or any number of "or"s. Those are unambiguous.
+- But you *can't* mix them in a flat sentence. "A and B or C" is not allowed by itself — you have to use the bracket pair `bra … ket` (Level 16) to show whether you mean "(A and B) or C" or "A and (B or C)."
 
 ---
 
-## L13 — Modal operators (possibility, necessity)
+## L12 — Reasoning step by step
 
-**Lexor:** `kan pluve` — it might rain (possibility, ◇)
-**Lexor:** `mus pluve` — it must be raining (necessity, □)
-**Lexor:** `no- mus sam a b` — "not necessarily a = b" (the elusive English reading)
-**Lexor:** `kan no- sam m1 m2` — "possibly m1 ≠ m2" (= "the masses can be different")
+For arguments and proofs, Lexor uses three little discourse words: `dat`, `erg`, and `imp`.
 
-**Gloss:**
-- `kan` epistemic possibility — English/German *can*/*kann*.
-- `mus` epistemic necessity — English/German *must*/*muss*.
-- Both sentence-initial. Both compose with `no-` for the four corners.
+**Lexor:** `dat pluvo. golo e kaw ke pluvo. erg sta sus-s [floor]`
+**Translation:** "Given that it rained. She left because it rained. Therefore the floor is wet."
 
-**What this demonstrates:**
-- The "can be different" / "doesn't have to equal" / "may or may not be" readings that English collapses are all distinct surface shapes in Lexor.
-- Epistemic flavor only — deontic permission/obligation are separate concepts not yet locked.
+**Lexor:** `dat pluvo imp sta sus-s [floor]. no-sta sus-s [floor]. erg no-pluvo`
+**Translation:** "Given that rain implies a wet floor. The floor is not wet. Therefore it didn't rain." (This is the logical step called *modus tollens*.)
+
+**The three words:**
+- `dat` — "given that," "let us assume." Marks a starting point.
+- `erg` — "therefore." Marks a conclusion.
+- `imp` — "formally implies." Used for strict logical implication, separate from the everyday "if…then" (`is`) of Level 10.
+
+**What this level shows:**
+- Reasoning chains are built from separate sentences, each one a step. Lexor doesn't nest conditionals inside conditionals.
+- These three words together let you write proofs, arguments, and structured explanations cleanly.
 
 ---
 
-## L13b — Graded probability
+## L13 — "Might" and "must" (modal operators)
+
+To say something might be true, or must be true, use one of two markers at the start of the sentence.
+
+**Lexor:** `kan pluve` — it might rain
+**Lexor:** `mus pluve` — it must be raining
+**Lexor:** `no- mus sam a b` — a doesn't have to equal b (it's not necessarily true that a equals b)
+**Lexor:** `kan no- sam m1 m2` — m1 and m2 might be different (it's possible that they aren't equal)
+
+**The words:**
+- `kan` = "might," "may," "is possibly." Mnemonic: English/German *can* / *kann*.
+- `mus` = "must," "is necessarily." Mnemonic: English/German *must* / *muss*.
+
+Both go at the very start of a sentence. Both can be combined with `no-` from Level 7 to give four readings: "might be the case," "might not be," "must be," "doesn't have to be."
+
+**What this level shows:**
+- The distinctions English collapses into "is" / "could be" / "might be" / "doesn't have to be" are clearly separate in Lexor.
+- This is *epistemic* modality — about what the speaker thinks is possible or necessary. Permission and obligation ("you may smoke here," "you must wear a helmet") are a separate kind of modality that hasn't been added yet.
+
+---
+
+## L13b — Numerical probability
+
+Sometimes you want to attach a specific probability to a claim, like "90% likely." Lexor uses `chan` for this.
 
 **Lexor:** `chan zo dem ne zo pluve` — it will rain with probability 0.90
 **Lexor:** `chan zo dem fi sam a b` — a equals b with probability 0.5
-**Lexor:** `chan mag zo dem fi pluve` — probability of rain is greater than 0.5
-**Lexor:** `chan zo dem ne zo X dat Y` — P(X | Y) = 0.9 (conditional probability via `dat`)
+**Lexor:** `chan mag zo dem fi pluve` — the probability of rain is greater than 0.5
 
-**Gloss:**
-- `chan` — graded probability marker, sentence-initial.
-- Form: `chan <number> <proposition>`. Number in [0, 1] = the probability.
-- Scalar version of `kan` (◇) and `mus` (□): `chan zo` ≡ `no- kan` (impossible), `chan pa` ≡ `mus` (certain).
+**How it works:**
+- `chan` goes at the start of the sentence, like `kan` and `mus`.
+- After `chan` comes a number, then the rest of the sentence.
+- The number is a fraction between 0 and 1, where 0 means "impossible" and 1 means "certain."
 - Mnemonic: English/French *chance*.
 
-**What this demonstrates:**
-- Probability "sprinkles" onto any proposition. The infrastructure handles point probabilities, ranges (compose with `mag`/`min`/`tom`), and conditional probabilities (compose with `dat`).
-- Distinct from amount-precision markers (`pir`/`tom`/`pem`) which scope over a *single magnitude*. `chan` scopes over the *whole proposition*. Different positions, no overload.
-- No fuzzy probability words ("likely," "unlikely"). Speakers compose with explicit numbers or fall back on the binary modals.
+The number itself is built from digits: `zo dem ne zo` is "zero point nine zero" = 0.90 in decimal. (The `dem` is the decimal point.)
+
+**Relating `chan` to the earlier `kan` and `mus`:**
+- `chan zo X` = "X has probability 0" = impossible. Same as `no- kan X`.
+- `chan pa X` = "X has probability 1" = certain. Same as `mus X`.
+- `kan X` (without a number) is "X is possible to some unspecified degree."
+
+**Conditional probability** uses `dat` from Level 12: `chan zo dem ne zo X dat Y` reads as "X has probability 0.9 given Y." That's the probability of X assuming Y.
+
+**What this level shows:**
+- You can attach a specific numeric probability to any sentence without awkward "it's 90% likely that…" wrappers.
+- `chan` is different from the amount-precision markers (`pir` for "approximately," `tom` for "between"). Those attach to a single number; `chan` attaches to a whole sentence.
 
 ---
 
-## L14 — Axis system (direction, location, dimension)
+## L14 — Talking about axes, directions, and dimensions
+
+For directions ("upward"), locations ("the top"), and dimensions ("the height"), Lexor uses a small system based on three new words plus the place-connectors you already know.
 
 **Lexor:** `gol aks fas mag e` — she goes forward
-**Lexor:** `aks lat mag` — left (the +Y direction)
-**Lexor:** `aks sur min` — down (the −Z direction)
-**Lexor:** `tip aks sur mag bra [box] ket` — the top of the box (extreme point of +Z axis of box)
-**Lexor:** `mez aks pa bra [box] ket` — the longest dimension of the box (object-frame, orientation-free)
-**Lexor:** `mez aks sur bra [box] ket` — the height of the box (Z-axis magnitude, agent-frame)
+**Lexor:** `aks lat mag` — left direction (the positive Y direction)
+**Lexor:** `aks sur min` — down direction (the negative Z direction)
+**Lexor:** `tip aks sur mag bra [box] ket` — the top of the box (the extreme point at the upper end)
+**Lexor:** `mez aks pa bra [box] ket` — the longest dimension of the box
+**Lexor:** `mez aks sur bra [box] ket` — the height of the box (the size along the up-down axis)
 
-**Gloss:**
-- `aks` — axis (1D directed line). Combines with spatial preposition for agent-frame (`aks fas` = X), or with digit for object-rank (`aks pa` = longest).
-- `tip` — endpoint / extremum along an axis.
-- `mez` — dimensional magnitude (length along an axis).
-- `mag`/`min` — polarity (positive / negative end of an axis).
+**The pieces:**
+- `aks` means "axis" — a line that goes through space in one direction.
+- `tip` means "the extreme point" or "the end of an axis."
+- `mez` means "size along an axis" (a length, a width, a height, etc.).
+- `mag` and `min` mark which end of an axis: `mag` = the positive end, `min` = the negative end. (You've seen them before as "greater than" and "less than" — Lexor reuses them.)
 
-**Coord system (locked):** X forward, Y left, Z up, right-handed.
+**Two ways to identify an axis:**
 
-**What this demonstrates:**
-- "Up" the direction vs "top" the location vs "height" the magnitude are three structurally distinct shapes. No overload.
-- Object-intrinsic dimensions (`aks pa/du/re`) don't presume orientation — works for a box lying on its side.
+*By the body's reference frame* (an observer's forward-backward, left-right, up-down):
+- `aks fas` = the front-back axis (= the X axis)
+- `aks lat` = the left-right axis (= the Y axis)
+- `aks sur` = the up-down axis (= the Z axis)
+
+*By size rank* (orientation doesn't matter):
+- `aks pa` = the longest dimension (rank 1)
+- `aks du` = the middle dimension (rank 2)
+- `aks re` = the shortest dimension (rank 3)
+
+**The coordinate system Lexor uses** (locked in `decisions.md`):
+- X axis points forward (the direction the person is facing).
+- Y axis points to their left.
+- Z axis points up.
+- "Right-handed" — if you curl the fingers of your right hand from X toward Y, your thumb points along Z.
+
+**What this level shows:**
+- English mixes up "up" the direction, "top" the location, and "height" the size. Lexor uses three different shapes for these so there's no ambiguity.
+- For the dimensions of an object (longest / middle / shortest), Lexor uses the digit ranks. That way you don't have to know which way the object is sitting.
 
 ---
 
 ## L15 — Angles
 
-**Lexor:** `rot zo doz re aks sur e` — she turns 90° left (1/4 revolution around Z)
-**Lexor:** `rot zo doz sa aks sur e` — she turns around (180°)
-**Lexor:** `rot min zo doz re aks sur e` — she turns 90° right (negative 1/4)
-**Lexor:** `rot zo doz pa aks lat e` — she tilts forward 30° (1/12 around Y)
-**Lexor:** `sam zo doz sa rota bra his approach ket aks sur` — his angle of approach is 180° around Z
+Angles in Lexor are written as *fractions of a full turn*. There's no degrees, no radians — the number itself is how many full rotations.
 
-**Gloss:**
-- Angles are *fractions of a full revolution*. No degrees, no radians, no unit suffix — the number IS the count.
-- Dozenal is the natural base: `zo doz pa` = 1/12 (30°), `zo doz re` = 1/4 (90°), `zo doz sa` = 1/2 (180°), `zo doz pa sa` = 0.16 doz = 1/8 (45°).
-- Sign: positive = right-handed around the named axis. For `aks sur` (Z), positive = counterclockwise from above = leftward turn (the clock analogy is flipped).
+| Lexor | Meaning |
+|---|---|
+| `rot zo doz re aks sur e` | she turns 90° to the left (1/4 of a full turn around the Z axis) |
+| `rot zo doz sa aks sur e` | she turns around (180°, 1/2 of a full turn) |
+| `rot min zo doz re aks sur e` | she turns 90° to the right (negative 1/4 turn) |
+| `rot zo doz pa aks lat e` | she tilts forward 30° (1/12 of a turn around the Y axis) |
 
-**What this demonstrates:**
-- "12 o'clock = 0 revs, 9 o'clock = +0.25, 6 o'clock = +0.5, 3 o'clock = −0.25" — compositionally, no new vocabulary.
-- The verb form (`rot <amount> aks <ax>`) and noun form (`rota <amount> aks <ax>`) share the same skeleton.
+**How the numbers work:**
 
----
+The number is just the fraction. So 1/4 of a turn = 0.25 in decimal = 0.3 in dozenal (base 12).
 
-## L16 — Sub-constituent brackets
+In dozenal — Lexor's natural base for angles, because 12 divides evenly into many useful angles:
+- `zo doz pa` = 1/12 = 30° (the `doz` is the dozenal decimal point)
+- `zo doz du` = 2/12 = 60°
+- `zo doz re` = 3/12 = 90°
+- `zo doz sa` = 6/12 = 180°
+- `zo doz pa sa` = roughly 1/8 = 45°
 
-**Lexor:** `tom bra re ket bra ko zo zo ket e` — I can do between 3 and 400 (pushups)
-**Lexor:** `bra loma A e kun loma B e ket vel loma C e` — (she eats A and eats B) or she eats C
-**Lexor:** `loma A e kun bra loma B e vel loma C e ket` — she eats A and (eats B or eats C)
+**Direction of positive turn:**
 
-**Gloss:**
-- `bra` opens a sub-constituent group, `ket` closes it.
-- Each `ket` matches the nearest unmatched `bra` (standard nesting).
+A positive turn (no minus sign) means *right-handed* rotation around the named axis. For `aks sur` (the Z axis, pointing up), that's counterclockwise when you look down from above — which is *leftward* for someone facing forward.
 
-**What this demonstrates:**
-- Brackets are required for mixed AND/OR — flat form is grammatically ill-formed.
-- Brackets break the digit-stream auto-fuse rule, so `tom bra re ket bra ko zo zo ket` cleanly gives `tom` two distinct number arguments.
-- Mnemonic: English "bracket" split into `bra` + `ket`.
+If you're used to a clock face, this is flipped: clock hands go clockwise (which is *negative* in Lexor for rotation around Z), and 9 o'clock (the left side of a clock face) corresponds to a positive 1/4 turn (0.25). It's consistent with physics convention; takes a moment to get used to.
+
+**What this level shows:**
+- Any angle around any axis can be expressed compactly with no new vocabulary — just the rotation verb, a number, and the axis name.
+- Compass-like directions are reachable: forward = 0, left = +1/4, back = +1/2, right = +3/4 (or −1/4).
 
 ---
 
-## L17 — Named binding (`def`)
+## L16 — Grouping inside a sentence (brackets)
 
-**Lexor:** `def var p loma A e kun loma B e. var p vel loma C e` — Let p = "she eats A and B." (p) or she eats C.
-**Lexor:** `def var x sam [biggest prime ant pa zo zo]. mag var x fi zo` — Let x = the biggest prime before 100. x > 50.
-**Lexor:** `nul def var x` — x is no longer bound (explicit retraction)
+When a sentence has multiple parts that could group different ways, Lexor uses a pair of bracket-words: `bra` (opens a group) and `ket` (closes a group). Mnemonic: English "bracket" split into bra-ket.
 
-**Gloss:**
-- `def var <name> <expression>` introduces a named binding.
-- `var <name>` references it later.
-- `nul def var <name>` retracts it; re-`def`ing the same name shadows.
+**Lexor:** `tom bra re ket bra ko zo zo ket e` — "I can do between 3 and 400 (pushups)"
+**Lexor:** `bra loma A e kun loma B e ket vel loma C e` — "(she eats A and she eats B) or she eats C"
+**Lexor:** `loma A e kun bra loma B e vel loma C e ket` — "she eats A and (she eats B or she eats C)"
 
-**What this demonstrates:**
-- For long expressions that would clutter the sentence, name them once and reuse.
-- Scope is discourse-local (current conversation), not sentence-local.
-- `def`'s real job is *naming for reuse*, not disambiguation (that's `bra/ket`'s job).
+**When you need them:**
+- When a number-operator like `tom` (between) takes two numeric arguments. Without brackets, "tom 3 400" would all get read as one big number because Lexor concatenates adjacent digits.
+- When you want to mix "and" and "or" in the same sentence. Flat mixed forms are not allowed; brackets make the grouping unambiguous.
+- Anywhere else you'd want grouping for clarity.
+
+**Nesting:**
+
+If you have brackets inside brackets, each `ket` closes the most recent unclosed `bra` — same rule as math parentheses.
+
+---
+
+## L17 — Naming a piece of sentence for reuse
+
+When you want to use the same phrase several times without retyping it, give it a name with `def`.
+
+**Lexor:** `def var p loma A e kun loma B e. var p vel loma C e`
+**Translation:** "Let p be 'she eats A and she eats B'. (p) or she eats C."
+
+**Lexor:** `def var x sam [biggest prime ant pa zo zo]. mag var x fi zo`
+**Translation:** "Let x be the biggest prime before 100. x is greater than 50."
+
+**Lexor:** `nul def var x`
+**Translation:** "x is no longer defined." (Explicit erasure of a name you had bound.)
+
+**The pieces:**
+- `def` introduces a name-binding.
+- `var <name>` references a name you've defined. The first time, it's the name being introduced; later times, it stands in for the expression.
+- `nul def var <name>` removes the binding. Defining the same name again replaces the old binding.
+
+**What this level shows:**
+- Use `def` to name long expressions so a later sentence can refer back to them compactly.
+- The name stays defined as long as the conversation continues (until you erase it or define it differently).
+- Note that `def` is for *naming for reuse*. For just splitting up a confusing sentence so groupings are clear, use the brackets from Level 16 instead.
 
 ---
 
 ## L18 — Composing several features
 
-A small worked text. Each sentence uses multiple earlier features.
+A small collection of worked examples. Each one combines several earlier features in a way the language is designed to handle smoothly.
 
-### Scene: she might come, but won't eat unless we ask
+### Example 1: she might come, but won't eat unless we ask
 
 ```
 kan vene e. is no-kan mus pet e ke loma, no-lomy e.
 ```
 
-**Gloss line 1:** `kan` possibility · `vene` come-present · `e` she — "She might come."
+Sentence 1: `kan vene e` — "She might come." (`kan` = might, `vene` = come-present, `e` = she.)
 
-**Gloss line 2:** `is` if · `no-kan` not-possible · `mus` necessary · `pet` ask · `e ke` she-that · `loma` eat · `,` · `no-lomy` not-eat-conditional · `e` — "If we can't necessarily ask her to eat, she would not eat."
+Sentence 2: `is no-kan mus pet e ke loma, no-lomy e` — "If we can't necessarily ask her to eat, she would not eat." Stilted in English but legal Lexor; demonstrates a modal inside a conditional inside an embedded clause.
 
-(Stilted, but legal Lexor. Demonstrates modal + conditional + clause embedding composing without conflict.)
-
-### Scene: pushup bet with bracketed range
+### Example 2: a pushup bet with a number range
 
 ```
 dat dike e ke kan domi e bra rot bra re ket bra ko zo zo ket ket pushupn. erg lori e kaw ke no-kan.
 ```
 
-**Translation:** "Given that she says she can do (between 3 and 400) pushups: therefore (she will cry) because (it is impossible)." — silly but exercises `dat`/`erg` reasoning, modal `kan`, sub-constituent brackets around a numerical range, and embedded clauses.
+Translation: "Given that she says she can do (between 3 and 400) pushups: therefore (she will cry) because (it is impossible)."
 
-### Scene: navigation order
+This silly example exercises: reasoning markers (`dat`, `erg`), a modal (`kan`), grouping brackets around a number range, and embedded clauses.
+
+### Example 3: a navigation order
 
 ```
 gol aks fas mag pa zo metr e. rot zo doz re aks sur e. gol aks fas mag fi metr e.
 ```
 
-**Translation:** "Go forward 10 meters. Turn 90° left. Go forward 5 meters."
+Translation: "Go forward 10 meters. Turn 90° left. Go forward 5 meters."
 
-This is three crisp imperatives chaining motion, rotation, and motion. The axis system + angle convention gives a compact, unambiguous navigation language — useful in any context (driving instructions, robotics, game directions, military comms).
+Three crisp imperatives in a row, chaining motion and rotation. The axis system plus the angle convention makes this kind of language compact and unambiguous — useful for driving instructions, robotics, game commands, military communications.
 
-### Scene: epistemic hedge with measurement
+### Example 4: hedging a measurement
 
 ```
 kan sam re metr mez aks pa bra box ket. kan min. no-vis y i.
 ```
 
-**Translation:** "The longest dimension of the box might be 3 meters. It might be less. I haven't seen it."
+Translation: "The longest dimension of the box might be 3 meters. It might be less. I haven't seen it."
 
-Demonstrates how modal `kan` lets a speaker hedge without lying. Compare to English "it's 3 meters... maybe? I don't know" which requires three separate clauses to convey the same hedging.
+Shows how `kan` lets a speaker hedge cleanly. Compare to English "it's 3 meters… maybe? I don't know" which needs three separate clauses to do the same job.
 
 ---
 
 ## Closing notes
 
-- This walkthrough covers ~80% of the locked grammar. The remaining 20% is in `decisions.md` (settled choices) and `examples.md` (dense reference).
-- Open design questions are tracked in `tasks.md`; unmet design goals are in `trials.md` (grep `\[.*, open\]`).
-- The vocabulary is still mostly unwritten — every bracketed `[word]` above is a placeholder. The `frequencies.yaml` priority list drives the next vocab pass.
+This walkthrough covers most of the locked grammar. The remaining details are in `decisions.md` (the log of settled choices) and `examples.md` (a denser reference with many more example sentences).
 
-If a sentence-shape here parses two ways in your head, that's either a bug in the walkthrough or a real ambiguity worth filing as a `[trap]` trial in `trials.md`. Both are useful to flag.
+Open design questions are tracked in `tasks.md`. Unmet design goals are in `trials.md` — `grep` for `[.*, open]` to see them all.
+
+The vocabulary itself is still mostly unwritten. Every bracketed `[word]` above is a placeholder for a content root that hasn't been chosen yet. The priority list for filling those in is in `frequencies.yaml`.
+
+If a sentence shape here parses two ways in your head, that's either a bug in the walkthrough or a real ambiguity worth filing as a `[trap]` entry in `trials.md`. Both are useful to flag.

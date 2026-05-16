@@ -1400,3 +1400,34 @@ Rejected adding `lik` (likely), `lim` (unlikely — also collides with `lim` for
 - **Fuzzy probability words** — rejected on principle; if a use case emerges that the composed forms can't handle, revisit.
 - **Probabilistic versions of `dat`/`erg`** — for "given that with probability P" / "therefore with probability P." Composable but not formalized.
 - **Frequentist vs Bayesian flavors** — Lexor's `chan` is interpretation-neutral; if a trial requires distinguishing "P(X) in the long run" from "my degree of belief in X," add then.
+
+---
+
+## 2026-05-16 — walkthrough.md readability pass
+
+### Issues raised by the user (and observed)
+The first draft of `walkthrough.md` had three concrete problems:
+
+1. **Acronyms used without explanation on first use.** VOS, CVC, logic symbols (◇ □ ∀ ∃), 1D, coordinate notation (+Y / −Z), and P(X) / P(X|Y) all appeared without being defined. A learner reading top-to-bottom hits these and has to either guess or leave the document to look them up.
+
+2. **General tone too terse / jargon-heavy.** The doc was structurally a walkthrough but read like reference material in places.
+
+3. **Stacked-adjective phrases were genuinely hard to parse.** The user flagged "atemporal-frame inner vowel" as the canonical example: three words modifying "vowel," with "atemporal-frame" ambiguously parseable as either a hyphenated unit or "atemporal frame" (where frame is the noun), and "inner" feeling tacked on. The reader has to do parsing work that the writer should have done.
+
+### Fix
+Rewrote the entire file (411 → 549 lines, structure preserved). Specific changes:
+
+- **Added a "What you need to know before Level 0" preface** that introduces word shapes (CV, CVC) and sentence order (VOS) once, with examples, before they're used. Every later reference can rely on this.
+- **Replaced math/logic symbols with words** where they appeared in prose: ◇/□ → "might / must," ∀/∃ → "all / some" with parenthetical notes for readers who know the symbols. Where the symbol is genuinely useful (rare), it's introduced alongside the word.
+- **Broke stacked adjectives into clear sentences.** "Atemporal-frame inner vowel" became "The vowel `a` ... means 'no specific time' — the default when a speaker doesn't want to commit to a time." Each level's gloss now uses short declarative sentences instead of noun-stack phrases.
+- **Friendlier overall voice.** Each level starts with what the example means (the meaning, not the parts) before breaking down the structure. Lists use tables where comparison is easier. Removed implicit linguistics-trained-reader assumptions.
+- **Coordinate notation written out.** "+Y direction" became "the positive Y direction" with a reminder that Y points to the speaker's left.
+- **Probability notation (P(X), P(X|Y)) gone from the prose** in L13b; the math notation appears only in the related-files comment in `decisions.md`.
+
+### Rule added (consider promoting to AGENTS.md)
+**When writing learner-facing material in this repo, define every abbreviation on its first use, prefer plain words over symbols, and avoid stacking more than one adjective in front of a noun. If you find yourself writing "X-Y Z noun," refactor into a sentence: "the noun, which is Y and X, …" or similar.**
+
+This rule deserves to be permanent — it'll come up again in the README, any future tutorial chapters, and any user-facing explanation. Will offer to add it to AGENTS.md next.
+
+### What the fix doesn't address
+- The user said "i have a few issues to fix" — plural. They named two issues explicitly (acronyms, friendliness) plus the stacked-adjective example. The rewrite addresses these three. If there are more issues they spot on a re-read, they're invited to flag.
