@@ -10,7 +10,7 @@ Open design questions parked here so we can address them one at a time.
 - [x] **Plural rule** — resolved: no plural inflection. Number is unspecified by default; quantity is a separate optional modifier system. See history.md 2026-05-15.
 - [x] **Quantifier / quantity system framework** — resolved: digit-stream numbers, base markers `dem`/`doz` for decimal/dozenal first-class compatibility, scale via `pem` scientific notation, comparison operators `min`/`mag`/`sam`/`tom`/`pir` as CVC closed class. Quantifier follows noun. See decisions.md / history.md 2026-05-15. Sub-questions still open:
     - [x] **12 digit roots** — resolved: `zo pa du re ko fi sa chi bo ne` (0–9) plus `ja gi` (A, B for dozenal). See decisions.md / history.md 2026-05-15.
-    - [ ] **Prosodic disambiguation rule** for CV-vs-CVC overlap (e.g., digit `sa` 6 vs operator `sam` equal, digit `ko` 4 vs verb `kom` move). Likely a stress-and-timing convention.
+    - [x] **Prosodic disambiguation rule** for CV-vs-CVC overlap — resolved: obligatory brief acoustic break (~50–100 ms / light glottal) at every word boundary; digit streams concatenate as one prosodic unit. See phonetics.md "Prosody" section, decisions.md / history.md 2026-05-16.
     - [ ] **Distribution-shape roots** (gaussian, uniform, bimodal, etc.) for richer probabilistic quantifiers.
     - [ ] **Arbitrary-base spoken notation** (user's written `9_12.5` syntax — base-N representation of numbers).
     - [x] **Vague quantifiers** — partially resolved: `sol`/`tot`/`nul`/`kel` cover only/all/none/some. "Many"/"few" still open as fuzzy magnitude quantifiers.
@@ -25,7 +25,7 @@ Open design questions parked here so we can address them one at a time.
         - [ ] Time zone representation.
         - [x] Event-relative time ("when X happens") — unblocked. Use `tep ke [clause]` ("at WHEN she arrives"). See subordinate-clause framework 2026-05-15.
         - [ ] Weak placeholder roots `xor` (hour), `vet` (year) flagged for possible replacement.
-- [ ] **Verb shape** — confirm CVC-root + vowel-for-tense (roots.md:40 currently marked TODO).
+- [x] **Verb shape** — confirmed: CVC root + V (tense vowel). Infinitive = bare CVC. Continuous-aspect `x` after tense vowel. Stale TODO in roots.md cleared. See decisions.md / history.md 2026-05-16.
 - [x] **Negation** — resolved: prefix `no-`, phonologically bound to its host. See decisions.md and history.md 2026-05-15. Related sub-questions parked:
     - [x] Lexical opposite marker (`love` → `hate`) — resolved: rejected. Antonyms get separate roots; `no-` is the only "not" operator. See decisions.md / history.md 2026-05-16.
     - [ ] Canonical stacking order for multiple prefixes (negation + interrogative + intensity, etc.) when more prefixes get added.
@@ -40,7 +40,7 @@ Open design questions parked here so we can address them one at a time.
     - [x] Causation particle for "because/since" — resolved: `kaw` (also serves "why?" question). See decisions.md / history.md 2026-05-16.
     - [x] Embedded-question marker — resolved: `ka` inside a `ke`-clause does the work. See history.md 2026-05-15.
     - [x] Nested-clause disambiguation — resolved: strict adjacency for ~2 levels; named binding (`def`) for deeper or for clause-closure-back-to-main. No terminator words. See history.md 2026-05-15.
-    - [ ] Comma/pause prosodic conventions between main and subordinate clauses.
+    - [x] Comma/pause prosodic conventions between main and subordinate clauses — resolved: clause boundary = ~200–300 ms pause + slight pitch reset; sentence = ~500+ ms + complete reset. See phonetics.md "Prosody", decisions.md / history.md 2026-05-16.
 - [x] **Precision-by-default meta-principle** — locked: every sentence has exactly one meaning. Vague allowed, ambiguous forbidden. See AGENTS.md, decisions.md, history.md 2026-05-15.
 - [x] **Reasoning-particle set** — locked: `dat` (premise), `erg` (therefore), `imp` (logical implication, distinct from `is` causal conditional). Multi-step reasoning uses staged sentences, not nested conditionals. See decisions.md / history.md 2026-05-15. Sub-questions still open:
     - [ ] Scope-of-premise: when does a `dat`-asserted premise expire?
@@ -63,7 +63,7 @@ Open design questions parked here so we can address them one at a time.
 - [ ] Populate dictionary.md from roots.md (currently empty).
 
 ## Validation
-- [ ] Write `examples.md` with 20–50 worked translations covering questions, conditionals, negation, plurals, nested clauses. Use it to expose gaps before committing more roots.
+- [x] Write `examples.md` with 20–50 worked translations covering questions, conditionals, negation, plurals, nested clauses. Resolved: 66 worked examples committed (see examples.md). Surfaced gaps documented in the "Observations" section of that file. Next pass after vocabulary buildout.
 
 ## Repo restructuring
 - [ ] Split the root tables out of roots.md (prose stays; data moves to dictionary.md or a roots/ folder by category).

@@ -79,3 +79,43 @@ To ensure clarity and ease of articulation, the following phonetic rules are for
 8. **Words starting with `z` and ending with `s` or `x`**:
     - This sequence is phonetically unstable and may cause slurring in rapid speech.
     - Example: `zis`, `zix` → Invalid.
+
+## Prosody
+
+### Word boundary
+Every Lexor word is its own prosodic unit. Word boundaries are obligatorily marked by **a brief acoustic break** — a short pause (≈50–100 ms) or a light glottal closure between two content words. This is the *single* mechanism that disambiguates the CV-vs-CVC overlap.
+
+Examples:
+- `sa magas` → digit "6" + word "magas". Heard as two prosodic units: `sa` [break] `magas`. The `m` belongs to the second word.
+- `sam agas` → operator "equal" + word "agas". Heard as `sam` [break] `agas`. The `m` belongs to the first word.
+- `ko mago` (4 + mago) vs `kom ago` (move + ago) — same rule.
+
+The break is short and natural; fluent speakers of any language already insert micro-pauses at word boundaries. Lexor just makes the rule load-bearing: a speaker who runs words together creates parse failures, and the listener is grammatically entitled to ask for repetition.
+
+### Numbers
+Inside a digit stream (sequence of digit roots forming one number), the digits are **concatenated with no internal break**. The number forms a single prosodic unit. The unit closes when a non-digit word follows or when the base marker (`dem`/`doz`) or scale marker (`pem`) appears at its boundary position.
+
+Examples:
+- `sa pa du` (642 in some base) → one prosodic unit `sapadu`, no internal breaks.
+- `sa pa du dem chi` (642.7 decimal) → `sapadu` [break] `dem` [break] `chi` — the radix marker `dem` is its own unit.
+- `sa dim` (6 days) → `sa` [break] `dim` — `dim` is not a digit, so the digit stream closed before it.
+
+### Pronouns
+Pronouns are V or CV shape (`y`, `u`, `e`, `la`, etc.), shorter than the standard CVCV word. They still get their own prosodic unit and their own brief break before and after. Pronoun + role vowel (e.g. `y-e`, `u-o`) is one unit (the role vowel is a suffix, not a separate word); doubled vowels (`ee`, `uu`, `loo`) are pronounced as a single long vowel held about twice the duration of a short vowel.
+
+### Clause boundary (comma in writing)
+A clause boundary is marked by **a longer pause (≈200–300 ms) plus a slight pitch reset**. This is the spoken equivalent of the comma. It separates:
+- Main clause from subordinate clause: `golo e [break-long] tep ke pluvex` — "she left, when it was raining."
+- Coordinated clauses joined by `kun` / `vel`: `kome e [break-long] kun bibe e` — "she eats, and she drinks."
+- Tag-question hosts from the tag: `golo e [break-long] ka` — "she left, right?"
+- Reasoning-particle transitions: `dat A [break-long] erg B` — "given A, therefore B."
+
+The comma boundary is acoustically distinguishable from the word boundary by **duration and pitch reset** combined. A word-break is a short flat micro-pause; a clause-break is a longer pause plus a fresh pitch starting point on the next clause.
+
+### Sentence boundary
+Sentence boundaries get **a full pause (≈500 ms or more) plus a complete pitch reset**. Spoken equivalent of the period. Longer than a clause boundary.
+
+### Stress
+Each word carries **primary stress on its first syllable** (the root onset). Derived non-verb forms (CVCVCV) have a secondary stress on the suffix. Numbers stress the first digit of the stream. Stress is not lexical — it never distinguishes minimal pairs — but it aids parsing by giving the listener a regular rhythm.
+
+Stress is also used for **focus**: a word the speaker wants to emphasize can take heavier-than-default primary stress without changing meaning. Per the precision-by-default principle, focus is a pragmatic overlay, not a scope-resolution mechanism — scope is already pinned by the strict positional rules.

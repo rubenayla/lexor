@@ -1,0 +1,136 @@
+# Examples
+
+Worked sentence translations. Goal: validate the grammar by writing realistic sentences with the locked machinery and surface gaps before more vocabulary is committed.
+
+## Conventions
+- Content roots that haven't been formally locked yet are written in brackets: `[apple]`, `[house]`, `[man]`, `[water]`. Their exact CVC form will be picked during the vocabulary buildout; the sentences here exercise *structure*, not lexicon.
+- Roots used as working assumptions but not yet in roots.md are noted at first use: `pluv` (rain, from Latin *pluere*), `bib` (drink, from Latin *bibere*), `dik` (say, from Latin *dicere*).
+- VOS = verb, object, subject. Role-vowel suffixes (`-e` subject, `-o` object, `-u` recipient, `-i` instrument) are only attached when default position would be ambiguous.
+
+## 1. Basic VOS and tense
+
+1. `loma e` — "She eats." (atemporal — habit, general fact, no specific time)
+2. `lome e` — "She is eating." / "She eats right now." (present)
+3. `lomo e` — "She ate." (past)
+4. `lomi e` — "She will eat." (future)
+5. `lomex e` — "She is eating." (present continuous, aspect `x` on present)
+6. `lomu` — "Eat!" (imperative; subject usually elided)
+7. `lomy e` — "She would eat." (conditional)
+8. `loma [apple] e` — "She eats an apple." (VOS: verb, object, subject)
+
+## 2. Role vowels (when position alone is ambiguous)
+
+9. `loma [apple]-o e-e` — same as #8, explicit roles. Use when object/subject swap would be plausible from context.
+10. `dake [apple]-o e-e u-u` — "She gives an apple to you." (recipient `u` marked because three-argument verb)
+11. `apre [door]-o e-e [key]-i` — "She opens the door with a key." (instrument `i`)
+
+## 3. Negation
+
+12. `no-loma e` — "She doesn't eat." (logical negation, scope = entire predicate)
+13. `loma no-[apple] e` — "She eats not-an-apple." (scope = object only)
+14. `no-mag e [him]` — "She is not greater than him."
+
+## 4. Quantifiers
+
+15. `loma [apple] re e` — "She eats three apples." (quantifier follows noun)
+16. `loma [apple] re pad e` — "She eats three apples, each one (distributive)."
+17. `loma [apple] re mas e` — "She eats three apples together (collective)."
+18. `loma [apple] tot e` — "She eats every apple." (universal quantifier)
+19. `loma [apple] kel e` — "She eats some apple." (existential)
+20. `loma [apple] nul e` — "She eats no apple." (none)
+21. `loma [apple] sol re e` — "She eats only three apples." (restriction + count)
+
+## 5. Numbers and time
+
+22. `loma [apple] re tep [yesterday]` — "She ate three apples yesterday." (composing: `ant pa dim` = yesterday literally, but commonly the unit-time expression)
+23. `lome e kex dim` — "She eats every day." (frequency operator)
+24. `loma [apple] pa fi pem du` — "She eats 1.5×10² = 150 apples." (digit stream + base + scale)
+25. `loma [apple] re tom fi e` — "She eats between three and five apples." (range)
+26. `pluvex tep nun` — "It is raining right now." (using time-root `nun` = now)
+
+## 6. Questions
+
+27. `ka loma e` — "Does she eat?" (yes/no question; `ka` sentence-initial)
+28. `loma ka` — "What does she eat?" (`ka` in the object slot)
+29. `loma [apple] ka` — "Who eats apples?" (`ka` in the subject slot)
+30. `loma e tep ka` — "When does she eat?"
+31. `loma e lok ka` — "Where does she eat?"
+32. `loma e mod ka` — "How does she eat?"
+33. `loma e kaw ka` — "Why does she eat?"
+34. `ka loma [apple] vel loma [pear] e` — "Does she eat an apple or a pear?" (choice question)
+35. `loma e, ka` — "She eats, right?" (bare tag)
+36. `loma e, ka no-loma e` — "She eats, doesn't she?" (echo tag, explicit polarity)
+
+## 7. Subordinate clauses
+
+37. `[man] ke loma [apple]` — "the man who eats apples" (relative clause, gap = subject of `loma`)
+38. `[apple] ke loma e` — "the apple that she eats" (relative, gap = object)
+39. `dike e ke loma u` — "She says that you eat." (complement clause, `dike` = "says")
+40. `golo e tep ke pluvex` — "She left when it was raining." (temporal clause)
+41. `golo e lok ke [house]` — "She left where the house is." (spatial clause; reads as "at-WHERE house [is]")
+42. `golo e kaw ke pluvo` — "She left because it rained." (causal clause)
+43. `kompo e mod ke martelo o` — "She fixed it by hammering it." (manner clause)
+
+## 8. Conditionals
+
+44. `is pluve, lomy e [inside]` — "If it's raining, she would eat inside." (conditional `is` + consequent in conditional `y`)
+45. `is no-pluve, goly e` — "If it isn't raining, she would go." (negated antecedent)
+
+## 9. Coordination and depth
+
+46. `loma [apple] e kun bibe [water] e` — "She eats an apple and drinks water." (AND, same depth)
+47. `loma [apple] e vel loma [pear] e` — "She eats an apple or a pear." (OR)
+48. Mixed AND/OR forbidden in flat form: `loma A e kun loma B e vel loma C e` — ill-formed (ambiguous grouping). Rewrite with `def`:
+    - `def var p loma A e kun loma B e. var p vel loma C e` — "(A and B) or C."
+
+## 10. Reasoning chain
+
+49. `dat pluvo` — "Given that it rained." (premise)
+50. `dat pluvo. golo e kaw ke pluvo. erg [floor wet]` — "Given it rained. She left because it rained. Therefore the floor is wet."
+51. Modus tollens: `dat pluvo imp [floor wet]. no-[floor wet]. erg no-pluvo` — "Given rain implies wet floor. The floor is not wet. Therefore it did not rain."
+
+## 11. Copulas (the "is"-overload split)
+
+52. `[Mark Twain] sam [Samuel Clemens]` — "Mark Twain is Samuel Clemens." (identity)
+53. `est [blue] [sky]` — "The sky is blue." (essential predication)
+54. `sta [tired] e` — "She is tired." (state predication, transient)
+55. `mem [mammal] [whale]` — "A whale is a mammal." (set membership)
+56. `tot [mammal] mem [animal]` — "Every mammal is an animal." (subset by composition)
+57. `kel [problem]` — "There is a problem." (existence by composition)
+58. `sam lit incorrect fin [password]` — "The password is (literally) 'incorrect'."
+59. `sta [incorrect-property] [password]` — "The password is incorrect (= wrong)."
+
+## 12. Literal and variable markers
+
+60. `dike e lit thank you fin` — "She says, 'thank you'." (raw string content)
+61. `sam lit Lexor fin [name-language]` — "The language's name is 'Lexor'."
+62. `golo u tep var path. legu u var path` — "Go to var-path. Read var-path." (template; both occurrences = same slot)
+63. `def var x sam [biggest prime ant pa zo zo]. mag var x fi zo` — "Let x = the biggest prime before 100. x > 50."
+64. `def var f [function-expression]. kompe y var f mod var x` — "Let f = [function]. I apply f to x."
+65. `nul def var x` — "x is no longer bound." (explicit retraction)
+
+## 13. Composed bindings inside reasoning
+
+66. `def var p [tot [whale] mem [mammal]]. dat var p. dat mem [whale] [moby]. erg mem [mammal] [moby]` — "Let p = 'every whale is a mammal'. Given p. Given Moby is a whale. Therefore Moby is a mammal."
+
+---
+
+## Observations and surfaced gaps
+
+Working through these exposed the following:
+
+1. **"Yesterday" / "tomorrow" composition feels clunky.** `tep ant pa dim` ("at one-day-before") is correct but mouthy compared to `tep [yesterday]`. May want a dedicated unit-shift composition convention or a small set of relative-time roots after all. Decision deferred.
+2. **No locked roots for many high-frequency content words** — drink, water, door, key, apple, person, house, fix, hammer, read, function. Examples here rely on placeholder brackets. This is the next major work item (vocabulary arc, Session N+3+).
+3. **VOS placement of full clauses** (e.g., `dike e ke loma u`) reads naturally: verb, subject, complement-clause. The complement is the object slot, but expressed as a `ke`-clause it sits after the subject — consistent with "subordinate clause follows its host."
+4. **Embedded literal inside identity** (`sam lit incorrect fin [password]`) works but is heavy. For everyday quoted speech, the order `verb subject lit content fin` (as in #60, `dike e lit thank you fin`) is lighter because no copula is involved.
+5. **`def`-binding inside reasoning chains** (#66) is the most powerful demonstration so far. Long premises become single tokens (`var p`); the chain stays readable.
+6. **No problems found with prosody assumptions.** All examples parse uniquely under the brief-break / clause-break / sentence-break model.
+7. **`kompo` / `kompe`** ("fix/repair") used as working root; needs vocab assignment.
+8. **`apre` / `legu`** (open / read-imperative) — same.
+
+## Next examples to add (after vocabulary buildout)
+
+- Full spatial-prepositions paragraph (under/over/near/beside) once that family is locked.
+- Negative reasoning with multiple `dat` premises and case-splitting (need the parked proof-structuring particles first).
+- Nested `def`s in a formal proof (need scope rules locked).
+- Long natural-text paragraph (3–5 sentences) demonstrating discourse flow.

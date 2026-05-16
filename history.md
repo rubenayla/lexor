@@ -868,3 +868,71 @@ Interaction with already-locked machinery:
 - Sentence-local vs discourse-local scope for `def`. Currently discourse-local by default. May need formal scoping rules for nested proofs; revisit only if examples.md exposes a need.
 - Multi-name binding: "Let X = ..., Y = ..." — can either chain `def`s or use a coordinator. Specifics not locked.
 - `def` interaction with `kun`/`vel` (binding inside a coordinated chain) — defer until concrete examples surface a problem.
+
+## 2026-05-16 — Prosody rules, verb shape confirmed
+
+Session N+2 housekeeping. Closed three small items.
+
+### Prosody (tasks.md items 7, 8)
+
+Question opened: how does the listener disambiguate CV-vs-CVC overlap in connected speech? E.g. digit `sa` (6) followed by a consonant-initial word vs operator `sam` (=) followed by a vowel-initial word.
+
+Three approaches considered:
+- (a) Vowel-length distinction (CV digits long, CVC short). Phonetically tone-adjacent, conflicts with Lexor's non-tonal commitment.
+- (b) Mandatory acoustic break at word boundaries. Simple, additive, matches what fluent speakers of any language already do.
+- (c) Stress-and-timing convention with no explicit break. Risks under-specification.
+
+Picked **(b)**. Every word is its own prosodic unit; word boundaries are obligatorily marked by a brief acoustic break (≈50–100 ms pause or light glottal closure). Inside a digit stream, digits concatenate without internal breaks — the stream is one prosodic unit. The break is the *single* disambiguator: a speaker who runs words together creates parse failures, and the listener can ask for repetition.
+
+Three-level prosodic hierarchy locked:
+- **Word boundary** — brief break (≈50–100 ms), no pitch reset.
+- **Clause boundary** (written comma) — longer pause (≈200–300 ms) + slight pitch reset. Separates main from subordinate, hosts from tag-questions, and clauses joined by `kun`/`vel`.
+- **Sentence boundary** (written period) — full pause (≈500+ ms) + complete pitch reset.
+
+Stress is fixed on the first syllable of each word; non-lexical (never distinguishes minimal pairs); available as a focus overlay (heavier primary stress) without changing meaning. Focus is pragmatic, not scope-resolving — scope is pinned by positional rules per the precision-by-default principle.
+
+Tradeoffs accepted: speakers must respect word boundaries audibly. Rapid colloquial speech that elides boundaries is technically ill-formed (similar to dropping word-spaces in writing). Lexor prioritizes parsing reliability over speed.
+
+Rules written to phonetics.md "Prosody" section.
+
+### Verb shape (tasks.md item 19, roots.md:40)
+
+Question opened: confirm the CVC-root + V-tense shape that has been used throughout decisions but was still flagged TODO in roots.md.
+
+Locked: verb = CVC root + V (tense vowel). Infinitive is the bare CVC root with no trailing vowel. Continuous-aspect consonant `x` attaches after the tense vowel. All seven tense-vowel assignments (`a` atemporal, `e` present, `i` future, `o` past, `u` imperative, `y` conditional, `c` perfect) are already locked in decisions.md.
+
+This wasn't a new decision, just a long-overdue cleanup of a stale TODO that had been resolved by prior rounds. roots.md updated to remove the TODO and inline the shape rule.
+
+### What this unblocks
+- examples.md can now be written without prosody being ambiguous.
+- No remaining structural cleanups before validation.
+
+### Parked
+- Rhythmic-meter conventions for poetry/song (the stress-fixed-on-first-syllable rule makes Lexor naturally trochaic in feel; whether to make this rule explicit for verse is a separate design question).
+- Whispered or fully-silent prosody (sign-language analog) — not in scope.
+
+## 2026-05-16 — examples.md first pass (66 sentences)
+
+Wrote the first validation pass: 66 worked translations grouped by feature (basic VOS, tense, role vowels, negation, quantifiers, numbers/time, questions, subordinate clauses, conditionals, coordination, reasoning, copula split, markers, bindings). Content roots not yet locked are written as bracket-placeholders so the exercise tests structure, not lexicon. Working-assumption roots (`pluv`, `bib`, `dik`, `kompo`, `apre`, `legu`) flagged.
+
+The exercise is its own argument: the grammar held up. No structural rule broke; the precision-by-default principle was visibly load-bearing several times (every example has exactly one parse).
+
+Gaps surfaced and recorded in examples.md "Observations" section:
+1. `tep ant pa dim` ("yesterday") is correct but heavy. May reopen the relative-time-root question during vocab buildout.
+2. Major content vocabulary (drink, water, door, key, apple, person, house, fix, hammer, read, function) is missing. Next major work item.
+3. Complement-clause placement (`dike e ke loma u`) reads naturally.
+4. `lit … fin` is heavy when embedded inside an identity copula; quoted speech with a speech-verb is lighter.
+5. `def`-bindings inside reasoning chains (example 66) demonstrate the most powerful use of named binding: long premises become single tokens.
+6. Prosody rules parse every example uniquely. No collisions.
+
+These observations are *findings*, not new design decisions. They feed the vocabulary arc (Session N+3+) and may reopen one or two parked questions if the load becomes annoying in practice.
+
+### What this unblocks
+- Vocabulary buildout: the structural framework is validated, so root assignment can proceed without fear of structural re-design.
+- Concrete examples now exist for the README / future tutorial.
+- Future design rounds can quote example numbers when discussing edge cases.
+
+### Parked / followups
+- Second pass of examples.md after the first wave of vocabulary lands (spatial prepositions, common nouns).
+- A long-paragraph example (3–5 connected sentences) demonstrating discourse flow.
+- Examples for proof-structuring particles ("suppose for contradiction", QED) once those are designed.

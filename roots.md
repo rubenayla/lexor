@@ -37,7 +37,7 @@ Phonemes were chosen for consistency and logical alignment: **`y`** represents t
 
 
 ## Verbs
-TODO DECIDE WHETHER CONSONANT-VOWEL-CONSONANT AND THE TENSE IS A VOWEL AT THE END. FOR NOW IT'S THE IDEA.
+**Verb shape: locked.** Verb = CVC root + V (tense vowel). The tense vowel is `a` atemporal / `e` present / `i` future / `o` past / `u` imperative / `y` conditional / `c` perfect; the continuous-aspect consonant `x` attaches after a tense vowel (e.g., `lomex` = "is eating"). Infinitive form is the bare CVC root with no trailing vowel. See decisions.md.
 | **Root** | **Meaning**       | **Notes**                         |
 |----------|-------------------|-----------------------------------|
 | `pot`    | create/make       | Maintains simplicity with /p/ and /t/. |
