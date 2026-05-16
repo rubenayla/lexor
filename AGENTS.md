@@ -9,6 +9,7 @@ Lexor is a constructed language designed from first principles to maximize preci
 - `decisions.md` — settled design decisions. Append here once something is locked in.
 - `trials.md` — language design test suite. Each entry is a `[trap]` (known ambiguity from natural languages) or `[feature]`/`[stretch]`/`[stress]` (capability target). Tagged with `passes`/`open`/`parked` status. Grep `[.*, open]` to find every unmet design goal. Replaces the older `checklist.md`. Append a trial when a new capability target or trap surfaces; close one by changing its status when a decision lands.
 - `walkthrough.md` — pedagogical progression. ~18 levels of increasing complexity from bare verb to full paragraph, each level introduces one grammar feature. Audience: learners and evaluators. Different from `examples.md` (dense feature-organized reference) and `trials.md` (capability test suite).
+- `comparisons.md` — honest comparisons with prior constructed languages that share design goals. Currently covers Lojban; can grow to cover Esperanto, Toki Pona, Ithkuil, etc. Used to answer "has this been done better?" and to track what Lexor can learn from mature projects.
 - `pain.md` — concrete examples of what current languages get wrong. The "why" behind Lexor.
 - `TODO.md` — older open-questions list. Being merged into `tasks.md` over time.
 - `tasks.md` — current open design questions and work items, parked for later.

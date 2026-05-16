@@ -370,6 +370,11 @@ See A6.
 **Goal:** Construct a sentence where omitting an optional marker creates ambiguity, to confirm Lexor's rule "unmarked has one canonical meaning."
 **Status:** Untested. The grammar promises this is impossible; a failed attempt to construct one would be the proof.
 
+### J5. Run-together speech (no inter-word pauses) [stress, passes]
+**Goal:** A sentence spoken with words run together (no pauses) should still parse unambiguously.
+**Lexor:** Self-segregating morphology (decisions.md 2026-05-17) guarantees this. Content roots are consonant-initial and end in vowels; closed-class is a finite memorizable list. After a vowel, a consonant marks a new word; after a vowel, another vowel can only be a closed-class item.
+**How:** decisions.md self-segregating morphology (2026-05-17). Replaces the earlier mandatory-pause rule.
+
 ---
 
 ## How to use this file

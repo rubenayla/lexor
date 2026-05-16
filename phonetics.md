@@ -83,14 +83,32 @@ To ensure clarity and ease of articulation, the following phonetic rules are for
 ## Prosody
 
 ### Word boundary
-Every Lexor word is its own prosodic unit. Word boundaries are obligatorily marked by **a brief acoustic break** — a short pause (≈50–100 ms) or a light glottal closure between two content words. This is the *single* mechanism that disambiguates the CV-vs-CVC overlap.
 
-Examples:
-- `sa magas` → digit "6" + word "magas". Heard as two prosodic units: `sa` [break] `magas`. The `m` belongs to the second word.
-- `sam agas` → operator "equal" + word "agas". Heard as `sam` [break] `agas`. The `m` belongs to the first word.
-- `ko mago` (4 + mago) vs `kom ago` (move + ago) — same rule.
+Word boundaries are inferable from morphology alone — Lexor uses **self-segregating morphology**. No mandatory pause is required between words; a speaker can talk at natural pace and the listener will still parse boundaries unambiguously.
 
-The break is short and natural; fluent speakers of any language already insert micro-pauses at word boundaries. Lexor just makes the rule load-bearing: a speaker who runs words together creates parse failures, and the listener is grammatically entitled to ask for repetition.
+The mechanism is built from three rules working together:
+
+1. **Open-class content roots must start with a consonant.** Every verb, noun, and adjective root begins with a consonant. (See decisions.md 2026-05-17.)
+2. **Content words end in a vowel.** Verbs are `CVC + V` (root + tense vowel); derived non-verbs are `CVCVCV`.
+3. **Closed-class items are a finite, memorizable list.** Markers, prepositions, copulas, pronouns, and digits include some vowel-initial forms (`is`, `erg`, `imp`, `aks`, `est`, `int`, `oks`, `ant`, plus the V-shape pronouns `y u e i`). The listener identifies these by direct lookup.
+
+How parsing works under these rules:
+
+- After a vowel-final word, if the next sound is a consonant, the boundary is obvious — a new word is starting.
+- After a vowel-final word, if the next sound is a vowel, the next word must be one of the finite closed-class vowel-initial items; lookup decides which.
+- After a consonant-final closed-class word, if the next sound is a consonant, the boundary is obvious.
+- After a consonant-final closed-class word, if the next sound is a vowel, the next word must again be from the closed-class vowel-initial list — content words can't start with a vowel.
+
+Worked examples:
+
+- `sa magas` (digit 6 + content `magas`) vs `sam agas` (operator + ???) — `agas` starts with a vowel, isn't a closed-class item, and content roots can't begin with vowels. So `sam agas` doesn't parse. The unique reading is `sa magas`.
+- `ko mago` (digit 4 + content `mago`) vs `kom ago` (verb + ???) — `ago` starts with a vowel and isn't closed-class. So `kom ago` doesn't parse. Unique reading: `ko mago`.
+
+### Recommended pause for clarity
+
+A short acoustic break (~50–100 ms) between words is **recommended for clarity**, especially in noisy environments, at speed, or with non-native listeners. But it is **not required by the grammar**. A speaker who runs words together still produces parseable Lexor — the morphology guarantees uniqueness.
+
+This matches how natural languages work. English and Spanish speakers don't pause between every word; listeners parse boundaries from stress, vowel quality, and word-shape expectations. Lexor's self-segregating morphology gives a similar effect through stricter word-shape rules.
 
 ### Numbers
 Inside a digit stream (sequence of digit roots forming one number), the digits are **concatenated with no internal break**. The number forms a single prosodic unit. The unit closes when a non-digit word follows or when the base marker (`dem`/`doz`) or scale marker (`pem`) appears at its boundary position.

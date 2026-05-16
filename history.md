@@ -1456,3 +1456,61 @@ After my first readability pass, the user flagged three more issues on re-read:
 When explaining a feature that *deliberately leaves something open* (gender on `e`, time on `a`, definiteness on bare nouns), be explicit about the asymmetry: "this commits to X and Y but deliberately not to Z." Just listing the multiple English translations side-by-side ("he, she, or they") makes the feature read as vague-overall, when it's actually vague-on-exactly-one-axis. The reader needs to see the axis named.
 
 This is a writing-rule, captured in AGENTS.md's new fourth bullet.
+
+---
+
+## 2026-05-17 — Self-segregating morphology replaces mandatory pause
+
+### What changed
+The 2026-05-16 prosody decision required an obligatory ~50–100 ms acoustic break between every pair of content words to disambiguate the CV-vs-CVC overlap. User objected: "i dont like requiring waits AT ALL." Asked how natural languages solve the same problem.
+
+### What natural languages actually do
+- English: relies on stress patterns, phonotactic constraints, vocabulary sparsity. No obligatory pause.
+- Spanish: actively dissolves word boundaries via resyllabification (`los amigos` → [lo-sa-mi-gos]) and sinalefa (vowel merging). Famously rapid, continuous speech.
+- Lojban: uses self-segregating morphology — word shapes are mathematically constrained so no concatenation of valid words equals another valid word. No pause needed.
+
+The mandatory-pause rule was an over-engineering of a problem that has a structural solution.
+
+### Why Lexor was almost there already
+- All locked verb roots are consonant-initial.
+- All content words already end in a vowel (locked).
+- Closed-class items are a finite list (markers, prepositions, copulas, pronouns, digits, coordinators, quantifiers).
+
+We only needed to formalize one new rule: **open-class content roots must start with a consonant**. This is already de-facto true.
+
+### The new parsing argument
+Given the rules:
+1. Content roots start with a consonant, end with a vowel.
+2. Closed-class items are a finite, memorizable list (some are vowel-initial).
+
+Then:
+- After a vowel-final word, the next sound is either:
+  - A consonant → must be the onset of a new word (boundary clear).
+  - A vowel → must be a closed-class vowel-initial item; lookup decides.
+- After a consonant-final word (must be closed-class), the next sound is either:
+  - A consonant → boundary clear.
+  - A vowel → again, lookup against the closed-class list.
+
+Worked through the canonical "ambiguous" pairs from the original prosody decision:
+- `sa magas` (digit + content) vs `sam agas` (operator + ???) — `agas` is vowel-initial, not closed-class, so `sam agas` doesn't parse. Unique reading: `sa magas`.
+- `ko mago` vs `kom ago` — same analysis. Unique reading: `ko mago`.
+
+The pause was never grammatically needed. It was a workaround for a problem that doesn't actually exist under the stricter morphology.
+
+### What changed in the files
+- `decisions.md` — locked the new rule and explicitly superseded the 2026-05-16 mandatory-pause decision.
+- `phonetics.md` — rewrote the "Word boundary" subsection. Pause is now recommended for clarity, not required. Three-rule mechanism explained.
+- `walkthrough.md` preface — rewrote the "A note on pronunciation" subsection to match. Speakers can talk at natural pace.
+- `trials.md` — added new trial J5 [stress, passes] confirming run-together speech parses uniquely.
+
+### What this changes downstream
+- The clause and sentence boundary rules (~200–300 ms and ~500+ ms) are unchanged. Those carry pitch and meaning information that morphology can't supply.
+- The digit-stream rule (digits concatenate as one prosodic unit) is unchanged — it was already not about pauses but about the absence of structure.
+- Stress is unchanged (first syllable, non-lexical).
+- The recommended-pause-for-clarity convention is a courtesy, not a rule.
+
+### Lesson worth keeping
+Before locking a phonological constraint, check whether morphological structure already does the work. Mandatory speaker effort is a tax on the language's everyday use; structural constraints are paid once at design time.
+
+### Parked
+- Empirical test: write a paragraph of locked-vocabulary Lexor and confirm no part of it admits an alternate parse when spoken run-together. Trial J5 will be exercised when more vocabulary lands.

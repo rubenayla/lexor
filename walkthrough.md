@@ -34,11 +34,13 @@ Some textbooks abbreviate this as **VOS** ("verb-object-subject"). This abbrevia
 
 ### A note on pronunciation
 
-The space between two Lexor words is not just visual — it's a real, short pause when spoken (about a tenth of a second, or a quick stop in the throat). So when you see two consonants meeting across a space, like the `n` and `z` in `chan zo`, they are *not* pronounced as a cluster. They are two separate sounds with a brief pause between them.
+Lexor uses **self-segregating morphology**: word boundaries fall out of word shapes, so you don't have to pause between words. You can speak at a natural pace, like in English or Spanish.
 
-Read `chan zo` as "chan, zo" — not "chanzo." Same for any other pair: `dem ne` is "dem, ne," not "demne." This rule is what lets Lexor pack short words next to each other without making the speech a tongue-twister.
+The rule that makes this work: regular content words (verbs, nouns, adjectives) always start with a consonant and end with a vowel. So when you hear a vowel followed by a consonant in a sound stream, the consonant is starting a new word. When you hear two consonants meeting, the second one is the next word's onset.
 
-(Inside a single word, the rules are stricter. No more than two consonants in a row are allowed, and a few specific combinations are forbidden — you'll never see a real Lexor word that's hard to pronounce.)
+The small set of "function words" (pronouns, connectors, markers) can be vowel-initial, but they're a short memorized list — your brain identifies them as a unit when they come up.
+
+In practice, this means you can speak Lexor fluidly. A short pause between words is *recommended* for clarity, especially when speaking fast or in noisy places — but it's not grammatically required.
 
 A separate point: some example sentences below use placeholder forms like `pluve` for "rain." These are not yet locked Lexor words. They follow Latin-style shapes that don't fit the language's strict consonant-vowel-consonant pattern. When the vocabulary for "rain" is chosen, the real form will replace `pluve`.
 
