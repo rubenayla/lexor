@@ -1514,3 +1514,38 @@ Before locking a phonological constraint, check whether morphological structure 
 
 ### Parked
 - Empirical test: write a paragraph of locked-vocabulary Lexor and confirm no part of it admits an alternate parse when spoken run-together. Trial J5 will be exercised when more vocabulary lands.
+
+---
+
+## 2026-05-17 — comparisons.md expanded to include natural languages
+
+### Why
+User asked: "ah, that compare with others like English and Spanish too?" The original comparisons.md framed itself as "Lexor vs other *constructed* languages," but most of `pain.md` engages with English and Spanish and Lexor borrows several decisions from Spanish. Confining the comparison file to conlangs left an obvious gap.
+
+### What was added
+Two new sections in `comparisons.md`, alongside the existing Lojban section. Each follows the same four-axis structure:
+- **What [language] does well that Lexor sacrifices** — honest about the costs of leaving an established language.
+- **What Lexor fixes** — concrete list, mostly drawn from pain.md and trials.md trap entries.
+- **What Lexor borrowed from [language]** — explicit credit for design moves taken from natural languages.
+- **What Lexor explicitly rejected** — design patterns the language deliberately avoids.
+
+Plus a "trade-off, stated honestly" paragraph closing each section.
+
+### Reframe of comparisons.md
+Top of file rewritten: title changed from "Lexor vs other constructed languages" to "Lexor vs other languages." Added note that constructed-language comparisons are about technical differentiation while natural-language comparisons are about trade-offs.
+
+Listed in the table-of-contents: Lojban, English, Spanish. Future entries (Mandarin, Latin, Esperanto, Toki Pona, Ithkuil, Sona) noted as possible later additions.
+
+### Specific honest acknowledgments worth keeping
+- **Lexor sacrifices English's redundancy.** Compact CVC roots are less forgiving of mishearing than English's morphologically rich words.
+- **Lexor sacrifices Spanish's subjunctive expressiveness.** The composable modal markers (chan/kan/mus + conditional vowel) are technically equivalent but lose some of the subjunctive's compactness for hopes/doubts/desires.
+- **Lexor's pronoun system loses Spanish's gender-based disambiguation cheapness.** In a paragraph with two women, Spanish writers use "la otra" — Lexor needs names or def-bindings. Real cost.
+- **Beating English at being English is not the goal.** English wasn't designed for precision; it survived for social cohesion. The bet is that for tasks where precision matters more than ergonomics (technical writing, legal text, scientific argument, multi-step reasoning), Lexor will be measurably better. For casual conversation, English likely wins on social comfort.
+
+### What this doesn't yet cover
+- **Mandarin** — would be interesting because it tonally distinguishes words and has classifier systems Lexor could learn from.
+- **Latin** — interesting because Lexor sources many roots from it; comparison would clarify what Lexor took vs left.
+- **Toki Pona** — minimalist constructed language with ~120 words; very different design philosophy.
+- **Ithkuil** — extreme-precision constructed language; comparison would expose Lexor's commitments to readability vs theoretical maximum precision.
+
+Parked unless a use case surfaces.
