@@ -89,6 +89,15 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
     - `tom bra re ket bra ko zo zo ket e` — "between 3 and 400 (pushups)." Without brackets, `tom re ko zo zo` would fuse all four digits into `rekozozo` (= 3400) and `tom` would be missing its second argument — ill-formed.
     - `tom bra re zo zo ket bra ko zo zo ket e` — "between 300 and 400." Always bracket both arguments; never trust the digit-stream rule to split a multi-number expression on its own.
 
+## 9b. Epistemic modality (kan / mus)
+
+49a. `kan pluve` — "It might rain." / "Possibly it rains." (◇)
+49b. `mus pluve` — "It must be raining." / "Necessarily." (□)
+49c. `no- mus sam m1 m2` — "Not necessarily m1 = m2." (English's elusive "doesn't have to equal" reading)
+49d. `kan no- sam m1 m2` — "Possibly m1 ≠ m2." (the "can be different" reading without claiming they actually are)
+49e. `kan lok-x i kun kan lok-y i kun no- mes` — "Possibly at-x AND possibly at-y AND no measurement." (quantum superposition without smuggling in a definite location)
+49f. `dik e ke kan pluve` — "She says that it might rain." (modal inside a complement clause)
+
 ## 10. Reasoning chain
 
 49. `dat pluvo` — "Given that it rained." (premise)

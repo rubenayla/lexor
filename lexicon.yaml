@@ -73,6 +73,8 @@
 - {root: def,   kind: marker, concept: "named-binding introducer",  source: "math/CS def"}
 - {root: bra,   kind: marker, concept: "group-open (paren-like)",   source: "English bracket (bra-ket split)", notes: "Pairs with `fin`-style closer `ket`. Used to group a sub-constituent inside a clause so operators bind unambiguously. Breaks digit-stream auto-fuse."}
 - {root: ket,   kind: marker, concept: "group-close",                source: "English bracket (bra-ket split)", notes: "Closes a `bra`-opened group. Nesting allowed (each `ket` matches the nearest unmatched `bra`)."}
+- {root: kan,   kind: marker, concept: "epistemic possibility (may/can/possibly)", source: "English can / German kann / Dutch kan / Swedish kan", notes: "Sentence-initial; scopes over the rest of the clause. Composes with `no-`. Dual of `mus` but locked directly to avoid forced composition. Epistemic flavor only — deontic permission parked."}
+- {root: mus,   kind: marker, concept: "epistemic necessity (must/necessarily)",   source: "English must / German muss",                                  notes: "Sentence-initial; scopes over the rest of the clause. Composes with `no-`. Dual of `kan`. Epistemic flavor only — deontic obligation parked."}
 
 # =============================================================================
 # COORDINATORS

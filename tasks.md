@@ -47,6 +47,11 @@ Open design questions parked here so we can address them one at a time.
     - [ ] Scope-of-premise: when does a `dat`-asserted premise expire?
     - [ ] Other proof-structuring particles ("suppose for contradiction", QED-marker, case-splitting).
     - [ ] Sibling implication operators (necessary vs sufficient, biconditional).
+- [x] **Epistemic modal operators** — resolved 2026-05-16: `kan` (possibility ◇), `mus` (necessity □). Closed class, sentence-initial. Compose with `no-`. Closed trials B1/B2/I2. See decisions.md / history.md 2026-05-16. Sub-questions parked:
+    - [ ] Deontic modality (permission / obligation) — split from epistemic when a trial requires it.
+    - [ ] Alethic vs epistemic split — refine if a logical/metaphysical trial exposes the need.
+    - [ ] Probability operator surface form (trial D6) — infrastructure exists via `kan` + numeric; specific shape pending.
+    - [ ] Counterfactual conditionals ("if she had eaten...") — distinct from `is`/`imp`. Parked.
 - [x] **Named binding for compositional clarity** — locked as concept (`def`-style construction for long expressions). Sub-questions still open:
     - [x] Specific `def`-construction syntax — resolved: `def var <name> <expression>`. Bare `def` is the binding op; explicit retraction `nul def var <name>`; shadowing on re-`def`. See decisions.md / history.md 2026-05-16.
     - [x] Scope of named bindings — resolved (default): discourse-local. Sentence-local and explicit-block scopes parked; revisit only if examples.md exposes a need.

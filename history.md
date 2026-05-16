@@ -1183,3 +1183,64 @@ Original sketch had a separate `regressions.md` paired with pain.md. User pushed
 ### Parked
 - TODO.md vs tasks.md merge (separate concern from checklist removal).
 - A script that auto-checks every `[*, passes]` trial against the decision/lexicon it cites (catches drift if a decision changes).
+
+---
+
+## 2026-05-16 — Epistemic modal operators `kan` / `mus`
+
+### Why this round
+User handed design autonomy. Highest-leverage open trial cluster on the inventory: modal modality, with 3 open trials (B1 "not(a=b)", B2 "masses can be different", I2 quantum superposition) and one open feature (D6 plug-in probability) all blocked on the same missing infrastructure. One decision round closes three trials and clears the path for the fourth.
+
+Alternative clusters considered:
+- **Direction family** (G3/G4/G5: sentido, direction vs location, neutral axis names) — 3 trials, but interlocking; needs ~2-3 design rounds to settle.
+- **Evidentiality** (H4) — 1 trial, would add a new suffix-level system; bigger structural commitment.
+- **Probability/distribution** (D5/D6) — downstream of modals; can't lock cleanly without them.
+- **Bulk vocab from frequencies.yaml** — broad but flat. Doesn't unlock any structurally-new sentence.
+
+Modals win clearly: deepest hole, three trials closed at once, foundation for the probability work that comes next.
+
+### What was decided
+Two closed-class markers:
+- `kan` — epistemic possibility (◇). "X may be / can be / is possibly the case."
+- `mus` — epistemic necessity (□). "X must be / is necessarily the case."
+
+Both sentence-initial, scoping over the remainder of the clause. Inside a `ke`-clause: `ke kan pluve` = "that it might rain."
+
+Compose with `no-` for the four corner readings:
+- `kan X` = ◇X (possible X)
+- `mus X` = □X (necessary X)
+- `no- mus X` = ¬□X (not necessarily X) — the "doesn't have to" reading
+- `no- kan X` = ¬◇X (impossible X) — same as `mus no- X` (always-not-X), with which it is logically equivalent.
+
+### Alternatives considered and rejected
+- **Only one primitive + composition** (lock only `kan`, derive `mus` as `no- kan no-`). Rejected: forces "not possibly not" every time someone wants "must." Cognitive friction, same anti-pattern as English's mandatory tense. Cost is one extra closed-class root — trivial.
+- **Modal-as-quantifier** (treat possibility as ∃ over possible-worlds, necessity as ∀). Linguistically valid (standard Kripke semantics) but would require explicit "world" arguments. Reject for surface simplicity — keep the modal as a marker that scopes over a proposition.
+- **Modal-as-suffix** on the verb (like tense vowels). Rejected: modal scope is the whole proposition, not just the verb's temporal frame. Marker shape is correct.
+- **Epistemic + deontic both in this round** (e.g., `kan` epistemic + `let` deontic-permission + `mus` epistemic-necessity + `obg` deontic-obligation). Rejected: no current trial requires deontic; YAGNI. Park.
+- **Alethic vs epistemic split** (logical necessity vs known necessity, e.g., `2+2=4` is alethically necessary, while "the sun will rise tomorrow" is epistemically near-certain). Real philosophical distinction. Rejected for now — locks the unified epistemic flavor first; refine if a trial exposes a case that needs alethic-specifically.
+
+### Surface-form alternatives considered
+- `kan` vs `pos` for possibility — `pos` is taken (after-in-time preposition).
+- `kan` vs `pot` — `pot` is taken (verb: create/make). Also semantically weaker mnemonic for possibility.
+- `mus` vs `dev` (from Spanish *deber*) for necessity — `dev` would carry an obligation flavor (deontic) more than necessity (epistemic); chose `mus` to keep the marker firmly in the epistemic territory.
+- `mus` vs `nec` — `c` is the vowel /æ/ per phonetics.md; `nec` would be VCC and shape-violate; `nek` doesn't have the same Latin mnemonic strength.
+- Both `kan` and `mus` checked against lexicon: no collisions.
+
+### Position rule rationale
+Sentence-initial position chosen for consistency with the existing sentence-level operator family: `is` (conditional), `dat` (premise), `erg` (therefore). All scope-over-clause operators sit at the head. This is the operator-family invariant.
+
+Alternative considered: modal-as-trailing-suffix on the verb (like Turkish/Japanese). Rejected because (a) inconsistent with the rest of the operator family, (b) puts the scope-defining word at the *end* of the proposition, requiring listeners to revise their parse retroactively — exactly the "negation processing leak" failure mode that motivated negation-as-prefix.
+
+### Trials closed
+- B1 "not(a=b) vs a≠b" — passes via `no- mus sam a b` / `kan no- sam a b`.
+- B2 "masses can be different" — passes via `kan no- sam m1 m2`.
+- I2 quantum superposition — passes via `kan lok-x i kun kan lok-y i kun no- mes`.
+
+### Trials clarified but not closed
+- D6 plug-in numerical probability — path is now `kan pir [number]` or `[number] dem kan X`, but the specific shape is parked for a follow-up round. The infrastructure exists; the API is pending.
+
+### Parked
+- **Deontic modality**: `let` (permission) / `obg` (obligation) — surface forms tentative; lock when a trial requires them.
+- **Alethic modality**: split from epistemic if a logical/metaphysical trial exposes the need.
+- **Probability operator surface form**: D6 stays open; the modal infrastructure is necessary but not sufficient. Needs a separate round to pick the syntax.
+- **Counterfactual conditionals**: "If she had eaten, she would not be hungry now" — distinct from the locked `is` (real conditional) and `imp` (formal implication). Parked, no trial yet.

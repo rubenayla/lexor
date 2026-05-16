@@ -168,6 +168,8 @@ Locked so far (closed class, CVC):
 | `var`        | variable/placeholder (prefix on one word)         | Flags slot or bound-name; pairs with `def`. |
 | `def`        | named-binding introducer                          | Form: `def var <name> <expression>`. Discourse-local scope; retract with `nul def var <name>`; re-`def` shadows. |
 | `bra … ket`  | paired sub-constituent grouping (paren-like)      | Wraps a sub-expression inside a clause so operators bind unambiguously. Breaks digit-stream auto-fuse. Nesting allowed (each `ket` matches the nearest unmatched `bra`). Mnemonic: English "bracket" split into bra + ket. |
+| `kan`        | epistemic possibility (may / can / possibly)      | Sentence-initial. Scopes over the rest of the clause. Composes with `no-`. Mnemonic: English/German *can/kann*. Dual of `mus` but locked directly. Epistemic only — deontic permission parked. |
+| `mus`        | epistemic necessity (must / necessarily)          | Sentence-initial. Scopes over the rest of the clause. Composes with `no-`. Mnemonic: English/German *must/muss*. Dual of `kan`. Epistemic only — deontic obligation parked. |
 
 
 

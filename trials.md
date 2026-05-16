@@ -78,17 +78,18 @@ Grep examples: `grep '\[trap, open\]' trials.md` for traps without a fix yet.
 
 ## B. Negation, modality, possibility — distinguishing what English collapses
 
-### B1. not(a = b) vs a ≠ b [trap, open]
+### B1. not(a = b) vs a ≠ b [trap, passes]
 **English:** "a is not equal to b" — never equal, or "doesn't have to equal"?
-**Lexor:** `no- sam a b` is "a is not equal to b" (assertion of inequality). For "a doesn't necessarily equal b" we need a modal operator (possibility, necessity), not yet locked.
-**Status:** `no-` covers assertion of negation. Modal operators (possible, necessary, contingent) parked.
-**Related:** tasks.md modal-operator family.
+**Lexor:**
+- Assertion of inequality: `no- sam a b` (a ≠ b, claimed).
+- "a doesn't necessarily equal b": `no- mus sam a b` (¬□ a=b).
+- "a may or may not equal b": `kan no- sam a b` (◇ a≠b).
+**How:** decisions.md modal operators `kan`/`mus` (2026-05-16).
 
-### B2. "Masses can be different" [trap, open]
+### B2. "Masses can be different" [trap, passes]
 **English:** "The masses can be different" — speaker is not committing on whether they actually are.
-**Lexor goal:** A modal quantifier (∃-style "there exists a case where") that reads cleanly. Possibly `kel ke ...` ("there-exists a case ke ...").
-**Status:** Existential `kel` exists for nouns; clausal existence over possible-worlds not yet locked.
-**Related:** B1, tasks.md modal-operators.
+**Lexor:** `kan no- sam m1 m2` — "possibly m1 ≠ m2." Speaker explicitly does not commit to the inequality holding.
+**How:** decisions.md modal operators (2026-05-16).
 
 ### B3. Tense when uncertain [trap, passes]
 **English:** Speaker isn't sure if it happened, is happening, or will happen, but must commit to a tense.
@@ -164,8 +165,8 @@ Same shape as C2.
 
 ### D6. Plug-in probability [feature, open]
 **Capability:** "90% likely to rain" reads as cleanly as "5 cm."
-**Status:** Numerical probability is expressible as `pa zo zo dem ne zo` (0.90), but a probability operator that links a clause to a number cleanly is not yet locked.
-**Related:** D5.
+**Status:** Path clearer after modal-operators land. Possible surface forms: `kan pir [number]` (possibly to approximate degree N) or `[number] dem kan X` (X with degree-N possibility). Specific shape parked for follow-up round.
+**Related:** D5, modal operators 2026-05-16.
 
 ### D7. Exactly vs at-least [feature, passes]
 See A5.
@@ -298,10 +299,10 @@ See A6.
 **Why:** Validates the language is expressive enough for its own meta-discourse.
 **Status:** Parked in checklist; tracked in tasks.md.
 
-### I2. Quantum superposition [stretch, partly-passes]
+### I2. Quantum superposition [stretch, passes]
 **Goal:** Express "the particle's position is in superposition over X and Y" without smuggling in a definite location.
-**Lexor draft:** `sta lok-x i kun sta lok-y i kun nul mes` ≈ "state at-x AND state at-y AND no measurement" — but composing modal possibility cleanly needs B1/B2.
-**Status:** Partly passes; full case waits on modal operators.
+**Lexor:** `kan lok-x i kun kan lok-y i kun no- mes` = "possibly at x AND possibly at y AND no measurement." Each location is modal-possible, not asserted-state.
+**How:** decisions.md modal operators (2026-05-16).
 
 ### I3. Pronoun-less paragraph [stretch, passes]
 **Goal:** Three consecutive sentences with no explicit subject, no awkwardness.
