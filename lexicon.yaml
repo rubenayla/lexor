@@ -1,0 +1,212 @@
+# Lexor lexicon — single source of truth for all locked roots.
+#
+# Schema (per entry):
+#   root            (str, required)   — the surface form (CV, CVC, prefix, etc.).
+#   kind            (str, required)   — broad class: pronoun | digit | marker |
+#                                       preposition | quantifier | copula |
+#                                       coordinator | time_unit | verb |
+#                                       noun | adj | adv | ...
+#   concept         (str, required)   — concept-level gloss (the *meaning*, not a POS).
+#   semantic_parent (str, optional)   — gloss of the broader concept this slots under.
+#                                       Tree emerges from these links without needing
+#                                       a pre-designed ontology.
+#   source          (str, optional)   — etymological / mnemonic source.
+#   freq_rank       (int, optional)   — merged frequency rank (lower = more frequent).
+#                                       Populated after frequencies.yaml is built.
+#   notes           (str, optional)   — anything else worth remembering.
+#
+# Editing rules:
+#   - Adding a root: append an entry. Run scripts/check_collisions.py.
+#   - Never reuse a root surface form for two distinct concepts unless decisions.md
+#     explicitly locks the overload (currently only `sam`).
+#   - Closed-class roots (markers, prepositions, quantifiers, copulas, coordinators,
+#     digits, pronouns) cannot be re-purposed by adding more entries — those classes
+#     are frozen except by an explicit decisions.md update.
+
+# =============================================================================
+# PRONOUNS (CV / CCV, special shape — not CVC)
+# =============================================================================
+
+- {root: y,  kind: pronoun, concept: "I/me",                 source: "speaker-vowel /y/"}
+- {root: u,  kind: pronoun, concept: "you (sg)",             source: "listener-vowel /u/"}
+- {root: e,  kind: pronoun, concept: "he/she/they (sg)",     source: "external-third /e/"}
+- {root: la, kind: pronoun, concept: "we (generic)",         source: "plural-marker l + neutral vowel"}
+- {root: lc, kind: pronoun, concept: "we (inclusive)",       source: "plural-marker l + /æ/"}
+- {root: ly, kind: pronoun, concept: "you (plural)",         source: "l + speaker-excluded vowel"}
+- {root: lu, kind: pronoun, concept: "me and him/her",       source: "l + listener-excluded vowel"}
+- {root: le, kind: pronoun, concept: "we (you and me)",      source: "l + third-excluded vowel"}
+- {root: lo, kind: pronoun, concept: "they (people, pl)",    source: "l + third-person vowel"}
+- {root: i,  kind: pronoun, concept: "it (object/concept)",  source: "object vowel /i/"}
+- {root: li, kind: pronoun, concept: "they (objects, pl)",   source: "l + object vowel"}
+
+# =============================================================================
+# DIGITS (CV, base-12 friendly)
+# =============================================================================
+
+- {root: zo,  kind: digit, concept: "0", notes: "zero"}
+- {root: pa,  kind: digit, concept: "1"}
+- {root: du,  kind: digit, concept: "2"}
+- {root: re,  kind: digit, concept: "3"}
+- {root: ko,  kind: digit, concept: "4"}
+- {root: fi,  kind: digit, concept: "5"}
+- {root: sa,  kind: digit, concept: "6"}
+- {root: chi, kind: digit, concept: "7"}
+- {root: bo,  kind: digit, concept: "8"}
+- {root: ne,  kind: digit, concept: "9"}
+- {root: ja,  kind: digit, concept: "A (10, dozenal)"}
+- {root: gi,  kind: digit, concept: "B (11, dozenal)"}
+
+# =============================================================================
+# MARKERS (closed-class operators)
+# =============================================================================
+
+- {root: "no-", kind: marker, concept: "logical negation (prefix)", source: "English/Spanish/Latin no"}
+- {root: ka,    kind: marker, concept: "universal question particle"}
+- {root: ke,    kind: marker, concept: "universal complementizer",  source: "Spanish/French que"}
+- {root: is,    kind: marker, concept: "causal conditional (if)"}
+- {root: dat,   kind: marker, concept: "premise / given that",      source: "Latin datum"}
+- {root: erg,   kind: marker, concept: "therefore / inference",     source: "Latin ergo"}
+- {root: imp,   kind: marker, concept: "formal logical implication"}
+- {root: lit,   kind: marker, concept: "literal open (quote)"}
+- {root: fin,   kind: marker, concept: "literal close (end-quote)", source: "Latin finis"}
+- {root: var,   kind: marker, concept: "variable/placeholder (prefix on one word)"}
+- {root: def,   kind: marker, concept: "named-binding introducer",  source: "math/CS def"}
+- {root: bra,   kind: marker, concept: "group-open (paren-like)",   source: "English bracket (bra-ket split)", notes: "Pairs with `fin`-style closer `ket`. Used to group a sub-constituent inside a clause so operators bind unambiguously. Breaks digit-stream auto-fuse."}
+- {root: ket,   kind: marker, concept: "group-close",                source: "English bracket (bra-ket split)", notes: "Closes a `bra`-opened group. Nesting allowed (each `ket` matches the nearest unmatched `bra`)."}
+
+# =============================================================================
+# COORDINATORS
+# =============================================================================
+
+- {root: kun, kind: coordinator, concept: "AND", source: "Latin cum"}
+- {root: vel, kind: coordinator, concept: "OR",  source: "Latin vel"}
+
+# =============================================================================
+# QUANTIFIERS (closed-class CVC)
+# =============================================================================
+
+- {root: sol, kind: quantifier, concept: "only / restriction"}
+- {root: tot, kind: quantifier, concept: "all / every (∀)",          source: "Latin totus"}
+- {root: nul, kind: quantifier, concept: "none (no X has property)", source: "Latin nullus"}
+- {root: kel, kind: quantifier, concept: "some (∃)"}
+- {root: pad, kind: quantifier, concept: "distributive (each individually)"}
+- {root: mas, kind: quantifier, concept: "collective (together as group)"}
+
+# Comparison operators (also used in numerical/quantity comparisons)
+- {root: min, kind: quantifier, concept: "less than (<)",           source: "Latin minus"}
+- {root: mag, kind: quantifier, concept: "greater than (>)",        source: "Latin magis"}
+- {root: sam, kind: quantifier, concept: "equal / identity (=)",    notes: "Also serves as identity copula — same concept in two syntactic contexts"}
+- {root: tom, kind: quantifier, concept: "range / to (between A and B)"}
+- {root: pir, kind: quantifier, concept: "approximately (≈)"}
+
+# Base markers and scale
+- {root: dem, kind: quantifier, concept: "decimal base marker",     source: "Latin decem"}
+- {root: doz, kind: quantifier, concept: "dozenal base marker",     source: "English dozen"}
+- {root: pem, kind: quantifier, concept: "scientific notation × 10^x"}
+- {root: kex, kind: quantifier, concept: "frequency / every / each (durative)"}
+
+# =============================================================================
+# COPULAS (the "is"-overload split)
+# =============================================================================
+
+# `sam` (identity copula) is listed under quantifiers above — same root, same concept,
+# different syntactic environments. Other copulas:
+- {root: est, kind: copula, concept: "essential predication",  source: "Spanish ser / Latin esse"}
+- {root: sta, kind: copula, concept: "state predication",      source: "Spanish estar / Latin stare"}
+- {root: mem, kind: copula, concept: "set membership (∈)",     source: "English member"}
+
+# =============================================================================
+# PREPOSITIONS (closed-class CVC)
+# =============================================================================
+
+# Temporal
+- {root: tep, kind: preposition, concept: "at / in (point in time)",  source: "Latin tempus"}
+- {root: pen, kind: preposition, concept: "during (span of time)"}
+- {root: sin, kind: preposition, concept: "since (start of interval)", source: "Latin sine? Spanish desde"}
+- {root: lim, kind: preposition, concept: "until (end of interval)",  source: "Latin limes"}
+- {root: ant, kind: preposition, concept: "before (in time)",         source: "Latin ante"}
+- {root: pos, kind: preposition, concept: "after (in time)",          source: "Latin post"}
+
+# Spatial
+- {root: lok, kind: preposition, concept: "at / in / on (spatial)",   source: "Latin locus"}
+- {root: sub, kind: preposition, concept: "under / below",            source: "Latin sub"}
+- {root: sur, kind: preposition, concept: "over / above",             source: "French/Latin sur/super"}
+- {root: pok, kind: preposition, concept: "near / close to",          source: "Latin proximus"}
+- {root: lat, kind: preposition, concept: "beside / at the side of",  source: "Latin latus"}
+- {root: dor, kind: preposition, concept: "behind / at the back of",  source: "Latin dorsum"}
+- {root: fas, kind: preposition, concept: "in front of",              source: "Latin facies"}
+- {root: int, kind: preposition, concept: "between (binary)",         source: "Latin inter"}
+- {root: kir, kind: preposition, concept: "around / surrounding",     source: "Greek kyklos / Latin circa"}
+- {root: dir, kind: preposition, concept: "toward (goal direction)",  source: "Latin directio"}
+- {root: oks, kind: preposition, concept: "from / out of (source)",   source: "Latin ex"}
+- {root: tra, kind: preposition, concept: "through",                  source: "Latin trans"}
+
+# Manner / causation
+- {root: mod, kind: preposition, concept: "manner / way / by means of", source: "Latin modus"}
+- {root: kaw, kind: preposition, concept: "cause / because / why",      source: "English cause"}
+
+# =============================================================================
+# TIME-UNIT ROOTS (placeholders — xor/vet flagged for possible replacement)
+# =============================================================================
+
+- {root: nun, kind: time_unit, concept: "now / present moment",       source: "Latin nunc"}
+- {root: mom, kind: time_unit, concept: "second (time unit)",         source: "Latin momentum"}
+- {root: mit, kind: time_unit, concept: "minute"}
+- {root: xor, kind: time_unit, concept: "hour", notes: "Weak mnemonic; may be replaced."}
+- {root: dim, kind: time_unit, concept: "day",                        source: "Latin dies"}
+- {root: sem, kind: time_unit, concept: "week",                       source: "Latin septimana"}
+- {root: mes, kind: time_unit, concept: "month",                      source: "Spanish mes"}
+- {root: vet, kind: time_unit, concept: "year", notes: "Weak mnemonic; may be replaced."}
+
+# =============================================================================
+# VERB ROOTS (open class, CVC)
+# =============================================================================
+
+- {root: pot, kind: verb, concept: "create / make",       semantic_parent: "production"}
+- {root: lom, kind: verb, concept: "eat / consume",       semantic_parent: "ingestion"}
+- {root: kom, kind: verb, concept: "move / motion",       semantic_parent: "motion",      notes: "Generic motion"}
+- {root: vis, kind: verb, concept: "see / visualize",     semantic_parent: "perception",  source: "Latin videre"}
+- {root: zan, kind: verb, concept: "exist / be",          semantic_parent: "existence"}
+- {root: bat, kind: verb, concept: "start / begin",       semantic_parent: "temporal_boundary"}
+- {root: dit, kind: verb, concept: "finish / end",        semantic_parent: "temporal_boundary"}
+- {root: mut, kind: verb, concept: "change / modify",     semantic_parent: "change",      source: "Latin mutare"}
+- {root: sup, kind: verb, concept: "supply / give",       semantic_parent: "transfer"}
+- {root: tak, kind: verb, concept: "take / receive",      semantic_parent: "transfer"}
+- {root: dom, kind: verb, concept: "do / perform action", semantic_parent: "action"}
+- {root: gol, kind: verb, concept: "go / move toward",    semantic_parent: "motion"}
+- {root: hav, kind: verb, concept: "have / possess",      semantic_parent: "possession"}
+- {root: ked, kind: verb, concept: "run",                 semantic_parent: "motion"}
+- {root: ser, kind: verb, concept: "serve / help",        semantic_parent: "social_action"}
+- {root: lav, kind: verb, concept: "wash / clean",        semantic_parent: "maintenance",  source: "Latin lavare"}
+- {root: fir, kind: verb, concept: "build / construct",   semantic_parent: "production"}
+- {root: led, kind: verb, concept: "lead / guide",        semantic_parent: "social_action"}
+- {root: ris, kind: verb, concept: "laugh / smile",       semantic_parent: "emotion_expression", source: "Latin ridere"}
+- {root: mot, kind: verb, concept: "stir / agitate",      semantic_parent: "motion",       notes: "Distinct from `kom` (general motion) and `gol` (directed motion)"}
+- {root: sal, kind: verb, concept: "jump / leap",         semantic_parent: "motion",       source: "Latin salire"}
+- {root: kad, kind: verb, concept: "fall",                semantic_parent: "motion",       source: "Latin cadere", notes: "Renamed from `cad` 2026-05-16 to fit strict CVC phoneme rule"}
+- {root: ven, kind: verb, concept: "come / arrive",       semantic_parent: "motion",       source: "Latin venire"}
+- {root: par, kind: verb, concept: "prepare / ready",     semantic_parent: "production",   source: "Latin parare"}
+- {root: lib, kind: verb, concept: "free / release",      semantic_parent: "transfer",     source: "Latin liberare"}
+- {root: pag, kind: verb, concept: "pay",                 semantic_parent: "transfer",     source: "Spanish/Latin pagar/pacare"}
+- {root: tem, kind: verb, concept: "fear / be afraid",    semantic_parent: "emotion",      source: "Latin timere"}
+- {root: lor, kind: verb, concept: "cry / weep",          semantic_parent: "emotion_expression", source: "Spanish llorar / Latin plorare", notes: "Renamed from `cri` 2026-05-16; cluster reduction. Sense narrowed to tearful crying; loud shouting deferred to a future root."}
+- {root: mel, kind: verb, concept: "improve / better",    semantic_parent: "change",       source: "Latin meliorare"}
+- {root: viv, kind: verb, concept: "live / be alive",     semantic_parent: "existence",    source: "Latin vivere"}
+- {root: mor, kind: verb, concept: "die",                 semantic_parent: "existence",    source: "Latin mori"}
+- {root: per, kind: verb, concept: "open",                semantic_parent: "state_change", source: "Latin aperire (a-PER-ire stem)", notes: "Renamed from `apr` 2026-05-16 to fit strict CVC."}
+- {root: xut, kind: verb, concept: "close / shut",        semantic_parent: "state_change", source: "English shut (x=/ʃ/)", notes: "Renamed from `cla` 2026-05-16; Latin claudere has a CL- cluster that doesn't fit CVC, so switched to Germanic source."}
+- {root: sen, kind: verb, concept: "feel / sense",        semantic_parent: "perception",   source: "Latin sentire"}
+- {root: tir, kind: verb, concept: "pull / draw",         semantic_parent: "force_application", source: "Spanish/Italian tirar/tirare", notes: "Renamed from `duc` 2026-05-16; `duc` violated CVC (CVV with `c` = vowel /æ/), and `duk` would be /k/-final (forbidden)."}
+- {root: fer, kind: verb, concept: "carry / bring",       semantic_parent: "transfer",     source: "Latin ferre"}
+- {root: pun, kind: verb, concept: "hit / strike",        semantic_parent: "force_application", source: "Latin pungere"}
+- {root: kur, kind: verb, concept: "run / flow",          semantic_parent: "motion",       source: "Latin currere", notes: "Renamed from `cur` 2026-05-16. Note partial overlap with `ked` (run): `kur` covers continuous flow / liquid running; `ked` covers locomotive running. Disambiguate by context."}
+- {root: rot, kind: verb, concept: "rotate",              semantic_parent: "motion",       source: "Latin rotare", notes: "Composes with spatial prepositions for axis-specific rotations."}
+- {root: lek, kind: verb, concept: "read / gather",       semantic_parent: "perception",   source: "Latin legere"}
+- {root: sek, kind: verb, concept: "write",               semantic_parent: "production",   source: "Latin scribere"}
+- {root: lis, kind: verb, concept: "hear / listen",       semantic_parent: "perception",   source: "English listen", notes: "Renamed from `aud` 2026-05-16; Latin audire starts with a vowel (VVC). Candidate `her` (English hear) blocked by phonetics rule 6 (h+vowel forbidden)."}
+- {root: dik, kind: verb, concept: "speak / say",         semantic_parent: "communication", source: "Latin dicere"}
+- {root: kap, kind: verb, concept: "capture / seize",     semantic_parent: "transfer",     source: "Latin capere"}
+- {root: ten, kind: verb, concept: "hold",                semantic_parent: "possession",   source: "Latin tenere"}
+- {root: vit, kind: verb, concept: "avoid / shun",        semantic_parent: "motion",       source: "Latin vitare"}
+- {root: pat, kind: verb, concept: "suffer / endure",     semantic_parent: "emotion",      source: "Latin pati"}
+- {root: dur, kind: verb, concept: "last / endure (time)", semantic_parent: "temporal_boundary", source: "Latin durare"}

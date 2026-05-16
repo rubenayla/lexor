@@ -61,27 +61,27 @@ Phonemes were chosen for consistency and logical alignment: **`y`** represents t
 | `ris`    | laugh/smile       | /r/ and /s/ derived from "ridere." |
 | `mot`    | move/stir         | Simplifies to /m/ and /t/. |
 | `sal`    | jump/leap         | Retains /s/ and /l/, derived from "salire." |
-| `cad`    | fall              | Maintains /k/ and /d/, inspired by "cadere." |
+| `kad`    | fall              | Latin *cadere*. Renamed from `cad` 2026-05-16 (phoneme conformance). |
 | `ven`    | come/arrive       | Derived from "venire," matches /v/ and /n/. |
 | `par`    | prepare/ready     | Retains /p/ and /r/, inspired by "parare." |
 | `lib`    | free/release      | Derived from "liberare," fits /l/ and /b/. |
 | `pag`    | pay               | Matches /p/ and /g/, derived from "pagare." |
 | `tem`    | fear/be afraid    | /t/ and /m/ derived from "timere." |
-| `cri`    | cry/scream        | Matches /k/ and /r/, derived from "criare." |
+| `lor`    | cry / weep        | Spanish *llorar* / Latin *plorare* (cluster reduction). Renamed from `cri` 2026-05-16. Sense narrowed to tearful crying. |
 | `mel`    | improve/better    | Retains /m/ and /l/, derived from "meliorare." |
 | `viv`    | live/exist        | Compatible with /v/, from "vivere." |
 | `mor`    | die               | Matches /m/ and /r/, derived from "mori." |
-| `apr`    | open              | Retains /a/ and /r/, derived from "aperire." |
-| `cla`    | close             | Matches /k/ and /l/, derived from "claudere." |
+| `per`    | open              | Latin *a-PER-ire* stem. Renamed from `apr` 2026-05-16. |
+| `xut`    | close / shut      | English *shut* (x=/ʃ/). Renamed from `cla` 2026-05-16 — Latin *claudere* has a CL- cluster that doesn't fit CVC. |
 | `sen`    | feel/sense        | Fits /s/ and /n/, derived from "sentire." |
-| `duc`    | pull/draw         | Adjusted for /d/ and /k/, derived from "ducere." |
+| `tir`    | pull / draw       | Spanish/Italian *tirar*/*tirare*. Renamed from `duc` 2026-05-16 — `duc` ends in `c` = vowel /æ/, and `duk` would violate /k/-final rule. |
 | `fer`    | carry/bring       | Matches /f/ and /r/, derived from "ferre." |
 | `pun`    | hit/strike        | Matches /p/ and /n/, derived from "pungere." |
-| `cur`    | run/flow          | Retains /k/ and /r/, inspired by "currere." |
+| `kur`    | run / flow        | Latin *currere*. Renamed from `cur` 2026-05-16. Sense: continuous flow / liquid running; locomotive running is `ked`. |
 | `rot`    | rotate            | Latin *rotare*. Composes with spatial prepositions for axis-specific rotations: `rot fas` (roll, about X), `rot lat` (pitch, about Y), `rot sur` (yaw, about Z). |
 | `lek`    | read/gather       | Adjusted to /l/ and /k/, derived from "legere." |
 | `sek`    | write             | Adjusted for /s/ and /k/, derived from "scribere." |
-| `aud`    | hear/listen       | Matches /a/ and /d/, derived from "audire." |
+| `lis`    | hear / listen     | English *listen*. Renamed from `aud` 2026-05-16 — `aud` starts with vowel (VVC), and `her` is blocked by phonetics rule 6 (h+vowel forbidden). |
 | `dik`    | speak/say         | Adjusted to /d/ and /k/, inspired by "dicere." |
 | `kap`    | capture/take      | Matches /k/ and /p/, derived from "capere." |
 | `ten`    | hold              | Retains /t/ and /n/, inspired by "tenere." |
@@ -167,6 +167,7 @@ Locked so far (closed class, CVC):
 | `lit … fin`  | paired literal-content brackets                   | Inside is raw string, not parsed predication. |
 | `var`        | variable/placeholder (prefix on one word)         | Flags slot or bound-name; pairs with `def`. |
 | `def`        | named-binding introducer                          | Form: `def var <name> <expression>`. Discourse-local scope; retract with `nul def var <name>`; re-`def` shadows. |
+| `bra … ket`  | paired sub-constituent grouping (paren-like)      | Wraps a sub-expression inside a clause so operators bind unambiguously. Breaks digit-stream auto-fuse. Nesting allowed (each `ket` matches the nearest unmatched `bra`). Mnemonic: English "bracket" split into bra + ket. |
 
 
 

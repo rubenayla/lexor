@@ -1018,3 +1018,132 @@ The exact sign convention for pitch and roll is parked — it's a separate quest
 - "Inside / outside" potentially needing dedicated roots if the `lok int` / `oks` compositions feel heavy in practice — defer until examples surface a problem.
 - "Along", "against (contact)", "across (perpendicular sense)" — defer to vocabulary buildout when their use-cases concretize.
 - Diagonal / oblique spatial relations — out of scope for the core 12.
+
+---
+
+## 2026-05-16 — Machine-readable lexicon and collision-checker
+
+### What was decided
+- `lexicon.yaml` becomes the source of truth for all locked roots. Schema is self-documenting (header comment in the file). All 130 currently-locked roots seeded: 11 pronouns, 12 digits, 11 markers, 2 coordinators, 15 quantifiers (incl. comparison/base/scale operators), 3 non-identity copulas, 20 prepositions, 8 time-unit roots, 48 verb roots.
+- `scripts/check_collisions.py` runs over the YAML. Detects duplicate root forms (whitelisting only `sam`, which is one concept used in two syntactic contexts) and shape violations. Shape rule enforced strictly only on open-class kinds (`verb`, `noun`, `adj`); closed-class kinds (markers, prepositions, etc.) are allowed to keep their hand-chosen non-CVC forms (`est`, `ant`, `imp`, `is`, etc.) because those were deliberately picked for source-language recognizability and are locked in decisions.md.
+
+### Tree-structure decision
+The user suggested encoding the whole vocabulary as a tree. Considered:
+- (a) Full WordNet-style semantic ontology upfront — rejected. Pre-designing every internal node is a classic conlang deathtrap; months of taxonomy work before any vocabulary lands.
+- (b) Lightweight emergent tree — accepted. Each entry carries an optional `semantic_parent` field with a gloss; internal nodes only get created when at least one leaf points to them. Traversal still works (find all entries with `semantic_parent: motion`, etc.). Cost is bounded; the tree grows organically with the vocabulary.
+- (c) Phonological tree (index by CVC slot) — folded into the collision-checker, no separate file needed.
+- (d) Etymological / derivational trees — derivable on demand from existing fields.
+
+### Why YAML, why at the repo root
+- YAML over JSON for human edit-ability (comments allowed, less ceremony).
+- Repo root (not `data/`) for visibility — there are only a handful of top-level files; nesting it would just hide it.
+- Single file (not one-per-category) because the total stays well under 10K entries even at full buildout, and a single file is grep-friendly and atomic to read.
+
+### Collision-checker finding: verb-root phoneme conformance
+Running the checker surfaced 7 inherited verb roots that violate the strict CVC verb-shape rule:
+- `cad`, `cri`, `cur`, `cla`, `duc` — use `c` as if it were /k/, but per phonetics.md `c` is exclusively the vowel /æ/. So `cad` is phonetically /kæd/? No — it's /æad/, which has 3 consecutive vowels including the implicit "a" — illegal.
+- `apr`, `aud` — start with a vowel, shape VCC or VVC, not CVC.
+
+These were inherited from a draft of roots.md that predates the strict CVC + phoneme-table locks. Two fix paths (parked as a `tasks.md` item, not resolved here):
+1. Rename to fit CVC + the phoneme table: `cad→kad`, `cri→kri`, `cur→kur`, `cla→kla`, `duc→duk` (but `k`-final is forbidden by phonetics.md rule 1, so `duc→tir` or similar), `apr→pri` or rename, `aud→` rename to a sense-of-hearing CVC.
+2. Grant an explicit exception clause in decisions.md allowing inherited verb roots to keep non-conformant shapes. Discouraged — would weaken the rule that should drive future vocabulary.
+
+Path 1 is preferred but each rename is its own micro-decision and should run through the standard "lay out options, pick, log rationale" flow. Parked.
+
+### What this unblocks
+- Bulk vocabulary adds: every new root gets entered in `lexicon.yaml` and `python3 scripts/check_collisions.py` is run before committing. Collisions are caught structurally instead of through manual search.
+- Frequency-list driven assignment: once `frequencies.yaml` is built, the assignment loop is "take next-highest-frequency concept, propose CVC root, run checker, commit on green."
+- Auto-generated `dictionary.md` from the YAML — straightforward script, parked under repo-restructuring tasks.
+
+### Parked
+- Frequency-list construction (`frequencies.yaml`): merged top-N from English (SUBTLEX-US), Spanish (SUBTLEX-ESP), Latin (Diederich's basic Latin list), deduped by concept. To be built next.
+- Verb-root rename audit (the 7 findings above).
+- `dictionary.md` auto-generation script.
+
+---
+
+## 2026-05-16 — Verb-root rename pass: phoneme conformance
+
+### What was decided
+Resolved the 7 verb-shape warnings surfaced by the collision-checker. All renames preserve source-language recognizability where possible; switched source language only when the original cluster wouldn't fit CVC:
+
+| Old  | New  | Source                                    | Notes |
+|------|------|-------------------------------------------|-------|
+| `cad`| `kad`| Latin *cadere*                            | Direct phoneme rewrite. |
+| `cur`| `kur`| Latin *currere*                           | Direct phoneme rewrite. Now overlaps with `ked` (run); split sense: `kur` = continuous flow, `ked` = locomotive. |
+| `cri`| `lor`| Spanish *llorar* / Latin *plorare*        | Cluster reduction (drop initial /pl/ or /j/). Sense narrowed to tearful crying; loud-shouting/scream sense parked for a future root. |
+| `cla`| `xut`| English *shut* (x=/ʃ/)                    | Switched source language because Latin *claudere*'s /kl/ cluster can't fit CVC. |
+| `duc`| `tir`| Spanish/Italian *tirar*/*tirare*          | Latin *ducere* failed two ways: `duc` has `c`=vowel; `duk` violates /k/-final rule. Romance "tir-" is widely cognate (Spanish, Italian, also French *tirer*). |
+| `apr`| `per`| Latin *a-PER-ire* stem                    | Dropped leading vowel; PER stem preserved. |
+| `aud`| `lis`| English *listen*                          | Latin *audire* (VVC) doesn't fit CVC. Candidate `her` (English hear) blocked by phonetics rule 6 (h+vowel forbidden). |
+
+### Alternatives considered and rejected
+- **`cad → kad` vs preserving `cad` with an exception clause.** Rejected the exception: would weaken the strict-CVC rule that should drive all future open-class roots, and the rewrite costs nothing.
+- **`cri → lam` (Latin *clamare* cluster-reduced) vs `lor`.** Picked `lor` because *llorar* is the everyday Spanish word for crying, while *clamare* is closer to "exclaim/proclaim" — slightly different sense. Reserved `lam` for a potential future "shout/proclaim" root.
+- **`cla → klu`/`klud`** rejected for CC cluster; **`cla → ser`** rejected (collides with verb `ser` = serve). **`cla → ker`** rejected because of weak mnemonic and to keep `k`+vowel for the `kad`/`kur` pair.
+- **`duc → dut` or `dug`** rejected for arbitrary phoneme swap with no mnemonic; **`tir`** chosen for cross-Romance recognizability.
+- **`apr → bri`** (Spanish *abrir* cluster-reduced) rejected because `per` traces back to a more widely-cognate Latin stem (*aperire* → English *aperture*, French *ouvrir* from *operire*).
+- **`aud → her`** (English *hear*) rejected at the phonetics check — rule 6.
+- **`aud → kut`** (Latin *auscultare* middle syllable) rejected for weak mnemonic.
+
+### Propagation
+Updated everywhere `cad/cri/cur/cla/duc/apr/aud` appeared:
+- `lexicon.yaml` — 7 entries renamed, original spelling preserved in `notes`.
+- `roots.md` — verb table updated.
+- `examples.md` — `apre` → `pere` (only inflected form in use).
+- `frequencies.yaml` — `assigned_root` fields for "hear" and "fall" updated.
+- `tasks.md` — audit task ticked.
+
+### Sense-split surfaced as a side effect
+- **`kur` vs `ked`** — both glossed "run" before, but now `kur` (from *currere*, primary sense = continuous flow) and `ked` (already in lexicon as "run", working English-stem mnemonic) overlap. Decided to split: `kur` = liquid/continuous flow, `ked` = locomotive running. Logged in both `notes` fields. May need a third root if "running of an engine / running of an event" gets crowded; defer.
+- **`lor` vs the parked future "shout/proclaim" root** — `lor` covers tearful crying; loud emotional shouting is a separate concept and gets its own root later (candidate slot: `lam` reserved).
+
+### Parked
+- Future root for "shout/proclaim" (candidate slot `lam` from *clamare*).
+- Possible third "run" root if `kur`/`ked` split feels insufficient under more examples.
+
+---
+
+## 2026-05-16 — Sub-constituent grouping markers `bra … ket`
+
+### Problem
+Working through the "I bet I can do between three and four hundred pushups" example surfaced a gap: Lexor's locked prosody (word / clause / sentence boundaries) only structures clause-level and above. There was no general mechanism for sub-clause constituent grouping inside a single clause. The digit-stream auto-fuse rule actively fights such cases: `tom re ko zo zo` parses as `tom rekozozo` (one fused number = 3400), so `tom`'s second argument is missing entirely — ill-formed, but the speaker had no good shape to produce. Mixed AND/OR (examples.md #48) hits the same family of gap; the current answer is `def`-binding, which is heavy for short phrases.
+
+### Options considered
+- (A) Paired grouping brackets (parenthesis-style closed-class markers). Two short words: one opens, one closes. Parser treats the bracketed span as a single argument unit.
+- (B) Fourth prosodic level (~150 ms sub-constituent pause, between word-break and clause-break).
+- (C) Single closed-class separator word, no closer.
+
+### Why (A) won
+- **General.** Handles numerical ranges, mixed AND/OR, future nested operators of any shape. (B) and (C) only address some.
+- **No prosodic load.** (B) would push the prosodic-distinction count to 4 levels, near the perceptual reliability limit per Lehiste 1973 / Price et al. 1991. Listeners under noise/fatigue/cross-dialect would lose distinctions.
+- **Consistent with the locked "scope by explicit markers, not by prosody" rule.** (B) directly contradicts it.
+- **Composable with `lit … fin`.** Lexor already has one paired-marker pattern; reusing the shape is familiar.
+- **Nesting comes free.** Each `ket` matches the nearest unmatched `bra`, like every paren-based language.
+- (C) collapses into (A) as soon as nesting is needed — you still need a closer. So (A) generalizes (C).
+
+### Tonality side-question
+User asked: could tonality make the brackets unnecessary in speech? Honest answer documented in the response: prosody *can* cue grouping (every natural language uses intonational phrasing for it), but formally licensing prosody as a substitute breaks two locked invariants: (1) "scope is pinned by positional rules, not prosody"; (2) precision-by-default fails under noise/speed/cross-dialect. Resolution: brackets are mandatory; prosody is a secondary cue that aligns with them. Keeping the brackets short (one syllable each) makes the cost of saying them low enough that "trusting prosody instead" doesn't save much.
+
+### Surface forms
+- `bra` (CCV, closed-class shape exception fine per the established rule for non-CVC closed-class entries).
+- `ket` (CVC).
+- Mnemonic: English "bracket" split. `bra` opens, `ket` closes.
+- Checked against lexicon: no collisions. `ket` distinct from `ke` (universal complementizer) and `kex` (frequency operator) under the obligatory ~50–100 ms word-boundary break.
+
+### Alternatives rejected
+- `kop / kof` — abstract phonological mirror, no mnemonic.
+- `bok / kob` — clean CVC but weak mnemonic.
+- `pa / ap` — `pa` collides with digit 1.
+- `gru / urg` — weak mnemonic, two cluster shapes.
+- `tag / gat` — weak mnemonic.
+
+### What this unblocks
+- `tom`-range expressions on heterogeneous-digit numbers: `tom bra re ket bra ko zo zo ket` cleanly = "between 3 and 400."
+- Mixed AND/OR without `def`: `bra A kun B ket vel C` = "(A and B) or C." `def`-binding goes back to its real job (naming an expression for reuse), no longer load-bearing for disambiguation.
+- Future operators that take 2+ arguments where digit-stream or constituent-fuse rules would otherwise eat the boundary.
+- Cleaner factoring: examples.md #48 updated; the principle that `def` is for naming, brackets are for grouping, is now visible at the syntax level.
+
+### Parked
+- Whether to add a third prosodic-level reinforcement (a ~150 ms tighter phrase inside brackets) as a *style* recommendation, not a grammatical requirement. Probably yes, but document later under "spoken-style guide" rather than `phonetics.md` proper.
+- Multi-character/Unicode written form for the brackets (parentheses `( )`, square `[ ]`, angle `⟨ ⟩`). Defer until a written-form section is written.

@@ -1,0 +1,168 @@
+# Lexor frequency-driven vocabulary priority queue.
+#
+# Goal: bulk vocabulary buildout in frequency order across multiple natural
+# languages, so the most common concepts get assigned roots first. Words that
+# rank high in multiple languages independently are universal-concept evidence
+# and become highest priority. Words that appear in only one language are
+# culturally-scoped and lower priority.
+#
+# Schema (per entry):
+#   concept       (str, required) — canonical concept gloss.
+#   en            (int, optional) — rank in SUBTLEX-US (lower = more frequent).
+#   es            (int, optional) — rank in SUBTLEX-ESP.
+#   la            (int, optional) — rank in Diederich's basic Latin list.
+#   universal     (int, derived)  — sum-of-reciprocal-ranks score; entries
+#                                   appearing in all three with low rank
+#                                   bubble to the top. Filled in by a
+#                                   future build script.
+#   assigned_root (str, optional) — when a root has been chosen and entered
+#                                   into lexicon.yaml. Lets us track coverage.
+#   notes         (str, optional)
+#
+# Seeding strategy:
+#   1. Manual seed below covers obvious universals — pronouns, basic verbs,
+#      core nouns, body parts, kinship. These are inserted with rough rank
+#      estimates rather than fetched from corpora (which is a separate task).
+#   2. Bulk ingest from SUBTLEX-US, SUBTLEX-ESP, and a Latin frequency list
+#      will replace these placeholders with real corpus-derived ranks. Script
+#      to fetch and dedup by concept is planned (see tasks.md).
+#
+# Rank conventions:
+#   - Ranks are integers >= 1. Use 1-99 for "almost certainly top-100 in this
+#     language," 100-499 for top-500, etc. Seed estimates use this granularity
+#     until real data lands.
+#   - Missing language field = not in that language's top-N frequency list.
+#
+# Status tracking:
+#   - "assigned_root" filled in once the root makes it into lexicon.yaml.
+#   - Concepts already covered by current lexicon.yaml are listed in the
+#     "Already assigned" block below for completeness.
+
+# =============================================================================
+# ALREADY ASSIGNED (mirrors lexicon.yaml — for coverage tracking only)
+# =============================================================================
+# Most of these are universals; assigned_root field links back to lexicon.yaml.
+
+- {concept: "I/me",            assigned_root: y,    en: 10,  es: 50,  la: 30}
+- {concept: "you (sg)",        assigned_root: u,    en: 5,   es: 20,  la: 50}
+- {concept: "he/she/they",     assigned_root: e,    en: 15,  es: 10,  la: 5}
+- {concept: "we",              assigned_root: la,   en: 80,  es: 60,  la: 70}
+- {concept: "eat",             assigned_root: lom,  en: 250, es: 220, la: 180}
+- {concept: "see",             assigned_root: vis,  en: 90,  es: 85,  la: 60}
+- {concept: "go",              assigned_root: gol,  en: 40,  es: 30,  la: 90}
+- {concept: "come",            assigned_root: ven,  en: 110, es: 80,  la: 100}
+- {concept: "have",            assigned_root: hav,  en: 30,  es: 35,  la: 45}
+- {concept: "give",            assigned_root: sup,  en: 120, es: 130, la: 110}
+- {concept: "take",            assigned_root: tak,  en: 95,  es: 90,  la: 75}
+- {concept: "say",             assigned_root: dik,  en: 25,  es: 45,  la: 35}
+- {concept: "read",            assigned_root: lek,  en: 400, es: 380, la: 200}
+- {concept: "write",           assigned_root: sek,  en: 350, es: 360, la: 220}
+- {concept: "hear",            assigned_root: lis,  en: 200, es: 240, la: 250}
+- {concept: "fall",            assigned_root: kad,  en: 600, es: 500, la: 300}
+- {concept: "live (be alive)", assigned_root: viv,  en: 280, es: 200, la: 150}
+- {concept: "die",             assigned_root: mor,  en: 320, es: 260, la: 130}
+- {concept: "now",             assigned_root: nun,  en: 35,  es: 25,  la: 80}
+- {concept: "day",             assigned_root: dim,  en: 100, es: 95,  la: 85}
+
+# =============================================================================
+# UNASSIGNED — TO ASSIGN NEXT (highest priority first)
+# =============================================================================
+# These are concepts that almost certainly appear in the top 500 of all three
+# languages. The next pass of vocabulary buildout should target these in order.
+
+# Function words / pronouns (often closed-class — may need decisions before root)
+- {concept: "this",            en: 20,  es: 15,  la: 25}
+- {concept: "that",            en: 18,  es: 22,  la: 28}
+- {concept: "what",            en: 50,  es: 40,  la: 55, notes: "Composes with ka — may not need root"}
+- {concept: "who",             en: 70,  es: 65,  la: 65, notes: "Composes with ka — may not need root"}
+- {concept: "all",             assigned_root: tot,  en: 60,  es: 55,  la: 40}
+- {concept: "many",            en: 90,  es: 100, la: 95, notes: "Fuzzy magnitude quantifier — parked"}
+- {concept: "few",             en: 150, es: 160, la: 150, notes: "Same parked"}
+- {concept: "some",            assigned_root: kel,  en: 110, es: 105, la: 105}
+- {concept: "and",             assigned_root: kun,  en: 3,   es: 5,   la: 10}
+- {concept: "or",              assigned_root: vel,  en: 75,  es: 70,  la: 60}
+- {concept: "not",             assigned_root: "no-", en: 8,  es: 18,  la: 20}
+
+# High-frequency content words — body
+- {concept: "person",          en: 130, es: 120, la: 100}
+- {concept: "man (male adult)", en: 100, es: 140, la: 90}
+- {concept: "woman",           en: 140, es: 145, la: 200}
+- {concept: "child",           en: 230, es: 200, la: 170}
+- {concept: "body",            en: 300, es: 280, la: 240}
+- {concept: "head",            en: 270, es: 260, la: 190}
+- {concept: "eye",             en: 240, es: 230, la: 175}
+- {concept: "hand",            en: 210, es: 215, la: 160}
+- {concept: "foot",            en: 290, es: 295, la: 210}
+- {concept: "mouth",           en: 380, es: 360, la: 330}
+- {concept: "heart",           en: 360, es: 320, la: 220}
+
+# High-frequency content words — environment
+- {concept: "water",           en: 220, es: 180, la: 120}
+- {concept: "fire",            en: 410, es: 400, la: 270}
+- {concept: "earth (ground)",  en: 340, es: 310, la: 230}
+- {concept: "air",             en: 430, es: 420, la: 290}
+- {concept: "sky",             en: 470, es: 450, la: 280}
+- {concept: "sun",             en: 380, es: 350, la: 250}
+- {concept: "moon",            en: 600, es: 550, la: 310}
+- {concept: "star",            en: 700, es: 650, la: 330}
+- {concept: "tree",            en: 480, es: 460, la: 270}
+- {concept: "stone",           en: 550, es: 530, la: 290}
+- {concept: "house",           en: 180, es: 160, la: 200}
+- {concept: "road / way",      en: 260, es: 220, la: 180}
+
+# Time & state
+- {concept: "time",            en: 70,  es: 75,  la: 50}
+- {concept: "year",            assigned_root: vet,  en: 160, es: 150, la: 110}
+- {concept: "month",           assigned_root: mes,  en: 240, es: 200, la: 220}
+- {concept: "hour",            assigned_root: xor,  en: 220, es: 240, la: 260}
+- {concept: "morning",         en: 460, es: 450, la: 380}
+- {concept: "night",           en: 280, es: 250, la: 200}
+- {concept: "good",            en: 65,  es: 60,  la: 90}
+- {concept: "bad",             en: 280, es: 230, la: 250}
+- {concept: "big",             en: 95,  es: 85,  la: 80}
+- {concept: "small",           en: 170, es: 160, la: 150}
+- {concept: "new",             en: 145, es: 140, la: 130}
+- {concept: "old",             en: 200, es: 190, la: 170}
+- {concept: "hot",             en: 470, es: 450, la: 400}
+- {concept: "cold",            en: 460, es: 440, la: 410}
+
+# Action verbs — high frequency, not yet assigned
+- {concept: "want",            en: 45,  es: 55,  la: 80}
+- {concept: "need",            en: 130, es: 110, la: 140}
+- {concept: "know (fact)",     en: 55,  es: 50,  la: 60}
+- {concept: "know (person)",   en: 220, es: 130, la: 80, notes: "Spanish/Latin split conocer/saber vs scire/cognoscere"}
+- {concept: "think",           en: 80,  es: 90,  la: 100}
+- {concept: "love",            en: 250, es: 130, la: 95, notes: "Lexor `am` planned per decisions.md no-lexical-opposite debate"}
+- {concept: "hate",            en: 480, es: 470, la: 340, notes: "Lexor `od` planned (paired antonym to am)"}
+- {concept: "like",            en: 105, es: 100, la: 230}
+- {concept: "find",            en: 175, es: 165, la: 200}
+- {concept: "get / obtain",    en: 60,  es: 95,  la: 110}
+- {concept: "make / do",       assigned_root: dom,  en: 22,  es: 28,  la: 35}
+- {concept: "use",             en: 90,  es: 110, la: 160}
+- {concept: "work (verb)",     en: 215, es: 210, la: 190}
+- {concept: "sleep",           en: 410, es: 390, la: 270}
+- {concept: "wake",            en: 600, es: 580, la: 450}
+- {concept: "speak / talk",    en: 165, es: 70,  la: 90, notes: "Spanish split decir/hablar — `dik` covers say; talk may need separate root `parl`"}
+- {concept: "ask",             en: 180, es: 180, la: 230}
+- {concept: "answer / reply",  en: 320, es: 300, la: 350}
+- {concept: "buy",             en: 380, es: 290, la: 320}
+- {concept: "sell",            en: 470, es: 380, la: 360}
+- {concept: "play",            en: 200, es: 220, la: 380}
+- {concept: "sing",            en: 530, es: 500, la: 380}
+- {concept: "dance",           en: 700, es: 650, la: 750}
+- {concept: "swim",            en: 800, es: 750, la: 480}
+- {concept: "fly",             en: 620, es: 600, la: 350}
+
+# Numbers beyond digits (handled by digit stream — listed for completeness)
+- {concept: "first",           en: 75,  es: 80,  la: 50}
+- {concept: "last",            en: 175, es: 180, la: 150}
+
+# =============================================================================
+# CULTURAL / DOMAIN-SPECIFIC (lower priority — pick after universals)
+# =============================================================================
+# Concepts that rank high in one or two languages but not all three. Useful
+# but not the first frontier. Examples below; full list filled by corpus ingest.
+
+- {concept: "weekend",         en: 1500, notes: "English-specific concept"}
+- {concept: "siesta",          es: 1800, notes: "Spanish-cultural"}
+- {concept: "senate",          la: 60,   notes: "Latin-cultural (Roman institution)"}

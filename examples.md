@@ -22,7 +22,7 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 
 9. `loma [apple]-o e-e` — same as #8, explicit roles. Use when object/subject swap would be plausible from context.
 10. `dake [apple]-o e-e u-u` — "She gives an apple to you." (recipient `u` marked because three-argument verb)
-11. `apre [door]-o e-e [key]-i` — "She opens the door with a key." (instrument `i`)
+11. `pere [door]-o e-e [key]-i` — "She opens the door with a key." (instrument `i`)
 
 ## 3. Negation
 
@@ -80,8 +80,14 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 
 46. `loma [apple] e kun bibe [water] e` — "She eats an apple and drinks water." (AND, same depth)
 47. `loma [apple] e vel loma [pear] e` — "She eats an apple or a pear." (OR)
-48. Mixed AND/OR forbidden in flat form: `loma A e kun loma B e vel loma C e` — ill-formed (ambiguous grouping). Rewrite with `def`:
-    - `def var p loma A e kun loma B e. var p vel loma C e` — "(A and B) or C."
+48. Mixed AND/OR uses sub-constituent brackets `bra … ket`:
+    - `bra loma A e kun loma B e ket vel loma C e` — "(A and B) or C."
+    - `loma A e kun bra loma B e vel loma C e ket` — "A and (B or C)."
+    - The old `def`-binding rewrite still works (`def var p loma A e kun loma B e. var p vel loma C e`) but is reserved for naming a sub-expression for later reuse, not just disambiguation.
+
+48a. Numerical-range disambiguation (the `bra … ket` motivating case):
+    - `tom bra re ket bra ko zo zo ket e` — "between 3 and 400 (pushups)." Without brackets, `tom re ko zo zo` would fuse all four digits into `rekozozo` (= 3400) and `tom` would be missing its second argument — ill-formed.
+    - `tom bra re zo zo ket bra ko zo zo ket e` — "between 300 and 400." Always bracket both arguments; never trust the digit-stream rule to split a multi-number expression on its own.
 
 ## 10. Reasoning chain
 
@@ -126,7 +132,7 @@ Working through these exposed the following:
 5. **`def`-binding inside reasoning chains** (#66) is the most powerful demonstration so far. Long premises become single tokens (`var p`); the chain stays readable.
 6. **No problems found with prosody assumptions.** All examples parse uniquely under the brief-break / clause-break / sentence-break model.
 7. **`kompo` / `kompe`** ("fix/repair") used as working root; needs vocab assignment.
-8. **`apre` / `legu`** (open / read-imperative) — same.
+8. **`pere` / `legu`** (open / read-imperative) — `pere` updated 2026-05-16 (root renamed `apr → per`). `legu` still using working-form spelling.
 
 ## Next examples to add (after vocabulary buildout)
 

@@ -12,11 +12,14 @@ Lexor is a constructed language designed from first principles to maximize preci
 - `TODO.md` — older open-questions list. Being merged into `tasks.md` over time.
 - `tasks.md` — current open design questions and work items, parked for later.
 - `history.md` — append-only log of decisions, reflections, findings. Grep, don't read in full.
-- `roots.md` — root inventory: rationale + tables. Will eventually be split (data → `dictionary.md`).
-- `dictionary.md` — word list (currently near-empty; to be populated).
+- `lexicon.yaml` — **source of truth for all locked roots.** Machine-readable. Every new root is added here first. Schema documented in the file header. Tree structure emerges from `semantic_parent` links — internal taxonomy nodes only get created when needed.
+- `roots.md` — root inventory rationale + tables. Tables are legacy / human-readable views; `lexicon.yaml` is authoritative if they disagree.
+- `dictionary.md` — word list (currently near-empty; will be auto-generated from `lexicon.yaml`).
+- `frequencies.yaml` — merged frequency rankings from English / Spanish / Latin, used to prioritize root assignment. (Planned; not yet built.)
 - `phonetics.md` — phoneme inventory and rules.
 - `grammar.md` — grammar notes.
 - `stuff.md` — misc.
+- `scripts/check_collisions.py` — runs over `lexicon.yaml`; flags duplicate root forms and (for open-class verbs/nouns/adj) shape violations against the locked CVC rule. Run before committing any new root.
 
 ## Working conventions
 - **Plan before building.** For non-trivial design decisions, debate one question at a time. Don't try to settle everything in one pass.

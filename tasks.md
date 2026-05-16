@@ -35,7 +35,8 @@ Open design questions parked here so we can address them one at a time.
 - [x] **"is" overload** — resolved: split into `sam` (identity), `est` (essential predication / ser), `sta` (state predication / estar), `mem` (membership), `tot+mem` (subset, composed), `kel` (existence, composed), `lit/fin` (paired quotation markers). Universal quantifier family also locked: `sol`/`tot`/`nul`/`kel`. See decisions.md and history.md 2026-05-16.
 - [ ] **Synonym/equivalence grouping** — comma-like marker for "scalar-first, wxyz, Hamilton convention" being three names for one thing (TODO.md:9).
 - [x] **Rotation names** — resolved compositionally: `rot fas` (roll), `rot lat` (pitch), `rot sur` (yaw). No new roots beyond the verb `rot`. See decisions.md / history.md 2026-05-16.
-- [ ] **Multi-level sentence punctuation** — beyond comma, for nested clauses (decisions.md:26).
+- [x] **Sub-constituent grouping** — resolved 2026-05-16: paired markers `bra … ket`. Handles numerical ranges, mixed AND/OR, nested operators. `def`-binding freed for its original naming role. See decisions.md / history.md 2026-05-16.
+- [ ] **Multi-level sentence punctuation** — beyond comma, for nested clauses (decisions.md:26). Partly addressed by `bra/ket` for sub-clause grouping; full multi-level punctuation system still open.
 - [x] **Subordinate clauses** — resolved: single universal complementizer `ke`, function determined by what precedes it. Conditional uses dedicated particle `is`. See decisions.md / history.md 2026-05-15. Sub-questions still open:
     - [x] Causation particle for "because/since" — resolved: `kaw` (also serves "why?" question). See decisions.md / history.md 2026-05-16.
     - [x] Embedded-question marker — resolved: `ka` inside a `ke`-clause does the work. See history.md 2026-05-15.
@@ -59,13 +60,15 @@ Open design questions parked here so we can address them one at a time.
 
 ## Vocabulary buildout (after decisions above)
 - [ ] Fill empty categories in roots.md: prepositions, conjunctions, adverbs, demonstratives, relatives, interrogatives, indefinites, nouns, modifiers, logical operators, probabilistic operators, directions, states, emotions.
-- [ ] Build a reservation map of CVC space (which roots are taken vs free) to prevent collisions.
-- [ ] Populate dictionary.md from roots.md (currently empty).
+- [x] Build a reservation map of CVC space (which roots are taken vs free) to prevent collisions. Resolved: `lexicon.yaml` is the source of truth, `scripts/check_collisions.py` is the conflict-checker. 130 entries seeded from existing locked roots.
+- [x] **Audit verb roots for phoneme conformance.** Resolved 2026-05-16: all 7 renamed to CVC. `cad→kad`, `cur→kur`, `cri→lor`, `cla→xut`, `duc→tir`, `apr→per`, `aud→lis`. See decisions.md / history.md for per-root rationale. Spawned: future root for "shout/proclaim" (parked).
+- [ ] **Build a parallel frequency list** (`frequencies.yaml`) merging top-N words from English (SUBTLEX-US), Spanish (SUBTLEX-ESP), Latin (Diederich). Drives frequency-first root assignment. Dedup by concept across languages.
+- [ ] Populate dictionary.md from lexicon.yaml (auto-generation script).
 
 ## Validation
 - [x] Write `examples.md` with 20–50 worked translations covering questions, conditionals, negation, plurals, nested clauses. Resolved: 66 worked examples committed (see examples.md). Surfaced gaps documented in the "Observations" section of that file. Next pass after vocabulary buildout.
 
 ## Repo restructuring
-- [ ] Split the root tables out of roots.md (prose stays; data moves to dictionary.md or a roots/ folder by category).
+- [ ] Split the root tables out of roots.md (prose stays; data moves to `lexicon.yaml`, which now exists). Tables in roots.md become read-only views or get deleted entirely.
 - [ ] Disambiguate TODO.md vs checklist.md vs decisions.md: TODO = open questions, checklist = features the language must support, decisions = settled. Items currently drift between them.
-- [ ] Eventually: machine-readable form (YAML/JSON) for roots so collisions can be scripted and the dictionary auto-generated.
+- [x] Machine-readable form for roots — resolved: `lexicon.yaml` at repo root. Schema documented in-file. Collision-checker at `scripts/check_collisions.py`. See AGENTS.md.

@@ -11,6 +11,7 @@ Short, concrete examples of things natural languages get wrong. The "why" behind
 - **"Determinar el empuje específico, el impulso específico y el rendimiento isentrópico del difusor."**
   > "I spent an hour computing the specific thrust of the diffuser. Turns out only the efficiency was about the diffuser."
   - Only "del difusor" attaches to the last item. Thrust and impulse are not about the diffuser.
+  - MISSING COMMA?
 
 - **"The 12 cities marked in red have the same population as NYC."**
   > "So each of those cities is the size of New York?? That can't be right."
