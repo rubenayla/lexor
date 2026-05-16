@@ -936,3 +936,85 @@ These observations are *findings*, not new design decisions. They feed the vocab
 - Second pass of examples.md after the first wave of vocabulary lands (spatial prepositions, common nouns).
 - A long-paragraph example (3–5 connected sentences) demonstrating discourse flow.
 - Examples for proof-structuring particles ("suppose for contradiction", QED) once those are designed.
+
+## 2026-05-16 — Spatial-preposition family, rotation names
+
+Session N+3 first wave. Two related items locked: the full spatial-preposition closed class (extending the previously-locked `lok`) and the names of X/Y/Z rotations (resolved compositionally, no new roots beyond a verb `rot`).
+
+### Spatial prepositions (twelve-root closed class)
+
+Question opened: what is the full spatial-preposition family that complements `lok` (at/in/on)? Needed for examples like "under the table", "behind the door", "between two trees". Previously parked.
+
+Approach: pick a small primitive set (~10–12) covering the canonical spatial relations; let everything else compose. Same strategy as the time prepositions (`tep`, `pen`, `sin`, `lim`, `ant`, `pos`).
+
+Locked roots and rationale:
+
+- **`sub`** — under / below. Latin *sub*. Cross-linguistic transparency (Spanish, English compounds like subway, subterranean).
+- **`sur`** — over / above. French/Latin *super* / *sur*. Strong recognizability. Note: `sup` was already taken (supply/give verb), so `sur` is the spatial choice. Acceptable: the etymological family is the same and the surface is cleaner.
+- **`pok`** — near / close-to. From Latin *proximus*. CVC; the alternatives `prok` (CCVC) and `pro` (CV, conflicts with prefix slot) were rejected on phonotactic grounds.
+- **`lat`** — beside / at-the-side. Latin *latus* (side). Survives in English lateral, bilateral.
+- **`dor`** — behind / at-the-back. Latin *dorsum* (back). Survives in English dorsal. Chosen over `pos` (time-only, locked) and `ter` (risks collision with future "earth/terra"). Mnemonic is a slight stretch for non-anatomy speakers but the alternatives were worse.
+- **`fas`** — in-front-of. Latin *facies* (face). Survives in English face, façade. The X axis (forward direction) is conceptually the same direction; the spatial preposition and the axis-name share the root (see rotation-names section below).
+- **`int`** — between. Latin *inter*. Binary by default ("between A and B"); for n-way "among", compose with quantifier (`int tot X` = "among all X"). Phonotactically VCC; legal per the established exceptions (`est`, `sta` are also unusual shapes).
+- **`kir`** — around / surrounding. Greek *kyklos* / Latin *circa*. Mnemonic: English circle, cycle.
+- **`dir`** — toward (goal direction). Latin *directio*. Distinct from `tep` (point in time at goal) and `lok` (point in space). `dir` is the *motion-toward* preposition.
+- **`oks`** — from / out-of (source direction). Latin *ex*. Phonotactically CVC; `eks` (VCC) was the alternative but `oks` reads cleaner and avoids a vowel-initial shape collision with role vowels.
+- **`tra`** — through. Latin *trans*. Phonotactically CCV — legal but unusual; chosen because the cross-linguistic recognition is too strong to pass up.
+- **`lok`** — at/in/on (previously locked, 2026-05-15).
+
+Compositions handle the rest:
+- **inside / interior**: `lok int` ("at-the-inside") or just `lok` when interior is contextually obvious.
+- **outside**: `oks` ("from-outside", in motion sense) or `no-lok int` (negation, in stative sense).
+- **across**: `tra` reused, or compose with `lat` for the lateral sense ("across the road" = `tra` + road).
+- **against (touching)**: compose `pok` + contact context, or rely on a future "touch" verb root.
+- **along**: compose `tra` + path axis, or rely on a future "path/line" root.
+- **away from**: `oks` covers this in motion contexts; for stative "far from" use `no-pok`.
+
+Tradeoffs accepted:
+- Some prepositions take CCV / VCC shapes (`tra`, `int`, `oks`). Lexor already has these exceptions; the closed-class slot can tolerate non-CVC shapes when the root has high cross-linguistic recognizability.
+- "in front of" and "before (time)" don't share a root (`fas` vs `ant`); same for "behind" vs "after" (`dor` vs `pos`). English/Spanish overload these (front/before, behind/after) but the spatial-vs-temporal distinction is real and worth marking — eliminates the "before the door" ambiguity (= in space, in front of) vs "before the meeting" (= in time, prior to).
+
+Examples (added compositionally to examples.md if useful in a future pass):
+- `loma sub [tree] e` — "She eats under the tree."
+- `golo dor [door] e` — "She went behind the door."
+- `viv int [montañas] lo` — "They live between the mountains."
+- `kompo [auto] e dir [city]` — "She drove the car toward the city." (Note: `kompo` is a working-assumption verb; will refine.)
+- `ven oks [house] e` — "She came from the house."
+- `gol tra [forest] e` — "She went through the forest."
+
+### Rotation names (X/Y/Z) — compositional, no new roots
+
+Question opened: how to name the X, Y, Z rotations (decisions.md item from 2026-05-15 marked TODO three times). The user's framing: names must be obvious, no need to actively memorize (unlike yaw/pitch/roll/aft/starboard/port/camber/caster/toe).
+
+Coordinate frame already locked: X forward, Y left, Z up; right-handed; positive horizontal rotation toward the left.
+
+Approach: name rotations by the spatial-preposition root for the axis they rotate about. Composes with a generic rotation verb `rot`.
+
+Locked:
+- **`rot`** — verb root, "rotate". Latin *rotare*. CVC. No collision with existing roots.
+- **`rot fas`** — rotation about the X (forward) axis. English equivalent: roll.
+- **`rot lat`** — rotation about the Y (lateral / left) axis. English equivalent: pitch.
+- **`rot sur`** — rotation about the Z (vertical / up) axis. English equivalent: yaw.
+
+Rationale for compositional vs dedicated roots:
+- Dedicated roots (`rol`, `pit`, `yaw` or analogous) would save one syllable per use but require three new memorizations and aren't transparent to anyone without aerospace/animation background.
+- Compositional form (`rot` + axis-direction) is self-explanatory the moment you know the spatial-preposition family and the coordinate frame. Speakers don't need to memorize three additional mappings.
+- Matches Lexor's pattern: no dedicated roots when composition works (subset, existence, "what/who/when/where/why/how" are all compositional).
+
+Sign convention (positive rotation):
+- `rot sur` positive = turning left (matches user's "positive horizontal rotation toward the left").
+- `rot lat` positive = ... TBD on convention; defer to physics arc.
+- `rot fas` positive = ... TBD on convention; defer to physics arc.
+
+The exact sign convention for pitch and roll is parked — it's a separate question from the *naming* one and depends on whether Lexor wants to standardize physics conventions universally or allow context (aerospace vs robotics vs animation use different signs).
+
+### What this unblocks
+- Spatial sentences for examples.md (second pass).
+- The "where/when" distinction can now be fully expressed for all spatial relations, not just `lok` (at).
+- Rotation terminology no longer needs a placeholder; existing vocabulary suffices.
+
+### Parked
+- Pitch/roll sign conventions.
+- "Inside / outside" potentially needing dedicated roots if the `lok int` / `oks` compositions feel heavy in practice — defer until examples surface a problem.
+- "Along", "against (contact)", "across (perpendicular sense)" — defer to vocabulary buildout when their use-cases concretize.
+- Diagonal / oblique spatial relations — out of scope for the core 12.

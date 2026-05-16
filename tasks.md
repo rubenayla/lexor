@@ -34,7 +34,7 @@ Open design questions parked here so we can address them one at a time.
     - [x] **Variable / placeholder marker** — resolved: `var` prefix, single-word scope. Covers both template-slot and bound-variable cases. Pairs with `def` for bindings. See decisions.md / history.md 2026-05-16.
 - [x] **"is" overload** — resolved: split into `sam` (identity), `est` (essential predication / ser), `sta` (state predication / estar), `mem` (membership), `tot+mem` (subset, composed), `kel` (existence, composed), `lit/fin` (paired quotation markers). Universal quantifier family also locked: `sol`/`tot`/`nul`/`kel`. See decisions.md and history.md 2026-05-16.
 - [ ] **Synonym/equivalence grouping** — comma-like marker for "scalar-first, wxyz, Hamilton convention" being three names for one thing (TODO.md:9).
-- [ ] **Rotation names** — names for X/Y/Z rotations (decisions.md:23-25).
+- [x] **Rotation names** — resolved compositionally: `rot fas` (roll), `rot lat` (pitch), `rot sur` (yaw). No new roots beyond the verb `rot`. See decisions.md / history.md 2026-05-16.
 - [ ] **Multi-level sentence punctuation** — beyond comma, for nested clauses (decisions.md:26).
 - [x] **Subordinate clauses** — resolved: single universal complementizer `ke`, function determined by what precedes it. Conditional uses dedicated particle `is`. See decisions.md / history.md 2026-05-15. Sub-questions still open:
     - [x] Causation particle for "because/since" — resolved: `kaw` (also serves "why?" question). See decisions.md / history.md 2026-05-16.
@@ -55,7 +55,7 @@ Open design questions parked here so we can address them one at a time.
     - [x] Causation preposition for "why?" questions — resolved: `kaw` (same root serves as "because/since" subordinator). See decisions.md / history.md 2026-05-16.
     - [ ] Person vs object disambiguation marker on `ka` for rare context-failure cases.
     - [x] Tag questions sanity check — resolved: compose from existing parts. Bare `ka?` tag is the default; echo form `ka no-[verb] [subj]?` is available when explicit polarity is wanted. No new particle. See decisions.md / history.md 2026-05-16.
-    - [ ] Full spatial-preposition family (under, over, near, beside, etc.).
+    - [x] Full spatial-preposition family — resolved: 12-root closed class (`lok` `sub` `sur` `pok` `lat` `dor` `fas` `int` `kir` `dir` `oks` `tra`). See decisions.md / history.md 2026-05-16.
 
 ## Vocabulary buildout (after decisions above)
 - [ ] Fill empty categories in roots.md: prepositions, conjunctions, adverbs, demonstratives, relatives, interrogatives, indefinites, nouns, modifiers, logical operators, probabilistic operators, directions, states, emotions.

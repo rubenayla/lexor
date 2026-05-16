@@ -19,10 +19,10 @@
     - Relation to usual terms, to memorize easily, in xyz:
         - Wheels (right ones): camber, -caster, toe (in)
         - Planes: roll, -pitch, and yaw.
-    - Names of rotations? They must be obvious, no need to actively memorize them (like yaw, roll, pitch, aft, starboard, port, camber, caster, toe, etc.)
-        - X rotation: TODO
-        - Y rotation: TODO
-        - Z rotation: TODO
+    - Names of rotations resolved compositionally (2026-05-16): verb `rot` + spatial preposition for the axis.
+        - X rotation (roll): `rot fas`
+        - Y rotation (pitch): `rot lat`
+        - Z rotation (yaw): `rot sur`
 - TODO: English uses commas to separate sentences, but we may have more than 2 different levels of indentation. How can we manage that?
 - Root sourcing: prefer the language whose everyday word for the concept matches. Don't pull a Latin root if the word people actually use is Germanic (or vice-versa). Goal is recognizability for real speakers, not etymological neatness.
 - Roots are concept-level, not part-of-speech-level. The same root spawns verb / act-noun / agent / patient / adjective via systematic markers. (See history.md 2026-05-15.)
@@ -165,3 +165,12 @@
     - **Sentence boundary** (written period): full pause (≈500+ ms) + complete pitch reset.
     - Stress is fixed on each word's first syllable; non-lexical; available as a focus overlay (heavier stress) without changing meaning. Scope resolution is pinned by positional rules, not prosody.
 - **Verb shape (locked):** verb = CVC root + V (tense vowel). Infinitive = bare CVC root, no trailing vowel. Continuous aspect = `x` attached after tense vowel.
+- **Spatial-preposition family (closed class, locked):**
+    - `lok` at/in/on (already locked), `sub` under, `sur` over/above, `pok` near, `lat` beside, `dor` behind, `fas` in-front-of, `int` between, `kir` around, `dir` toward, `oks` from, `tra` through.
+    - Spatial and temporal prepositions are deliberately distinct: "in front of" (`fas`) ≠ "before in time" (`ant`); "behind" (`dor`) ≠ "after in time" (`pos`). Eliminates the spatial-temporal ambiguity English overloads.
+    - "Inside / outside / along / against / across" compose from the core (or rely on future content roots); no dedicated roots locked yet.
+- **Rotation names — compositional, not dedicated.** Verb root `rot` (rotate) plus the spatial preposition for the axis:
+    - `rot fas` — roll (about X / forward axis).
+    - `rot lat` — pitch (about Y / lateral axis).
+    - `rot sur` — yaw (about Z / vertical axis).
+    - Positive sign for `rot sur` = leftward turn (per coordinate-frame convention). Pitch/roll signs deferred.

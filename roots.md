@@ -78,6 +78,7 @@ Phonemes were chosen for consistency and logical alignment: **`y`** represents t
 | `fer`    | carry/bring       | Matches /f/ and /r/, derived from "ferre." |
 | `pun`    | hit/strike        | Matches /p/ and /n/, derived from "pungere." |
 | `cur`    | run/flow          | Retains /k/ and /r/, inspired by "currere." |
+| `rot`    | rotate            | Latin *rotare*. Composes with spatial prepositions for axis-specific rotations: `rot fas` (roll, about X), `rot lat` (pitch, about Y), `rot sur` (yaw, about Z). |
 | `lek`    | read/gather       | Adjusted to /l/ and /k/, derived from "legere." |
 | `sek`    | write             | Adjusted for /s/ and /k/, derived from "scribere." |
 | `aud`    | hear/listen       | Matches /a/ and /d/, derived from "audire." |
@@ -132,7 +133,18 @@ Locked so far (closed class, CVC):
 | `lim`    | until (end of interval)                           |  |
 | `ant`    | before                                            |  |
 | `pos`    | after                                             |  |
-| `lok`    | at / in / on (spatial location)                   | Latin *locus*. Composes: `lok ka` = "where?", `lok ke [clause]` = "where [X is]". Full spatial-prep family (under, over, near, beside…) still parked. |
+| `lok`    | at / in / on (spatial location)                   | Latin *locus*. Composes: `lok ka` = "where?", `lok ke [clause]` = "where [X is]". |
+| `sub`    | under / below                                     | Latin *sub*. |
+| `sur`    | over / above                                      | French/Latin *sur* / *super*. (`sup` taken by verb supply.) |
+| `pok`    | near / close-to                                   | Latin *proximus*. |
+| `lat`    | beside / at the side of                           | Latin *latus*. |
+| `dor`    | behind / at the back of                           | Latin *dorsum*. Spatial-only; "after in time" is `pos`. |
+| `fas`    | in front of                                       | Latin *facies*. Spatial-only; "before in time" is `ant`. |
+| `int`    | between (binary; for n-way "among" compose with quantifier) | Latin *inter*. |
+| `kir`    | around / surrounding                              | Greek *kyklos* / Latin *circa*. |
+| `dir`    | toward (goal direction)                           | Latin *directio*. |
+| `oks`    | from / out of (source direction)                  | Latin *ex*. |
+| `tra`    | through                                           | Latin *trans*. |
 | `mod`    | manner / way / by means of                        | Latin *modus*. Composes: `mod ka` = "how?", `mod [adj]` = manner-adverbial, `mod ke [clause]` = "by [doing X]". Distinct from instrument role-vowel `-i` (which is for tools). |
 | `kaw`    | cause / because / why                             | From English *cause*. Composes: `kaw ka` = "why?", `kaw ke [clause]` = "because [clause]". Distinct from `imp` (formal implication), `is` (causal conditional), `dat`/`erg` (reasoning-chain markers). |
 
