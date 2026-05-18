@@ -194,25 +194,25 @@ To say how many of something, put a number or quantity word *after* the noun.
 | Lexor | Meaning |
 |---|---|
 | `loma [apple] re e` | she eats three apples |
-| `loma [apple] tot e` | she eats every apple |
-| `loma [apple] kel e` | she eats some apple |
-| `loma [apple] nul e` | she eats no apple |
-| `loma [apple] sol re e` | she eats only three apples |
+| `loma [apple] totu e` | she eats every apple |
+| `loma [apple] kelu e` | she eats some apple |
+| `loma [apple] nulu e` | she eats no apple |
+| `loma [apple] solu re e` | she eats only three apples |
 
 **The pieces:**
 
 - `re` is the digit 3. The full digit list is `zo pa du re ko fi sa chi bo ne` for 0 through 9.
-- `tot` means "all" or "every." (Logicians sometimes call this the *universal* quantifier and write it as ∀.)
-- `kel` means "some." (Logicians call this the *existential* quantifier and write it as ∃.)
-- `nul` means "none, zero of."
-- `sol` means "only, restricted to."
+- `totu` means "all" or "every." (Logicians sometimes call this the *universal* quantifier and write it as ∀.)
+- `kelu` means "some." (Logicians call this the *existential* quantifier and write it as ∃.)
+- `nulu` means "none, zero of."
+- `solu` means "only, restricted to."
 
 **Choosing between "each" and "together":**
 
 When three people share three apples, English can be ambiguous — does each person get one, or do all three eat the apples together? Lexor has two small markers to make this explicit:
 
-- `loma [apple] re pad e` — three apples, each one separately (distributive)
-- `loma [apple] re mas e` — three apples, all together as a group (collective)
+- `loma [apple] re padu e` — three apples, each one separately (distributive)
+- `loma [apple] re masu e` — three apples, all together as a group (collective)
 
 If you don't add either marker, you're saying "three apples" without committing to which reading — that's allowed and means exactly that.
 
@@ -222,23 +222,23 @@ If you don't add either marker, you're saying "three apples" without committing 
 
 Lexor uses small connector words to attach extra information like *where*, *when*, or *how*. These come at the end of the sentence by default.
 
-**Lexor:** `loma e tep dim` — she eats during the day
-**Lexor:** `loma e lok bra [kitchen] ket` — she eats in the kitchen
-**Lexor:** `kompo e mod ke martelo o` — she fixes it by hammering it
+**Lexor:** `loma e tepa dima` — she eats during the day
+**Lexor:** `loma e loka bra [kitchen] keti` — she eats in the kitchen
+**Lexor:** `kompo e moda ke martelo o` — she fixes it by hammering it
 
 **The connector words used here:**
 
-- `tep` — "at" or "during" (for points in time). `tep dim` = "during the day."
-- `lok` — "at," "in," or "on" (for places). `lok bra [kitchen] ket` = "in the kitchen." The `bra … ket` is a pair of brackets you'll meet in Level 16; here they just group the place word.
-- `mod` — "by," "by means of." `mod ke martelo o` = "by hammering it." The `ke` introduces a small sub-sentence as the way it was done.
+- `tepa` — "at" or "during" (for points in time). `tepa dima` = "during the day."
+- `loka` — "at," "in," or "on" (for places). `loka bra [kitchen] keti` = "in the kitchen." The `bra … keti` is a pair of brackets you'll meet in Level 16; here they just group the place word.
+- `moda` — "by," "by means of." `moda ke martelo o` = "by hammering it." The `ke` introduces a small sub-sentence as the way it was done.
 
 **The full set of place connectors** (closed list — these are the only ones):
 
-`lok` (at/in/on), `sub` (under), `sur` (over), `pok` (near), `lat` (beside), `dor` (behind), `fas` (in front of), `int` (between), `kir` (around), `dir` (toward), `oks` (from), `tra` (through).
+`loka` (at/in/on), `suba` (under), `sura` (over), `poka` (near), `lata` (beside), `dora` (behind), `fasa` (in front of), `inta` (between), `kira` (around), `dira` (toward), `oksa` (from), `tra` (through).
 
 **The full set of time connectors:**
 
-`tep` (at), `pen` (during), `sin` (since), `lim` (until), `ant` (before), `pos` (after).
+`tepa` (at), `pena` (during), `sina` (since), `lima` (until), `anta` (before), `posa` (after).
 
 ---
 
@@ -250,7 +250,7 @@ To negate a word, attach `no-` directly in front of it. The hyphen shows it's st
 |---|---|
 | `no-loma e` | she doesn't eat (the whole action is negated) |
 | `loma no-[apple] e` | she eats not-an-apple (only the *thing eaten* is negated — she eats, but not an apple) |
-| `no-mag e [him]` | she is not greater than him (the comparison is negated) |
+| `no-magu e [him]` | she is not greater than him (the comparison is negated) |
 
 **What this level shows:**
 - `no-` always scopes over the *one* word it's attached to. To negate a different part of the sentence, move `no-` to a different word. Three positions, three meanings.
@@ -268,10 +268,10 @@ All questions in Lexor use the same little word: `ka`. Where you put `ka` determ
 | `ka loma e` | does she eat? (yes/no — `ka` at the start) |
 | `loma ka` | what does she eat? (`ka` in the object slot) |
 | `loma [apple] ka` | who eats apples? (`ka` in the subject slot) |
-| `loma e tep ka` | when does she eat? (`ka` after the time-connector `tep`) |
-| `loma e lok ka` | where does she eat? (`ka` after the place-connector `lok`) |
-| `loma e mod ka` | how does she eat? |
-| `loma e kaw ka` | why does she eat? (`kaw` is the cause-connector) |
+| `loma e tepa ka` | when does she eat? (`ka` after the time-connector `tepa`) |
+| `loma e loka ka` | where does she eat? (`ka` after the place-connector `loka`) |
+| `loma e moda ka` | how does she eat? |
+| `loma e kawa ka` | why does she eat? (`kawa` is the cause-connector) |
 | `loma e, ka` | she eats, right? (tag question — comma plus `ka` at the end) |
 
 **What this level shows:**
@@ -289,8 +289,8 @@ To put a small sentence inside a bigger one — like "the man who eats apples" o
 | `[man] ke loma [apple]` | the man who eats apples | a noun → relative clause |
 | `[apple] ke loma e` | the apple that she eats | a noun (object) → relative clause |
 | `dike e ke loma u` | she says that you eat | a speech verb → complement clause |
-| `golo e tep ke pluvex` | she left when it was raining | a time word → time clause |
-| `golo e kaw ke pluvo` | she left because it rained | a cause word → reason clause |
+| `golo e tepa ke pluvex` | she left when it was raining | a time word → time clause |
+| `golo e kawa ke pluvo` | she left because it rained | a cause word → reason clause |
 
 **What this level shows:**
 - One word, `ke`, replaces English's "who, which, that, when, while, because, although…"
@@ -300,15 +300,15 @@ To put a small sentence inside a bigger one — like "the man who eats apples" o
 
 ## L10 — "If…then" sentences (conditionals)
 
-**Lexor:** `is pluve, lomy e [inside]` — if it's raining, she would eat inside
-**Lexor:** `is no-pluve, goly e` — if it isn't raining, she would go
+**Lexor:** `isi pluve, lomy e [inside]` — if it's raining, she would eat inside
+**Lexor:** `isi no-pluve, goly e` — if it isn't raining, she would go
 
 **How it's built:**
-- `is` means "if." It introduces the condition.
+- `isi` means "if." It introduces the condition.
 - The verb after the comma takes the vowel `y` (the conditional vowel from Level 2). So `lomy` is "would eat" and `goly` is "would go."
 
 **What this level shows:**
-- Causal "if" (the everyday kind, where one thing makes another happen) uses `is`. There's also a separate word `imp` for formal logical implication (used in proofs and math). You'll see `imp` in Level 12.
+- Causal "if" (the everyday kind, where one thing makes another happen) uses `isi`. There's also a separate word `impi` for formal logical implication (used in proofs and math). You'll see `impi` in Level 12.
 - The conditional vowel `y` on the result-verb signals that this isn't an assertion — it's a hypothetical.
 
 ---
@@ -317,33 +317,33 @@ To put a small sentence inside a bigger one — like "the man who eats apples" o
 
 Two simple connectors:
 
-**Lexor:** `loma [apple] e kun bibe [water] e` — she eats an apple and drinks water
-**Lexor:** `loma [apple] e vel loma [pear] e` — she eats an apple or a pear
+**Lexor:** `loma [apple] e kune bibe [water] e` — she eats an apple and drinks water
+**Lexor:** `loma [apple] e vele loma [pear] e` — she eats an apple or a pear
 
 **The words:**
-- `kun` = "and" (from Latin *cum*, "with")
-- `vel` = "or" (from Latin *vel*, "or")
+- `kune` = "and" (from Latin *cum*, "with")
+- `vele` = "or" (from Latin *vel*, "or")
 
 **What this level shows:**
 - You can chain any number of "and"s together, or any number of "or"s. Those are unambiguous.
-- But you *can't* mix them in a flat sentence. "A and B or C" is not allowed by itself — you have to use the bracket pair `bra … ket` (Level 16) to show whether you mean "(A and B) or C" or "A and (B or C)."
+- But you *can't* mix them in a flat sentence. "A and B or C" is not allowed by itself — you have to use the bracket pair `bra … keti` (Level 16) to show whether you mean "(A and B) or C" or "A and (B or C)."
 
 ---
 
 ## L12 — Reasoning step by step
 
-For arguments and proofs, Lexor uses three little discourse words: `dat`, `erg`, and `imp`.
+For arguments and proofs, Lexor uses three little discourse words: `dati`, `ergi`, and `impi`.
 
-**Lexor:** `dat pluvo. golo e kaw ke pluvo. erg sta sus-s [floor]`
+**Lexor:** `dati pluvo. golo e kawa ke pluvo. ergi stao sus-s [floor]`
 **Translation:** "Given that it rained. She left because it rained. Therefore the floor is wet."
 
-**Lexor:** `dat pluvo imp sta sus-s [floor]. no-sta sus-s [floor]. erg no-pluvo`
+**Lexor:** `dati pluvo impi stao sus-s [floor]. no-stao sus-s [floor]. ergi no-pluvo`
 **Translation:** "Given that rain implies a wet floor. The floor is not wet. Therefore it didn't rain." (This is the logical step called *modus tollens*.)
 
 **The three words:**
-- `dat` — "given that," "let us assume." Marks a starting point.
-- `erg` — "therefore." Marks a conclusion.
-- `imp` — "formally implies." Used for strict logical implication, separate from the everyday "if…then" (`is`) of Level 10.
+- `dati` — "given that," "let us assume." Marks a starting point.
+- `ergi` — "therefore." Marks a conclusion.
+- `impi` — "formally implies." Used for strict logical implication, separate from the everyday "if…then" (`isi`) of Level 10.
 
 **What this level shows:**
 - Reasoning chains are built from separate sentences, each one a step. Lexor doesn't nest conditionals inside conditionals.
@@ -355,14 +355,14 @@ For arguments and proofs, Lexor uses three little discourse words: `dat`, `erg`,
 
 To say something might be true, or must be true, use one of two markers at the start of the sentence.
 
-**Lexor:** `kan pluve` — it might rain
-**Lexor:** `mus pluve` — it must be raining
-**Lexor:** `no- mus sam a b` — a doesn't have to equal b (it's not necessarily true that a equals b)
-**Lexor:** `kan no- sam m1 m2` — m1 and m2 might be different (it's possible that they aren't equal)
+**Lexor:** `kani pluve` — it might rain
+**Lexor:** `musi pluve` — it must be raining
+**Lexor:** `no- musi samo a b` — a doesn't have to equal b (it's not necessarily true that a equals b)
+**Lexor:** `kani no- samo m1 m2` — m1 and m2 might be different (it's possible that they aren't equal)
 
 **The words:**
-- `kan` = "might," "may," "is possibly." Mnemonic: English/German *can* / *kann*.
-- `mus` = "must," "is necessarily." Mnemonic: English/German *must* / *muss*.
+- `kani` = "might," "may," "is possibly." Mnemonic: English/German *can* / *kann*.
+- `musi` = "must," "is necessarily." Mnemonic: English/German *must* / *muss*.
 
 Both go at the very start of a sentence. Both can be combined with `no-` from Level 7 to give four readings: "might be the case," "might not be," "must be," "doesn't have to be."
 
@@ -374,30 +374,30 @@ Both go at the very start of a sentence. Both can be combined with `no-` from Le
 
 ## L13b — Numerical probability
 
-Sometimes you want to attach a specific probability to a claim, like "90% likely." Lexor uses `chan` for this.
+Sometimes you want to attach a specific probability to a claim, like "90% likely." Lexor uses `chani` for this.
 
-**Lexor:** `chan zo dem ne zo pluve` — it will rain with probability 0.90
-**Lexor:** `chan zo dem fi sam a b` — a equals b with probability 0.5
-**Lexor:** `chan mag zo dem fi pluve` — the probability of rain is greater than 0.5
+**Lexor:** `chani zo demu ne zo pluve` — it will rain with probability 0.90
+**Lexor:** `chani zo demu fi samo a b` — a equals b with probability 0.5
+**Lexor:** `chani magu zo demu fi pluve` — the probability of rain is greater than 0.5
 
 **How it works:**
-- `chan` goes at the start of the sentence, like `kan` and `mus`.
-- After `chan` comes a number, then the rest of the sentence.
+- `chani` goes at the start of the sentence, like `kani` and `musi`.
+- After `chani` comes a number, then the rest of the sentence.
 - The number is a fraction between 0 and 1, where 0 means "impossible" and 1 means "certain."
 - Mnemonic: English/French *chance*.
 
-The number itself is built from digits: `zo dem ne zo` is "zero point nine zero" = 0.90 in decimal. (The `dem` is the decimal point.)
+The number itself is built from digits: `zo demu ne zo` is "zero point nine zero" = 0.90 in decimal. (The `demu` is the decimal point.)
 
-**Relating `chan` to the earlier `kan` and `mus`:**
-- `chan zo X` = "X has probability 0" = impossible. Same as `no- kan X`.
-- `chan pa X` = "X has probability 1" = certain. Same as `mus X`.
-- `kan X` (without a number) is "X is possible to some unspecified degree."
+**Relating `chani` to the earlier `kani` and `musi`:**
+- `chani zo X` = "X has probability 0" = impossible. Same as `no- kani X`.
+- `chani pa X` = "X has probability 1" = certain. Same as `musi X`.
+- `kani X` (without a number) is "X is possible to some unspecified degree."
 
-**Conditional probability** uses `dat` from Level 12: `chan zo dem ne zo X dat Y` reads as "X has probability 0.9 given Y." That's the probability of X assuming Y.
+**Conditional probability** uses `dati` from Level 12: `chani zo demu ne zo X dati Y` reads as "X has probability 0.9 given Y." That's the probability of X assuming Y.
 
 **What this level shows:**
 - You can attach a specific numeric probability to any sentence without awkward "it's 90% likely that…" wrappers.
-- `chan` is different from the amount-precision markers (`pir` for "approximately," `tom` for "between"). Those attach to a single number; `chan` attaches to a whole sentence.
+- `chani` is different from the amount-precision markers (`piru` for "approximately," `tomu` for "between"). Those attach to a single number; `chani` attaches to a whole sentence.
 
 ---
 
@@ -405,30 +405,30 @@ The number itself is built from digits: `zo dem ne zo` is "zero point nine zero"
 
 For directions ("upward"), locations ("the top"), and dimensions ("the height"), Lexor uses a small system based on three new words plus the place-connectors you already know.
 
-**Lexor:** `gol aks fas mag e` — she goes forward
-**Lexor:** `aks lat mag` — left direction (the positive Y direction)
-**Lexor:** `aks sur min` — down direction (the negative Z direction)
-**Lexor:** `tip aks sur mag bra [box] ket` — the top of the box (the extreme point at the upper end)
-**Lexor:** `mez aks pa bra [box] ket` — the longest dimension of the box
-**Lexor:** `mez aks sur bra [box] ket` — the height of the box (the size along the up-down axis)
+**Lexor:** `gol aksi fasa magu e` — she goes forward
+**Lexor:** `aksi lata magu` — left direction (the positive Y direction)
+**Lexor:** `aksi sura minu` — down direction (the negative Z direction)
+**Lexor:** `tipi aksi sura magu bra [box] keti` — the top of the box (the extreme point at the upper end)
+**Lexor:** `mezi aksi pa bra [box] keti` — the longest dimension of the box
+**Lexor:** `mezi aksi sura bra [box] keti` — the height of the box (the size along the up-down axis)
 
 **The pieces:**
-- `aks` means "axis" — a line that goes through space in one direction.
-- `tip` means "the extreme point" or "the end of an axis."
-- `mez` means "size along an axis" (a length, a width, a height, etc.).
-- `mag` and `min` mark which end of an axis: `mag` = the positive end, `min` = the negative end. (You've seen them before as "greater than" and "less than" — Lexor reuses them.)
+- `aksi` means "axis" — a line that goes through space in one direction.
+- `tipi` means "the extreme point" or "the end of an axis."
+- `mezi` means "size along an axis" (a length, a width, a height, etc.).
+- `magu` and `minu` mark which end of an axis: `magu` = the positive end, `minu` = the negative end. (You've seen them before as "greater than" and "less than" — Lexor reuses them.)
 
 **Two ways to identify an axis:**
 
 *By the body's reference frame* (an observer's forward-backward, left-right, up-down):
-- `aks fas` = the front-back axis (= the X axis)
-- `aks lat` = the left-right axis (= the Y axis)
-- `aks sur` = the up-down axis (= the Z axis)
+- `aksi fasa` = the front-back axis (= the X axis)
+- `aksi lata` = the left-right axis (= the Y axis)
+- `aksi sura` = the up-down axis (= the Z axis)
 
 *By size rank* (orientation doesn't matter):
-- `aks pa` = the longest dimension (rank 1)
-- `aks du` = the middle dimension (rank 2)
-- `aks re` = the shortest dimension (rank 3)
+- `aksi pa` = the longest dimension (rank 1)
+- `aksi du` = the middle dimension (rank 2)
+- `aksi re` = the shortest dimension (rank 3)
 
 **The coordinate system Lexor uses** (locked in `decisions.md`):
 - X axis points forward (the direction the person is facing).
@@ -448,25 +448,25 @@ Angles in Lexor are written as *fractions of a full turn*. There's no degrees, n
 
 | Lexor | Meaning |
 |---|---|
-| `rot zo doz re aks sur e` | she turns 90° to the left (1/4 of a full turn around the Z axis) |
-| `rot zo doz sa aks sur e` | she turns around (180°, 1/2 of a full turn) |
-| `rot min zo doz re aks sur e` | she turns 90° to the right (negative 1/4 turn) |
-| `rot zo doz pa aks lat e` | she tilts forward 30° (1/12 of a turn around the Y axis) |
+| `rot zo dozu re aksi sura e` | she turns 90° to the left (1/4 of a full turn around the Z axis) |
+| `rot zo dozu sa aksi sura e` | she turns around (180°, 1/2 of a full turn) |
+| `rot minu zo dozu re aksi sura e` | she turns 90° to the right (negative 1/4 turn) |
+| `rot zo dozu pa aksi lata e` | she tilts forward 30° (1/12 of a turn around the Y axis) |
 
 **How the numbers work:**
 
 The number is just the fraction. So 1/4 of a turn = 0.25 in decimal = 0.3 in dozenal (base 12).
 
 In dozenal — Lexor's natural base for angles, because 12 divides evenly into many useful angles:
-- `zo doz pa` = 1/12 = 30° (the `doz` is the dozenal decimal point)
-- `zo doz du` = 2/12 = 60°
-- `zo doz re` = 3/12 = 90°
-- `zo doz sa` = 6/12 = 180°
-- `zo doz pa sa` = roughly 1/8 = 45°
+- `zo dozu pa` = 1/12 = 30° (the `dozu` is the dozenal decimal point)
+- `zo dozu du` = 2/12 = 60°
+- `zo dozu re` = 3/12 = 90°
+- `zo dozu sa` = 6/12 = 180°
+- `zo dozu pa sa` = roughly 1/8 = 45°
 
 **Direction of positive turn:**
 
-A positive turn (no minus sign) means *right-handed* rotation around the named axis. For `aks sur` (the Z axis, pointing up), that's counterclockwise when you look down from above — which is *leftward* for someone facing forward.
+A positive turn (no minus sign) means *right-handed* rotation around the named axis. For `aksi sura` (the Z axis, pointing up), that's counterclockwise when you look down from above — which is *leftward* for someone facing forward.
 
 If you're used to a clock face, this is flipped: clock hands go clockwise (which is *negative* in Lexor for rotation around Z), and 9 o'clock (the left side of a clock face) corresponds to a positive 1/4 turn (0.25). It's consistent with physics convention; takes a moment to get used to.
 
@@ -478,45 +478,45 @@ If you're used to a clock face, this is flipped: clock hands go clockwise (which
 
 ## L16 — Grouping inside a sentence (brackets)
 
-When a sentence has multiple parts that could group different ways, Lexor uses a pair of bracket-words: `bra` (opens a group) and `ket` (closes a group). Mnemonic: English "bracket" split into bra-ket.
+When a sentence has multiple parts that could group different ways, Lexor uses a pair of bracket-words: `bra` (opens a group) and `keti` (closes a group). Mnemonic: English "bracket" split into bra-ket.
 
-**Lexor:** `tom bra re ket bra ko zo zo ket e` — "I can do between 3 and 400 (pushups)"
-**Lexor:** `bra loma A e kun loma B e ket vel loma C e` — "(she eats A and she eats B) or she eats C"
-**Lexor:** `loma A e kun bra loma B e vel loma C e ket` — "she eats A and (she eats B or she eats C)"
+**Lexor:** `tomu bra re keti bra ko zo zo keti e` — "I can do between 3 and 400 (pushups)"
+**Lexor:** `bra loma A e kune loma B e keti vele loma C e` — "(she eats A and she eats B) or she eats C"
+**Lexor:** `loma A e kune bra loma B e vele loma C e keti` — "she eats A and (she eats B or she eats C)"
 
 **When you need them:**
-- When a number-operator like `tom` (between) takes two numeric arguments. Without brackets, "tom 3 400" would all get read as one big number because Lexor concatenates adjacent digits.
+- When a number-operator like `tomu` (between) takes two numeric arguments. Without brackets, "tom 3 400" would all get read as one big number because Lexor concatenates adjacent digits.
 - When you want to mix "and" and "or" in the same sentence. Flat mixed forms are not allowed; brackets make the grouping unambiguous.
 - Anywhere else you'd want grouping for clarity.
 
 **Nesting:**
 
-If you have brackets inside brackets, each `ket` closes the most recent unclosed `bra` — same rule as math parentheses.
+If you have brackets inside brackets, each `keti` closes the most recent unclosed `bra` — same rule as math parentheses.
 
 ---
 
 ## L17 — Naming a piece of sentence for reuse
 
-When you want to use the same phrase several times without retyping it, give it a name with `def`.
+When you want to use the same phrase several times without retyping it, give it a name with `defi`.
 
-**Lexor:** `def var p loma A e kun loma B e. var p vel loma C e`
+**Lexor:** `defi vari p loma A e kune loma B e. vari p vele loma C e`
 **Translation:** "Let p be 'she eats A and she eats B'. (p) or she eats C."
 
-**Lexor:** `def var x sam [biggest prime ant pa zo zo]. mag var x fi zo`
+**Lexor:** `defi vari x samo [biggest prime anta pa zo zo]. magu vari x fi zo`
 **Translation:** "Let x be the biggest prime before 100. x is greater than 50."
 
-**Lexor:** `nul def var x`
+**Lexor:** `nulu defi vari x`
 **Translation:** "x is no longer defined." (Explicit erasure of a name you had bound.)
 
 **The pieces:**
-- `def` introduces a name-binding.
-- `var <name>` references a name you've defined. The first time, it's the name being introduced; later times, it stands in for the expression.
-- `nul def var <name>` removes the binding. Defining the same name again replaces the old binding.
+- `defi` introduces a name-binding.
+- `vari <name>` references a name you've defined. The first time, it's the name being introduced; later times, it stands in for the expression.
+- `nulu defi vari <name>` removes the binding. Defining the same name again replaces the old binding.
 
 **What this level shows:**
-- Use `def` to name long expressions so a later sentence can refer back to them compactly.
+- Use `defi` to name long expressions so a later sentence can refer back to them compactly.
 - The name stays defined as long as the conversation continues (until you erase it or define it differently).
-- Note that `def` is for *naming for reuse*. For just splitting up a confusing sentence so groupings are clear, use the brackets from Level 16 instead.
+- Note that `defi` is for *naming for reuse*. For just splitting up a confusing sentence so groupings are clear, use the brackets from Level 16 instead.
 
 ---
 
@@ -527,27 +527,27 @@ A small collection of worked examples. Each one combines several earlier feature
 ### Example 1: she might come, but won't eat unless we ask
 
 ```
-kan vene e. is no-kan mus pet e ke loma, no-lomy e.
+kani vene e. isi no-kani musi pet e ke loma, no-lomy e.
 ```
 
-Sentence 1: `kan vene e` — "She might come." (`kan` = might, `vene` = come-present, `e` = she.)
+Sentence 1: `kani vene e` — "She might come." (`kani` = might, `vene` = come-present, `e` = she.)
 
-Sentence 2: `is no-kan mus pet e ke loma, no-lomy e` — "If we can't necessarily ask her to eat, she would not eat." Stilted in English but legal Lexor; demonstrates a modal inside a conditional inside an embedded clause.
+Sentence 2: `isi no-kani musi pet e ke loma, no-lomy e` — "If we can't necessarily ask her to eat, she would not eat." Stilted in English but legal Lexor; demonstrates a modal inside a conditional inside an embedded clause.
 
 ### Example 2: a pushup bet with a number range
 
 ```
-dat dike e ke kan domi e bra rot bra re ket bra ko zo zo ket ket pushupn. erg lori e kaw ke no-kan.
+dati dike e ke kani domi e bra rot bra re keti bra ko zo zo keti keti pushupn. ergi lori e kawa ke no-kani.
 ```
 
 Translation: "Given that she says she can do (between 3 and 400) pushups: therefore (she will cry) because (it is impossible)."
 
-This silly example exercises: reasoning markers (`dat`, `erg`), a modal (`kan`), grouping brackets around a number range, and embedded clauses.
+This silly example exercises: reasoning markers (`dati`, `ergi`), a modal (`kani`), grouping brackets around a number range, and embedded clauses.
 
 ### Example 3: a navigation order
 
 ```
-gol aks fas mag pa zo metr e. rot zo doz re aks sur e. gol aks fas mag fi metr e.
+gol aksi fasa magu pa zo metr e. rot zo dozu re aksi sura e. gol aksi fasa magu fi metr e.
 ```
 
 Translation: "Go forward 10 meters. Turn 90° left. Go forward 5 meters."
@@ -557,12 +557,12 @@ Three crisp imperatives in a row, chaining motion and rotation. The axis system 
 ### Example 4: hedging a measurement
 
 ```
-kan sam re metr mez aks pa bra box ket. kan min. no-vis y i.
+kani samo re metr mezi aksi pa bra box keti. kani minu. no-vis y i.
 ```
 
 Translation: "The longest dimension of the box might be 3 meters. It might be less. I haven't seen it."
 
-Shows how `kan` lets a speaker hedge cleanly. Compare to English "it's 3 meters… maybe? I don't know" which needs three separate clauses to do the same job.
+Shows how `kani` lets a speaker hedge cleanly. Compare to English "it's 3 meters… maybe? I don't know" which needs three separate clauses to do the same job.
 
 ---
 

@@ -61,8 +61,8 @@
 - {concept: "fall",            assigned_root: kad,  en: 600, es: 500, la: 300}
 - {concept: "live (be alive)", assigned_root: viv,  en: 280, es: 200, la: 150}
 - {concept: "die",             assigned_root: mor,  en: 320, es: 260, la: 130}
-- {concept: "now",             assigned_root: nun,  en: 35,  es: 25,  la: 80}
-- {concept: "day",             assigned_root: dim,  en: 100, es: 95,  la: 85}
+- {concept: "now",             assigned_root: nuna,  en: 35,  es: 25,  la: 80}
+- {concept: "day",             assigned_root: dima,  en: 100, es: 95,  la: 85}
 
 # =============================================================================
 # UNASSIGNED — TO ASSIGN NEXT (highest priority first)
@@ -75,12 +75,12 @@
 - {concept: "that",            en: 18,  es: 22,  la: 28}
 - {concept: "what",            en: 50,  es: 40,  la: 55, notes: "Composes with ka — may not need root"}
 - {concept: "who",             en: 70,  es: 65,  la: 65, notes: "Composes with ka — may not need root"}
-- {concept: "all",             assigned_root: tot,  en: 60,  es: 55,  la: 40}
+- {concept: "all",             assigned_root: totu,  en: 60,  es: 55,  la: 40}
 - {concept: "many",            en: 90,  es: 100, la: 95, notes: "Fuzzy magnitude quantifier — parked"}
 - {concept: "few",             en: 150, es: 160, la: 150, notes: "Same parked"}
-- {concept: "some",            assigned_root: kel,  en: 110, es: 105, la: 105}
-- {concept: "and",             assigned_root: kun,  en: 3,   es: 5,   la: 10}
-- {concept: "or",              assigned_root: vel,  en: 75,  es: 70,  la: 60}
+- {concept: "some",            assigned_root: kelu,  en: 110, es: 105, la: 105}
+- {concept: "and",             assigned_root: kune,  en: 3,   es: 5,   la: 10}
+- {concept: "or",              assigned_root: vele,  en: 75,  es: 70,  la: 60}
 - {concept: "not",             assigned_root: "no-", en: 8,  es: 18,  la: 20}
 
 # High-frequency content words — body
@@ -112,9 +112,9 @@
 
 # Time & state
 - {concept: "time",            en: 70,  es: 75,  la: 50}
-- {concept: "year",            assigned_root: vet,  en: 160, es: 150, la: 110}
-- {concept: "month",           assigned_root: mes,  en: 240, es: 200, la: 220}
-- {concept: "hour",            assigned_root: xor,  en: 220, es: 240, la: 260}
+- {concept: "year",            assigned_root: veta,  en: 160, es: 150, la: 110}
+- {concept: "month",           assigned_root: mesa,  en: 240, es: 200, la: 220}
+- {concept: "hour",            assigned_root: xora,  en: 220, es: 240, la: 260}
 - {concept: "morning",         en: 460, es: 450, la: 380}
 - {concept: "night",           en: 280, es: 250, la: 200}
 - {concept: "good",            en: 65,  es: 60,  la: 90}

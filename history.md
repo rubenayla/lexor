@@ -1549,3 +1549,69 @@ Listed in the table-of-contents: Lojban, English, Spanish. Future entries (Manda
 - **Ithkuil** — extreme-precision constructed language; comparison would expose Lexor's commitments to readability vs theoretical maximum precision.
 
 Parked unless a use case surfaces.
+
+---
+
+## 2026-05-18 — Closed-class subclass-vowel suffix (C-2)
+
+### Why
+The self-segregating-morphology fix (2026-05-17) solved word-boundary *parsing* but not *pronounceability*. Closed-class CVCs like `aks`, `sur`, `kun`, `sam` end in consonants, and they stack frequently (especially in technical sentences like the axis system, modal operators, prepositional chains). Stacked CVCs produce uncomfortable boundary clusters: `aks sur` → doubled /s/, `aks fas` → three-consonant cluster /ksf/, `imp tra` → four-consonant pile-up /mptr/.
+
+User pushed back: "you sure that's comfortable? it feel awkward to me." Honest answer: no, it wasn't. The hand-waved "speakers accommodate naturally" was inadequate.
+
+### Options considered
+- **Accept rough spots.** Speakers cope. User found it awkward.
+- **Buffer-vowel sandhi.** Insert /a/ unconsciously between consonant clusters. Adds a phonological rule; speakers have to learn it.
+- **Add a meaningless `-a` to all closed-class items** (`aksa`, `kuna`). User: "no adding meaningless V at the end."
+- **Redesign closed-class to CV (one syllable, vowel-final).** Loses Latinate mnemonics. Bigger change.
+- **Subclass-vowel suffix** (chosen). Each closed-class subclass gets a specific ending vowel that *signals* the subclass. The vowel does real work, not ornament.
+
+User asked: "would it be possible to use a vowel for nouns, another vowel for adjectives etc, so the roots stay CVC?" That's exactly Esperanto's system. Confirmed: word class for *content* roots already lives in the derivation consonant (r/n/t/s), so no vowel exhaustion. Word class for *closed-class* items can use the suffix vowel slot freely.
+
+### What was decided
+| Subclass | Suffix | Examples |
+|---|---|---|
+| Prepositions | `-a` | `tepa`, `loka`, `sura`, `dora`, `fasa`, `moda`, `kawa`, `anta`, `posa`, `inta`, `oksa`, `kira`, `dira`, `suba`, `poka`, `lata`, `sina`, `lima`, `pena` |
+| Coordinators | `-e` | `kune`, `vele` |
+| Markers | `-i` | `isi`, `dati`, `ergi`, `impi`, `liti`, `fini`, `vari`, `defi`, `keti`, `kani`, `musi`, `chani`, `aksi`, `tipi`, `mezi` |
+| Copulas | `-o` | `samo` (identity, also numerical equality), `esto`, `stao`, `memo` |
+| Quantifiers / operators | `-u` | `solu`, `totu`, `nulu`, `kelu`, `padu`, `masu`, `minu`, `magu`, `tomu`, `piru`, `demu`, `dozu`, `pemu`, `kexu` |
+| Time-unit content roots | `-a` (default) | `nuna`, `moma`, `mita`, `xora`, `dima`, `sema`, `mesa`, `veta` |
+
+**Exceptions (kept as-is because they're already vowel-final or special):**
+- `no-` (negation prefix, phonologically bound to its host).
+- `ka` (universal question particle, high-frequency, vowel-final).
+- `ke` (universal complementizer, high-frequency, vowel-final).
+- `bra` (group-open, paired with `keti`, already vowel-final).
+- `tra` (preposition "through," already ends in -a matching the subclass vowel).
+
+**`sam` → `samo`:** treated as copula, single form covering both identity (`samo a b` = a is b) and numerical equality (`samo re ko` = 3 = 4? false). No separate form for the quantifier sense.
+
+### The win
+Every word in spoken Lexor now ends in a vowel. Every word boundary is either:
+- vowel + consonant (smooth, no cluster), or
+- vowel + vowel (allowed glide).
+
+Zero consonant clusters at boundaries, ever. Speakers can talk at natural pace without thinking about consonant accommodation.
+
+The suffix vowel earns its keep: it signals the subclass of closed-class word, so a listener hearing a word end in `-u` knows it's a quantifier or operator before recognizing the specific root. Esperanto-style class signaling.
+
+### Sweep applied (2026-05-18)
+- `lexicon.yaml` — ~50 root entries renamed; cross-references in `notes` fields updated.
+- `roots.md` — markers, prepositions, coordinators, copulas, and quantifier tables updated.
+- `examples.md` — all closed-class references swept.
+- `walkthrough.md` — all levels and the preface updated.
+- `trials.md` — all trial entries swept.
+- `phonetics.md` — Prosody section's worked examples updated.
+- `comparisons.md` — Lexor references in the English/Spanish/Lojban sections swept.
+- `frequencies.yaml` — `assigned_root` values updated.
+
+Etymology references in `source:` fields preserved (e.g., "English can / German kann / Dutch kan" stays — those are natural-language origins, not Lexor forms). Done via a context-aware script (`/tmp/rename_lexor.py`) that only touches text inside backticks or markdown code blocks plus the `root:` and `assigned_root:` yaml fields.
+
+History.md and decisions.md historical entries are unchanged — they document the language's evolution and reference the old forms accurately for their time.
+
+### Parked
+- **C-1 vs C-2 trade-off review.** C-1 (uniform `-a`) was rejected for being ornamental. If the subclass-signal turns out to be hard to learn (users mis-remembering which subclass gets which vowel), revisit.
+- **Compound and derivation morphology** at the closed-class level. Lujvo-style closed-class compounds aren't yet designed.
+- **`bra` exception** is a little inconsistent (markers should end in `-i`, but `bra` doesn't). Tolerable for now; revisit if it bites.
+- **Stale example text** that uses bare verb roots (like `dik e` instead of `dike e`). Not a C-2 issue; pre-existing. Clean up in a future pass.

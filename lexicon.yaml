@@ -18,7 +18,7 @@
 # Editing rules:
 #   - Adding a root: append an entry. Run scripts/check_collisions.py.
 #   - Never reuse a root surface form for two distinct concepts unless decisions.md
-#     explicitly locks the overload (currently only `sam`).
+#     explicitly locks the overload (currently only `samo`).
 #   - Closed-class roots (markers, prepositions, quantifiers, copulas, coordinators,
 #     digits, pronouns) cannot be re-purposed by adding more entries — those classes
 #     are frozen except by an explicit decisions.md update.
@@ -63,110 +63,110 @@
 - {root: "no-", kind: marker, concept: "logical negation (prefix)", source: "English/Spanish/Latin no"}
 - {root: ka,    kind: marker, concept: "universal question particle"}
 - {root: ke,    kind: marker, concept: "universal complementizer",  source: "Spanish/French que"}
-- {root: is,    kind: marker, concept: "causal conditional (if)"}
-- {root: dat,   kind: marker, concept: "premise / given that",      source: "Latin datum"}
-- {root: erg,   kind: marker, concept: "therefore / inference",     source: "Latin ergo"}
-- {root: imp,   kind: marker, concept: "formal logical implication"}
-- {root: lit,   kind: marker, concept: "literal open (quote)"}
-- {root: fin,   kind: marker, concept: "literal close (end-quote)", source: "Latin finis"}
-- {root: var,   kind: marker, concept: "variable/placeholder (prefix on one word)"}
-- {root: def,   kind: marker, concept: "named-binding introducer",  source: "math/CS def"}
-- {root: bra,   kind: marker, concept: "group-open (paren-like)",   source: "English bracket (bra-ket split)", notes: "Pairs with `fin`-style closer `ket`. Used to group a sub-constituent inside a clause so operators bind unambiguously. Breaks digit-stream auto-fuse."}
-- {root: ket,   kind: marker, concept: "group-close",                source: "English bracket (bra-ket split)", notes: "Closes a `bra`-opened group. Nesting allowed (each `ket` matches the nearest unmatched `bra`)."}
-- {root: kan,   kind: marker, concept: "epistemic possibility (may/can/possibly)", source: "English can / German kann / Dutch kan / Swedish kan", notes: "Sentence-initial; scopes over the rest of the clause. Composes with `no-`. Dual of `mus` but locked directly to avoid forced composition. Epistemic flavor only — deontic permission parked."}
-- {root: mus,   kind: marker, concept: "epistemic necessity (must/necessarily)",   source: "English must / German muss",                                  notes: "Sentence-initial; scopes over the rest of the clause. Composes with `no-`. Dual of `kan`. Epistemic flavor only — deontic obligation parked."}
+- {root: isi,    kind: marker, concept: "causal conditional (if)"}
+- {root: dati,   kind: marker, concept: "premise / given that",      source: "Latin datum"}
+- {root: ergi,   kind: marker, concept: "therefore / inference",     source: "Latin ergo"}
+- {root: impi,   kind: marker, concept: "formal logical implication"}
+- {root: liti,   kind: marker, concept: "literal open (quote)"}
+- {root: fini,   kind: marker, concept: "literal close (end-quote)", source: "Latin finis"}
+- {root: vari,   kind: marker, concept: "variable/placeholder (prefix on one word)"}
+- {root: defi,   kind: marker, concept: "named-binding introducer",  source: "math/CS def"}
+- {root: bra,   kind: marker, concept: "group-open (paren-like)",   source: "English bracket (bra-ket split)", notes: "Pairs with `fini`-style closer `keti`. Used to group a sub-constituent inside a clause so operators bind unambiguously. Breaks digit-stream auto-fuse."}
+- {root: keti,   kind: marker, concept: "group-close",                source: "English bracket (bra-ket split)", notes: "Closes a `bra`-opened group. Nesting allowed (each `keti` matches the nearest unmatched `bra`)."}
+- {root: kani,   kind: marker, concept: "epistemic possibility (may/can/possibly)", source: "English can / German kann / Dutch kan / Swedish kan", notes: "Sentence-initial; scopes over the rest of the clause. Composes with `no-`. Dual of `musi` but locked directly to avoid forced composition. Epistemic flavor only — deontic permission parked."}
+- {root: musi,   kind: marker, concept: "epistemic necessity (must/necessarily)",   source: "English must / German muss",                                  notes: "Sentence-initial; scopes over the rest of the clause. Composes with `no-`. Dual of `kani`. Epistemic flavor only — deontic obligation parked."}
 
 # Axis system (G3/G4/G5 closures, 2026-05-16)
-- {root: aks,   kind: marker, concept: "axis (1D directed line, unsigned)",        source: "English axis / Latin axis",     notes: "Composes with spatial preposition for agent-frame axis (`aks fas` = X, `aks lat` = Y, `aks sur` = Z); with digit for object-frame rank (`aks pa` = longest, `aks du` = middle, `aks re` = shortest). Polarity added via `mag` (+) / `min` (-)."}
-- {root: tip,   kind: marker, concept: "endpoint / extremum along an axis",        source: "English tip",                   notes: "Composes with `aks <axis> <polarity>` to locate the extreme point. `tip aks sur mag bra X ket` = the top of X. Distinguishes 'top' (location) from 'up' (direction)."}
-- {root: mez,   kind: marker, concept: "dimensional magnitude (length along axis)", source: "Spanish/Latin medir/metiri", notes: "Composes with `aks <axis>` to produce the size-along-that-axis as a number. `mez aks pa bra X ket` = the longest dimension of X. Bridges geometric axes to numeric magnitudes."}
+- {root: aksi,   kind: marker, concept: "axis (1D directed line, unsigned)",        source: "English axis / Latin axis",     notes: "Composes with spatial preposition for agent-frame axis (`aksi fasa` = X, `aksi lata` = Y, `aksi sura` = Z); with digit for object-frame rank (`aksi pa` = longest, `aksi du` = middle, `aksi re` = shortest). Polarity added via `magu` (+) / `minu` (-)."}
+- {root: tipi,   kind: marker, concept: "endpoint / extremum along an axis",        source: "English tip",                   notes: "Composes with `aksi <axis> <polarity>` to locate the extreme point. `tipi aksi sura magu bra X keti` = the top of X. Distinguishes 'top' (location) from 'up' (direction)."}
+- {root: mezi,   kind: marker, concept: "dimensional magnitude (length along axis)", source: "Spanish/Latin medir/metiri", notes: "Composes with `aksi <axis>` to produce the size-along-that-axis as a number. `mezi aksi pa bra X keti` = the longest dimension of X. Bridges geometric axes to numeric magnitudes."}
 
 # Graded probability (closes D6, 2026-05-16)
-- {root: chan,  kind: marker, concept: "graded epistemic probability — P(X) = N",  source: "English/French/Spanish chance",  notes: "Sentence-initial; scopes over the rest of the clause. Takes a numeric expression first (the probability in [0,1]), then the proposition. `chan zo dem ne zo pluve` = 'it will rain with probability 0.90.' Scalar version of `kan` (◇) and `mus` (□): `chan zo` ≡ `no- kan`, `chan pa` ≡ `mus`. Composes with comparison operators inside the numeric slot: `chan mag zo dem fi X` = 'P(X) > 0.5.'"}
+- {root: chani,  kind: marker, concept: "graded epistemic probability — P(X) = N",  source: "English/French/Spanish chance",  notes: "Sentence-initial; scopes over the rest of the clause. Takes a numeric expression first (the probability in [0,1]), then the proposition. `chani zo demu ne zo pluve` = 'it will rain with probability 0.90.' Scalar version of `kani` (◇) and `musi` (□): `chani zo` ≡ `no- kani`, `chani pa` ≡ `musi`. Composes with comparison operators inside the numeric slot: `chani magu zo demu fi X` = 'P(X) > 0.5.'"}
 
 # =============================================================================
 # COORDINATORS
 # =============================================================================
 
-- {root: kun, kind: coordinator, concept: "AND", source: "Latin cum"}
-- {root: vel, kind: coordinator, concept: "OR",  source: "Latin vel"}
+- {root: kune, kind: coordinator, concept: "AND", source: "Latin cum"}
+- {root: vele, kind: coordinator, concept: "OR",  source: "Latin vel"}
 
 # =============================================================================
 # QUANTIFIERS (closed-class CVC)
 # =============================================================================
 
-- {root: sol, kind: quantifier, concept: "only / restriction"}
-- {root: tot, kind: quantifier, concept: "all / every (∀)",          source: "Latin totus"}
-- {root: nul, kind: quantifier, concept: "none (no X has property)", source: "Latin nullus"}
-- {root: kel, kind: quantifier, concept: "some (∃)"}
-- {root: pad, kind: quantifier, concept: "distributive (each individually)"}
-- {root: mas, kind: quantifier, concept: "collective (together as group)"}
+- {root: solu, kind: quantifier, concept: "only / restriction"}
+- {root: totu, kind: quantifier, concept: "all / every (∀)",          source: "Latin totus"}
+- {root: nulu, kind: quantifier, concept: "none (no X has property)", source: "Latin nullus"}
+- {root: kelu, kind: quantifier, concept: "some (∃)"}
+- {root: padu, kind: quantifier, concept: "distributive (each individually)"}
+- {root: masu, kind: quantifier, concept: "collective (together as group)"}
 
 # Comparison operators (also used in numerical/quantity comparisons)
-- {root: min, kind: quantifier, concept: "less than (<)",           source: "Latin minus"}
-- {root: mag, kind: quantifier, concept: "greater than (>)",        source: "Latin magis"}
-- {root: sam, kind: quantifier, concept: "equal / identity (=)",    notes: "Also serves as identity copula — same concept in two syntactic contexts"}
-- {root: tom, kind: quantifier, concept: "range / to (between A and B)"}
-- {root: pir, kind: quantifier, concept: "approximately (≈)"}
+- {root: minu, kind: quantifier, concept: "less than (<)",           source: "Latin minus"}
+- {root: magu, kind: quantifier, concept: "greater than (>)",        source: "Latin magis"}
+- {root: samo, kind: quantifier, concept: "equal / identity (=)",    notes: "Also serves as identity copula — same concept in two syntactic contexts"}
+- {root: tomu, kind: quantifier, concept: "range / to (between A and B)"}
+- {root: piru, kind: quantifier, concept: "approximately (≈)"}
 
 # Base markers and scale
-- {root: dem, kind: quantifier, concept: "decimal base marker",     source: "Latin decem"}
-- {root: doz, kind: quantifier, concept: "dozenal base marker",     source: "English dozen"}
-- {root: pem, kind: quantifier, concept: "scientific notation × 10^x"}
-- {root: kex, kind: quantifier, concept: "frequency / every / each (durative)"}
+- {root: demu, kind: quantifier, concept: "decimal base marker",     source: "Latin decem"}
+- {root: dozu, kind: quantifier, concept: "dozenal base marker",     source: "English dozen"}
+- {root: pemu, kind: quantifier, concept: "scientific notation × 10^x"}
+- {root: kexu, kind: quantifier, concept: "frequency / every / each (durative)"}
 
 # =============================================================================
 # COPULAS (the "is"-overload split)
 # =============================================================================
 
-# `sam` (identity copula) is listed under quantifiers above — same root, same concept,
+# `samo` (identity copula) is listed under quantifiers above — same root, same concept,
 # different syntactic environments. Other copulas:
-- {root: est, kind: copula, concept: "essential predication",  source: "Spanish ser / Latin esse"}
-- {root: sta, kind: copula, concept: "state predication",      source: "Spanish estar / Latin stare"}
-- {root: mem, kind: copula, concept: "set membership (∈)",     source: "English member"}
+- {root: esto, kind: copula, concept: "essential predication",  source: "Spanish ser / Latin esse"}
+- {root: stao, kind: copula, concept: "state predication",      source: "Spanish estar / Latin stare"}
+- {root: memo, kind: copula, concept: "set membership (∈)",     source: "English member"}
 
 # =============================================================================
 # PREPOSITIONS (closed-class CVC)
 # =============================================================================
 
 # Temporal
-- {root: tep, kind: preposition, concept: "at / in (point in time)",  source: "Latin tempus"}
-- {root: pen, kind: preposition, concept: "during (span of time)"}
-- {root: sin, kind: preposition, concept: "since (start of interval)", source: "Latin sine? Spanish desde"}
-- {root: lim, kind: preposition, concept: "until (end of interval)",  source: "Latin limes"}
-- {root: ant, kind: preposition, concept: "before (in time)",         source: "Latin ante"}
-- {root: pos, kind: preposition, concept: "after (in time)",          source: "Latin post"}
+- {root: tepa, kind: preposition, concept: "at / in (point in time)",  source: "Latin tempus"}
+- {root: pena, kind: preposition, concept: "during (span of time)"}
+- {root: sina, kind: preposition, concept: "since (start of interval)", source: "Latin sine? Spanish desde"}
+- {root: lima, kind: preposition, concept: "until (end of interval)",  source: "Latin limes"}
+- {root: anta, kind: preposition, concept: "before (in time)",         source: "Latin ante"}
+- {root: posa, kind: preposition, concept: "after (in time)",          source: "Latin post"}
 
 # Spatial
-- {root: lok, kind: preposition, concept: "at / in / on (spatial)",   source: "Latin locus"}
-- {root: sub, kind: preposition, concept: "under / below",            source: "Latin sub"}
-- {root: sur, kind: preposition, concept: "over / above",             source: "French/Latin sur/super"}
-- {root: pok, kind: preposition, concept: "near / close to",          source: "Latin proximus"}
-- {root: lat, kind: preposition, concept: "beside / at the side of",  source: "Latin latus"}
-- {root: dor, kind: preposition, concept: "behind / at the back of",  source: "Latin dorsum"}
-- {root: fas, kind: preposition, concept: "in front of",              source: "Latin facies"}
-- {root: int, kind: preposition, concept: "between (binary)",         source: "Latin inter"}
-- {root: kir, kind: preposition, concept: "around / surrounding",     source: "Greek kyklos / Latin circa"}
-- {root: dir, kind: preposition, concept: "toward (goal direction)",  source: "Latin directio"}
-- {root: oks, kind: preposition, concept: "from / out of (source)",   source: "Latin ex"}
+- {root: loka, kind: preposition, concept: "at / in / on (spatial)",   source: "Latin locus"}
+- {root: suba, kind: preposition, concept: "under / below",            source: "Latin sub"}
+- {root: sura, kind: preposition, concept: "over / above",             source: "French/Latin sur/super"}
+- {root: poka, kind: preposition, concept: "near / close to",          source: "Latin proximus"}
+- {root: lata, kind: preposition, concept: "beside / at the side of",  source: "Latin latus"}
+- {root: dora, kind: preposition, concept: "behind / at the back of",  source: "Latin dorsum"}
+- {root: fasa, kind: preposition, concept: "in front of",              source: "Latin facies"}
+- {root: inta, kind: preposition, concept: "between (binary)",         source: "Latin inter"}
+- {root: kira, kind: preposition, concept: "around / surrounding",     source: "Greek kyklos / Latin circa"}
+- {root: dira, kind: preposition, concept: "toward (goal direction)",  source: "Latin directio"}
+- {root: oksa, kind: preposition, concept: "from / out of (source)",   source: "Latin ex"}
 - {root: tra, kind: preposition, concept: "through",                  source: "Latin trans"}
 
 # Manner / causation
-- {root: mod, kind: preposition, concept: "manner / way / by means of", source: "Latin modus"}
-- {root: kaw, kind: preposition, concept: "cause / because / why",      source: "English cause"}
+- {root: moda, kind: preposition, concept: "manner / way / by means of", source: "Latin modus"}
+- {root: kawa, kind: preposition, concept: "cause / because / why",      source: "English cause"}
 
 # =============================================================================
 # TIME-UNIT ROOTS (placeholders — xor/vet flagged for possible replacement)
 # =============================================================================
 
-- {root: nun, kind: time_unit, concept: "now / present moment",       source: "Latin nunc"}
-- {root: mom, kind: time_unit, concept: "second (time unit)",         source: "Latin momentum"}
-- {root: mit, kind: time_unit, concept: "minute"}
-- {root: xor, kind: time_unit, concept: "hour", notes: "Weak mnemonic; may be replaced."}
-- {root: dim, kind: time_unit, concept: "day",                        source: "Latin dies"}
-- {root: sem, kind: time_unit, concept: "week",                       source: "Latin septimana"}
-- {root: mes, kind: time_unit, concept: "month",                      source: "Spanish mes"}
-- {root: vet, kind: time_unit, concept: "year", notes: "Weak mnemonic; may be replaced."}
+- {root: nuna, kind: time_unit, concept: "now / present moment",       source: "Latin nunc"}
+- {root: moma, kind: time_unit, concept: "second (time unit)",         source: "Latin momentum"}
+- {root: mita, kind: time_unit, concept: "minute"}
+- {root: xora, kind: time_unit, concept: "hour", notes: "Weak mnemonic; may be replaced."}
+- {root: dima, kind: time_unit, concept: "day",                        source: "Latin dies"}
+- {root: sema, kind: time_unit, concept: "week",                       source: "Latin septimana"}
+- {root: mesa, kind: time_unit, concept: "month",                      source: "Spanish mes"}
+- {root: veta, kind: time_unit, concept: "year", notes: "Weak mnemonic; may be replaced."}
 
 # =============================================================================
 # VERB ROOTS (open class, CVC)

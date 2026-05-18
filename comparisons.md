@@ -59,7 +59,7 @@ So at the design-goal level, the overlap is large. If Lojban achieves all of the
 
 **Lexor** uses simpler, shorter shapes:
 - **Content roots**: CVC (3 letters, 1 syllable), with grammatical vowels attached: `lome` (eats), `lomera` (current eater).
-- **Closed-class**: ranges from V (pronouns like `y`, `e`) to CVCC (`erg`, `imp`) to CVC (most markers).
+- **Closed-class**: ranges from V (pronouns like `y`, `e`) to CVCC (`ergi`, `impi`) to CVC (most markers).
 
 The trade-off: Lexor is shorter and more compact, easier to pronounce, but with less vocabulary headroom (CVC space is ~2000 roots) and more risk of collisions. Lojban's longer shapes give more vocabulary space and more morphological cushion, but every content word costs two syllables minimum.
 
@@ -90,7 +90,7 @@ Trade-off: Lojban can express precise temporal distinctions; Lexor optimizes for
 
 **Lojban** has a rich set of logical connectives (jeks, joiks, gi'iks) with explicit scope. Mixed AND/OR, conditionals, and other operators all have well-defined scope rules.
 
-**Lexor** has `kun` (AND) and `vel` (OR) plus `bra/ket` brackets for grouping. Mixed AND/OR in flat form is grammatically forbidden — speakers must bracket.
+**Lexor** has `kune` (AND) and `vele` (OR) plus `bra/keti` brackets for grouping. Mixed AND/OR in flat form is grammatically forbidden — speakers must bracket.
 
 Trade-off: Lojban handles logical complexity by having more vocabulary; Lexor by having a single grouping mechanism plus a small operator set.
 
@@ -98,13 +98,13 @@ Trade-off: Lojban handles logical complexity by having more vocabulary; Lexor by
 
 **Lojban** has cmavo for possibility, necessity, attitudinal indicators, evidentiality (source of information). Quite rich — Lojban can express "I assert that this happened, I learned it from a third party, and I'm uncertain about it" as a single sentence with stacked attitudinal markers.
 
-**Lexor** has `kan` (possibility ◇), `mus` (necessity □), `chan` (graded probability with explicit number). Evidentiality is parked (trial H4). Attitudinal markers haven't been designed yet.
+**Lexor** has `kani` (possibility ◇), `musi` (necessity □), `chani` (graded probability with explicit number). Evidentiality is parked (trial H4). Attitudinal markers haven't been designed yet.
 
 Trade-off: Lojban is more developed here; Lexor has the modal infrastructure but hasn't built up to attitudinal/evidential yet.
 
 #### Numbers
 
-Both languages support arbitrary bases, exact counts, ranges, approximation. Both use compositional digit streams. Lojban has dedicated cmavo for many numeric concepts (Lexor uses `tom`, `pir`, `mag`, `min`, `pem`).
+Both languages support arbitrary bases, exact counts, ranges, approximation. Both use compositional digit streams. Lojban has dedicated cmavo for many numeric concepts (Lexor uses `tomu`, `piru`, `magu`, `minu`, `pemu`).
 
 Trade-off: roughly equivalent. Lexor's first-class dozenal support is a stronger commitment than Lojban's (Lojban has multi-base support but doesn't privilege dozenal).
 
@@ -198,26 +198,26 @@ English is the natural reference point for most Lexor readers, and many of the t
 A condensed version of `pain.md` and `trials.md`, restated as comparison:
 
 - **Mandatory number.** English forces "a dog" vs "dogs" even when count is irrelevant or unknown. Lexor: number is an optional modifier.
-- **The "is"-overload.** English collapses identity (Mark Twain is Samuel Clemens), essential predication (the sky is blue), state predication (she is tired), set membership (a whale is a mammal), subset (mammals are animals), existence (there is a god), and literal identity (the password is "incorrect") into one verb. Lexor splits these: `sam` / `est` / `sta` / `mem` / `tot+mem` / `kel` / `lit…fin`.
-- **Negation scope.** "Not a equals b" is ambiguous between "never equal" and "doesn't have to equal." Lexor: positional `no-` with explicit modal operators (`mus`, `kan`) for the necessity reading.
-- **"Top" vs "up" vs "height" conflation.** English uses "up" for direction and "top" for both location and quasi-direction. Lexor: `aks sur mag` (direction), `tip aks sur mag bra X ket` (location), `mez aks sur bra X ket` (magnitude).
+- **The "is"-overload.** English collapses identity (Mark Twain is Samuel Clemens), essential predication (the sky is blue), state predication (she is tired), set membership (a whale is a mammal), subset (mammals are animals), existence (there is a god), and literal identity (the password is "incorrect") into one verb. Lexor splits these: `samo` / `esto` / `stao` / `memo` / `totu+memo` / `kelu` / `liti…fini`.
+- **Negation scope.** "Not a equals b" is ambiguous between "never equal" and "doesn't have to equal." Lexor: positional `no-` with explicit modal operators (`musi`, `kani`) for the necessity reading.
+- **"Top" vs "up" vs "height" conflation.** English uses "up" for direction and "top" for both location and quasi-direction. Lexor: `aksi sura magu` (direction), `tipi aksi sura magu bra X keti` (location), `mezi aksi sura bra X keti` (magnitude).
 - **Tense/aspect tangle.** English perfect, continuous, modal forms don't compose cleanly ("I might have been going to have eaten"). Lexor: one vowel = tense, one consonant `x` = continuous aspect, modals separate at sentence-start.
-- **Modal soup.** "Have to" / "must" / "may" / "might" / "could" / "should" each carry subtly different mixes of epistemic and deontic modality. Lexor: epistemic split (`kan`, `mus`, `chan`) with deontic explicitly parked, no conflation.
+- **Modal soup.** "Have to" / "must" / "may" / "might" / "could" / "should" each carry subtly different mixes of epistemic and deontic modality. Lexor: epistemic split (`kani`, `musi`, `chani`) with deontic explicitly parked, no conflation.
 - **Lexical sprawl for question words.** Who/what/when/where/why/how — six different words. Lexor: one particle `ka`, position determines type.
 - **Mixed AND/OR ambiguity.** "A and B or C" parses two ways. Lexor: forbidden in flat form; brackets required.
 - **Compound-noun ambiguity.** "Its tube ends were round" — `tube` modifying `ends`, or `ends` as verb? Lexor: adjective suffix on modifier disambiguates morphologically.
 - **Gendered third person.** English forces he/she on every reference (singular "they" is gaining ground but still controversial in formal writing). Lexor: `e` is gender-neutral by default.
 - **Stress is unmarked in writing.** "I scream" vs "ice cream" — disambiguated only by spoken stress, not by spelling. Lexor: stress is non-lexical (always on first syllable).
 - **Spelling irregularities.** English has hundreds of common words whose pronunciation can't be derived from spelling. Lexor: one-to-one phoneme-character mapping.
-- **Number expression.** Million / billion / trillion / quadrillion — arms race with no end. Lexor: scientific notation `pem` handles arbitrary magnitudes.
+- **Number expression.** Million / billion / trillion / quadrillion — arms race with no end. Lexor: scientific notation `pemu` handles arbitrary magnitudes.
 - **Two clock conventions** (12-hour and 24-hour) with built-in ambiguity at noon/midnight. Lexor: digit stream + base marker, both bases first-class.
 
 ### What Lexor borrowed from English
 
-- **Sub-constituent brackets `bra/ket`** — split from the English word "bracket."
-- **Modal markers `kan` (can) and `mus` (must)** — direct phoneme rewrite of English/Germanic stems.
-- **Probability marker `chan`** — English "chance."
-- **Endpoint marker `tip`** — English "tip" (end of anything).
+- **Sub-constituent brackets `bra/keti`** — split from the English word "bracket."
+- **Modal markers `kani` (can) and `musi` (must)** — direct phoneme rewrite of English/Germanic stems.
+- **Probability marker `chani`** — English "chance."
+- **Endpoint marker `tipi`** — English "tip" (end of anything).
 - **Several verb roots** when the English everyday word matched the concept: `xut` (shut, for close), `lis` (listen), `hav` (have), `lek` (read, via Latin but matches English "lecture" stem).
 - **Stress as parsing aid** — English's reliance on first-syllable stress on content words shaped Lexor's first-syllable stress convention.
 - **The basic concept of compositional negation** with a single morpheme (English "un-/not-" partially inspired the `no-` prefix).
@@ -252,17 +252,17 @@ Spanish is the other natural reference point that shows up repeatedly in Lexor's
 
 - **Flowing rhythm with vowel-rich phonology.** Spanish's 5-vowel system and predictable stress give it a musical, easy-to-listen-to character. Lexor's vowel inventory is wider (7 vowels) but its rhythm is less established.
 - **Native speaker community of ~500M.** Lexor has none.
-- **Compact subjunctive mood for hypotheticals, desires, doubts.** "Espero que vengas" packs hope + uncertainty + future-orientation into the verb form. Lexor needs to compose this from `chan`, conditional vowel `y`, and a content verb for "hope."
+- **Compact subjunctive mood for hypotheticals, desires, doubts.** "Espero que vengas" packs hope + uncertainty + future-orientation into the verb form. Lexor needs to compose this from `chani`, conditional vowel `y`, and a content verb for "hope."
 - **Reflexive constructions for impersonal/passive ("se").** "Se ha decidido," "se vende" — compact ways to leave the agent unspecified. Lexor copies this in spirit (pronoun-droppable VOS).
 - **Diminutives and augmentatives.** -ito / -ita / -ón / -ona attach to nouns to compactly express size, affection, or contempt ("perrito" = cute little dog; "casona" = imposing big house). Lexor would need separate adjectives.
 - **Verb conjugations carry person + number + tense + mood** in one ending. Compact when you've memorized them, though irregular for high-frequency verbs.
 - **Cultural depth.** Centuries of literature, regional variation (Castilian, Mexican, Rioplatense, Andean…), idiom and slang.
-- **"Sentido"** — a precise word for direction-with-polarity along an axis. English has no clean equivalent. Lexor borrowed the concept (axis system, `aks <ax> <pol>`) but Spanish was here first.
+- **"Sentido"** — a precise word for direction-with-polarity along an axis. English has no clean equivalent. Lexor borrowed the concept (axis system, `aksi <ax> <pol>`) but Spanish was here first.
 
 ### What Lexor fixes (vs Spanish)
 
 - **Mandatory gender on every noun.** Spanish forces amigo/amiga, el/la, -o/-a. Lexor: no mandatory gender anywhere.
-- **The ser/estar split is real but conjugation is irregular.** Spanish nailed the conceptual distinction (essence vs state), then drowned it in conjugation paradigms. Lexor: keeps the split (`est`/`sta`) with regular vowel-based tense, no irregularities.
+- **The ser/estar split is real but conjugation is irregular.** Spanish nailed the conceptual distinction (essence vs state), then drowned it in conjugation paradigms. Lexor: keeps the split (`esto`/`stao`) with regular vowel-based tense, no irregularities.
 - **Verb conjugation paradigms.** Spanish has 17+ regular tense/mood forms per verb × 6 person-number combinations, with multiple irregular families. A learner spends years memorizing. Lexor: one vowel encodes tense, pronouns are separate.
 - **Mandatory subjunctive triggers.** Spanish's "que" clauses force subjunctive in unpredictable ways for non-native speakers. Lexor: no subjunctive; conditional vowel `y` and modal markers compose explicitly.
 - **Number agreement across constituents.** "Los perros pequeños corren" forces agreement on article, noun, adjective, verb. Lexor: no agreement.
@@ -275,14 +275,14 @@ Spanish is the other natural reference point that shows up repeatedly in Lexor's
 
 ### What Lexor borrowed from Spanish
 
-- **The ser/estar distinction.** Possibly the single most impactful borrow. `est` (Spanish *ser*) / `sta` (Spanish *estar*) preserve the conceptual split.
-- **"Sentido" as direction-with-polarity.** Built into the axis system (`aks fas mag` vs `aks fas min`).
+- **The ser/estar distinction.** Possibly the single most impactful borrow. `esto` (Spanish *ser*) / `stao` (Spanish *estar*) preserve the conceptual split.
+- **"Sentido" as direction-with-polarity.** Built into the axis system (`aksi fasa magu` vs `aksi fasa minu`).
 - **Pronoun-droppable construction** ("se ha decidido").
 - **Several content roots** where Spanish's everyday word matched the concept:
     - `lor` (cry/weep) from *llorar*
     - `tir` (pull/draw) from *tirar*
-    - `mez` (measure) from *medir/metiri*
-    - `mes` (month) from *mes*
+    - `mezi` (measure) from *medir/metiri*
+    - `mesa` (month) from *mes*
     - `pag` (pay) from *pagar*
 - **Awareness of resyllabification.** Spanish's word-boundary-dissolution informed Lexor's self-segregating morphology design — both languages avoid mandatory pauses, but Lexor handles it through stricter shape rules rather than predictable resyllabification.
 - **Comma-based clause boundaries.** Spanish's heavy use of clause-internal commas matches Lexor's clause-boundary prosody.
@@ -295,7 +295,7 @@ Spanish is the other natural reference point that shows up repeatedly in Lexor's
 - **Number agreement** rejected across constituents.
 - **Pluralization morphemes** (-s/-es) rejected.
 - **Accent marks** rejected; one phoneme per character means stress is non-lexical.
-- **Subjunctive mood** rejected; replaced by `chan`/`kan`/`mus` + conditional vowel.
+- **Subjunctive mood** rejected; replaced by `chani`/`kani`/`musi` + conditional vowel.
 - **Two-letter digraphs** (ch, ll, rr) mostly rejected — Lexor keeps `ch` (one phoneme /tʃ/) and uses `x` for /ʃ/.
 - **Ser/estar conjugation irregularity** — keeps the split, kills the irregularity.
 
@@ -303,6 +303,6 @@ Spanish is the other natural reference point that shows up repeatedly in Lexor's
 
 Spanish-speaking Lexor learners will gain precision and lose two things they're used to: the expressive subjunctive (compensated by composable modal markers), and the gender-based reference disambiguation (in a paragraph with two women, Spanish lets you say "la otra" to disambiguate; Lexor would need a name binding or contextual cue).
 
-Lexor's pronoun system (no mandatory gender) is a clear win for many users, but in a multi-character narrative it costs disambiguation cheapness. A Spanish writer can write "ella le dijo a él que la quería" — gender alone disambiguates four references. Lexor would either use names, `def`-bindings, or accept the loss of disambiguation. This is a real cost.
+Lexor's pronoun system (no mandatory gender) is a clear win for many users, but in a multi-character narrative it costs disambiguation cheapness. A Spanish writer can write "ella le dijo a él que la quería" — gender alone disambiguates four references. Lexor would either use names, `defi`-bindings, or accept the loss of disambiguation. This is a real cost.
 
 The borrows are substantial enough that Spanish speakers should find Lexor more learnable than English speakers will — many of the conceptual moves (ser/estar, sentido, pronoun-drop) come from territory Spanish already navigates.

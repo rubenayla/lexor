@@ -52,7 +52,8 @@ Open design questions parked here so we can address them one at a time.
     - [ ] Alethic vs epistemic split — refine if a logical/metaphysical trial exposes the need.
     - [x] Probability operator surface form (trial D6) — resolved 2026-05-16: `chan <number> <proposition>` sentence-initial, scalar version of `kan`/`mus`. See decisions.md / history.md 2026-05-16.
     - [ ] Counterfactual conditionals ("if she had eaten...") — distinct from `is`/`imp`. Parked.
-- [x] **Axis system: aks / tip / mez** — resolved 2026-05-16. Closed trials.md G3 (sentido), G4 (direction vs location), G5 (neutral axis names). Three new closed-class composable markers; agent-frame axes reuse spatial prepositions, object-frame ranks reuse digits, polarity reuses `mag`/`min`. See decisions.md / history.md 2026-05-16. Sub-questions parked:
+- [x] **Closed-class subclass-vowel suffix (C-2)** — resolved 2026-05-18. All closed-class items end in a subclass-marking vowel: prepositions `-a`, coordinators `-e`, markers `-i`, copulas `-o`, quantifiers `-u`, time-units `-a`. Every word in spoken Lexor now ends in a vowel; zero consonant clusters at word boundaries. ~50 lexicon entries renamed, ~10 active docs swept. See decisions.md / history.md 2026-05-18.
+- [x] **Axis system: aksi / tipi / mezi** — resolved 2026-05-16. Closed trials.md G3 (sentido), G4 (direction vs location), G5 (neutral axis names). Three new closed-class composable markers; agent-frame axes reuse spatial prepositions, object-frame ranks reuse digits, polarity reuses `magu`/`minu`. See decisions.md / history.md 2026-05-16. Sub-questions parked:
     - [ ] Compass directions (N/S/E/W) — need dedicated roots or compositional Earth-frame system.
     - [ ] Gravity-as-axis vs Z-axis distinction — defer until a trial exposes the need (vehicles, spacecraft).
     - [ ] Signed magnitudes (physics displacement, negative values) — compose `mag`/`min` on top of `mez`; convention not yet locked.

@@ -90,7 +90,7 @@ The mechanism is built from three rules working together:
 
 1. **Open-class content roots must start with a consonant.** Every verb, noun, and adjective root begins with a consonant. (See decisions.md 2026-05-17.)
 2. **Content words end in a vowel.** Verbs are `CVC + V` (root + tense vowel); derived non-verbs are `CVCVCV`.
-3. **Closed-class items are a finite, memorizable list.** Markers, prepositions, copulas, pronouns, and digits include some vowel-initial forms (`is`, `erg`, `imp`, `aks`, `est`, `int`, `oks`, `ant`, plus the V-shape pronouns `y u e i`). The listener identifies these by direct lookup.
+3. **Closed-class items are a finite, memorizable list.** Markers, prepositions, copulas, pronouns, and digits include some vowel-initial forms (`isi`, `ergi`, `impi`, `aksi`, `esto`, `inta`, `oksa`, `anta`, plus the V-shape pronouns `y u e i`). The listener identifies these by direct lookup.
 
 How parsing works under these rules:
 
@@ -101,7 +101,7 @@ How parsing works under these rules:
 
 Worked examples:
 
-- `sa magas` (digit 6 + content `magas`) vs `sam agas` (operator + ???) — `agas` starts with a vowel, isn't a closed-class item, and content roots can't begin with vowels. So `sam agas` doesn't parse. The unique reading is `sa magas`.
+- `sa magas` (digit 6 + content `magas`) vs `samo agas` (operator + ???) — `agas` starts with a vowel, isn't a closed-class item, and content roots can't begin with vowels. So `samo agas` doesn't parse. The unique reading is `sa magas`.
 - `ko mago` (digit 4 + content `mago`) vs `kom ago` (verb + ???) — `ago` starts with a vowel and isn't closed-class. So `kom ago` doesn't parse. Unique reading: `ko mago`.
 
 ### Recommended pause for clarity
@@ -111,22 +111,22 @@ A short acoustic break (~50–100 ms) between words is **recommended for clarity
 This matches how natural languages work. English and Spanish speakers don't pause between every word; listeners parse boundaries from stress, vowel quality, and word-shape expectations. Lexor's self-segregating morphology gives a similar effect through stricter word-shape rules.
 
 ### Numbers
-Inside a digit stream (sequence of digit roots forming one number), the digits are **concatenated with no internal break**. The number forms a single prosodic unit. The unit closes when a non-digit word follows or when the base marker (`dem`/`doz`) or scale marker (`pem`) appears at its boundary position.
+Inside a digit stream (sequence of digit roots forming one number), the digits are **concatenated with no internal break**. The number forms a single prosodic unit. The unit closes when a non-digit word follows or when the base marker (`demu`/`dozu`) or scale marker (`pemu`) appears at its boundary position.
 
 Examples:
 - `sa pa du` (642 in some base) → one prosodic unit `sapadu`, no internal breaks.
-- `sa pa du dem chi` (642.7 decimal) → `sapadu` [break] `dem` [break] `chi` — the radix marker `dem` is its own unit.
-- `sa dim` (6 days) → `sa` [break] `dim` — `dim` is not a digit, so the digit stream closed before it.
+- `sa pa du demu chi` (642.7 decimal) → `sapadu` [break] `demu` [break] `chi` — the radix marker `demu` is its own unit.
+- `sa dima` (6 days) → `sa` [break] `dima` — `dima` is not a digit, so the digit stream closed before it.
 
 ### Pronouns
 Pronouns are V or CV shape (`y`, `u`, `e`, `la`, etc.), shorter than the standard CVCV word. They still get their own prosodic unit and their own brief break before and after. Pronoun + role vowel (e.g. `y-e`, `u-o`) is one unit (the role vowel is a suffix, not a separate word); doubled vowels (`ee`, `uu`, `loo`) are pronounced as a single long vowel held about twice the duration of a short vowel.
 
 ### Clause boundary (comma in writing)
 A clause boundary is marked by **a longer pause (≈200–300 ms) plus a slight pitch reset**. This is the spoken equivalent of the comma. It separates:
-- Main clause from subordinate clause: `golo e [break-long] tep ke pluvex` — "she left, when it was raining."
-- Coordinated clauses joined by `kun` / `vel`: `kome e [break-long] kun bibe e` — "she eats, and she drinks."
+- Main clause from subordinate clause: `golo e [break-long] tepa ke pluvex` — "she left, when it was raining."
+- Coordinated clauses joined by `kune` / `vele`: `kome e [break-long] kune bibe e` — "she eats, and she drinks."
 - Tag-question hosts from the tag: `golo e [break-long] ka` — "she left, right?"
-- Reasoning-particle transitions: `dat A [break-long] erg B` — "given A, therefore B."
+- Reasoning-particle transitions: `dati A [break-long] ergi B` — "given A, therefore B."
 
 The comma boundary is acoustically distinguishable from the word boundary by **duration and pitch reset** combined. A word-break is a short flat micro-pause; a clause-break is a longer pause plus a fresh pitch starting point on the next clause.
 
