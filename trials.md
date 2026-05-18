@@ -165,7 +165,7 @@ Same shape as C2.
 
 ### D6. Plug-in probability [feature, passes]
 **Capability:** "90% likely to rain" reads as cleanly as "5 cm."
-**Lexor:** `chani zo demu ne zo pluve` — "P(rain) = 0.90." Sentence-initial graded probability marker `chani` takes a numeric expression in [0, 1] followed by the proposition.
+**Lexor:** `chani zo demu ne zo luve` — "P(rain) = 0.90." Sentence-initial graded probability marker `chani` takes a numeric expression in [0, 1] followed by the proposition.
 **How:** decisions.md `chani` (2026-05-16). Composes with comparison operators for ranges (`chani magu zo demu fi X` = "P(X) > 0.5") and with `dati` for conditional probability.
 **Distinct from amount-precision** (`piru`/`tomu`/`pemu`): probability scopes over the whole proposition; amount-precision scopes over a single magnitude. Different positions, no overload.
 **Related:** modal operators 2026-05-16. Closes the D6 trial.

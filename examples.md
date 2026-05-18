@@ -3,8 +3,8 @@
 Worked sentence translations. Goal: validate the grammar by writing realistic sentences with the locked machinery and surface gaps before more vocabulary is committed.
 
 ## Conventions
-- Content roots that haven't been formally locked yet are written in brackets: `[apple]`, `[house]`, `[man]`, `[water]`. Their exact CVC form will be picked during the vocabulary buildout; the sentences here exercise *structure*, not lexicon.
-- Roots used as working assumptions but not yet in roots.md are noted at first use: `pluv` (rain, from Latin *pluere*), `bib` (drink, from Latin *bibere*), `dik` (say, from Latin *dicere*).
+- Content roots that haven't been formally locked yet are written in brackets: `[apple]`, `[door]`, `[key]`, `[yesterday]`, `[house]` (note: "house" itself is now locked as `kas`; remaining bracketed items are concepts that haven't been assigned roots). Their exact CVC form will be picked during the vocabulary buildout; the sentences here exercise *structure*, not lexicon.
+- Locked roots used heavily below: `lom` (eat), `vis` (see), `dik` (say), `gol` (go), `bib` (drink), `luv` (rain), `vat` (water), `kas` (house), and many more — see `lexicon.yaml` for the full inventory.
 - VOS = verb, object, subject. Role-vowel suffixes (`-e` subject, `-o` object, `-u` recipient, `-i` instrument) are only attached when default position would be ambiguous.
 
 ## 1. Basic VOS and tense
@@ -46,7 +46,7 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 23. `lome e kexu dima` — "She eats every day." (frequency operator)
 24. `loma [apple] pa fi pemu du` — "She eats 1.5×10² = 150 apples." (digit stream + base + scale)
 25. `loma [apple] re tomu fi e` — "She eats between three and five apples." (range)
-26. `pluvex tepa nuna` — "It is raining right now." (using time-root `nuna` = now)
+26. `luvex tepa nuna` — "It is raining right now." (using time-root `nuna` = now)
 
 ## 6. Questions
 
@@ -66,15 +66,15 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 37. `[man] ke loma [apple]` — "the man who eats apples" (relative clause, gap = subject of `loma`)
 38. `[apple] ke loma e` — "the apple that she eats" (relative, gap = object)
 39. `dike e ke loma u` — "She says that you eat." (complement clause, `dike` = "says")
-40. `golo e tepa ke pluvex` — "She left when it was raining." (temporal clause)
+40. `golo e tepa ke luvex` — "She left when it was raining." (temporal clause)
 41. `golo e loka ke [house]` — "She left where the house is." (spatial clause; reads as "at-WHERE house [is]")
-42. `golo e kawa ke pluvo` — "She left because it rained." (causal clause)
+42. `golo e kawa ke luvo` — "She left because it rained." (causal clause)
 43. `kompo e moda ke martelo o` — "She fixed it by hammering it." (manner clause)
 
 ## 8. Conditionals
 
-44. `isi pluve, lomy e [inside]` — "If it's raining, she would eat inside." (conditional `isi` + consequent in conditional `y`)
-45. `isi no-pluve, goly e` — "If it isn't raining, she would go." (negated antecedent)
+44. `isi luve, lomy e [inside]` — "If it's raining, she would eat inside." (conditional `isi` + consequent in conditional `y`)
+45. `isi no-luve, goly e` — "If it isn't raining, she would go." (negated antecedent)
 
 ## 9. Coordination and depth
 
@@ -91,12 +91,12 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 
 ## 9b. Epistemic modality (kani / musi)
 
-49a. `kani pluve` — "It might rain." / "Possibly it rains." (◇)
-49b. `musi pluve` — "It must be raining." / "Necessarily." (□)
+49a. `kani luve` — "It might rain." / "Possibly it rains." (◇)
+49b. `musi luve` — "It must be raining." / "Necessarily." (□)
 49c. `no- musi samo m1 m2` — "Not necessarily m1 = m2." (English's elusive "doesn't have to equal" reading)
 49d. `kani no- samo m1 m2` — "Possibly m1 ≠ m2." (the "can be different" reading without claiming they actually are)
 49e. `kani loka-x i kune kani loka-y i kune no- mesa` — "Possibly at-x AND possibly at-y AND no measurement." (quantum superposition without smuggling in a definite location)
-49f. `dik e ke kani pluve` — "She says that it might rain." (modal inside a complement clause)
+49f. `dik e ke kani luve` — "She says that it might rain." (modal inside a complement clause)
 
 ## 9c. Axis system (aksi / tipi / mezi)
 
@@ -128,19 +128,19 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 
 ## 9e. Graded probability (chani)
 
-49y. `chani zo demu ne zo pluve` — "It will rain with probability 0.90." (90% likely)
+49y. `chani zo demu ne zo luve` — "It will rain with probability 0.90." (90% likely)
 49z. `chani zo demu fi samo a b` — "a equals b with probability 0.5." (Coin-flip uncertainty.)
-49aa. `chani zo demu pa pluve` — "It'll rain with probability 0.1." (Unlikely.)
+49aa. `chani zo demu pa luve` — "It'll rain with probability 0.1." (Unlikely.)
 49bb. Equivalences:
     - `chani zo X` ≡ `no- kani X` — P = 0 = impossible.
     - `chani pa X` ≡ `musi X` — P = 1 = certain.
     - `kani X` ≈ `chani <unspecified positive> X` — speaker not committing to a specific value.
 49cc. Probability ranges (compose with comparison operators):
-    - `chani magu zo demu fi pluve` — "P(rain) > 0.5" (more likely than not)
-    - `chani minu zo demu du fi pluve` — "P(rain) < 0.25"
-    - `chani tomu zo demu du fi zo demu chi fi pluve` — "P(rain) is between 0.25 and 0.75"
-49dd. Probability comparison: `magu chani pluve chani ne` — "rain is more likely than snow" (chance-of-rain > chance-of-snow).
-49ee. Conditional probability: `chani zo demu ne zo pluve dati stao nub-s [sky]` — "P(rain | sky is cloudy) = 0.9" (conditional via `dati`).
+    - `chani magu zo demu fi luve` — "P(rain) > 0.5" (more likely than not)
+    - `chani minu zo demu du fi luve` — "P(rain) < 0.25"
+    - `chani tomu zo demu du fi zo demu chi fi luve` — "P(rain) is between 0.25 and 0.75"
+49dd. Probability comparison: `magu chani luve chani ne` — "rain is more likely than snow" (chance-of-rain > chance-of-snow).
+49ee. Conditional probability: `chani zo demu ne zo luve dati stao nub-s [sky]` — "P(rain | sky is cloudy) = 0.9" (conditional via `dati`).
 49ff. `kani samo re metr mezi aksi pa bra box keti. chani zo demu chi fi samo re metr. no-vis y i` — "The longest dimension of the box might be 3 meters. It's probably 3 meters (P = 0.75). I haven't seen it." (Hedging with mixed modals.)
 49gg. Distinction from amount-precision:
     - `hav piru pa zo [apple] e` — "She has approximately 10 apples." (`piru` on the amount.)
@@ -149,9 +149,9 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 
 ## 10. Reasoning chain
 
-49. `dati pluvo` — "Given that it rained." (premise)
-50. `dati pluvo. golo e kawa ke pluvo. ergi [floor wet]` — "Given it rained. She left because it rained. Therefore the floor is wet."
-51. Modus tollens: `dati pluvo impi [floor wet]. no-[floor wet]. ergi no-pluvo` — "Given rain implies wet floor. The floor is not wet. Therefore it did not rain."
+49. `dati luvo` — "Given that it rained." (premise)
+50. `dati luvo. golo e kawa ke luvo. ergi [floor wet]` — "Given it rained. She left because it rained. Therefore the floor is wet."
+51. Modus tollens: `dati luvo impi [floor wet]. no-[floor wet]. ergi no-luvo` — "Given rain implies wet floor. The floor is not wet. Therefore it did not rain."
 
 ## 11. Copulas (the "is"-overload split)
 

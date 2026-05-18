@@ -42,7 +42,7 @@ The small set of "function words" (pronouns, connectors, markers) can be vowel-i
 
 In practice, this means you can speak Lexor fluidly. A short pause between words is *recommended* for clarity, especially when speaking fast or in noisy places — but it's not grammatically required.
 
-A separate point: some example sentences below use placeholder forms like `pluve` for "rain." These are not yet locked Lexor words. They follow Latin-style shapes that don't fit the language's strict consonant-vowel-consonant pattern. When the vocabulary for "rain" is chosen, the real form will replace `pluve`.
+A separate point: some example sentences below use bracketed placeholders like `[apple]` or `[door]` for content words whose Lexor roots haven't been assigned yet. As of vocab batch 2 (2026-05-18), most common concepts have real roots — words like `vat` (water), `luv` (rain), `kas` (house), `vir` (man), `fem` (woman), `nin` (child), `met` (meter), `kub` (box) appear directly. Bracketed words remain only where the concept isn't yet in the lexicon.
 
 ---
 
@@ -289,8 +289,8 @@ To put a small sentence inside a bigger one — like "the man who eats apples" o
 | `[man] ke loma [apple]` | the man who eats apples | a noun → relative clause |
 | `[apple] ke loma e` | the apple that she eats | a noun (object) → relative clause |
 | `dike e ke loma u` | she says that you eat | a speech verb → complement clause |
-| `golo e tepa ke pluvex` | she left when it was raining | a time word → time clause |
-| `golo e kawa ke pluvo` | she left because it rained | a cause word → reason clause |
+| `golo e tepa ke luvex` | she left when it was raining | a time word → time clause |
+| `golo e kawa ke luvo` | she left because it rained | a cause word → reason clause |
 
 **What this level shows:**
 - One word, `ke`, replaces English's "who, which, that, when, while, because, although…"
@@ -300,8 +300,8 @@ To put a small sentence inside a bigger one — like "the man who eats apples" o
 
 ## L10 — "If…then" sentences (conditionals)
 
-**Lexor:** `isi pluve, lomy e [inside]` — if it's raining, she would eat inside
-**Lexor:** `isi no-pluve, goly e` — if it isn't raining, she would go
+**Lexor:** `isi luve, lomy e [inside]` — if it's raining, she would eat inside
+**Lexor:** `isi no-luve, goly e` — if it isn't raining, she would go
 
 **How it's built:**
 - `isi` means "if." It introduces the condition.
@@ -334,10 +334,10 @@ Two simple connectors:
 
 For arguments and proofs, Lexor uses three little discourse words: `dati`, `ergi`, and `impi`.
 
-**Lexor:** `dati pluvo. golo e kawa ke pluvo. ergi stao sus-s [floor]`
+**Lexor:** `dati luvo. golo e kawa ke luvo. ergi stao sus-s [floor]`
 **Translation:** "Given that it rained. She left because it rained. Therefore the floor is wet."
 
-**Lexor:** `dati pluvo impi stao sus-s [floor]. no-stao sus-s [floor]. ergi no-pluvo`
+**Lexor:** `dati luvo impi stao sus-s [floor]. no-stao sus-s [floor]. ergi no-luvo`
 **Translation:** "Given that rain implies a wet floor. The floor is not wet. Therefore it didn't rain." (This is the logical step called *modus tollens*.)
 
 **The three words:**
@@ -355,8 +355,8 @@ For arguments and proofs, Lexor uses three little discourse words: `dati`, `ergi
 
 To say something might be true, or must be true, use one of two markers at the start of the sentence.
 
-**Lexor:** `kani pluve` — it might rain
-**Lexor:** `musi pluve` — it must be raining
+**Lexor:** `kani luve` — it might rain
+**Lexor:** `musi luve` — it must be raining
 **Lexor:** `no- musi samo a b` — a doesn't have to equal b (it's not necessarily true that a equals b)
 **Lexor:** `kani no- samo m1 m2` — m1 and m2 might be different (it's possible that they aren't equal)
 
@@ -376,9 +376,9 @@ Both go at the very start of a sentence. Both can be combined with `no-` from Le
 
 Sometimes you want to attach a specific probability to a claim, like "90% likely." Lexor uses `chani` for this.
 
-**Lexor:** `chani zo demu ne zo pluve` — it will rain with probability 0.90
+**Lexor:** `chani zo demu ne zo luve` — it will rain with probability 0.90
 **Lexor:** `chani zo demu fi samo a b` — a equals b with probability 0.5
-**Lexor:** `chani magu zo demu fi pluve` — the probability of rain is greater than 0.5
+**Lexor:** `chani magu zo demu fi luve` — the probability of rain is greater than 0.5
 
 **How it works:**
 - `chani` goes at the start of the sentence, like `kani` and `musi`.
@@ -408,9 +408,9 @@ For directions ("upward"), locations ("the top"), and dimensions ("the height"),
 **Lexor:** `gol aksi fasa magu e` — she goes forward
 **Lexor:** `aksi lata magu` — left direction (the positive Y direction)
 **Lexor:** `aksi sura minu` — down direction (the negative Z direction)
-**Lexor:** `tipi aksi sura magu bra [box] keti` — the top of the box (the extreme point at the upper end)
-**Lexor:** `mezi aksi pa bra [box] keti` — the longest dimension of the box
-**Lexor:** `mezi aksi sura bra [box] keti` — the height of the box (the size along the up-down axis)
+**Lexor:** `tipi aksi sura magu bra kub keti` — the top of the box (the extreme point at the upper end)
+**Lexor:** `mezi aksi pa bra kub keti` — the longest dimension of the box
+**Lexor:** `mezi aksi sura bra kub keti` — the height of the box (the size along the up-down axis)
 
 **The pieces:**
 - `aksi` means "axis" — a line that goes through space in one direction.
@@ -572,24 +572,24 @@ What this demonstrates: a complement clause introduced by `ke`, with a modal (`k
 ### Example 4: Navigation order
 
 ```
-golu aksi fasa magu pa zo [metr]. rotu zo dozu re aksi sura. golu aksi fasa magu fi [metr].
+golu aksi fasa magu pa zo met. rotu zo dozu re aksi sura. golu aksi fasa magu fi met.
 ```
 
 Translation: "Go forward 10 meters. Turn 90° left. Go forward 5 meters."
 
 Three imperatives in a row, chaining motion and rotation. The axis system plus the angle convention give a compact, unambiguous navigation language — useful for driving instructions, robotics, game commands, or military communications.
 
-`golu` and `rotu` are imperative forms (root + `-u`). Subject is dropped in imperatives. `[metr]` is a placeholder; "meter" doesn't have an assigned root yet.
+`golu` and `rotu` are imperative forms (root + `-u`). Subject is dropped in imperatives. `met` is a placeholder; "meter" doesn't have an assigned root yet.
 
 ### Example 5: Hedging a measurement
 
 ```
-kani samo re [metr] mezi aksi pa bra [box] keti. kani minu. no-visc y i.
+kani samo re met mezi aksi pa bra kub keti. kani minu. no-visc y i.
 ```
 
 Translation: "The longest dimension of the box might be 3 meters. It might be less. I haven't seen it."
 
-What this demonstrates: how `kani` lets a speaker hedge cleanly. Compare to English "it's 3 meters… maybe? I don't know" which needs three separate clauses to do the same job. `[box]` and `[metr]` are placeholders. `no-visc y i` is the perfect tense ("have not seen") + "I" + "it."
+What this demonstrates: how `kani` lets a speaker hedge cleanly. Compare to English "it's 3 meters… maybe? I don't know" which needs three separate clauses to do the same job. `kub` and `met` are placeholders. `no-visc y i` is the perfect tense ("have not seen") + "I" + "it."
 
 ### Example 6: A small reasoning chain
 

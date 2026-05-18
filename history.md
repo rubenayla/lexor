@@ -1653,3 +1653,45 @@ The closed-class underlying roots (now suffixed as e.g. `aksi`, `kani`, `samo`) 
 - **Number nouns** (one-thing, two-thing concepts vs digit). Currently the digits suffice; no dedicated "first / last / unique" roots yet. `first` (`pa-na`?) and `last` (`xut-na`?) compose from existing.
 - **Function words: what, who.** These compose with `ka` (universal question particle); no dedicated roots needed.
 - **Eye, ear, mouth.** Vowel-initial source words across all candidate languages make these hard to fit into consonant-initial CVC. Need a thoughtful design pass.
+
+---
+
+## 2026-05-18 — Vocab batch 2: 26 more content roots + L18 rewrite
+
+### What was added
+Second vocabulary batch (after C-2 stabilization). Twenty-six more content roots:
+
+- **10 verbs** — perception/communication (`mir` look, `chal` talk), motion (`kam` walk, `vor` fly, `sed` sit), action (`bib` drink, `lan` throw, `gid` drive, `pin` paint, `gan` find/gain).
+- **10 nouns** — body (`vid` eye, `bos` mouth), environment (`luv` rain), units (`met` meter, `kub` box), language/abstract (`nom` name, `lin` language, `lex` word, `num` number, `mon` money).
+- **6 adjectives** — speed (`rap` fast, `tar` slow), length (`lon` long), moisture (`mol` wet), aesthetic (`bel` beautiful), emotion (`dol` sad).
+
+Total lexicon: 185 → 211 entries.
+
+### Notable design moves
+- **`vor` for fly** (from Latin *volare*) — couldn't use `vol` because batch 1 took it for "want." Shifted to `vor`, accepted the slight mnemonic stretch.
+- **`vid` for eye** (vision-organ) — distinct from `vis` (see-action). Mnemonic from *videre*; the eye is the see-organ, vis- the verb.
+- **`bos` for mouth** (from Spanish *boca*) — couldn't use `bok` because /k/-final is forbidden by phonetics rule 1. Swapped k→s.
+- **`luv` for rain** (Spanish *lluvia* / Latin *pluvia*) — dropped the consonant cluster to fit CVC. Now `luve` (rains-present), `luvex` (is-raining), `luvo` (rained), etc.
+- **`chal` for talk/chat** — distinct from `dik` (say). Spanish *charlar*. Conversational vs propositional speech.
+- **`mir` for look-at** — distinct from `vis` (see-passively). Spanish *mirar*. Intentional vs incidental perception.
+
+### Sweep of active docs
+Replaced `[metr]` → `met` and `[box]` → `kub` everywhere in `walkthrough.md`, `examples.md`, `trials.md`. Replaced `pluv-` placeholder roots → `luv-` (so `pluve` → `luve`, etc.). Updated the convention note in `examples.md` to reflect that `bib`/`dik` are now locked roots, and the walkthrough preface to note that most placeholders are now real words.
+
+### L18 rewrite (committed as 1c4f31a, earlier today)
+Replaced the contrived original example sentences (she-might-come-pet-her, pushup-bet) with six worked scenes using real vocabulary from batch 1: morning routine, trade, modal+complement clause, navigation order, hedging measurement, reasoning chain. The new examples flow with locked vocabulary instead of placeholders, demonstrating real-world fluency of the language.
+
+### Frequencies coverage
+`frequencies.yaml` now has 102 `assigned_root` entries (was 76 before batch 2). Batch 2 added 22 new entries to the file for concepts not previously tracked.
+
+### Still missing (next batches)
+- **ear** — vowel-initial source words in all candidates; needs design thought.
+- **time** (the abstract concept) — `tem` taken (fear), `tep` is now `tepa` (preposition). Park.
+- **first / last / unique** — could compose with digits + ordinal marker (no marker yet) or get dedicated roots.
+- **morning / night** — composition or dedicated roots.
+- **Many specialized vocab** — colors (red/blue/green), animals (dog/cat), common foods, body parts beyond face. Tackleable in subsequent batches.
+
+### Parked
+- **Demonstratives** (this/that). Still parked from batch 1.
+- **Compound noun formation**. Lojban-style lujvo rules haven't been studied yet.
+- **Time-as-noun root**. Hard because of root collisions.

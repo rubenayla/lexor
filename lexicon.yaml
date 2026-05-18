@@ -279,3 +279,39 @@
 - {root: mat, kind: adj,  concept: "old / aged",                  semantic_parent: "age",                source: "Latin maturus (sense-shifted)"}
 - {root: kal, kind: adj,  concept: "hot",                         semantic_parent: "temperature",        source: "Latin calor"}
 - {root: kol, kind: adj,  concept: "cold",                        semantic_parent: "temperature",        source: "English cold / Latin gelidus"}
+
+# =============================================================================
+# CONTENT ROOTS — vocab batch 2 (2026-05-18)
+# =============================================================================
+
+# Verbs — perception, motion, communication, basic actions
+- {root: mir, kind: verb, concept: "look (at) / regard intentionally",  semantic_parent: "perception",   source: "Spanish mirar"}
+- {root: bib, kind: verb, concept: "drink",                              semantic_parent: "ingestion",    source: "Latin bibere"}
+- {root: kam, kind: verb, concept: "walk",                               semantic_parent: "motion",       source: "Spanish caminar"}
+- {root: vor, kind: verb, concept: "fly",                                semantic_parent: "motion",       source: "Latin volare (vol- taken for 'want', shifted to vor-)"}
+- {root: chal, kind: verb, concept: "talk / chat / converse",            semantic_parent: "communication", source: "Spanish charlar"}
+- {root: sed, kind: verb, concept: "sit",                                semantic_parent: "body_posture", source: "Latin sedere"}
+- {root: gan, kind: verb, concept: "find / gain / obtain",               semantic_parent: "transfer",     source: "Spanish ganar (sense broadened to 'find')"}
+- {root: lan, kind: verb, concept: "throw / hurl",                       semantic_parent: "force_application", source: "Spanish lanzar"}
+- {root: gid, kind: verb, concept: "drive / guide / steer",              semantic_parent: "action",       source: "Spanish guiar"}
+- {root: pin, kind: verb, concept: "paint / draw",                       semantic_parent: "production",   source: "Spanish pintar"}
+
+# Nouns — body, environment, language, abstract
+- {root: vid, kind: noun, concept: "eye",                                semantic_parent: "body_part",    source: "Latin videre (vision-organ; vis- is the 'see' verb root)"}
+- {root: bos, kind: noun, concept: "mouth",                              semantic_parent: "body_part",    source: "Spanish boca (k→s for /k/-final ban)"}
+- {root: met, kind: noun, concept: "meter (unit of length)",             semantic_parent: "unit",         source: "Greek/Latin metron"}
+- {root: kub, kind: noun, concept: "box / cube / container",             semantic_parent: "container",    source: "English cube / Latin cubus"}
+- {root: luv, kind: noun, concept: "rain",                               semantic_parent: "weather",      source: "Spanish lluvia / Latin pluvia"}
+- {root: nom, kind: noun, concept: "name",                               semantic_parent: "label",        source: "Latin nomen"}
+- {root: lin, kind: noun, concept: "language",                           semantic_parent: "communication_system", source: "Latin lingua"}
+- {root: lex, kind: noun, concept: "word",                               semantic_parent: "communication_unit", source: "Greek lexis"}
+- {root: num, kind: noun, concept: "number (as a concept / quantity)",   semantic_parent: "quantity",     source: "Latin numerus"}
+- {root: mon, kind: noun, concept: "money",                              semantic_parent: "commerce",     source: "Latin moneta / Spanish moneda"}
+
+# Adjectives — speed, length, state
+- {root: rap, kind: adj,  concept: "fast / quick",                       semantic_parent: "speed",        source: "Latin rapidus / English rapid"}
+- {root: tar, kind: adj,  concept: "slow",                               semantic_parent: "speed",        source: "Latin tardus"}
+- {root: lon, kind: adj,  concept: "long",                               semantic_parent: "length",       source: "Latin longus"}
+- {root: mol, kind: adj,  concept: "wet",                                semantic_parent: "moisture",     source: "Latin mollis (wet/soft)"}
+- {root: bel, kind: adj,  concept: "beautiful / pleasing",               semantic_parent: "aesthetic",    source: "Spanish bello / Latin bellus"}
+- {root: dol, kind: adj,  concept: "sad / painful / sorrowful",          semantic_parent: "emotion_state", source: "Spanish dolor (pain)"}

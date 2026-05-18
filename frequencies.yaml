@@ -90,10 +90,10 @@
 - {concept: "child",           assigned_root: nin, en: 230, es: 200, la: 170}
 - {concept: "body",            assigned_root: kor, en: 300, es: 280, la: 240}
 - {concept: "head",            assigned_root: kab, en: 270, es: 260, la: 190}
-- {concept: "eye",             en: 240, es: 230, la: 175}
+- {concept: "eye",             assigned_root: vid, en: 240, es: 230, la: 175}
 - {concept: "hand",            assigned_root: man, en: 210, es: 215, la: 160}
 - {concept: "foot",            assigned_root: ped, en: 290, es: 295, la: 210}
-- {concept: "mouth",           en: 380, es: 360, la: 330}
+- {concept: "mouth",           assigned_root: bos, en: 380, es: 360, la: 330}
 - {concept: "heart",           assigned_root: kar, en: 360, es: 320, la: 220}
 
 # High-frequency content words — environment
@@ -135,7 +135,7 @@
 - {concept: "love",            assigned_root: lov, en: 250, es: 130, la: 95, notes: "Lexor `am` planned per decisions.md no-lexical-opposite debate"}
 - {concept: "hate",            assigned_root: nem, en: 480, es: 470, la: 340, notes: "Lexor `od` planned (paired antonym to am)"}
 - {concept: "like",            assigned_root: gus, en: 105, es: 100, la: 230}
-- {concept: "find",            en: 175, es: 165, la: 200}
+- {concept: "find",            assigned_root: gan, en: 175, es: 165, la: 200}
 - {concept: "get / obtain",    en: 60,  es: 95,  la: 110}
 - {concept: "make / do",       assigned_root: dom,  en: 22,  es: 28,  la: 35}
 - {concept: "use",             assigned_root: tul, en: 90,  es: 110, la: 160}
@@ -151,7 +151,7 @@
 - {concept: "sing",            assigned_root: son, en: 530, es: 500, la: 380}
 - {concept: "dance",           assigned_root: bal, en: 700, es: 650, la: 750}
 - {concept: "swim",            assigned_root: nat, en: 800, es: 750, la: 480}
-- {concept: "fly",             en: 620, es: 600, la: 350}
+- {concept: "fly",             assigned_root: vor, en: 620, es: 600, la: 350}
 
 # Numbers beyond digits (handled by digit stream — listed for completeness)
 - {concept: "first",           en: 75,  es: 80,  la: 50}
@@ -166,3 +166,31 @@
 - {concept: "weekend",         en: 1500, notes: "English-specific concept"}
 - {concept: "siesta",          es: 1800, notes: "Spanish-cultural"}
 - {concept: "senate",          la: 60,   notes: "Latin-cultural (Roman institution)"}
+
+# =============================================================================
+# VOCAB BATCH 2 ADDITIONS (2026-05-18) — concepts added during batch 2
+# =============================================================================
+# Ranks are estimates; will be replaced with corpus-derived data later.
+
+- {concept: "drink",          assigned_root: bib,  en: 240, es: 200, la: 130}
+- {concept: "walk",           assigned_root: kam,  en: 180, es: 160, la: 200}
+- {concept: "talk / chat",    assigned_root: chal, en: 110, es: 90,  la: 250, notes: "Conversational counterpart to dik (say)"}
+- {concept: "sit",            assigned_root: sed,  en: 290, es: 270, la: 180}
+- {concept: "throw",          assigned_root: lan,  en: 420, es: 380, la: 280}
+- {concept: "drive / guide",  assigned_root: gid,  en: 270, es: 280, la: 290}
+- {concept: "paint / draw",   assigned_root: pin,  en: 550, es: 510, la: 480}
+- {concept: "look (intentional)", assigned_root: mir, en: 200, es: 150, la: 280, notes: "Distinct from vis (passive see)"}
+- {concept: "meter",          assigned_root: met,  en: 700, es: 650, la: 900, notes: "Unit of length (SI)"}
+- {concept: "box / container", assigned_root: kub, en: 600, es: 580, la: 700}
+- {concept: "rain",           assigned_root: luv,  en: 480, es: 420, la: 280}
+- {concept: "name",           assigned_root: nom,  en: 120, es: 110, la: 150}
+- {concept: "language",       assigned_root: lin,  en: 380, es: 320, la: 380}
+- {concept: "word",           assigned_root: lex,  en: 280, es: 290, la: 340}
+- {concept: "number",         assigned_root: num,  en: 320, es: 310, la: 280}
+- {concept: "money",          assigned_root: mon,  en: 290, es: 280, la: 400}
+- {concept: "fast / quick",   assigned_root: rap,  en: 350, es: 330, la: 360}
+- {concept: "slow",           assigned_root: tar,  en: 450, es: 420, la: 380}
+- {concept: "long",           assigned_root: lon,  en: 170, es: 160, la: 200}
+- {concept: "wet",            assigned_root: mol,  en: 580, es: 540, la: 460}
+- {concept: "beautiful",      assigned_root: bel,  en: 360, es: 230, la: 290}
+- {concept: "sad",            assigned_root: dol,  en: 420, es: 350, la: 320}
