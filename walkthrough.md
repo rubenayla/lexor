@@ -522,47 +522,89 @@ When you want to use the same phrase several times without retyping it, give it 
 
 ## L18 — Composing several features
 
-A small collection of worked examples. Each one combines several earlier features in a way the language is designed to handle smoothly.
+A small collection of worked examples. With vocab batch 1 (2026-05-18), most everyday concepts are now real Lexor words. Only specialized vocabulary (like "meter" and "box") still appears as `[bracketed]` placeholders.
 
-### Example 1: she might come, but won't eat unless we ask
-
-```
-kani vene e. isi no-kani musi pet e ke loma, no-lomy e.
-```
-
-Sentence 1: `kani vene e` — "She might come." (`kani` = might, `vene` = come-present, `e` = she.)
-
-Sentence 2: `isi no-kani musi pet e ke loma, no-lomy e` — "If we can't necessarily ask her to eat, she would not eat." Stilted in English but legal Lexor; demonstrates a modal inside a conditional inside an embedded clause.
-
-### Example 2: a pushup bet with a number range
+### Example 1: Morning scene
 
 ```
-dati dike e ke kani domi e bra rot bra re keti bra ko zo zo keti keti pushupn. ergi lori e kawa ke no-kani.
+vige fema. some nina. kere vat fema. labe e.
 ```
 
-Translation: "Given that she says she can do (between 3 and 400) pushups: therefore (she will cry) because (it is impossible)."
+Word-by-word:
+- `vige fema` — wakes-up, the-woman.
+- `some nina` — sleeps, the-child.
+- `kere vat fema` — asks-for, water, the-woman.
+- `labe e` — works, she.
 
-This silly example exercises: reasoning markers (`dati`, `ergi`), a modal (`kani`), grouping brackets around a number range, and embedded clauses.
+Translation: "The woman wakes up. The child sleeps. The woman asks for water. She works."
 
-### Example 3: a navigation order
+What this demonstrates: simple verb-object-subject (VOS) sentences using content nouns. Conjugated verbs (`vige` wakes, `some` sleeps, `kere` asks-for, `labe` works). Pronoun continuity — `e` in the last sentence refers back to `fema` from earlier.
+
+### Example 2: Trade
 
 ```
-gol aksi fasa magu pa zo metr e. rot zo dozu re aksi sura e. gol aksi fasa magu fi metr e.
+kope kasa vira. vezo lapa fema.
+```
+
+Word-by-word:
+- `kope kasa vira` — buys, house, man.
+- `vezo lapa fema` — sold, stone, woman.
+
+Translation: "The man buys the house. The woman sold the stone."
+
+What this demonstrates: noun subjects (not pronouns), and adjacent sentences in different tenses — present (`kope` = buys) and past (`vezo` = sold).
+
+### Example 3: She might come home
+
+```
+dike e ke kani veni kasu.
+```
+
+Word-by-word:
+- `dike e` — says, she.
+- `ke` — that.
+- `kani veni kasu` — might come-future to-house.
+
+Translation: "She says she might come home."
+
+What this demonstrates: a complement clause introduced by `ke`, with a modal (`kani`) inside the embedded clause, and recipient role on a noun (`kasu` = `kas` + `-u` recipient-role vowel = "to the house").
+
+### Example 4: Navigation order
+
+```
+golu aksi fasa magu pa zo [metr]. rotu zo dozu re aksi sura. golu aksi fasa magu fi [metr].
 ```
 
 Translation: "Go forward 10 meters. Turn 90° left. Go forward 5 meters."
 
-Three crisp imperatives in a row, chaining motion and rotation. The axis system plus the angle convention makes this kind of language compact and unambiguous — useful for driving instructions, robotics, game commands, military communications.
+Three imperatives in a row, chaining motion and rotation. The axis system plus the angle convention give a compact, unambiguous navigation language — useful for driving instructions, robotics, game commands, or military communications.
 
-### Example 4: hedging a measurement
+`golu` and `rotu` are imperative forms (root + `-u`). Subject is dropped in imperatives. `[metr]` is a placeholder; "meter" doesn't have an assigned root yet.
+
+### Example 5: Hedging a measurement
 
 ```
-kani samo re metr mezi aksi pa bra box keti. kani minu. no-visc y i.
+kani samo re [metr] mezi aksi pa bra [box] keti. kani minu. no-visc y i.
 ```
 
 Translation: "The longest dimension of the box might be 3 meters. It might be less. I haven't seen it."
 
-Shows how `kani` lets a speaker hedge cleanly. Compare to English "it's 3 meters… maybe? I don't know" which needs three separate clauses to do the same job.
+What this demonstrates: how `kani` lets a speaker hedge cleanly. Compare to English "it's 3 meters… maybe? I don't know" which needs three separate clauses to do the same job. `[box]` and `[metr]` are placeholders. `no-visc y i` is the perfect tense ("have not seen") + "I" + "it."
+
+### Example 6: A small reasoning chain
+
+```
+dati labe vira. dati some nina. ergi no-vige nina kawa ke labe vira.
+```
+
+Word-by-word:
+- `dati labe vira` — given, works, man.
+- `dati some nina` — given, sleeps, child.
+- `ergi no-vige nina kawa ke labe vira` — therefore, not-wakes-up, child, because that works man.
+
+Translation: "Given that the man works. Given that the child sleeps. Therefore the child does not wake up, because the man works."
+
+What this demonstrates: reasoning particles (`dati` premise, `ergi` therefore), causal subordinator (`kawa ke` because-that), negation on a verb (`no-vige`), and real content nouns and verbs throughout — no placeholders at all.
 
 ---
 
@@ -572,6 +614,6 @@ This walkthrough covers most of the locked grammar. The remaining details are in
 
 Open design questions are tracked in `tasks.md`. Unmet design goals are in `trials.md` — `grep` for `[.*, open]` to see them all.
 
-The vocabulary itself is still mostly unwritten. Every bracketed `[word]` above is a placeholder for a content root that hasn't been chosen yet. The priority list for filling those in is in `frequencies.yaml`.
+The vocabulary is being built out incrementally. As of vocab batch 1 (2026-05-18), the lexicon has 185 entries covering common verbs, nouns, and adjectives — enough for most everyday topics. Specialized vocabulary (units of measurement, less common objects) still appears as bracketed placeholders. The priority list for filling those in is in `frequencies.yaml`.
 
 If a sentence shape here parses two ways in your head, that's either a bug in the walkthrough or a real ambiguity worth filing as a `[trap]` entry in `trials.md`. Both are useful to flag.
