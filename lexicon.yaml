@@ -220,3 +220,62 @@
 - {root: vit, kind: verb, concept: "avoid / shun",        semantic_parent: "motion",       source: "Latin vitare"}
 - {root: pat, kind: verb, concept: "suffer / endure",     semantic_parent: "emotion",      source: "Latin pati"}
 - {root: dur, kind: verb, concept: "last / endure (time)", semantic_parent: "temporal_boundary", source: "Latin durare"}
+
+# =============================================================================
+# CONTENT ROOTS — vocab batch 1 (2026-05-18)
+# =============================================================================
+
+# Common verbs — cognition, preference, communication, daily activity
+- {root: vol, kind: verb, concept: "want / wish",                 semantic_parent: "preference",         source: "Latin volo (will/want)"}
+- {root: dev, kind: verb, concept: "need / require",              semantic_parent: "preference",         source: "Spanish deber, Latin debere"}
+- {root: sav, kind: verb, concept: "know (a fact)",               semantic_parent: "cognition",          source: "Spanish saber / Latin sapere"}
+- {root: kon, kind: verb, concept: "know (a person, be acquainted with)", semantic_parent: "social_recognition", source: "Spanish conocer / Latin cognoscere"}
+- {root: kog, kind: verb, concept: "think",                       semantic_parent: "cognition",          source: "Latin cogitare"}
+- {root: lov, kind: verb, concept: "love",                        semantic_parent: "emotion",            source: "English love"}
+- {root: nem, kind: verb, concept: "hate / strongly dislike",     semantic_parent: "emotion",            source: "Greek nemesis"}
+- {root: gus, kind: verb, concept: "like / be pleased by",        semantic_parent: "emotion",            source: "Spanish gustar"}
+- {root: tul, kind: verb, concept: "use (a tool / resource)",     semantic_parent: "action",             source: "English tool"}
+- {root: lab, kind: verb, concept: "work / labor",                semantic_parent: "action",             source: "Latin labor"}
+- {root: som, kind: verb, concept: "sleep",                       semantic_parent: "biological_state",   source: "Latin somnus"}
+- {root: vig, kind: verb, concept: "wake / be awake",             semantic_parent: "biological_state",   source: "Latin vigilare"}
+- {root: ker, kind: verb, concept: "ask / inquire",               semantic_parent: "communication",      source: "Spanish querer (request-stem)"}
+- {root: res, kind: verb, concept: "answer / respond",            semantic_parent: "communication",      source: "Latin respondere"}
+- {root: kop, kind: verb, concept: "buy / purchase",              semantic_parent: "transaction",        source: "Spanish comprar"}
+- {root: vez, kind: verb, concept: "sell",                        semantic_parent: "transaction",        source: "Spanish vender"}
+- {root: lud, kind: verb, concept: "play (game / recreation)",    semantic_parent: "recreation",         source: "Latin ludere"}
+- {root: son, kind: verb, concept: "sing",                        semantic_parent: "recreation",         source: "Spanish sonar (to sound) / Latin sonare"}
+- {root: bal, kind: verb, concept: "dance",                       semantic_parent: "recreation",         source: "Spanish bailar"}
+- {root: nat, kind: verb, concept: "swim",                        semantic_parent: "motion",             source: "Latin natare"}
+
+# Common content nouns — environment
+- {root: vat, kind: noun, concept: "water",                       semantic_parent: "liquid",             source: "English water (w→v)"}
+- {root: fog, kind: noun, concept: "fire",                        semantic_parent: "element",            source: "Spanish fuego"}
+- {root: ter, kind: noun, concept: "earth / ground / soil",       semantic_parent: "element",            source: "Latin terra"}
+- {root: sun, kind: noun, concept: "sun",                         semantic_parent: "celestial",          source: "English sun"}
+- {root: lun, kind: noun, concept: "moon",                        semantic_parent: "celestial",          source: "Latin luna"}
+- {root: tel, kind: noun, concept: "star",                        semantic_parent: "celestial",          source: "Latin stella (s-l reduced)"}
+- {root: lig, kind: noun, concept: "tree / wood",                 semantic_parent: "natural_object",     source: "Latin lignum"}
+- {root: lap, kind: noun, concept: "stone / rock",                semantic_parent: "natural_object",     source: "Latin lapis"}
+- {root: kas, kind: noun, concept: "house / dwelling",            semantic_parent: "structure",          source: "Spanish casa"}
+- {root: vej, kind: noun, concept: "road / way / path",           semantic_parent: "path",               source: "English way"}
+
+# Content nouns — people and body
+- {root: gen, kind: noun, concept: "person / human",              semantic_parent: "human",              source: "Latin gens / genus"}
+- {root: vir, kind: noun, concept: "man (adult male)",            semantic_parent: "human",              source: "Latin vir"}
+- {root: fem, kind: noun, concept: "woman (adult female)",        semantic_parent: "human",              source: "Latin femina"}
+- {root: nin, kind: noun, concept: "child / young person",        semantic_parent: "human",              source: "Spanish niño"}
+- {root: kor, kind: noun, concept: "body (whole physical body)",  semantic_parent: "body",               source: "Latin corpus"}
+- {root: kab, kind: noun, concept: "head",                        semantic_parent: "body_part",          source: "Latin caput"}
+- {root: kar, kind: noun, concept: "heart",                       semantic_parent: "body_part",          source: "Latin cor / cardio-"}
+- {root: man, kind: noun, concept: "hand",                        semantic_parent: "body_part",          source: "Latin manus / Spanish mano"}
+- {root: ped, kind: noun, concept: "foot",                        semantic_parent: "body_part",          source: "Latin pes / pedis"}
+
+# Common adjectives — evaluation, size, age, temperature
+- {root: bon, kind: adj,  concept: "good",                        semantic_parent: "evaluation",         source: "Latin bonus / Spanish bueno"}
+- {root: mal, kind: adj,  concept: "bad",                         semantic_parent: "evaluation",         source: "Latin malus / Spanish malo"}
+- {root: big, kind: adj,  concept: "big / large",                 semantic_parent: "size",               source: "English big"}
+- {root: tin, kind: adj,  concept: "small / tiny",                semantic_parent: "size",               source: "English tiny"}
+- {root: nov, kind: adj,  concept: "new",                         semantic_parent: "age",                source: "Latin novus / Spanish nuevo"}
+- {root: mat, kind: adj,  concept: "old / aged",                  semantic_parent: "age",                source: "Latin maturus (sense-shifted)"}
+- {root: kal, kind: adj,  concept: "hot",                         semantic_parent: "temperature",        source: "Latin calor"}
+- {root: kol, kind: adj,  concept: "cold",                        semantic_parent: "temperature",        source: "English cold / Latin gelidus"}

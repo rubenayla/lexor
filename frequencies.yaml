@@ -84,31 +84,31 @@
 - {concept: "not",             assigned_root: "no-", en: 8,  es: 18,  la: 20}
 
 # High-frequency content words — body
-- {concept: "person",          en: 130, es: 120, la: 100}
-- {concept: "man (male adult)", en: 100, es: 140, la: 90}
-- {concept: "woman",           en: 140, es: 145, la: 200}
-- {concept: "child",           en: 230, es: 200, la: 170}
-- {concept: "body",            en: 300, es: 280, la: 240}
-- {concept: "head",            en: 270, es: 260, la: 190}
+- {concept: "person",          assigned_root: gen, en: 130, es: 120, la: 100}
+- {concept: "man (male adult)", assigned_root: vir, en: 100, es: 140, la: 90}
+- {concept: "woman",           assigned_root: fem, en: 140, es: 145, la: 200}
+- {concept: "child",           assigned_root: nin, en: 230, es: 200, la: 170}
+- {concept: "body",            assigned_root: kor, en: 300, es: 280, la: 240}
+- {concept: "head",            assigned_root: kab, en: 270, es: 260, la: 190}
 - {concept: "eye",             en: 240, es: 230, la: 175}
-- {concept: "hand",            en: 210, es: 215, la: 160}
-- {concept: "foot",            en: 290, es: 295, la: 210}
+- {concept: "hand",            assigned_root: man, en: 210, es: 215, la: 160}
+- {concept: "foot",            assigned_root: ped, en: 290, es: 295, la: 210}
 - {concept: "mouth",           en: 380, es: 360, la: 330}
-- {concept: "heart",           en: 360, es: 320, la: 220}
+- {concept: "heart",           assigned_root: kar, en: 360, es: 320, la: 220}
 
 # High-frequency content words — environment
-- {concept: "water",           en: 220, es: 180, la: 120}
-- {concept: "fire",            en: 410, es: 400, la: 270}
-- {concept: "earth (ground)",  en: 340, es: 310, la: 230}
+- {concept: "water",           assigned_root: vat, en: 220, es: 180, la: 120}
+- {concept: "fire",            assigned_root: fog, en: 410, es: 400, la: 270}
+- {concept: "earth (ground)",  assigned_root: ter, en: 340, es: 310, la: 230}
 - {concept: "air",             en: 430, es: 420, la: 290}
 - {concept: "sky",             en: 470, es: 450, la: 280}
-- {concept: "sun",             en: 380, es: 350, la: 250}
-- {concept: "moon",            en: 600, es: 550, la: 310}
-- {concept: "star",            en: 700, es: 650, la: 330}
-- {concept: "tree",            en: 480, es: 460, la: 270}
-- {concept: "stone",           en: 550, es: 530, la: 290}
-- {concept: "house",           en: 180, es: 160, la: 200}
-- {concept: "road / way",      en: 260, es: 220, la: 180}
+- {concept: "sun",             assigned_root: sun, en: 380, es: 350, la: 250}
+- {concept: "moon",            assigned_root: lun, en: 600, es: 550, la: 310}
+- {concept: "star",            assigned_root: tel, en: 700, es: 650, la: 330}
+- {concept: "tree",            assigned_root: lig, en: 480, es: 460, la: 270}
+- {concept: "stone",           assigned_root: lap, en: 550, es: 530, la: 290}
+- {concept: "house",           assigned_root: kas, en: 180, es: 160, la: 200}
+- {concept: "road / way",      assigned_root: vej, en: 260, es: 220, la: 180}
 
 # Time & state
 - {concept: "time",            en: 70,  es: 75,  la: 50}
@@ -117,40 +117,40 @@
 - {concept: "hour",            assigned_root: xora,  en: 220, es: 240, la: 260}
 - {concept: "morning",         en: 460, es: 450, la: 380}
 - {concept: "night",           en: 280, es: 250, la: 200}
-- {concept: "good",            en: 65,  es: 60,  la: 90}
-- {concept: "bad",             en: 280, es: 230, la: 250}
-- {concept: "big",             en: 95,  es: 85,  la: 80}
-- {concept: "small",           en: 170, es: 160, la: 150}
-- {concept: "new",             en: 145, es: 140, la: 130}
-- {concept: "old",             en: 200, es: 190, la: 170}
-- {concept: "hot",             en: 470, es: 450, la: 400}
-- {concept: "cold",            en: 460, es: 440, la: 410}
+- {concept: "good",            assigned_root: bon, en: 65,  es: 60,  la: 90}
+- {concept: "bad",             assigned_root: mal, en: 280, es: 230, la: 250}
+- {concept: "big",             assigned_root: big, en: 95,  es: 85,  la: 80}
+- {concept: "small",           assigned_root: tin, en: 170, es: 160, la: 150}
+- {concept: "new",             assigned_root: nov, en: 145, es: 140, la: 130}
+- {concept: "old",             assigned_root: mat, en: 200, es: 190, la: 170}
+- {concept: "hot",             assigned_root: kal, en: 470, es: 450, la: 400}
+- {concept: "cold",            assigned_root: kol, en: 460, es: 440, la: 410}
 
 # Action verbs — high frequency, not yet assigned
-- {concept: "want",            en: 45,  es: 55,  la: 80}
-- {concept: "need",            en: 130, es: 110, la: 140}
-- {concept: "know (fact)",     en: 55,  es: 50,  la: 60}
-- {concept: "know (person)",   en: 220, es: 130, la: 80, notes: "Spanish/Latin split conocer/saber vs scire/cognoscere"}
-- {concept: "think",           en: 80,  es: 90,  la: 100}
-- {concept: "love",            en: 250, es: 130, la: 95, notes: "Lexor `am` planned per decisions.md no-lexical-opposite debate"}
-- {concept: "hate",            en: 480, es: 470, la: 340, notes: "Lexor `od` planned (paired antonym to am)"}
-- {concept: "like",            en: 105, es: 100, la: 230}
+- {concept: "want",            assigned_root: vol, en: 45,  es: 55,  la: 80}
+- {concept: "need",            assigned_root: dev, en: 130, es: 110, la: 140}
+- {concept: "know (fact)",     assigned_root: sav, en: 55,  es: 50,  la: 60}
+- {concept: "know (person)",   assigned_root: kon, en: 220, es: 130, la: 80, notes: "Spanish/Latin split conocer/saber vs scire/cognoscere"}
+- {concept: "think",           assigned_root: kog, en: 80,  es: 90,  la: 100}
+- {concept: "love",            assigned_root: lov, en: 250, es: 130, la: 95, notes: "Lexor `am` planned per decisions.md no-lexical-opposite debate"}
+- {concept: "hate",            assigned_root: nem, en: 480, es: 470, la: 340, notes: "Lexor `od` planned (paired antonym to am)"}
+- {concept: "like",            assigned_root: gus, en: 105, es: 100, la: 230}
 - {concept: "find",            en: 175, es: 165, la: 200}
 - {concept: "get / obtain",    en: 60,  es: 95,  la: 110}
 - {concept: "make / do",       assigned_root: dom,  en: 22,  es: 28,  la: 35}
-- {concept: "use",             en: 90,  es: 110, la: 160}
-- {concept: "work (verb)",     en: 215, es: 210, la: 190}
-- {concept: "sleep",           en: 410, es: 390, la: 270}
-- {concept: "wake",            en: 600, es: 580, la: 450}
+- {concept: "use",             assigned_root: tul, en: 90,  es: 110, la: 160}
+- {concept: "work (verb)",     assigned_root: lab, en: 215, es: 210, la: 190}
+- {concept: "sleep",           assigned_root: som, en: 410, es: 390, la: 270}
+- {concept: "wake",            assigned_root: vig, en: 600, es: 580, la: 450}
 - {concept: "speak / talk",    en: 165, es: 70,  la: 90, notes: "Spanish split decir/hablar — `dik` covers say; talk may need separate root `parl`"}
-- {concept: "ask",             en: 180, es: 180, la: 230}
-- {concept: "answer / reply",  en: 320, es: 300, la: 350}
-- {concept: "buy",             en: 380, es: 290, la: 320}
-- {concept: "sell",            en: 470, es: 380, la: 360}
-- {concept: "play",            en: 200, es: 220, la: 380}
-- {concept: "sing",            en: 530, es: 500, la: 380}
-- {concept: "dance",           en: 700, es: 650, la: 750}
-- {concept: "swim",            en: 800, es: 750, la: 480}
+- {concept: "ask",             assigned_root: ker, en: 180, es: 180, la: 230}
+- {concept: "answer / reply",  assigned_root: res, en: 320, es: 300, la: 350}
+- {concept: "buy",             assigned_root: kop, en: 380, es: 290, la: 320}
+- {concept: "sell",            assigned_root: vez, en: 470, es: 380, la: 360}
+- {concept: "play",            assigned_root: lud, en: 200, es: 220, la: 380}
+- {concept: "sing",            assigned_root: son, en: 530, es: 500, la: 380}
+- {concept: "dance",           assigned_root: bal, en: 700, es: 650, la: 750}
+- {concept: "swim",            assigned_root: nat, en: 800, es: 750, la: 480}
 - {concept: "fly",             en: 620, es: 600, la: 350}
 
 # Numbers beyond digits (handled by digit stream — listed for completeness)

@@ -1615,3 +1615,41 @@ History.md and decisions.md historical entries are unchanged — they document t
 - **Compound and derivation morphology** at the closed-class level. Lujvo-style closed-class compounds aren't yet designed.
 - **`bra` exception** is a little inconsistent (markers should end in `-i`, but `bra` doesn't). Tolerable for now; revisit if it bites.
 - **Stale example text** that uses bare verb roots (like `dik e` instead of `dike e`). Not a C-2 issue; pre-existing. Clean up in a future pass.
+
+---
+
+## 2026-05-18 — Vocab batch 1: 47 content roots
+
+### What was added
+First substantive vocabulary buildout, post-C-2. Forty-seven content roots covering universal high-frequency concepts:
+
+- **20 verbs** — preference (`vol` want, `dev` need, `gus` like, `lov` love, `nem` hate), cognition (`sav` know-fact, `kon` know-person, `kog` think), action (`tul` use, `lab` work), biological state (`som` sleep, `vig` wake), communication (`ker` ask, `res` answer), transaction (`kop` buy, `vez` sell), recreation (`lud` play, `son` sing, `bal` dance), motion (`nat` swim).
+- **10 environment nouns** — `vat` water, `fog` fire, `ter` earth, `sun` sun, `lun` moon, `tel` star, `lig` tree, `lap` stone, `kas` house, `vej` road.
+- **9 people / body nouns** — `gen` person, `vir` man, `fem` woman, `nin` child, `kor` body, `kab` head, `kar` heart, `man` hand, `ped` foot.
+- **8 adjectives** — `bon` good, `mal` bad, `big` big, `tin` small, `nov` new, `mat` old, `kal` hot, `kol` cold.
+
+### Sources
+Mostly Latin and Spanish (≈70%) where the everyday Romance word fits CVC cleanly. English (≈25%) where the Germanic form is more recognizable (`big`, `tin`, `lov`, `kol`, `sun`, `vej`, `vat`, `tul`). Greek (≈5%) for `nem` (hate).
+
+### Phonetic constraints honored
+- All CVC.
+- None /k/-final.
+- None h+vowel start (this killed obvious candidates `hom` for person and `hat` for hate — switched to `gen` and `nem`).
+- No doubled consonants, no 3+ clusters within a root.
+
+### Collision avoidance
+The closed-class underlying roots (now suffixed as e.g. `aksi`, `kani`, `samo`) were treated as off-limits at the root level even though their bare CVC form isn't in lexicon.yaml — reusing them would confuse learners who recognize the closed-class word.
+
+### Coverage
+`frequencies.yaml` now has 76 `assigned_root` entries (was 29 before this batch). Concepts still needing roots at the top of the priority queue: time, eye, mouth, air, sky, morning, night, find, get/obtain, speak/talk specifically (currently composes with `dik`), fly, first, last.
+
+### What this unblocks
+- Real example sentences with vocabulary instead of `[bracketed]` placeholders. The walkthrough's L18 paragraphs can now be rewritten using actual roots.
+- Validation that the C-2 system is comfortable in practice with real content words flowing through.
+- Frequency-driven assignment continues — next batch could target body parts that need more design effort (eye, ear, mouth) plus closure of the most-cited gaps in trials.
+
+### Parked
+- **Demonstratives** (this, that, these, those). Composable with `ka` + `ke` or new root family. Defer to its own design round.
+- **Number nouns** (one-thing, two-thing concepts vs digit). Currently the digits suffice; no dedicated "first / last / unique" roots yet. `first` (`pa-na`?) and `last` (`xut-na`?) compose from existing.
+- **Function words: what, who.** These compose with `ka` (universal question particle); no dedicated roots needed.
+- **Eye, ear, mouth.** Vowel-initial source words across all candidate languages make these hard to fit into consonant-initial CVC. Need a thoughtful design pass.
