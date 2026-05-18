@@ -557,7 +557,7 @@ Three crisp imperatives in a row, chaining motion and rotation. The axis system 
 ### Example 4: hedging a measurement
 
 ```
-kani samo re metr mezi aksi pa bra box keti. kani minu. no-vis y i.
+kani samo re metr mezi aksi pa bra box keti. kani minu. no-visc y i.
 ```
 
 Translation: "The longest dimension of the box might be 3 meters. It might be less. I haven't seen it."

@@ -89,7 +89,7 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
     - `tomu bra re keti bra ko zo zo keti e` — "between 3 and 400 (pushups)." Without brackets, `tomu re ko zo zo` would fuse all four digits into `rekozozo` (= 3400) and `tomu` would be missing its second argument — ill-formed.
     - `tomu bra re zo zo keti bra ko zo zo keti e` — "between 300 and 400." Always bracket both arguments; never trust the digit-stream rule to split a multi-number expression on its own.
 
-## 9b. Epistemic modality (kan / mus)
+## 9b. Epistemic modality (kani / musi)
 
 49a. `kani pluve` — "It might rain." / "Possibly it rains." (◇)
 49b. `musi pluve` — "It must be raining." / "Necessarily." (□)
@@ -98,7 +98,7 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 49e. `kani loka-x i kune kani loka-y i kune no- mesa` — "Possibly at-x AND possibly at-y AND no measurement." (quantum superposition without smuggling in a definite location)
 49f. `dik e ke kani pluve` — "She says that it might rain." (modal inside a complement clause)
 
-## 9c. Axis system (aks / tip / mez)
+## 9c. Axis system (aksi / tipi / mezi)
 
 49g. `aksi fasa` — "the X axis (forward-back axis, agent-frame)."
 49h. `aksi sura magu` — "upward direction" (Z axis, + polarity).
@@ -126,7 +126,7 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
    - 3 o'clock (right): `aksi lata minu` (cardinal) or `rota minu zo dozu re aksi sura` (angle −1/4).
 49x. Non-cardinal "1:30 o'clock" (45° clockwise from 12) = `rota minu zo dozu pa sa aksi sura` ≈ "rotation of −1/8 around Z."
 
-## 9e. Graded probability (chan)
+## 9e. Graded probability (chani)
 
 49y. `chani zo demu ne zo pluve` — "It will rain with probability 0.90." (90% likely)
 49z. `chani zo demu fi samo a b` — "a equals b with probability 0.5." (Coin-flip uncertainty.)
