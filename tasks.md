@@ -2,8 +2,24 @@
 
 Open design questions parked here so we can address them one at a time.
 
-## Inbox
-(empty — VOS question addressed; see history.md 2026-05-15)
+## Inbox — next session candidates (queued 2026-05-19)
+
+Ready to pick up, ranked roughly by visible impact:
+
+- [ ] **Vocab batch 3** — second-tier high-frequency concepts. Likely additions:
+    - Colors: red, blue, green, yellow, black, white, gray.
+    - Animals: dog, cat, bird, fish, horse, cow.
+    - More body parts: ear (needs design — vowel-initial sources in all candidate languages), face, leg, arm, finger, hair, tooth, neck, back.
+    - Hard parked ones from batch 2: `ear`, `time` (abstract concept; `tem` and `tep` taken).
+    - Common verbs still missing: hear (locked `lis` already), feel (locked `sen`), believe, hope, dream, remember, forget, learn, teach, help, lose, leave-place.
+    - Common adjectives still missing: dry (counterpart to `mol` wet), strong/weak, full/empty, easy/hard, true/false, right/correct, wrong, dead/alive (already `viv`/`mor` for verbs), young (counterpart to `mat` old; `nin` is child-noun not adjective).
+    - Likely target: 30–50 roots.
+- [ ] **Compound noun formation rules** (Lojban-style lujvo). Unblocks derivatives like "doctor" = treat-agent, "kitchen" = cook-place, "teacher" = teach-agent, etc., without needing dedicated roots for each. Would let the lexicon spend less effort on compound concepts and more on atomic ones. Design round.
+- [ ] **H1 + H2 paired design round** — anti-adjective marker (for "more or less," "a lot or a little") plus neutral magnitude axis (for "weight" instead of "fatness/thinness," "temperature" instead of "hotness/coldness"). Closes trials H1 and H2 in one round.
+- [ ] **Stale-content cleanup in examples.md** — pre-existing bare-verb-root bugs like `dik e` instead of `dike e`. One careful pass to fix all instances. Low risk, visible-correctness win.
+- [ ] **Demonstrative system** (this / that / these / those). Parked since batch 1. Small new closed-class family (probably 2–4 markers under a `-i` subclass vowel, e.g., `ti` / `ta` / similar). Closes a gap that comes up constantly in real sentences.
+- [ ] **Ordinal markers** — "first," "second," "last." Compose with digit + ordinal suffix? Or new roots? Worth one round.
+- [ ] **Time-as-noun** — the abstract concept of "time" (not a specific unit like day/hour). `tem` and `tep` are taken; needs a creative root choice. Park as a vocab item but flag the design pressure.
 
 ## Design decisions to resolve
 - [x] **Part-of-speech marking** — resolved: suffix, vowel-initial, universal word shape `CVC + V[C]`. Derivation consonants: `r` agent, `n` act, `t` patient, `s` adjective. See decisions.md and history.md 2026-05-15.
