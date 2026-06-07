@@ -26,9 +26,9 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 
 ## 3. Negation
 
-12. `no-loma e` — "She doesn't eat." (logical negation, scope = entire predicate)
-13. `loma no-[apple] e` — "She eats not-an-apple." (scope = object only)
-14. `no-magu e [him]` — "She is not greater than him."
+12. `noloma e` — "She doesn't eat." (logical negation, scope = entire predicate)
+13. `loma no[apple] e` — "She eats not-an-apple." (scope = object only)
+14. `nomagu e [him]` — "She is not greater than him."
 
 ## 4. Quantifiers
 
@@ -59,7 +59,7 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 33. `loma e kawa ka` — "Why does she eat?"
 34. `ka loma [apple] vele loma [pear] e` — "Does she eat an apple or a pear?" (choice question)
 35. `loma e, ka` — "She eats, right?" (bare tag)
-36. `loma e, ka no-loma e` — "She eats, doesn't she?" (echo tag, explicit polarity)
+36. `loma e, ka noloma e` — "She eats, doesn't she?" (echo tag, explicit polarity)
 
 ## 7. Subordinate clauses
 
@@ -74,7 +74,7 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 ## 8. Conditionals
 
 44. `isi luve, lomy e [inside]` — "If it's raining, she would eat inside." (conditional `isi` + consequent in conditional `y`)
-45. `isi no-luve, goly e` — "If it isn't raining, she would go." (negated antecedent)
+45. `isi noluve, goly e` — "If it isn't raining, she would go." (negated antecedent)
 
 ## 9. Coordination and depth
 
@@ -93,9 +93,9 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 
 49a. `kani luve` — "It might rain." / "Possibly it rains." (◇)
 49b. `musi luve` — "It must be raining." / "Necessarily." (□)
-49c. `no- musi samo m1 m2` — "Not necessarily m1 = m2." (English's elusive "doesn't have to equal" reading)
-49d. `kani no- samo m1 m2` — "Possibly m1 ≠ m2." (the "can be different" reading without claiming they actually are)
-49e. `kani loka-x i kune kani loka-y i kune no- mesa` — "Possibly at-x AND possibly at-y AND no measurement." (quantum superposition without smuggling in a definite location)
+49c. `no musi samo m1 m2` — "Not necessarily m1 = m2." (English's elusive "doesn't have to equal" reading)
+49d. `kani no samo m1 m2` — "Possibly m1 ≠ m2." (the "can be different" reading without claiming they actually are)
+49e. `kani loka-x i kune kani loka-y i kune no mesa` — "Possibly at-x AND possibly at-y AND no measurement." (quantum superposition without smuggling in a definite location)
 49f. `dik e ke kani luve` — "She says that it might rain." (modal inside a complement clause)
 
 ## 9c. Axis system (aksi / tipi / mezi)
@@ -132,7 +132,7 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 49z. `chani zo demu fi samo a b` — "a equals b with probability 0.5." (Coin-flip uncertainty.)
 49aa. `chani zo demu pa luve` — "It'll rain with probability 0.1." (Unlikely.)
 49bb. Equivalences:
-    - `chani zo X` ≡ `no- kani X` — P = 0 = impossible.
+    - `chani zo X` ≡ `no kani X` — P = 0 = impossible.
     - `chani pa X` ≡ `musi X` — P = 1 = certain.
     - `kani X` ≈ `chani <unspecified positive> X` — speaker not committing to a specific value.
 49cc. Probability ranges (compose with comparison operators):
@@ -141,7 +141,7 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
     - `chani tomu zo demu du fi zo demu chi fi luve` — "P(rain) is between 0.25 and 0.75"
 49dd. Probability comparison: `magu chani luve chani ne` — "rain is more likely than snow" (chance-of-rain > chance-of-snow).
 49ee. Conditional probability: `chani zo demu ne zo luve dati stao nub-s [sky]` — "P(rain | sky is cloudy) = 0.9" (conditional via `dati`).
-49ff. `kani samo re metr mezi aksi pa bra box keti. chani zo demu chi fi samo re metr. no-vis y i` — "The longest dimension of the box might be 3 meters. It's probably 3 meters (P = 0.75). I haven't seen it." (Hedging with mixed modals.)
+49ff. `kani samo re metr mezi aksi pa bra box keti. chani zo demu chi fi samo re metr. novis y i` — "The longest dimension of the box might be 3 meters. It's probably 3 meters (P = 0.75). I haven't seen it." (Hedging with mixed modals.)
 49gg. Distinction from amount-precision:
     - `hav piru pa zo [apple] e` — "She has approximately 10 apples." (`piru` on the amount.)
     - `chani zo demu chi fi hav pa zo [apple] e` — "She probably has 10 apples." (`chani` on the proposition.)
@@ -151,7 +151,7 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 
 49. `dati luvo` — "Given that it rained." (premise)
 50. `dati luvo. golo e kawa ke luvo. ergi [floor wet]` — "Given it rained. She left because it rained. Therefore the floor is wet."
-51. Modus tollens: `dati luvo impi [floor wet]. no-[floor wet]. ergi no-luvo` — "Given rain implies wet floor. The floor is not wet. Therefore it did not rain."
+51. Modus tollens: `dati luvo impi [floor wet]. no[floor wet]. ergi noluvo` — "Given rain implies wet floor. The floor is not wet. Therefore it did not rain."
 
 ## 11. Copulas (the "is"-overload split)
 
@@ -185,16 +185,16 @@ Base quantities: `tes` stress, `dis` strain, `ner` energy, `las` recoverability 
 
 67. `mezi ner bra [steel] keti` — **toughness**: total absorbed energy to fracture.
 68. `mezi ner lasasa bra [steel] keti` — **resilience**: the recoverable (elastic) part of that energy.
-69. `mezi ner ze-lasasa bra [steel] keti` — **plastic energy**: the non-recoverable part. *English has no one-word term for this; Lexor builds it regularly.* Identity: toughness = resilience + plastic energy.
+69. `mezi ner zelasasa bra [steel] keti` — **plastic energy**: the non-recoverable part. *English has no one-word term for this; Lexor builds it regularly.* Identity: toughness = resilience + plastic energy.
 70. `mezi tes tepa rup bra [steel] keti` — **strength**: stress at fracture (`tepa` = at, `rup` = the fracture point).
 71. `mezi tes kexu dis bra [steel] keti` — **stiffness / elastic modulus**: stress per strain (`kexu` = per, same operator as the H3 pixels-per-mm case).
-72. `mezi dis ze-lasasa bra [steel] keti` — **ductility**: non-recoverable (plastic) strain capacity.
-73. `mezi dis ze-lasasa bra [glas] keti minu` — **brittle**: that same ductility, low (postposed `minu`).
+72. `mezi dis zelasasa bra [steel] keti` — **ductility**: non-recoverable (plastic) strain capacity.
+73. `mezi dis zelasasa bra [glas] keti minu` — **brittle**: that same ductility, low (postposed `minu`).
 74. `mezi dus bra [steel] keti` — **hardness**.
-75. `mezi kal bra [steel] keti` — **temperature**; `kalasa` = hot, `mi-kalasa` = cold, `kalasa magu` = hotter (the refactored `kal`/`kol`).
+75. `mezi kal bra [steel] keti` — **temperature**; `kalasa` = hot, `mikalasa` = cold, `kalasa magu` = hotter (the refactored `kal`/`kol`).
 
 76. **The case that started the thread — resilient *and* brittle, no contradiction:**
-    `mezi ner lasasa bra X keti magu, kune mezi dis ze-lasasa bra X keti minu`
+    `mezi ner lasasa bra X keti magu, kune mezi dis zelasasa bra X keti minu`
     — "X's elastic energy is high, **and** its plastic strain is low." A springy-but-shattering material. English's "brittle" obscures this by conflating an energy magnitude with a failure mode; here resilience is built on `ner` (energy) and brittleness on `dis` (strain), so the two ride independent axes and the sentence is plainly consistent.
 
 ---

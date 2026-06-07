@@ -81,7 +81,7 @@
 - {concept: "some",            assigned_root: kelu,  en: 110, es: 105, la: 105}
 - {concept: "and",             assigned_root: kune,  en: 3,   es: 5,   la: 10}
 - {concept: "or",              assigned_root: vele,  en: 75,  es: 70,  la: 60}
-- {concept: "not",             assigned_root: "no-", en: 8,  es: 18,  la: 20}
+- {concept: "not",             assigned_root: "no", en: 8,  es: 18,  la: 20}
 
 # High-frequency content words — body
 - {concept: "person",          assigned_root: gen, en: 130, es: 120, la: 100}

@@ -60,9 +60,9 @@
 # MARKERS (closed-class operators)
 # =============================================================================
 
-- {root: "no-", kind: marker, concept: "logical negation / complement (prefix, ≠)", source: "English/Spanish/Latin no", notes: "Polarity family with mi-/ze-. Outermost: scopes over a mi-/ze- derived concept (no-mi-X = 'not opposite-of-X'). Proposition/predicate-level."}
-- {root: "mi-", kind: marker, concept: "contrary / opposite pole (prefix, ×−1)",  source: "Latin minus; echoes quantifier minu", notes: "Bound prefix. Gradable BIPOLAR roots only (pretty/ugly, love/hate, hot/cold): mi-[pretty] = ugly. No ×−1 on unipolar scales — use postposed minu for 'less tough'. Mutually exclusive with ze- on one root. Exempt from subclass-vowel scheme like no-."}
-- {root: "ze-", kind: marker, concept: "privative / absence (prefix, ×0)",          source: "zero; echoes digit zo",            notes: "Bound prefix. Any scalar root: ze-[color] = colorless; on a bipolar scale lands on the neutral midpoint. Mutually exclusive with mi- on one root. Compositional equivalent = samo zo. Exempt from subclass-vowel scheme like no-."}
+- {root: "no", kind: marker, concept: "logical negation / complement (prefix, ≠)", source: "English/Spanish/Latin no", notes: "Polarity family with mi/ze. Outermost: scopes over a mi/ze derived concept (nomiX = 'not opposite-of-X'). Proposition/predicate-level."}
+- {root: "mi", kind: marker, concept: "contrary / opposite pole (prefix, ×−1)",  source: "Latin minus; echoes quantifier minu", notes: "Bound prefix. Gradable BIPOLAR roots only (pretty/ugly, love/hate, hot/cold): mi[pretty] = ugly. No ×−1 on unipolar scales — use postposed minu for 'less tough'. Mutually exclusive with ze on one root. Exempt from subclass-vowel scheme like no."}
+- {root: "ze", kind: marker, concept: "privative / absence (prefix, ×0)",          source: "zero; echoes digit zo",            notes: "Bound prefix. Any scalar root: ze[color] = colorless; on a bipolar scale lands on the neutral midpoint. Mutually exclusive with mi on one root. Compositional equivalent = samo zo. Exempt from subclass-vowel scheme like no."}
 - {root: ka,    kind: marker, concept: "universal question particle"}
 - {root: ke,    kind: marker, concept: "universal complementizer",  source: "Spanish/French que"}
 - {root: isi,    kind: marker, concept: "causal conditional (if)"}
@@ -75,8 +75,8 @@
 - {root: defi,   kind: marker, concept: "named-binding introducer",  source: "math/CS def"}
 - {root: bra,   kind: marker, concept: "group-open (paren-like)",   source: "English bracket (bra-ket split)", notes: "Pairs with `fini`-style closer `keti`. Used to group a sub-constituent inside a clause so operators bind unambiguously. Breaks digit-stream auto-fuse."}
 - {root: keti,   kind: marker, concept: "group-close",                source: "English bracket (bra-ket split)", notes: "Closes a `bra`-opened group. Nesting allowed (each `keti` matches the nearest unmatched `bra`)."}
-- {root: kani,   kind: marker, concept: "epistemic possibility (may/can/possibly)", source: "English can / German kann / Dutch kan / Swedish kan", notes: "Sentence-initial; scopes over the rest of the clause. Composes with `no-`. Dual of `musi` but locked directly to avoid forced composition. Epistemic flavor only — deontic permission parked."}
-- {root: musi,   kind: marker, concept: "epistemic necessity (must/necessarily)",   source: "English must / German muss",                                  notes: "Sentence-initial; scopes over the rest of the clause. Composes with `no-`. Dual of `kani`. Epistemic flavor only — deontic obligation parked."}
+- {root: kani,   kind: marker, concept: "epistemic possibility (may/can/possibly)", source: "English can / German kann / Dutch kan / Swedish kan", notes: "Sentence-initial; scopes over the rest of the clause. Composes with `no`. Dual of `musi` but locked directly to avoid forced composition. Epistemic flavor only — deontic permission parked."}
+- {root: musi,   kind: marker, concept: "epistemic necessity (must/necessarily)",   source: "English must / German muss",                                  notes: "Sentence-initial; scopes over the rest of the clause. Composes with `no`. Dual of `kani`. Epistemic flavor only — deontic obligation parked."}
 
 # Axis system (G3/G4/G5 closures, 2026-05-16)
 - {root: aksi,   kind: marker, concept: "axis (1D directed line, unsigned)",        source: "English axis / Latin axis",     notes: "Composes with spatial preposition for agent-frame axis (`aksi fasa` = X, `aksi lata` = Y, `aksi sura` = Z); with digit for object-frame rank (`aksi pa` = longest, `aksi du` = middle, `aksi re` = shortest). Polarity added via `magu` (+) / `minu` (-)."}
@@ -84,7 +84,7 @@
 - {root: mezi,   kind: marker, concept: "magnitude along an axis or scalar quality", source: "Spanish/Latin medir/metiri", notes: "Geometric: `mezi aksi pa bra X keti` = the longest dimension of X. Generalized 2026-06-07 to ANY scalar quality: `mezi bel X` = the degree of beauty of X. This is the neutral, direction-free magnitude term for a gradable concept (H2). Bridges axes/qualities to numeric magnitudes."}
 
 # Graded probability (closes D6, 2026-05-16)
-- {root: chani,  kind: marker, concept: "graded epistemic probability — P(X) = N",  source: "English/French/Spanish chance",  notes: "Sentence-initial; scopes over the rest of the clause. Takes a numeric expression first (the probability in [0,1]), then the proposition. `chani zo demu ne zo pluve` = 'it will rain with probability 0.90.' Scalar version of `kani` (◇) and `musi` (□): `chani zo` ≡ `no- kani`, `chani pa` ≡ `musi`. Composes with comparison operators inside the numeric slot: `chani magu zo demu fi X` = 'P(X) > 0.5.'"}
+- {root: chani,  kind: marker, concept: "graded epistemic probability — P(X) = N",  source: "English/French/Spanish chance",  notes: "Sentence-initial; scopes over the rest of the clause. Takes a numeric expression first (the probability in [0,1]), then the proposition. `chani zo demu ne zo pluve` = 'it will rain with probability 0.90.' Scalar version of `kani` (◇) and `musi` (□): `chani zo` ≡ `no kani`, `chani pa` ≡ `musi`. Composes with comparison operators inside the numeric slot: `chani magu zo demu fi X` = 'P(X) > 0.5.'"}
 
 # =============================================================================
 # COORDINATORS
@@ -279,20 +279,20 @@
 - {root: tin, kind: adj,  concept: "small / tiny",                semantic_parent: "size",               source: "English tiny"}
 - {root: nov, kind: adj,  concept: "new",                         semantic_parent: "age",                source: "Latin novus / Spanish nuevo"}
 - {root: mat, kind: adj,  concept: "old / aged",                  semantic_parent: "age",                source: "Latin maturus (sense-shifted)"}
-- {root: kal, kind: adj,  concept: "temperature / warmth (gradable quality)", semantic_parent: "physical_property", source: "Latin calor", notes: "H2 neutral-axis quality (refactored 2026-06-07, replaces the old kal=hot / kol=cold pair). hot = kalasa (positive default); cold = mi-kalasa (opposite pole); cooler = kalasa minu; temperature of X = mezi kal X. Bipolar around a contextual reference."}
+- {root: kal, kind: adj,  concept: "temperature / warmth (gradable quality)", semantic_parent: "physical_property", source: "Latin calor", notes: "H2 neutral-axis quality (refactored 2026-06-07, replaces the old kal=hot / kol=cold pair). hot = kalasa (positive default); cold = mikalasa (opposite pole); cooler = kalasa minu; temperature of X = mezi kal X. Bipolar around a contextual reference."}
 
 # =============================================================================
 # MATERIAL / MECHANICAL PROPERTIES (H2 neutral-axis qualities + base quantities)
 # Named engineering properties are COMPOSITIONS, not roots (decisions.md
 # 2026-06-07). Energy decomposes by deformation regime via the recoverability
 # adjective `las`, so plastic-only energy — which English cannot name in one
-# word — is expressible: `mezi ner ze-lasasa <X>`.
+# word — is expressible: `mezi ner zelasasa <X>`.
 # =============================================================================
 - {root: tes, kind: noun, concept: "mechanical stress (force per area, sigma)",     semantic_parent: "physical_property", source: "Latin tensio",    notes: "Strength = mezi tes tepa rup <X> (stress at fracture). Stiffness / elastic modulus = mezi tes kexu dis <X> (stress per strain)."}
-- {root: dis, kind: noun, concept: "strain / relative deformation (epsilon)",       semantic_parent: "physical_property", source: "distortion",       notes: "Ductility = mezi dis ze-lasasa <X> (non-recoverable strain capacity); brittle = that, minu."}
-- {root: ner, kind: noun, concept: "energy",                                        semantic_parent: "physical_property", source: "Greek energeia",   notes: "Absorbed-deformation energy = area under stress-strain. Toughness = mezi ner <X> (total to fracture); resilience = mezi ner lasasa <X> (recoverable part); plastic energy = mezi ner ze-lasasa <X>. toughness = resilience + plastic energy."}
-- {root: las, kind: adj,  concept: "deformation recoverability / springiness",      semantic_parent: "physical_property", source: "Greek elastikos",  notes: "H2 neutral axis. elastic = lasasa (recoverable, positive default); plastic = ze-lasasa (non-recoverable, x0). Scopes a quantity to the elastic vs plastic regime (see resilience / ductility)."}
-- {root: dus, kind: adj,  concept: "hardness (resistance to indentation/scratch)",  semantic_parent: "physical_property", source: "Latin durus",      notes: "H2 neutral axis. hard = dusasa; soft = mi-dusasa / dusasa minu; hardness of X = mezi dus X. Distinct from stiffness (mezi tes kexu dis) and from toughness."}
+- {root: dis, kind: noun, concept: "strain / relative deformation (epsilon)",       semantic_parent: "physical_property", source: "distortion",       notes: "Ductility = mezi dis zelasasa <X> (non-recoverable strain capacity); brittle = that, minu."}
+- {root: ner, kind: noun, concept: "energy",                                        semantic_parent: "physical_property", source: "Greek energeia",   notes: "Absorbed-deformation energy = area under stress-strain. Toughness = mezi ner <X> (total to fracture); resilience = mezi ner lasasa <X> (recoverable part); plastic energy = mezi ner zelasasa <X>. toughness = resilience + plastic energy."}
+- {root: las, kind: adj,  concept: "deformation recoverability / springiness",      semantic_parent: "physical_property", source: "Greek elastikos",  notes: "H2 neutral axis. elastic = lasasa (recoverable, positive default); plastic = zelasasa (non-recoverable, x0). Scopes a quantity to the elastic vs plastic regime (see resilience / ductility)."}
+- {root: dus, kind: adj,  concept: "hardness (resistance to indentation/scratch)",  semantic_parent: "physical_property", source: "Latin durus",      notes: "H2 neutral axis. hard = dusasa; soft = midusasa / dusasa minu; hardness of X = mezi dus X. Distinct from stiffness (mezi tes kexu dis) and from toughness."}
 - {root: rup, kind: noun, concept: "fracture / break / mechanical failure",         semantic_parent: "physical_property", source: "Latin rumpere",     notes: "The failure event. Strength = stress at fracture = mezi tes tepa rup <X>."}
 
 # =============================================================================

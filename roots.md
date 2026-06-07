@@ -155,7 +155,7 @@ Locked so far (closed class, CVC):
 
 | **Root**     | **Meaning**                                       | **Notes** |
 |--------------|---------------------------------------------------|-----------|
-| `no-`        | logical negation (prefix)                         | Phonologically bound to its host. Only "not" operator — no lexical-opposite marker exists. |
+| `no`        | logical negation (prefix)                         | Phonologically bound to its host. Only "not" operator — no lexical-opposite marker exists. |
 | `ka`         | universal question particle                       | Position pins meaning: initial = yes/no, in-slot = wh, after-preposition = role-question, in `ke`-clause = embedded. |
 | `ke`         | universal complementizer                          | Function determined by what precedes it. |
 | `isi`         | conditional particle                              | Pairs with conditional inner-vowel `y`. |
@@ -168,8 +168,8 @@ Locked so far (closed class, CVC):
 | `vari`        | variable/placeholder (prefix on one word)         | Flags slot or bound-name; pairs with `defi`. |
 | `defi`        | named-binding introducer                          | Form: `defi vari <name> <expression>`. Discourse-local scope; retract with `nulu defi vari <name>`; re-`defi` shadows. |
 | `bra … keti`  | paired sub-constituent grouping (paren-like)      | Wraps a sub-expression inside a clause so operators bind unambiguously. Breaks digit-stream auto-fuse. Nesting allowed (each `keti` matches the nearest unmatched `bra`). Mnemonic: English "bracket" split into bra + ket. |
-| `kani`        | epistemic possibility (may / can / possibly)      | Sentence-initial. Scopes over the rest of the clause. Composes with `no-`. Mnemonic: English/German *can/kann*. Dual of `musi` but locked directly. Epistemic only — deontic permission parked. |
-| `musi`        | epistemic necessity (must / necessarily)          | Sentence-initial. Scopes over the rest of the clause. Composes with `no-`. Mnemonic: English/German *must/muss*. Dual of `kani`. Epistemic only — deontic obligation parked. |
+| `kani`        | epistemic possibility (may / can / possibly)      | Sentence-initial. Scopes over the rest of the clause. Composes with `no`. Mnemonic: English/German *can/kann*. Dual of `musi` but locked directly. Epistemic only — deontic permission parked. |
+| `musi`        | epistemic necessity (must / necessarily)          | Sentence-initial. Scopes over the rest of the clause. Composes with `no`. Mnemonic: English/German *must/muss*. Dual of `kani`. Epistemic only — deontic obligation parked. |
 | `aksi`        | axis (1D directed line, unsigned)                 | Composes with spatial preposition for agent-frame axis (`aksi fasa` X, `aksi lata` Y, `aksi sura` Z); with digit for object-frame rank (`aksi pa` longest, `aksi du` middle, `aksi re` shortest). Polarity via `magu` (+) / `minu` (−). Mnemonic: English/Latin *axis*. |
 | `tipi`        | endpoint / extremum along an axis                 | Composes: `tipi aksi <ax> <pol>` for the extreme point. `tipi aksi sura magu bra box keti` = "the top of the box." Distinguishes location-at-extreme from relational `sura X` (above X) and from direction `aksi sura magu` (upward). Mnemonic: English *tip*. |
 | `mezi`        | dimensional magnitude (length along an axis)      | Composes: `mezi aksi <ax> bra X keti` = "the length of X along axis." Bridges geometric axes to numeric magnitudes. `mezi aksi pa` = longest dimension (object-frame, orientation-free). Mnemonic: Spanish/Latin *medir/metiri*. |

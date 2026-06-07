@@ -59,7 +59,7 @@ Grep examples: `grep '\[trap, open\]' trials.md` for traps without a fix yet.
 ### A7. "Password with no spaces and |" — coordinator vs conjunction [trap, passes]
 **English:** "Write a password with no spaces and |."
 **Trap:** Is `|` allowed (and = "separator between rules") or forbidden (and = "AND no |")?
-**Lexor:** `kune` (AND) only coordinates same-depth predications; doesn't sit inside a `no-` scope without explicit re-application. To forbid both: `no-spas kune no-pipe`. To present as separator: clause break + sentence boundary.
+**Lexor:** `kune` (AND) only coordinates same-depth predications; doesn't sit inside a `no` scope without explicit re-application. To forbid both: `nospas kune nopipe`. To present as separator: clause break + sentence boundary.
 **How:** decisions.md coordinators `kune`/`vele`, depth rule.
 
 ### A8. Between 3 and 400 pushups [trap, passes]
@@ -88,14 +88,14 @@ Grep examples: `grep '\[trap, open\]' trials.md` for traps without a fix yet.
 ### B1. not(a = b) vs a ≠ b [trap, passes]
 **English:** "a is not equal to b" — never equal, or "doesn't have to equal"?
 **Lexor:**
-- Assertion of inequality: `no- samo a b` (a ≠ b, claimed).
-- "a doesn't necessarily equal b": `no- musi samo a b` (¬□ a=b).
-- "a may or may not equal b": `kani no- samo a b` (◇ a≠b).
+- Assertion of inequality: `no samo a b` (a ≠ b, claimed).
+- "a doesn't necessarily equal b": `no musi samo a b` (¬□ a=b).
+- "a may or may not equal b": `kani no samo a b` (◇ a≠b).
 **How:** decisions.md modal operators `kani`/`musi` (2026-05-16).
 
 ### B2. "Masses can be different" [trap, passes]
 **English:** "The masses can be different" — speaker is not committing on whether they actually are.
-**Lexor:** `kani no- samo m1 m2` — "possibly m1 ≠ m2." Speaker explicitly does not commit to the inequality holding.
+**Lexor:** `kani no samo m1 m2` — "possibly m1 ≠ m2." Speaker explicitly does not commit to the inequality holding.
 **How:** decisions.md modal operators (2026-05-16).
 
 ### B3. Tense when uncertain [trap, passes]
@@ -114,7 +114,7 @@ Grep examples: `grep '\[trap, open\]' trials.md` for traps without a fix yet.
 
 ### C2. "The password is incorrect" [trap, passes]
 **English:** Predication ("has property wrong") vs literal-string-identity ("password = the word 'incorrect'").
-**Lexor:** `stao no-korek-s [password]` (state-of-being-incorrect) vs `samo liti incorrect fini [password]` (identity with the literal string).
+**Lexor:** `stao nokorek-s [password]` (state-of-being-incorrect) vs `samo liti incorrect fini [password]` (identity with the literal string).
 **How:** decisions.md `liti … fini` paired literal markers.
 
 ### C3. "My name is very stupid" [trap, passes]
@@ -210,7 +210,7 @@ See A5.
 
 ### E3. Multi-step reasoning [feature, passes]
 **Capability:** Premises → inference, chainable.
-**Trial:** `dati A impi B. no-B. ergi no-A.` (modus tollens, three crisp sentences).
+**Trial:** `dati A impi B. noB. ergi noA.` (modus tollens, three crisp sentences).
 **How:** decisions.md reasoning-particle set `dati`/`ergi`/`impi`.
 
 ### E4. Proof structuring [feature, open]
@@ -298,7 +298,7 @@ Three structurally distinct shapes; no overload.
 
 ### H2. Taper ratio / neutral magnitude term [feature, passes]
 **Capability:** A noun for the magnitude axis (e.g., "weight," "temperature") with no implied direction. Adjective specifies direction.
-**Lexor:** A gradable root names the *quality/dimension itself*, direction-free. The neutral magnitude noun is `mezi [quality] X` ("the degree of [quality] of X") — `mezi` generalized from geometric length to any scalar. Direction is added on top: bare adjective `[quality]asa` defaults positive; `minu` = low end; `mi-` = opposite pole; `ze-` = absence (× 0). A 0–1 taper ratio is just `mezi [taper] X` with a value, no value-meaning inversion.
+**Lexor:** A gradable root names the *quality/dimension itself*, direction-free. The neutral magnitude noun is `mezi [quality] X` ("the degree of [quality] of X") — `mezi` generalized from geometric length to any scalar. Direction is added on top: bare adjective `[quality]asa` defaults positive; `minu` = low end; `mi` = opposite pole; `ze` = absence (× 0). A 0–1 taper ratio is just `mezi [taper] X` with a value, no value-meaning inversion.
 **How:** decisions.md gradable-quality-roots decision + scalar-degree system + axis system `mezi` (2026-06-07).
 
 ### H3. Pixels-per-mm vs mm-per-pixel [trap, passes]
@@ -316,7 +316,7 @@ See A6.
 
 ### H6. Material-property completeness (plastic energy; brittle ≠ weak) [feature, passes]
 **English:** Names *resilience* (elastic energy) and *toughness* (total energy) but has **no one-word term for plastic-only energy**, and conflates *brittle* (failure mode) with *low toughness* (energy magnitude).
-**Lexor:** Decomposes over base quantities (`ner` energy, `dis` strain, `tes` stress) + the recoverability regime `las`. Plastic energy = `mezi ner ze-lasasa <X>` (regular phrase). Brittle is built on strain (`mezi dis ze-lasasa <X> minu`), low-toughness on energy (`mezi ner <X> minu`) — different roots, so the conflation is structurally impossible. A material can be `mezi ner lasasa <X> magu` (resilient) and `mezi dis ze-lasasa <X> minu` (brittle) at once with no contradiction.
+**Lexor:** Decomposes over base quantities (`ner` energy, `dis` strain, `tes` stress) + the recoverability regime `las`. Plastic energy = `mezi ner zelasasa <X>` (regular phrase). Brittle is built on strain (`mezi dis zelasasa <X> minu`), low-toughness on energy (`mezi ner <X> minu`) — different roots, so the conflation is structurally impossible. A material can be `mezi ner lasasa <X> magu` (resilient) and `mezi dis zelasasa <X> minu` (brittle) at once with no contradiction.
 **How:** decisions.md material-property decomposition + gradable-quality roots + scalar-degree system (2026-06-07). Worked forms in examples.md §14.
 
 ---
@@ -330,7 +330,7 @@ See A6.
 
 ### I2. Quantum superposition [stretch, passes]
 **Goal:** Express "the particle's position is in superposition over X and Y" without smuggling in a definite location.
-**Lexor:** `kani loka-x i kune kani loka-y i kune no- mesa` = "possibly at x AND possibly at y AND no measurement." Each location is modal-possible, not asserted-state.
+**Lexor:** `kani loka-x i kune kani loka-y i kune no mesa` = "possibly at x AND possibly at y AND no measurement." Each location is modal-possible, not asserted-state.
 **How:** decisions.md modal operators (2026-05-16).
 
 ### I3. Pronoun-less paragraph [stretch, passes]
@@ -348,8 +348,8 @@ See A6.
 
 ### I6. Composable comparator across adjectives [stretch, passes]
 **Goal:** "Less pretty" / "uglier" expressible without a separate antonym root.
-**Lexor:** Two routes, both without an antonym root. Bound prefix: `mi-[pretty]` = ugly, `mi-[pretty] magu` = uglier (more on the opposite end). Compositional: `[pretty] minu` = less pretty (lower on the same axis). The contrary prefix `mi-` (× −1) gives the opposite directly; `magu`/`minu` give degree.
-**How:** decisions.md scalar-degree system + bound polarity-prefix family `no-`/`mi-`/`ze-` (2026-06-07). Full worked sentences await locked adjective roots (vocab buildout); the mechanism is complete.
+**Lexor:** Two routes, both without an antonym root. Bound prefix: `mi[pretty]` = ugly, `mi[pretty] magu` = uglier (more on the opposite end). Compositional: `[pretty] minu` = less pretty (lower on the same axis). The contrary prefix `mi` (× −1) gives the opposite directly; `magu`/`minu` give degree.
+**How:** decisions.md scalar-degree system + bound polarity-prefix family `no`/`mi`/`ze` (2026-06-07). Full worked sentences await locked adjective roots (vocab buildout); the mechanism is complete.
 
 ### I7. "Yo voy el sábado" — fronting and topicalization [stretch, open]
 **Goal:** Distinguish "the day I'm going is Saturday" from "Saturday I'll go (possibly other days too)."

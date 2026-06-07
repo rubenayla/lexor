@@ -199,7 +199,7 @@ A condensed version of `pain.md` and `trials.md`, restated as comparison:
 
 - **Mandatory number.** English forces "a dog" vs "dogs" even when count is irrelevant or unknown. Lexor: number is an optional modifier.
 - **The "is"-overload.** English collapses identity (Mark Twain is Samuel Clemens), essential predication (the sky is blue), state predication (she is tired), set membership (a whale is a mammal), subset (mammals are animals), existence (there is a god), and literal identity (the password is "incorrect") into one verb. Lexor splits these: `samo` / `esto` / `stao` / `memo` / `totu+memo` / `kelu` / `liti…fini`.
-- **Negation scope.** "Not a equals b" is ambiguous between "never equal" and "doesn't have to equal." Lexor: positional `no-` with explicit modal operators (`musi`, `kani`) for the necessity reading.
+- **Negation scope.** "Not a equals b" is ambiguous between "never equal" and "doesn't have to equal." Lexor: positional `no` with explicit modal operators (`musi`, `kani`) for the necessity reading.
 - **"Top" vs "up" vs "height" conflation.** English uses "up" for direction and "top" for both location and quasi-direction. Lexor: `aksi sura magu` (direction), `tipi aksi sura magu bra X keti` (location), `mezi aksi sura bra X keti` (magnitude).
 - **Tense/aspect tangle.** English perfect, continuous, modal forms don't compose cleanly ("I might have been going to have eaten"). Lexor: one vowel = tense, one consonant `x` = continuous aspect, modals separate at sentence-start.
 - **Modal soup.** "Have to" / "must" / "may" / "might" / "could" / "should" each carry subtly different mixes of epistemic and deontic modality. Lexor: epistemic split (`kani`, `musi`, `chani`) with deontic explicitly parked, no conflation.
@@ -220,7 +220,7 @@ A condensed version of `pain.md` and `trials.md`, restated as comparison:
 - **Endpoint marker `tipi`** — English "tip" (end of anything).
 - **Several verb roots** when the English everyday word matched the concept: `xut` (shut, for close), `lis` (listen), `hav` (have), `lek` (read, via Latin but matches English "lecture" stem).
 - **Stress as parsing aid** — English's reliance on first-syllable stress on content words shaped Lexor's first-syllable stress convention.
-- **The basic concept of compositional negation** with a single morpheme (English "un-/not-" partially inspired the `no-` prefix).
+- **The basic concept of compositional negation** with a single morpheme (English "un-/not-" partially inspired the `no` prefix).
 
 ### What Lexor explicitly rejected from English
 

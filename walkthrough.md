@@ -244,18 +244,18 @@ Lexor uses small connector words to attach extra information like *where*, *when
 
 ## L7 — Saying "not"
 
-To negate a word, attach `no-` directly in front of it. The hyphen shows it's stuck to the next word, not a separate word.
+To negate a word, attach `no` directly in front of it. The hyphen shows it's stuck to the next word, not a separate word.
 
 | Lexor | Meaning |
 |---|---|
-| `no-loma e` | she doesn't eat (the whole action is negated) |
-| `loma no-[apple] e` | she eats not-an-apple (only the *thing eaten* is negated — she eats, but not an apple) |
-| `no-magu e [him]` | she is not greater than him (the comparison is negated) |
+| `noloma e` | she doesn't eat (the whole action is negated) |
+| `loma no[apple] e` | she eats not-an-apple (only the *thing eaten* is negated — she eats, but not an apple) |
+| `nomagu e [him]` | she is not greater than him (the comparison is negated) |
 
 **What this level shows:**
-- `no-` always scopes over the *one* word it's attached to. To negate a different part of the sentence, move `no-` to a different word. Three positions, three meanings.
-- Lexor doesn't have separate negation prefixes like English "un-," "non-," "anti-." There's just `no-` for everything.
-- Lexor has no built-in opposite marker either. "Love" and "hate" get their own separate roots (`am` and `od`). `no-am` means "doesn't love," which is not the same as "hates."
+- `no` always scopes over the *one* word it's attached to. To negate a different part of the sentence, move `no` to a different word. Three positions, three meanings.
+- Lexor doesn't have separate negation prefixes like English "un-," "non-," "anti-." There's just `no` for everything.
+- Lexor has no built-in opposite marker either. "Love" and "hate" get their own separate roots (`am` and `od`). `noam` means "doesn't love," which is not the same as "hates."
 
 ---
 
@@ -301,7 +301,7 @@ To put a small sentence inside a bigger one — like "the man who eats apples" o
 ## L10 — "If…then" sentences (conditionals)
 
 **Lexor:** `isi luve, lomy e [inside]` — if it's raining, she would eat inside
-**Lexor:** `isi no-luve, goly e` — if it isn't raining, she would go
+**Lexor:** `isi noluve, goly e` — if it isn't raining, she would go
 
 **How it's built:**
 - `isi` means "if." It introduces the condition.
@@ -337,7 +337,7 @@ For arguments and proofs, Lexor uses three little discourse words: `dati`, `ergi
 **Lexor:** `dati luvo. golo e kawa ke luvo. ergi stao sus-s [floor]`
 **Translation:** "Given that it rained. She left because it rained. Therefore the floor is wet."
 
-**Lexor:** `dati luvo impi stao sus-s [floor]. no-stao sus-s [floor]. ergi no-luvo`
+**Lexor:** `dati luvo impi stao sus-s [floor]. nostao sus-s [floor]. ergi noluvo`
 **Translation:** "Given that rain implies a wet floor. The floor is not wet. Therefore it didn't rain." (This is the logical step called *modus tollens*.)
 
 **The three words:**
@@ -357,14 +357,14 @@ To say something might be true, or must be true, use one of two markers at the s
 
 **Lexor:** `kani luve` — it might rain
 **Lexor:** `musi luve` — it must be raining
-**Lexor:** `no- musi samo a b` — a doesn't have to equal b (it's not necessarily true that a equals b)
-**Lexor:** `kani no- samo m1 m2` — m1 and m2 might be different (it's possible that they aren't equal)
+**Lexor:** `no musi samo a b` — a doesn't have to equal b (it's not necessarily true that a equals b)
+**Lexor:** `kani no samo m1 m2` — m1 and m2 might be different (it's possible that they aren't equal)
 
 **The words:**
 - `kani` = "might," "may," "is possibly." Mnemonic: English/German *can* / *kann*.
 - `musi` = "must," "is necessarily." Mnemonic: English/German *must* / *muss*.
 
-Both go at the very start of a sentence. Both can be combined with `no-` from Level 7 to give four readings: "might be the case," "might not be," "must be," "doesn't have to be."
+Both go at the very start of a sentence. Both can be combined with `no` from Level 7 to give four readings: "might be the case," "might not be," "must be," "doesn't have to be."
 
 **What this level shows:**
 - The distinctions English collapses into "is" / "could be" / "might be" / "doesn't have to be" are clearly separate in Lexor.
@@ -389,7 +389,7 @@ Sometimes you want to attach a specific probability to a claim, like "90% likely
 The number itself is built from digits: `zo demu ne zo` is "zero point nine zero" = 0.90 in decimal. (The `demu` is the decimal point.)
 
 **Relating `chani` to the earlier `kani` and `musi`:**
-- `chani zo X` = "X has probability 0" = impossible. Same as `no- kani X`.
+- `chani zo X` = "X has probability 0" = impossible. Same as `no kani X`.
 - `chani pa X` = "X has probability 1" = certain. Same as `musi X`.
 - `kani X` (without a number) is "X is possible to some unspecified degree."
 
@@ -584,27 +584,27 @@ Three imperatives in a row, chaining motion and rotation. The axis system plus t
 ### Example 5: Hedging a measurement
 
 ```
-kani samo re met mezi aksi pa bra kub keti. kani minu. no-visc y i.
+kani samo re met mezi aksi pa bra kub keti. kani minu. novisc y i.
 ```
 
 Translation: "The longest dimension of the box might be 3 meters. It might be less. I haven't seen it."
 
-What this demonstrates: how `kani` lets a speaker hedge cleanly. Compare to English "it's 3 meters… maybe? I don't know" which needs three separate clauses to do the same job. `kub` and `met` are placeholders. `no-visc y i` is the perfect tense ("have not seen") + "I" + "it."
+What this demonstrates: how `kani` lets a speaker hedge cleanly. Compare to English "it's 3 meters… maybe? I don't know" which needs three separate clauses to do the same job. `kub` and `met` are placeholders. `novisc y i` is the perfect tense ("have not seen") + "I" + "it."
 
 ### Example 6: A small reasoning chain
 
 ```
-dati labe vira. dati some nina. ergi no-vige nina kawa ke labe vira.
+dati labe vira. dati some nina. ergi novige nina kawa ke labe vira.
 ```
 
 Word-by-word:
 - `dati labe vira` — given, works, man.
 - `dati some nina` — given, sleeps, child.
-- `ergi no-vige nina kawa ke labe vira` — therefore, not-wakes-up, child, because that works man.
+- `ergi novige nina kawa ke labe vira` — therefore, not-wakes-up, child, because that works man.
 
 Translation: "Given that the man works. Given that the child sleeps. Therefore the child does not wake up, because the man works."
 
-What this demonstrates: reasoning particles (`dati` premise, `ergi` therefore), causal subordinator (`kawa ke` because-that), negation on a verb (`no-vige`), and real content nouns and verbs throughout — no placeholders at all.
+What this demonstrates: reasoning particles (`dati` premise, `ergi` therefore), causal subordinator (`kawa ke` because-that), negation on a verb (`novige`), and real content nouns and verbs throughout — no placeholders at all.
 
 ---
 

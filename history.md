@@ -99,16 +99,16 @@ Constraints on the prefix system:
 - Phonological shape must not collide with pronoun space (`y`, `u`, `e`, `i`, `l-` series) or be mistakeable for a root onset.
 - A canonical stacking order will need to be defined if multiple prefixes ever combine (parked).
 
-## 2026-05-15 — Negation prefix: `no-`
-Decided: negation is prefixed `no-`. Matches Spanish, English (`no`), Italian, French (`non`), Latin (`non`), German (`nein`) — maximum cross-language recognizability. `n` is already the act-noun derivation suffix consonant, but slot differs (suffix vs prefix) so there's no actual ambiguity.
+## 2026-05-15 — Negation prefix: `no`
+Decided: negation is prefixed `no`. Matches Spanish, English (`no`), Italian, French (`non`), Latin (`non`), German (`nein`) — maximum cross-language recognizability. `n` is already the act-noun derivation suffix consonant, but slot differs (suffix vs prefix) so there's no actual ambiguity.
 
 Worked examples with `lom`:
 - `loma` — eats
-- `no-loma` — does not eat
+- `noloma` — does not eat
 - `lomer` — eater
-- `no-lomer` — non-eater (one who doesn't eat)
+- `nolomer` — non-eater (one who doesn't eat)
 - `lomes` — edible
-- `no-lomes` — inedible
+- `nolomes` — inedible
 
 Note: this is *logical negation* (the event didn't happen / the property doesn't hold). A separate question — whether Lexor also wants a distinct *lexical opposite* marker (e.g., `love` → `hate`, not just `not love`) — is parked. The two are cognitively different and most languages conflate them.
 
@@ -242,13 +242,13 @@ Both required by grammar. No default — every number expression carries an expl
 - `tom` — range "to" (from English "to")
 - `pir` — ≈ (approximately, no strong cross-language mnemonic, picked for distinctness)
 
-Negation by existing `no-` prefix:
-- `no-sam` = ≠, `no-min` = ≥, `no-mag` = ≤
+Negation by existing `no` prefix:
+- `nosam` = ≠, `nomin` = ≥, `nomag` = ≤
 
 Plus-or-minus, ranges, distributions are *compositions* of these. No special syntax. Examples sketched (specific digit-roots TBD):
 - "around 15" → `pir pi fi`
 - "between 2 and 8" → uses `tom` between the two numbers
-- "≥ 10" → `no-min` + the number
+- "≥ 10" → `nomin` + the number
 - gaussian/uniform/bimodal distributions → eventually need distribution-shape roots; parked.
 
 Deliberately deferred:
@@ -449,7 +449,7 @@ Structural mechanisms that achieve this:
 
 1. **Strict positional rules** pin scope:
    - Modifier attachment: only to immediately adjacent unit. Wide scope requires restructuring (front the modifier) or named binding.
-   - Operator scope (`sol`, `no-`, `tot`): scopes over its adjacent argument. Three positions = three distinct meanings.
+   - Operator scope (`sol`, `no`, `tot`): scopes over its adjacent argument. Three positions = three distinct meanings.
    - Quantifier scope: linear order = logical scope. First mentioned has widest scope.
    - Mixed AND/OR is grammatically forbidden in flat form; named binding required for grouping.
 
@@ -506,8 +506,8 @@ Locked: three new closed-class particles for multi-step reasoning, plus a causal
 Modus tollens in Lexor:
 ```
 dat A imp B.    ← Given: A logically implies B.
-no-B.           ← Not B.
-erg no-A.       ← Therefore, not A.
+noB.           ← Not B.
+erg noA.       ← Therefore, not A.
 ```
 
 Three sentences, each with one meaning, each parseable independently. The logical relationship between them is explicit (premise / observation / conclusion) rather than encoded in nested structure.
@@ -516,7 +516,7 @@ Proof-by-cases extension:
 ```
 dat A imp B.                ← Given: A → B.
 is B, [unconstrained].       ← When B holds, A may or may not. (forward direction underconstrained)
-is no-B, no-A.               ← When B doesn't hold, A doesn't either. (modus tollens)
+is noB, noA.               ← When B doesn't hold, A doesn't either. (modus tollens)
 ```
 
 Each case parallel, neither nested in the other.
@@ -751,15 +751,15 @@ The English/Spanish tag pattern is "make an assertion, then briefly request conf
 
 Two compositional options give a tag without a new particle:
 1. **Bare `ka?` tag**: assertion, comma, `ka?`. "She left, right?" → `golo e, ka?`. The bare `ka` after a comma reads as "yes/no question about the just-asserted proposition" — confirmation-seeking. Short, ergonomic.
-2. **Echo question**: assertion, comma, mini yes/no question echoing the verb. "She left, didn't she leave?" → `golo e, ka no-golo e?`. Verbose but maximally explicit.
+2. **Echo question**: assertion, comma, mini yes/no question echoing the verb. "She left, didn't she leave?" → `golo e, ka nogolo e?`. Verbose but maximally explicit.
 
 Locked: both are grammatical. The bare `ka?` form (option 1) is the default; the echo form (option 2) is available when extra emphasis is wanted ("you didn't *actually* leave, did you?"). No new particle introduced.
 
-Polarity note: English/Spanish tag-question polarity matches the speaker's expectation (positive assertion → negative tag if expecting "yes": "she left, didn't she?"). Lexor's bare `ka?` is polarity-neutral — it just requests confirmation, leaving the speaker's expectation unstated. This is consistent with the no-mandatory-marking meta-principle: speakers who *want* to convey expectation can use the echo form with explicit `no-`.
+Polarity note: English/Spanish tag-question polarity matches the speaker's expectation (positive assertion → negative tag if expecting "yes": "she left, didn't she?"). Lexor's bare `ka?` is polarity-neutral — it just requests confirmation, leaving the speaker's expectation unstated. This is consistent with the no-mandatory-marking meta-principle: speakers who *want* to convey expectation can use the echo form with explicit `no`.
 
 Worked examples:
 - `golo e, ka?` → "She left, right?"
-- `golo e, ka no-golo e?` → "She left, didn't she?" (with explicit negative-polarity tag conveying speaker expects "yes")
+- `golo e, ka nogolo e?` → "She left, didn't she?" (with explicit negative-polarity tag conveying speaker expects "yes")
 - `pluvex, ka?` → "It's raining, right?"
 
 ### What this unblocks
@@ -798,12 +798,12 @@ Worked examples:
 
 Interaction with other markers:
 - `var` + `lit/fin`: distinct, no overlap. `lit incorrect fin` is the literal string "incorrect"; `var x` is a placeholder named x.
-- `var` + `no-`: composes. `no-var x` = "not var-x" (logical negation of the bound value).
+- `var` + `no`: composes. `novar x` = "not var-x" (logical negation of the bound value).
 - `var` + role vowels: composes. `var x-e` = subject-marked slot.
 
 ### Lexical opposite marker: rejected
 
-Question opened: should Lexor have a productive prefix like Esperanto's `mal-` that derives a lexical opposite of an adjective/state (love → hate, hot → cold), distinct from logical negation `no-`?
+Question opened: should Lexor have a productive prefix like Esperanto's `mal-` that derives a lexical opposite of an adjective/state (love → hate, hot → cold), distinct from logical negation `no`?
 
 The real distinction this would capture: English "I don't love her" (logical neg, neutral about positive/negative feeling) vs "I hate her" (specific positive antipathy). Spanish makes the same distinction. A productive opposite-marker on `am` (love) would give `mal-am` = hate, saving the root.
 
@@ -820,7 +820,7 @@ Picked **reject**. Rationale:
 
 3. Lexor's root-sourcing rule already lets each antonym pull from its natural language source (`am` love / Latin *amare*; `od` hate / Latin *odisse*). Separate roots are cheap given the 2000+ CVC slot space; root-saving is not a priority.
 
-4. The English/Spanish distinction (don't-love vs hate) is preserved compositionally: `no-am` (logical negation, neutral) vs `od` (separate root, specific antipathy). The semantic difference is real and Lexor expresses it — just without a productive opposite-marker.
+4. The English/Spanish distinction (don't-love vs hate) is preserved compositionally: `noam` (logical negation, neutral) vs `od` (separate root, specific antipathy). The semantic difference is real and Lexor expresses it — just without a productive opposite-marker.
 
 Tradeoffs accepted: 20-50 additional roots in the scalar-adjective vocabulary buildout. Worth it for the conceptual cleanness.
 
@@ -964,11 +964,11 @@ Locked roots and rationale:
 
 Compositions handle the rest:
 - **inside / interior**: `lok int` ("at-the-inside") or just `lok` when interior is contextually obvious.
-- **outside**: `oks` ("from-outside", in motion sense) or `no-lok int` (negation, in stative sense).
+- **outside**: `oks` ("from-outside", in motion sense) or `nolok int` (negation, in stative sense).
 - **across**: `tra` reused, or compose with `lat` for the lateral sense ("across the road" = `tra` + road).
 - **against (touching)**: compose `pok` + contact context, or rely on a future "touch" verb root.
 - **along**: compose `tra` + path axis, or rely on a future "path/line" root.
-- **away from**: `oks` covers this in motion contexts; for stative "far from" use `no-pok`.
+- **away from**: `oks` covers this in motion contexts; for stative "far from" use `nopok`.
 
 Tradeoffs accepted:
 - Some prepositions take CCV / VCC shapes (`tra`, `int`, `oks`). Lexor already has these exceptions; the closed-class slot can tolerate non-CVC shapes when the root has high cross-linguistic recognizability.
@@ -1206,14 +1206,14 @@ Two closed-class markers:
 
 Both sentence-initial, scoping over the remainder of the clause. Inside a `ke`-clause: `ke kan pluve` = "that it might rain."
 
-Compose with `no-` for the four corner readings:
+Compose with `no` for the four corner readings:
 - `kan X` = ◇X (possible X)
 - `mus X` = □X (necessary X)
-- `no- mus X` = ¬□X (not necessarily X) — the "doesn't have to" reading
-- `no- kan X` = ¬◇X (impossible X) — same as `mus no- X` (always-not-X), with which it is logically equivalent.
+- `no mus X` = ¬□X (not necessarily X) — the "doesn't have to" reading
+- `no kan X` = ¬◇X (impossible X) — same as `mus no X` (always-not-X), with which it is logically equivalent.
 
 ### Alternatives considered and rejected
-- **Only one primitive + composition** (lock only `kan`, derive `mus` as `no- kan no-`). Rejected: forces "not possibly not" every time someone wants "must." Cognitive friction, same anti-pattern as English's mandatory tense. Cost is one extra closed-class root — trivial.
+- **Only one primitive + composition** (lock only `kan`, derive `mus` as `no kan no`). Rejected: forces "not possibly not" every time someone wants "must." Cognitive friction, same anti-pattern as English's mandatory tense. Cost is one extra closed-class root — trivial.
 - **Modal-as-quantifier** (treat possibility as ∃ over possible-worlds, necessity as ∀). Linguistically valid (standard Kripke semantics) but would require explicit "world" arguments. Reject for surface simplicity — keep the modal as a marker that scopes over a proposition.
 - **Modal-as-suffix** on the verb (like tense vowels). Rejected: modal scope is the whole proposition, not just the verb's temporal frame. Marker shape is correct.
 - **Epistemic + deontic both in this round** (e.g., `kan` epistemic + `let` deontic-permission + `mus` epistemic-necessity + `obg` deontic-obligation). Rejected: no current trial requires deontic; YAGNI. Park.
@@ -1232,9 +1232,9 @@ Sentence-initial position chosen for consistency with the existing sentence-leve
 Alternative considered: modal-as-trailing-suffix on the verb (like Turkish/Japanese). Rejected because (a) inconsistent with the rest of the operator family, (b) puts the scope-defining word at the *end* of the proposition, requiring listeners to revise their parse retroactively — exactly the "negation processing leak" failure mode that motivated negation-as-prefix.
 
 ### Trials closed
-- B1 "not(a=b) vs a≠b" — passes via `no- mus sam a b` / `kan no- sam a b`.
-- B2 "masses can be different" — passes via `kan no- sam m1 m2`.
-- I2 quantum superposition — passes via `kan lok-x i kun kan lok-y i kun no- mes`.
+- B1 "not(a=b) vs a≠b" — passes via `no mus sam a b` / `kan no sam a b`.
+- B2 "masses can be different" — passes via `kan no sam m1 m2`.
+- I2 quantum superposition — passes via `kan lok-x i kun kan lok-y i kun no mes`.
 
 ### Trials clarified but not closed
 - D6 plug-in numerical probability — path is now `kan pir [number]` or `[number] dem kan X`, but the specific shape is parked for a follow-up round. The infrastructure exists; the API is pending.
@@ -1466,7 +1466,7 @@ The 2026-05-16 prosody decision required an obligatory ~50–100 ms acoustic bre
 
 ### What natural languages actually do
 - English: relies on stress patterns, phonotactic constraints, vocabulary sparsity. No obligatory pause.
-- Spanish: actively dissolves word boundaries via resyllabification (`los amigos` → [lo-sa-mi-gos]) and sinalefa (vowel merging). Famously rapid, continuous speech.
+- Spanish: actively dissolves word boundaries via resyllabification (`los amigos` → [lo-sa-migos]) and sinalefa (vowel merging). Famously rapid, continuous speech.
 - Lojban: uses self-segregating morphology — word shapes are mathematically constrained so no concatenation of valid words equals another valid word. No pause needed.
 
 The mandatory-pause rule was an over-engineering of a problem that has a structural solution.
@@ -1579,7 +1579,7 @@ User asked: "would it be possible to use a vowel for nouns, another vowel for ad
 | Time-unit content roots | `-a` (default) | `nuna`, `moma`, `mita`, `xora`, `dima`, `sema`, `mesa`, `veta` |
 
 **Exceptions (kept as-is because they're already vowel-final or special):**
-- `no-` (negation prefix, phonologically bound to its host).
+- `no` (negation prefix, phonologically bound to its host).
 - `ka` (universal question particle, high-frequency, vowel-final).
 - `ke` (universal complementizer, high-frequency, vowel-final).
 - `bra` (group-open, paired with `keti`, already vowel-final).
@@ -1705,14 +1705,14 @@ English splits the area under the stress–strain curve unevenly: **resilience**
 
 ### Three operations English collapses
 Clarified that there are **three** distinct operations, and natural languages mark all three (English: *not* / *un-,dis-* / *-less*):
-- **Complement** (≠, the set-complement): "not happy" includes sad *and* neutral *and* asleep — anywhere but the positive value. This is Lexor's `no-` (proposition-level, bound prefix, already locked).
+- **Complement** (≠, the set-complement): "not happy" includes sad *and* neutral *and* asleep — anywhere but the positive value. This is Lexor's `no` (proposition-level, bound prefix, already locked).
 - **Contrary** (× −1, opposite pole): `unhappy` = sad, `dislike` = aversion. NOT logical negation — these lexicalize to the far pole.
 - **Privative** (× 0, absence): `-less` = careless, colorless. Zero of the quantity.
 
-Key correction during the discussion: `dislike`/`unhappy` *feel* like negation but are actually **contrary** (× −1), which is exactly why overloading Lexor's strict-logical `no-` with the opposite-job would reintroduce ambiguity (`no-pretty` = "≤ norm" vs "ugly"). The intuitiveness the user liked comes from the form being **bound into the word**, not from it being the `no` sound.
+Key correction during the discussion: `dislike`/`unhappy` *feel* like negation but are actually **contrary** (× −1), which is exactly why overloading Lexor's strict-logical `no` with the opposite-job would reintroduce ambiguity (`nopretty` = "≤ norm" vs "ugly"). The intuitiveness the user liked comes from the form being **bound into the word**, not from it being the `no` sound.
 
 ### Why postposed separate words, not bound affixes
-The user wanted to integrate this with amount-quantifiers (× −1, × 0, × 2, "stronger"). That reframe is what settled the position question: as an *antonym affix*, × −1 sits in a prefix-biased category; as *the −1 coefficient in a degree system*, it rides with quantities — and Lexor already postposes those (number-after-noun, `magu`/`minu` polarity after the axis). Decisive practical point: the amount class is **open** (any number, ranges via `tomu`, ≈ via `piru`, scale via `pemu`). Binding it would force a bound duplicate of the whole numeral system — precisely the mistake Lexor refused when it kept numbers as separate words instead of a plural suffix. Rule reaffirmed: **bind only small closed classes (tense, role, `no-`); keep open/productive systems as separate words.**
+The user wanted to integrate this with amount-quantifiers (× −1, × 0, × 2, "stronger"). That reframe is what settled the position question: as an *antonym affix*, × −1 sits in a prefix-biased category; as *the −1 coefficient in a degree system*, it rides with quantities — and Lexor already postposes those (number-after-noun, `magu`/`minu` polarity after the axis). Decisive practical point: the amount class is **open** (any number, ranges via `tomu`, ≈ via `piru`, scale via `pemu`). Binding it would force a bound duplicate of the whole numeral system — precisely the mistake Lexor refused when it kept numbers as separate words instead of a plural suffix. Rule reaffirmed: **bind only small closed classes (tense, role, `no`); keep open/productive systems as separate words.**
 
 Empirical check on "do inverters have to be prefixes": suffixal **negation** (Turkish `-me`, Japanese `-nai`) and suffixal **privative** (English `-less`, Finnish abessive `-tta`, Hungarian `-tlan`) are well-attested; it is specifically **contrary/opposite-pole** derivation that resists suffixing cross-linguistically (prefers prefixes un-/dis-/mal- or suppletion). So × 0 suffixes freely, × −1 is the holdout — but the coefficient reframe moves × −1 out of the "antonym affix" reference class entirely, so the prefix bias no longer binds.
 
@@ -1720,57 +1720,57 @@ Empirical check on "do inverters have to be prefixes": suffixal **negation** (Tu
 A scalar comparison needs a reference. **Bipolar** axes use the natural origin `zo` (`minu zo`/`magu zo`/`samo zo` = negative/positive/neutral side). **Unipolar/ratio** axes (no negatives) use a contextual norm (`minu` = below typical); `samo zo` = absence. This is the convention left open under "signed magnitudes compose `magu`/`minu` on top of `mezi`."
 
 ### Alternatives considered and rejected
-- **Overload `no-` for opposites** — rejected: creates one-form/two-meanings ambiguity (complement vs contrary).
+- **Overload `no` for opposites** — rejected: creates one-form/two-meanings ambiguity (complement vs contrary).
 - **Mint a productive opposite-marker now** (reopening the 2026-05-16 rejection) — partially reconsidered. The 2026-05-16 reasons (opposite is fuzzy for `house`/`run`; root-saving not a priority) are defeated *for scalars* by scoping to gradable roots and by the new **chunking** argument (a bound opposite is one stored retrieval). So a bound shorthand for the two poles is approved *in principle* — but **parked**, because a bound pole-marker needs a reserved prefix/suffix slot, and the prefix-inventory + prefix-stacking-order questions are still open (tasks.md). Lock the compositional system now; add the sugar once the slot system is built.
 - **A dedicated contrary suffix** (floated mid-discussion) — superseded: with the coefficient reframe, contrary is just `minu` on a named axis, so no dedicated affix is needed; the cost shifts to naming the axis (H2), which is the better problem to have.
 
 ### What this leaves open
 Exact multiplicative coefficient (general × N beyond `pemu`'s × 10ⁿ); absolute intensifiers ("very"/"slightly") vs the relative `magu`/`minu`; and axis-naming for everyday adjectives (H2), which the whole scalar-opposite story now depends on. The compositional layer added no new roots — it reuses the `-u` operator class. The bound layer (next section) added two prefixes.
 
-## 2026-06-07 (same session) — Bound polarity prefixes `mi-` / `ze-` locked (un-parking the actual task)
+## 2026-06-07 (same session) — Bound polarity prefixes `mi` / `ze` locked (un-parking the actual task)
 
 The previous section parked the bound shorthand for the two poles "pending the prefix-inventory / stacking decisions." That was wrong: designing the −1 and 0 operators *was* the task, and parking it deferred the deliverable. The prerequisite questions (which CV shapes are prefixes; stacking order) are not really prerequisites — locking these two prefixes is what *answers* them. So the bound forms are now designed and locked.
 
 ### Decision
-Two bound prefixes join `no-` as one polarity family, restricted to gradable/scalar roots:
-- `no-` — complement ("not", ≠) — existing.
-- `mi-` — contrary (× −1, opposite pole). Source *minus*; deliberately echoes `minu`. Bipolar scales only.
-- `ze-` — privative (× 0, absence). Source *zero*; deliberately echoes `zo`. Any scalar.
+Two bound prefixes join `no` as one polarity family, restricted to gradable/scalar roots:
+- `no` — complement ("not", ≠) — existing.
+- `mi` — contrary (× −1, opposite pole). Source *minus*; deliberately echoes `minu`. Bipolar scales only.
+- `ze` — privative (× 0, absence). Source *zero*; deliberately echoes `zo`. Any scalar.
 
 ### Prefix, not suffix — and why this overrides the default
 Lexor's standing rule is prefix = scope (proposition-level), suffix = derivation (value-level), which by itself would make contrary/privative *suffixes* (they produce another value on the same axis). Overridden deliberately, for three reasons:
-1. **Family coherence.** These three are the negation/polarity operators. Keeping them one prefix series ({`no-`, `mi-`, `ze-`}) is more learnable than splitting negation-as-prefix from opposite/absence-as-suffix. English itself is inconsistent here (un-/dis- prefix, -less suffix); Lexor unifies.
-2. **Frame-first helps.** Knowing "opposite-of" or "without" *before* the root lets the listener process the root already in the modified frame — the same modifier-first logic that put `no-` in front. The affirmative-leak hazard that is specific to *negation* doesn't apply, but the framing benefit still does.
+1. **Family coherence.** These three are the negation/polarity operators. Keeping them one prefix series ({`no`, `mi`, `ze`}) is more learnable than splitting negation-as-prefix from opposite/absence-as-suffix. English itself is inconsistent here (un-/dis- prefix, -less suffix); Lexor unifies.
+2. **Frame-first helps.** Knowing "opposite-of" or "without" *before* the root lets the listener process the root already in the modified frame — the same modifier-first logic that put `no` in front. The affirmative-leak hazard that is specific to *negation* doesn't apply, but the framing benefit still does.
 3. **The user's throughline.** The whole reason the bound form exists is the `unhappy`/`dislike` chunk intuition, and those are prefixes. Matching that intuition is the point.
 
 ### Morpheme sourcing
-`mi-` from *minus* and `ze-` from *zero* tie the two prefixes directly to the user's own "× −1 / × 0" framing, and each echoes an existing word with the same polarity (`minu` low/less; `zo` zero) so the meaning is transparent without creating a collision (the prefixes are bound, the echoed words are free). Both are CV, vowel-final, attaching to consonant-initial roots — smooth under the self-segregating-morphology rule, and exempt from the subclass-vowel scheme exactly as `no-` is.
+`mi` from *minus* and `ze` from *zero* tie the two prefixes directly to the user's own "× −1 / × 0" framing, and each echoes an existing word with the same polarity (`minu` low/less; `zo` zero) so the meaning is transparent without creating a collision (the prefixes are bound, the echoed words are free). Both are CV, vowel-final, attaching to consonant-initial roots — smooth under the self-segregating-morphology rule, and exempt from the subclass-vowel scheme exactly as `no` is.
 
 ### Scope, stacking, redundancy
-- **Scope by scale type:** `ze-` (× 0) on any scalar; `mi-` (× −1) only on *bipolar* scales (real opposite exists). On unipolar scales ("tough", "tall") there is no × −1 — "less tough" is the postposed `minu`, not `mi-tough`. This is why `mi-` and the reference-point convention agree.
-- **Stacking:** `no-` outermost (`no-mi-[pretty]` = "not ugly"); `mi-`/`ze-` mutually exclusive on one root. First concrete prefix-stacking rule; fixes the prefix inventory at three.
-- **Redundancy is intended:** `mi-`/`ze-` are the lexicalized everyday shorthand; `samo minu pa` / `samo zo` / postposed `minu` stay for exact/numeric work. Two forms, one meaning = paraphrase.
+- **Scope by scale type:** `ze` (× 0) on any scalar; `mi` (× −1) only on *bipolar* scales (real opposite exists). On unipolar scales ("tough", "tall") there is no × −1 — "less tough" is the postposed `minu`, not `mitough`. This is why `mi` and the reference-point convention agree.
+- **Stacking:** `no` outermost (`nomi[pretty]` = "not ugly"); `mi`/`ze` mutually exclusive on one root. First concrete prefix-stacking rule; fixes the prefix inventory at three.
+- **Redundancy is intended:** `mi`/`ze` are the lexicalized everyday shorthand; `samo minu pa` / `samo zo` / postposed `minu` stay for exact/numeric work. Two forms, one meaning = paraphrase.
 
 ### Alternatives reconsidered
-- **Suffixes** (architecture default): rejected for family coherence + frame-first, above. Noted that privative-as-suffix (`-less`) is the cross-linguistic norm, but consistency with `no-` won.
-- **`an-` (anti-) for contrary:** rejected — shares an onset with the time preposition `anta` (before), a needless near-collision. `mi-` is cleaner and ties to `minu`.
-- **`zo-` (the digit itself) for privative:** rejected — would overload the digit root `zo`; `ze-` keeps the zero mnemonic without the overload.
+- **Suffixes** (architecture default): rejected for family coherence + frame-first, above. Noted that privative-as-suffix (`-less`) is the cross-linguistic norm, but consistency with `no` won.
+- **`an-` (anti-) for contrary:** rejected — shares an onset with the time preposition `anta` (before), a needless near-collision. `mi` is cleaner and ties to `minu`.
+- **`zo-` (the digit itself) for privative:** rejected — would overload the digit root `zo`; `ze` keeps the zero mnemonic without the overload.
 
 ## 2026-06-07 (same session) — H2 closed: gradable roots = neutral axis, adjective defaults positive
 
-The scalar-opposite/degree machinery (`magu`/`minu`, `mi-`/`ze-`, `mezi`) all assumed a *named scalar dimension* but never said how a gradable concept's root names it. H2 was the keystone. Resolved.
+The scalar-opposite/degree machinery (`magu`/`minu`, `mi`/`ze`, `mezi`) all assumed a *named scalar dimension* but never said how a gradable concept's root names it. H2 was the keystone. Resolved.
 
 ### Decision
 A gradable-concept root denotes the **quality/dimension itself**, direction-free. This is the natural reading of two standing principles: "roots are concept-level" (the root is the concept, not a POS or a pole) and "no implied direction." Everything directional derives from it:
 - **Magnitude noun:** `mezi [Q] X` = "the degree of [Q] of X." `mezi` is generalized from geometric length to any abstract scalar quality — that *is* the H2 neutral magnitude term.
 - **Adjective:** the bare `-s` adjective (`[Q]asa`) **defaults to the positive pole** ("beautiful"). Markedness — the common high case is unmarked.
-- **Direction/degree:** `minu` (low / less), `mi-` (opposite, bipolar only), `ze-` (absence), all already locked.
+- **Direction/degree:** `minu` (low / less), `mi` (opposite, bipolar only), `ze` (absence), all already locked.
 
 ### Why default-positive, and how vagueness survives
 User chose default-positive over strict-neutral. Strict-neutral (bare adjective = "has Q, direction unstated") is more principled but taxes the common case — you'd pay `magu` every time you call something beautiful. Default-positive matches how natural languages mark gradables (unmarked = positive pole: "how *tall*", "how *old*"). The "no mandatory marking / vague allowed" meta-principle is *not* violated, because the direction-free form still exists — it's the magnitude noun `mezi [Q]` ("the degree of Q"), not the bare adjective. So vagueness moved to the magnitude route; the bare adjective took on the high-frequency positive job.
 
 ### Bipolar vs unipolar (kept consistent)
-Bipolar qualities (beauty, warmth) get both a low end (`minu`) and an opposite-quality (`mi-`). Unipolar/ratio qualities (height, mass, toughness) get only a low end (`minu`); `mi-` is undefined there — "less tough," not "anti-tough." Same split as the reference-point convention (bipolar → origin `zo`; unipolar → contextual norm).
+Bipolar qualities (beauty, warmth) get both a low end (`minu`) and an opposite-quality (`mi`). Unipolar/ratio qualities (height, mass, toughness) get only a low end (`minu`); `mi` is undefined there — "less tough," not "anti-tough." Same split as the reference-point convention (bipolar → origin `zo`; unipolar → contextual norm).
 
 ### Worked back to the material-property example that started all this
 Toughness is unipolar: `mezi [tough] X` = degree of toughness; brittle = low on a *different* axis (plastic-fraction), `mezi [ductile] X` with `minu`. Resilience = `mezi [tough] X` scoped to the elastic region. The "we need 6 words" problem dissolves into two named quality-roots + the degree operators — no antonym roots, no conflation of energy-magnitude with failure-mode.
@@ -1786,19 +1786,29 @@ The thread opened with a material-science complaint: English names *resilience* 
 Named engineering properties are **compositions** over a few base quantities, not separate borrowed roots. Six base roots added: `tes` stress (Latin tensio), `dis` strain (distortion), `ner` energy (Greek energeia), `las` deformation-recoverability (Greek elastikos), `dus` hardness (Latin durus), `rup` fracture (Latin rumpere). (`dur` and `lon`, the first picks for hardness/strain, were already taken — endure/long — so re-sourced to `dus`/`dis`.)
 
 The key move is **regime-scoping of energy by the recoverability adjective `las`**:
-- elastic regime = `lasasa` (recoverable), plastic regime = `ze-lasasa` (non-recoverable, ×0 recovery).
-- resilience = `mezi ner lasasa <X>`; plastic energy = `mezi ner ze-lasasa <X>`; toughness = `mezi ner <X>` (total). Identity: toughness = resilience + plastic energy.
+- elastic regime = `lasasa` (recoverable), plastic regime = `zelasasa` (non-recoverable, ×0 recovery).
+- resilience = `mezi ner lasasa <X>`; plastic energy = `mezi ner zelasasa <X>`; toughness = `mezi ner <X>` (total). Identity: toughness = resilience + plastic energy.
 
-That is the completeness win: **plastic energy, which English cannot say in one word, is a regular phrase here**, and it sits in an explicit additive relationship with the other two. No region-scoping *mechanism* had to be invented — `lasasa`/`ze-lasasa` is just an adjective modifying the quantity head (`ner`), ordinary modifier-after-head.
+That is the completeness win: **plastic energy, which English cannot say in one word, is a regular phrase here**, and it sits in an explicit additive relationship with the other two. No region-scoping *mechanism* had to be invented — `lasasa`/`zelasasa` is just an adjective modifying the quantity head (`ner`), ordinary modifier-after-head.
 
-Other properties fall out the same way: strength = stress at fracture (`mezi tes tepa rup <X>`); stiffness/modulus = stress per strain (`mezi tes kexu dis <X>`, reusing `kexu` "per" exactly as the H3 pixels-per-mm trial does); ductility = non-recoverable strain (`mezi dis ze-lasasa <X>`), brittle = that with `minu`; hardness = `mezi dus <X>`.
+Other properties fall out the same way: strength = stress at fracture (`mezi tes tepa rup <X>`); stiffness/modulus = stress per strain (`mezi tes kexu dis <X>`, reusing `kexu` "per" exactly as the H3 pixels-per-mm trial does); ductility = non-recoverable strain (`mezi dis zelasasa <X>`), brittle = that with `minu`; hardness = `mezi dus <X>`.
 
 ### Why this beats English structurally
 The brittle/low-toughness conflation is *impossible* to make here, because toughness is built on `ner` (energy) and ductility/brittleness on `dis` (strain) — different roots. English collapses them because it lexicalized points on two different curves into adjacent-sounding words; Lexor keeps the curves (energy vs strain) as separate base quantities and derives the rest.
 
 ### Side decisions
-- **`kal`/`kol` refactored to H2.** The pre-H2 hot/cold antonym pair became one neutral root `kal` = temperature (hot = `kalasa`, cold = `mi-kalasa`, temperature = `mezi kal X`); `kol` removed. Only the lexicon referenced them, so the sweep was clean. Flags the general pattern: legacy antonym pairs get folded into single H2 axes as they surface.
+- **`kal`/`kol` refactored to H2.** The pre-H2 hot/cold antonym pair became one neutral root `kal` = temperature (hot = `kalasa`, cold = `mikalasa`, temperature = `mezi kal X`); `kol` removed. Only the lexicon referenced them, so the sweep was clean. Flags the general pattern: legacy antonym pairs get folded into single H2 axes as they surface.
 - **Units = metric/SI by default** (energy density J·m⁻³, stress Pa). Only the default system is fixed; the unit-*expression* mechanism stays parked.
 
 ### Still open
 Unit-expression mechanism; elastic/plastic as standalone regime *nouns* if ever needed (currently only the adjective forms are used); the broader physical-property vocabulary (density, mass, conductivity, …) as future batches; exact ×N coefficient and absolute intensifiers. Lexicon now 218 entries, collision-clean.
+
+## 2026-06-07 (same session) — Orthography: no dashes
+
+Up to now prefixes were written with a teaching dash (`no-loma`, `mi-kalasa`). User's call: drop it — "I don't want dashes in our language. We got spaces. That should be enough."
+
+Rationale: the dash never carried information. Negation/polarity prefixes were already decided to be *phonologically bound* (one stress group, no pause), so in speech there is no separator at all. In writing, self-segregating morphology (content roots consonant-initial, prefixes vowel-final) plus the closed three-prefix inventory {no, mi, ze} make the boundary recoverable from the letters: `noloma` can only be `no`+`loma` (a root `nol` would leave the invalid vowel-initial `omes`). So the dash was redundant clarity, and redundant marking is exactly what Lexor sheds.
+
+Decision: **spaces are the only word separator; bound prefixes attach with no space and no dash.** `noloma`, `mikalasa`, `zelas`, stacked `nomikalasa`. Swept all docs + lexicon root fields (`"no-"`→`"no"`, etc.), preserving English-prose hyphenated compounds (`no-mandatory`, `no-lexical`, `no-time`, the `mono-temporal` substring) since those are English, not Lexor. Collision-clean at 218 entries (the bare `no`/`mi`/`ze` forms are unique against digits, pronouns, and CVC roots).
+
+Recorded as the first writing-system rule in decisions.md; a dedicated orthography section can grow from it. Left untouched (out of scope, flagged): a few examples.md cases write negation as a *spaced* separate word before an operator (`no musi`, `no samo`) — whether negation binds to a following operator with no space, like it does to a root, is a separate question not raised here.
