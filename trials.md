@@ -296,10 +296,10 @@ Three structurally distinct shapes; no overload.
 **Trial goal:** One short word that says "irrespective of magnitude/polarity."
 **Status:** Open. Possibly composes from `totu` (universal) + the modifier axis.
 
-### H2. Taper ratio / neutral magnitude term [feature, open]
+### H2. Taper ratio / neutral magnitude term [feature, passes]
 **Capability:** A noun for the magnitude axis (e.g., "weight," "temperature") with no implied direction. Adjective specifies direction.
-**Trial goal:** Talk about a 0–1 ratio where 0 = maximum tapering, without the value-meaning inversion.
-**Status:** Open. The scalar-degree decision (2026-06-07) locked the *direction* side — poles are `magu`/`minu` on an axis, reference is origin `zo` (bipolar) or a contextual norm (unipolar), so "0 = absence" is `samo zo` with no value-meaning inversion. What remains is the **axis-noun policy**: how to name the dimension itself (prettiness, weight, taper) so adjectives can hang off it. This is now the keystone open question — I6 and the scalar-opposite story both depend on it. See decisions.md / history.md 2026-06-07.
+**Lexor:** A gradable root names the *quality/dimension itself*, direction-free. The neutral magnitude noun is `mezi [quality] X` ("the degree of [quality] of X") — `mezi` generalized from geometric length to any scalar. Direction is added on top: bare adjective `[quality]asa` defaults positive; `minu` = low end; `mi-` = opposite pole; `ze-` = absence (× 0). A 0–1 taper ratio is just `mezi [taper] X` with a value, no value-meaning inversion.
+**How:** decisions.md gradable-quality-roots decision + scalar-degree system + axis system `mezi` (2026-06-07).
 
 ### H3. Pixels-per-mm vs mm-per-pixel [trap, passes]
 **English:** "Higher resolution" ambiguous: more pixels per area, or finer detail per pixel.

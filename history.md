@@ -1755,3 +1755,25 @@ Lexor's standing rule is prefix = scope (proposition-level), suffix = derivation
 - **Suffixes** (architecture default): rejected for family coherence + frame-first, above. Noted that privative-as-suffix (`-less`) is the cross-linguistic norm, but consistency with `no-` won.
 - **`an-` (anti-) for contrary:** rejected — shares an onset with the time preposition `anta` (before), a needless near-collision. `mi-` is cleaner and ties to `minu`.
 - **`zo-` (the digit itself) for privative:** rejected — would overload the digit root `zo`; `ze-` keeps the zero mnemonic without the overload.
+
+## 2026-06-07 (same session) — H2 closed: gradable roots = neutral axis, adjective defaults positive
+
+The scalar-opposite/degree machinery (`magu`/`minu`, `mi-`/`ze-`, `mezi`) all assumed a *named scalar dimension* but never said how a gradable concept's root names it. H2 was the keystone. Resolved.
+
+### Decision
+A gradable-concept root denotes the **quality/dimension itself**, direction-free. This is the natural reading of two standing principles: "roots are concept-level" (the root is the concept, not a POS or a pole) and "no implied direction." Everything directional derives from it:
+- **Magnitude noun:** `mezi [Q] X` = "the degree of [Q] of X." `mezi` is generalized from geometric length to any abstract scalar quality — that *is* the H2 neutral magnitude term.
+- **Adjective:** the bare `-s` adjective (`[Q]asa`) **defaults to the positive pole** ("beautiful"). Markedness — the common high case is unmarked.
+- **Direction/degree:** `minu` (low / less), `mi-` (opposite, bipolar only), `ze-` (absence), all already locked.
+
+### Why default-positive, and how vagueness survives
+User chose default-positive over strict-neutral. Strict-neutral (bare adjective = "has Q, direction unstated") is more principled but taxes the common case — you'd pay `magu` every time you call something beautiful. Default-positive matches how natural languages mark gradables (unmarked = positive pole: "how *tall*", "how *old*"). The "no mandatory marking / vague allowed" meta-principle is *not* violated, because the direction-free form still exists — it's the magnitude noun `mezi [Q]` ("the degree of Q"), not the bare adjective. So vagueness moved to the magnitude route; the bare adjective took on the high-frequency positive job.
+
+### Bipolar vs unipolar (kept consistent)
+Bipolar qualities (beauty, warmth) get both a low end (`minu`) and an opposite-quality (`mi-`). Unipolar/ratio qualities (height, mass, toughness) get only a low end (`minu`); `mi-` is undefined there — "less tough," not "anti-tough." Same split as the reference-point convention (bipolar → origin `zo`; unipolar → contextual norm).
+
+### Worked back to the material-property example that started all this
+Toughness is unipolar: `mezi [tough] X` = degree of toughness; brittle = low on a *different* axis (plastic-fraction), `mezi [ductile] X` with `minu`. Resilience = `mezi [tough] X` scoped to the elastic region. The "we need 6 words" problem dissolves into two named quality-roots + the degree operators — no antonym roots, no conflation of energy-magnitude with failure-mode.
+
+### What's still open
+Naming the actual quality roots (vocab buildout) and the elastic/plastic region-scoping words; exact ×N coefficient; absolute intensifiers ("very"/"slightly"). No new roots added here — `mezi` was broadened in place.

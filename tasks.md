@@ -53,7 +53,7 @@ Ready to pick up, ranked roughly by visible impact:
     - [x] *Bound* shorthand for the two fixed poles — resolved 2026-06-07: bound prefixes `mi-` (contrary, ×−1, bipolar) and `ze-` (privative, ×0, any scalar), joining `no-` as one polarity family. Prefix not suffix (family coherence + frame-first). See decisions.md / history.md 2026-06-07.
     - [ ] General multiplicative-coefficient operator (exact × N beyond `pemu`'s × 10ⁿ).
     - [ ] Absolute intensifiers ("very" / "slightly") distinct from the relative `magu`/`minu` ("more" / "less").
-    - [ ] Depends on H2 axis-naming for everyday adjectives (prettiness, etc.) — naming the axis is the remaining cost of the compositional approach.
+    - [x] Depends on H2 axis-naming for everyday adjectives — resolved 2026-06-07: gradable roots denote the neutral quality/axis; magnitude noun = `mezi [Q] X` (mezi generalized); bare `-s` adjective defaults positive; direction via `minu`/`mi-`/`ze-`. Closes trial H2, grounds I6. See decisions.md / history.md 2026-06-07.
 - [ ] **Synonym/equivalence grouping** — comma-like marker for "scalar-first, wxyz, Hamilton convention" being three names for one thing (TODO.md:9).
 - [x] **Rotation names** — resolved compositionally: `rot fasa` (roll), `rot lata` (pitch), `rot sura` (yaw). No new roots beyond the verb `rot`. See decisions.md / history.md 2026-05-16.
 - [x] **Sub-constituent grouping** — resolved 2026-05-16: paired markers `bra … keti`. Handles numerical ranges, mixed AND/OR, nested operators. `defi`-binding freed for its original naming role. See decisions.md / history.md 2026-05-16.
