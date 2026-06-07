@@ -1725,4 +1725,33 @@ A scalar comparison needs a reference. **Bipolar** axes use the natural origin `
 - **A dedicated contrary suffix** (floated mid-discussion) — superseded: with the coefficient reframe, contrary is just `minu` on a named axis, so no dedicated affix is needed; the cost shifts to naming the axis (H2), which is the better problem to have.
 
 ### What this leaves open
-Exact multiplicative coefficient (general × N beyond `pemu`'s × 10ⁿ); absolute intensifiers ("very"/"slightly") vs the relative `magu`/`minu`; the bound-pole shorthand (pending prefix system); and axis-naming for everyday adjectives (H2), which the whole scalar-opposite story now depends on. No new roots were added — the decision is structural and reuses the `-u` operator class.
+Exact multiplicative coefficient (general × N beyond `pemu`'s × 10ⁿ); absolute intensifiers ("very"/"slightly") vs the relative `magu`/`minu`; and axis-naming for everyday adjectives (H2), which the whole scalar-opposite story now depends on. The compositional layer added no new roots — it reuses the `-u` operator class. The bound layer (next section) added two prefixes.
+
+## 2026-06-07 (same session) — Bound polarity prefixes `mi-` / `ze-` locked (un-parking the actual task)
+
+The previous section parked the bound shorthand for the two poles "pending the prefix-inventory / stacking decisions." That was wrong: designing the −1 and 0 operators *was* the task, and parking it deferred the deliverable. The prerequisite questions (which CV shapes are prefixes; stacking order) are not really prerequisites — locking these two prefixes is what *answers* them. So the bound forms are now designed and locked.
+
+### Decision
+Two bound prefixes join `no-` as one polarity family, restricted to gradable/scalar roots:
+- `no-` — complement ("not", ≠) — existing.
+- `mi-` — contrary (× −1, opposite pole). Source *minus*; deliberately echoes `minu`. Bipolar scales only.
+- `ze-` — privative (× 0, absence). Source *zero*; deliberately echoes `zo`. Any scalar.
+
+### Prefix, not suffix — and why this overrides the default
+Lexor's standing rule is prefix = scope (proposition-level), suffix = derivation (value-level), which by itself would make contrary/privative *suffixes* (they produce another value on the same axis). Overridden deliberately, for three reasons:
+1. **Family coherence.** These three are the negation/polarity operators. Keeping them one prefix series ({`no-`, `mi-`, `ze-`}) is more learnable than splitting negation-as-prefix from opposite/absence-as-suffix. English itself is inconsistent here (un-/dis- prefix, -less suffix); Lexor unifies.
+2. **Frame-first helps.** Knowing "opposite-of" or "without" *before* the root lets the listener process the root already in the modified frame — the same modifier-first logic that put `no-` in front. The affirmative-leak hazard that is specific to *negation* doesn't apply, but the framing benefit still does.
+3. **The user's throughline.** The whole reason the bound form exists is the `unhappy`/`dislike` chunk intuition, and those are prefixes. Matching that intuition is the point.
+
+### Morpheme sourcing
+`mi-` from *minus* and `ze-` from *zero* tie the two prefixes directly to the user's own "× −1 / × 0" framing, and each echoes an existing word with the same polarity (`minu` low/less; `zo` zero) so the meaning is transparent without creating a collision (the prefixes are bound, the echoed words are free). Both are CV, vowel-final, attaching to consonant-initial roots — smooth under the self-segregating-morphology rule, and exempt from the subclass-vowel scheme exactly as `no-` is.
+
+### Scope, stacking, redundancy
+- **Scope by scale type:** `ze-` (× 0) on any scalar; `mi-` (× −1) only on *bipolar* scales (real opposite exists). On unipolar scales ("tough", "tall") there is no × −1 — "less tough" is the postposed `minu`, not `mi-tough`. This is why `mi-` and the reference-point convention agree.
+- **Stacking:** `no-` outermost (`no-mi-[pretty]` = "not ugly"); `mi-`/`ze-` mutually exclusive on one root. First concrete prefix-stacking rule; fixes the prefix inventory at three.
+- **Redundancy is intended:** `mi-`/`ze-` are the lexicalized everyday shorthand; `samo minu pa` / `samo zo` / postposed `minu` stay for exact/numeric work. Two forms, one meaning = paraphrase.
+
+### Alternatives reconsidered
+- **Suffixes** (architecture default): rejected for family coherence + frame-first, above. Noted that privative-as-suffix (`-less`) is the cross-linguistic norm, but consistency with `no-` won.
+- **`an-` (anti-) for contrary:** rejected — shares an onset with the time preposition `anta` (before), a needless near-collision. `mi-` is cleaner and ties to `minu`.
+- **`zo-` (the digit itself) for privative:** rejected — would overload the digit root `zo`; `ze-` keeps the zero mnemonic without the overload.

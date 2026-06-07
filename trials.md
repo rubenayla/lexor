@@ -341,9 +341,10 @@ See A6.
 **Goal:** Long-form text where def-bindings introduced once are referenced across paragraphs.
 **Status:** Scope rules for def-binding are discourse-local but the boundary isn't formally tested.
 
-### I6. Composable comparator across adjectives [stretch, open]
+### I6. Composable comparator across adjectives [stretch, passes]
 **Goal:** "Less pretty" / "uglier" expressible without a separate antonym root.
-**Status:** Open, but **now addressable** (no longer expected-to-fail). The scalar-degree decision (2026-06-07) treats a gradable adjective as a named axis: "less pretty" = `⟨prettiness⟩ minu`, "uglier" = `⟨prettiness⟩ magu` (more on the same axis). No antonym root needed. Remaining blocker is purely the axis-naming policy for everyday adjectives (H2), not the comparator itself. See decisions.md / history.md 2026-06-07.
+**Lexor:** Two routes, both without an antonym root. Bound prefix: `mi-[pretty]` = ugly, `mi-[pretty] magu` = uglier (more on the opposite end). Compositional: `[pretty] minu` = less pretty (lower on the same axis). The contrary prefix `mi-` (× −1) gives the opposite directly; `magu`/`minu` give degree.
+**How:** decisions.md scalar-degree system + bound polarity-prefix family `no-`/`mi-`/`ze-` (2026-06-07). Full worked sentences await locked adjective roots (vocab buildout); the mechanism is complete.
 
 ### I7. "Yo voy el sábado" — fronting and topicalization [stretch, open]
 **Goal:** Distinguish "the day I'm going is Saturday" from "Saturday I'll go (possibly other days too)."

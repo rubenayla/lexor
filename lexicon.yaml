@@ -60,7 +60,9 @@
 # MARKERS (closed-class operators)
 # =============================================================================
 
-- {root: "no-", kind: marker, concept: "logical negation (prefix)", source: "English/Spanish/Latin no"}
+- {root: "no-", kind: marker, concept: "logical negation / complement (prefix, ≠)", source: "English/Spanish/Latin no", notes: "Polarity family with mi-/ze-. Outermost: scopes over a mi-/ze- derived concept (no-mi-X = 'not opposite-of-X'). Proposition/predicate-level."}
+- {root: "mi-", kind: marker, concept: "contrary / opposite pole (prefix, ×−1)",  source: "Latin minus; echoes quantifier minu", notes: "Bound prefix. Gradable BIPOLAR roots only (pretty/ugly, love/hate, hot/cold): mi-[pretty] = ugly. No ×−1 on unipolar scales — use postposed minu for 'less tough'. Mutually exclusive with ze- on one root. Exempt from subclass-vowel scheme like no-."}
+- {root: "ze-", kind: marker, concept: "privative / absence (prefix, ×0)",          source: "zero; echoes digit zo",            notes: "Bound prefix. Any scalar root: ze-[color] = colorless; on a bipolar scale lands on the neutral midpoint. Mutually exclusive with mi- on one root. Compositional equivalent = samo zo. Exempt from subclass-vowel scheme like no-."}
 - {root: ka,    kind: marker, concept: "universal question particle"}
 - {root: ke,    kind: marker, concept: "universal complementizer",  source: "Spanish/French que"}
 - {root: isi,    kind: marker, concept: "causal conditional (if)"}
