@@ -49,6 +49,11 @@ Ready to pick up, ranked roughly by visible impact:
 - [x] **Literal marker** — resolved: `liti … fini` paired quotation markers. See decisions.md 2026-05-16. Sub-question still open:
     - [x] **Variable / placeholder marker** — resolved: `vari` prefix, single-word scope. Covers both template-slot and bound-variable cases. Pairs with `defi` for bindings. See decisions.md / history.md 2026-05-16.
 - [x] **"is" overload** — resolved: split into `samo` (identity), `esto` (essential predication / ser), `stao` (state predication / estar), `memo` (membership), `totu+memo` (subset, composed), `kelu` (existence, composed), `liti/fini` (paired quotation markers). Universal quantifier family also locked: `solu`/`totu`/`nulu`/`kelu`. See decisions.md and history.md 2026-05-16.
+- [x] **Scalar degree / amount-modifier system** — resolved 2026-06-07. Amount/degree modifiers are *postposed separate words* (the `-u` operator class), not bound affixes (open/compositional class → separate, like number vs plural-suffix). Three operations kept distinct: complement (`no-`, ≠), contrary (× −1 = `minu` pole / `samo minu pa`), privative (× 0 = `samo zo` / `nulu`). Reference convention locked (bipolar → origin `zo`; unipolar → contextual norm), which also closes the parked signed-magnitude item. Refines (not overturns) the no-lexical-opposite-marker decision: scalar opposites = the low pole of one axis. No new roots. See decisions.md / history.md 2026-06-07. Sub-questions parked:
+    - [ ] Optional *bound* shorthand for the two fixed poles (contrary/privative) — approved in principle (lexicalized `unhappy`/`-less` sugar) but deferred until the prefix-inventory + prefix-stacking-order questions are settled (a bound pole-marker needs a reserved slot).
+    - [ ] General multiplicative-coefficient operator (exact × N beyond `pemu`'s × 10ⁿ).
+    - [ ] Absolute intensifiers ("very" / "slightly") distinct from the relative `magu`/`minu` ("more" / "less").
+    - [ ] Depends on H2 axis-naming for everyday adjectives (prettiness, etc.) — naming the axis is the remaining cost of the compositional approach.
 - [ ] **Synonym/equivalence grouping** — comma-like marker for "scalar-first, wxyz, Hamilton convention" being three names for one thing (TODO.md:9).
 - [x] **Rotation names** — resolved compositionally: `rot fasa` (roll), `rot lata` (pitch), `rot sura` (yaw). No new roots beyond the verb `rot`. See decisions.md / history.md 2026-05-16.
 - [x] **Sub-constituent grouping** — resolved 2026-05-16: paired markers `bra … keti`. Handles numerical ranges, mixed AND/OR, nested operators. `defi`-binding freed for its original naming role. See decisions.md / history.md 2026-05-16.
@@ -72,7 +77,7 @@ Ready to pick up, ranked roughly by visible impact:
 - [x] **Axis system: aksi / tipi / mezi** — resolved 2026-05-16. Closed trials.md G3 (sentido), G4 (direction vs location), G5 (neutral axis names). Three new closed-class composable markers; agent-frame axes reuse spatial prepositions, object-frame ranks reuse digits, polarity reuses `magu`/`minu`. See decisions.md / history.md 2026-05-16. Sub-questions parked:
     - [ ] Compass directions (N/S/E/W) — need dedicated roots or compositional Earth-frame system.
     - [ ] Gravity-as-axis vs Z-axis distinction — defer until a trial exposes the need (vehicles, spacecraft).
-    - [ ] Signed magnitudes (physics displacement, negative values) — compose `magu`/`minu` on top of `mezi`; convention not yet locked.
+    - [x] Signed magnitudes (physics displacement, negative values) — resolved 2026-06-07 by the scalar-degree reference convention: bipolar axes reference origin `zo` (`minu zo`/`magu zo`/`samo zo`), unipolar axes reference a contextual norm. See decisions.md / history.md 2026-06-07.
 - [x] **Angle convention** — resolved 2026-05-16: angles as fractions of a revolution, right-handed sign around the named axis, reference +X. No new roots; reuses `rot`/`rota` + `aksi` + digit-stream. Closed trial G6. See decisions.md / history.md 2026-05-16. Sub-questions parked:
     - [ ] Solid angles (3D angular measure).
     - [ ] Spherical-coordinate shorthand for arbitrary 3D directions.

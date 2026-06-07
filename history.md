@@ -1695,3 +1695,34 @@ Replaced the contrived original example sentences (she-might-come-pet-her, pushu
 - **Demonstratives** (this/that). Still parked from batch 1.
 - **Compound noun formation**. Lojban-style lujvo rules haven't been studied yet.
 - **Time-as-noun root**. Hard because of root collisions.
+
+## 2026-06-07 — Scalar degree / amount-modifier system (postposed, not bound)
+
+Started from a material-science question: brittleness = lack of stored plastic energy, but a springy-but-shattering material (lots of elastic energy, ~0 plastic) is *also* brittle — so "brittle" conflates an energy *magnitude* with a failure *mode*. Working out how Lexor should name material properties surfaced the general question of how scalar opposites and degrees work, and whether the amount machinery belongs inside the word or beside it.
+
+### The material-property example (the motivating case)
+English splits the area under the stress–strain curve unevenly: **resilience** (elastic energy, area to yield), **toughness** (total energy to fracture), and a *nameless* plastic-only integral. Separately, **ductile ↔ brittle** is a different axis entirely (does it yield before breaking), not an energy magnitude. The "we need ~6 words" feeling comes from English minting separate lexemes for points on what are really **two scalar axes**: (A) energy absorbed per unit volume, region-scoped to elastic/plastic/total; (B) plastic-fraction at failure (ductile = high, brittle = low). On axes, "opposite" is just the low end — `minu` — not a separate root. This is the concrete H2 case (neutral magnitude term).
+
+### Three operations English collapses
+Clarified that there are **three** distinct operations, and natural languages mark all three (English: *not* / *un-,dis-* / *-less*):
+- **Complement** (≠, the set-complement): "not happy" includes sad *and* neutral *and* asleep — anywhere but the positive value. This is Lexor's `no-` (proposition-level, bound prefix, already locked).
+- **Contrary** (× −1, opposite pole): `unhappy` = sad, `dislike` = aversion. NOT logical negation — these lexicalize to the far pole.
+- **Privative** (× 0, absence): `-less` = careless, colorless. Zero of the quantity.
+
+Key correction during the discussion: `dislike`/`unhappy` *feel* like negation but are actually **contrary** (× −1), which is exactly why overloading Lexor's strict-logical `no-` with the opposite-job would reintroduce ambiguity (`no-pretty` = "≤ norm" vs "ugly"). The intuitiveness the user liked comes from the form being **bound into the word**, not from it being the `no` sound.
+
+### Why postposed separate words, not bound affixes
+The user wanted to integrate this with amount-quantifiers (× −1, × 0, × 2, "stronger"). That reframe is what settled the position question: as an *antonym affix*, × −1 sits in a prefix-biased category; as *the −1 coefficient in a degree system*, it rides with quantities — and Lexor already postposes those (number-after-noun, `magu`/`minu` polarity after the axis). Decisive practical point: the amount class is **open** (any number, ranges via `tomu`, ≈ via `piru`, scale via `pemu`). Binding it would force a bound duplicate of the whole numeral system — precisely the mistake Lexor refused when it kept numbers as separate words instead of a plural suffix. Rule reaffirmed: **bind only small closed classes (tense, role, `no-`); keep open/productive systems as separate words.**
+
+Empirical check on "do inverters have to be prefixes": suffixal **negation** (Turkish `-me`, Japanese `-nai`) and suffixal **privative** (English `-less`, Finnish abessive `-tta`, Hungarian `-tlan`) are well-attested; it is specifically **contrary/opposite-pole** derivation that resists suffixing cross-linguistically (prefers prefixes un-/dis-/mal- or suppletion). So × 0 suffixes freely, × −1 is the holdout — but the coefficient reframe moves × −1 out of the "antonym affix" reference class entirely, so the prefix bias no longer binds.
+
+### Reference-point convention (also closes the parked signed-magnitude item)
+A scalar comparison needs a reference. **Bipolar** axes use the natural origin `zo` (`minu zo`/`magu zo`/`samo zo` = negative/positive/neutral side). **Unipolar/ratio** axes (no negatives) use a contextual norm (`minu` = below typical); `samo zo` = absence. This is the convention left open under "signed magnitudes compose `magu`/`minu` on top of `mezi`."
+
+### Alternatives considered and rejected
+- **Overload `no-` for opposites** — rejected: creates one-form/two-meanings ambiguity (complement vs contrary).
+- **Mint a productive opposite-marker now** (reopening the 2026-05-16 rejection) — partially reconsidered. The 2026-05-16 reasons (opposite is fuzzy for `house`/`run`; root-saving not a priority) are defeated *for scalars* by scoping to gradable roots and by the new **chunking** argument (a bound opposite is one stored retrieval). So a bound shorthand for the two poles is approved *in principle* — but **parked**, because a bound pole-marker needs a reserved prefix/suffix slot, and the prefix-inventory + prefix-stacking-order questions are still open (tasks.md). Lock the compositional system now; add the sugar once the slot system is built.
+- **A dedicated contrary suffix** (floated mid-discussion) — superseded: with the coefficient reframe, contrary is just `minu` on a named axis, so no dedicated affix is needed; the cost shifts to naming the axis (H2), which is the better problem to have.
+
+### What this leaves open
+Exact multiplicative coefficient (general × N beyond `pemu`'s × 10ⁿ); absolute intensifiers ("very"/"slightly") vs the relative `magu`/`minu`; the bound-pole shorthand (pending prefix system); and axis-naming for everyday adjectives (H2), which the whole scalar-opposite story now depends on. No new roots were added — the decision is structural and reuses the `-u` operator class.

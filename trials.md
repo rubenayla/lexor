@@ -74,6 +74,13 @@ Grep examples: `grep '\[trap, open\]' trials.md` for traps without a fix yet.
 **Status:** No "mean" root locked yet; the preposition-on-aggregator pattern is consistent with existing decisions but not formalized.
 **Related:** tasks.md modifier-attachment for aggregators.
 
+### A10. "La necesidad de Europa de Turquía" — genitive role collapse [trap, passes]
+**Spanish:** "La necesidad de Europa de Turquía es mayor que la necesidad de Turquía de Europa."
+**Trap:** Nominalization flattens a verb's subject and object into one genitive. *necesitar* (needs) keeps needer and needed apart; *necesidad de X de Y* marks both with *de*, so only word order — weakly — says who needs whom. "La necesidad de Europa" alone garden-paths as "the need *for* Europe." Disambiguating forces a full reversed restatement.
+**Lexor:** The act-noun keeps its arguments' role vowels instead of collapsing them to a genitive. `devan` (need-event, from `dev`) takes `-e` agent (needer) and `-o` patient (needed): `mag bra devana europa-e turki-o ket bra devana turki-e europa-o ket` — "greater: [Europe-needer, Turkey-needed] than [Turkey-needer, Europe-needed]." Roles ride the arguments, not their order, so there is no genitive overload and no reversed restatement.
+**How:** decisions.md role-vowel slot (`-e` subject / `-o` object), act-noun derivation `-n`. Nominalization preserves argument roles.
+**Related:** A3 (modifier attachment scope), I9 (actor vs action derivation).
+
 ---
 
 ## B. Negation, modality, possibility — distinguishing what English collapses
@@ -292,7 +299,7 @@ Three structurally distinct shapes; no overload.
 ### H2. Taper ratio / neutral magnitude term [feature, open]
 **Capability:** A noun for the magnitude axis (e.g., "weight," "temperature") with no implied direction. Adjective specifies direction.
 **Trial goal:** Talk about a 0–1 ratio where 0 = maximum tapering, without the value-meaning inversion.
-**Status:** Open. Requires both an axis-noun policy and explicit direction-suffix.
+**Status:** Open. The scalar-degree decision (2026-06-07) locked the *direction* side — poles are `magu`/`minu` on an axis, reference is origin `zo` (bipolar) or a contextual norm (unipolar), so "0 = absence" is `samo zo` with no value-meaning inversion. What remains is the **axis-noun policy**: how to name the dimension itself (prettiness, weight, taper) so adjectives can hang off it. This is now the keystone open question — I6 and the scalar-opposite story both depend on it. See decisions.md / history.md 2026-06-07.
 
 ### H3. Pixels-per-mm vs mm-per-pixel [trap, passes]
 **English:** "Higher resolution" ambiguous: more pixels per area, or finer detail per pixel.
@@ -336,7 +343,7 @@ See A6.
 
 ### I6. Composable comparator across adjectives [stretch, open]
 **Goal:** "Less pretty" / "uglier" expressible without a separate antonym root.
-**Status:** Open. Discussed and rejected in decisions.md (lexical-opposite marker), so this trial is *expected to fail* — the deliberate cost of the no-opposite-marker decision. Logged here to make that cost visible.
+**Status:** Open, but **now addressable** (no longer expected-to-fail). The scalar-degree decision (2026-06-07) treats a gradable adjective as a named axis: "less pretty" = `⟨prettiness⟩ minu`, "uglier" = `⟨prettiness⟩ magu` (more on the same axis). No antonym root needed. Remaining blocker is purely the axis-naming policy for everyday adjectives (H2), not the comparator itself. See decisions.md / history.md 2026-06-07.
 
 ### I7. "Yo voy el sábado" — fronting and topicalization [stretch, open]
 **Goal:** Distinguish "the day I'm going is Saturday" from "Saturday I'll go (possibly other days too)."
