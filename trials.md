@@ -314,6 +314,11 @@ Three structurally distinct shapes; no overload.
 ### H5. Apposition / "and that one is..." [trap, passes]
 See A6.
 
+### H6. Material-property completeness (plastic energy; brittle ≠ weak) [feature, passes]
+**English:** Names *resilience* (elastic energy) and *toughness* (total energy) but has **no one-word term for plastic-only energy**, and conflates *brittle* (failure mode) with *low toughness* (energy magnitude).
+**Lexor:** Decomposes over base quantities (`ner` energy, `dis` strain, `tes` stress) + the recoverability regime `las`. Plastic energy = `mezi ner ze-lasasa <X>` (regular phrase). Brittle is built on strain (`mezi dis ze-lasasa <X> minu`), low-toughness on energy (`mezi ner <X> minu`) — different roots, so the conflation is structurally impossible. A material can be `mezi ner lasasa <X> magu` (resilient) and `mezi dis ze-lasasa <X> minu` (brittle) at once with no contradiction.
+**How:** decisions.md material-property decomposition + gradable-quality roots + scalar-degree system (2026-06-07). Worked forms in examples.md §14.
+
 ---
 
 ## I. Stretch goals

@@ -54,6 +54,10 @@ Ready to pick up, ranked roughly by visible impact:
     - [ ] General multiplicative-coefficient operator (exact × N beyond `pemu`'s × 10ⁿ).
     - [ ] Absolute intensifiers ("very" / "slightly") distinct from the relative `magu`/`minu` ("more" / "less").
     - [x] Depends on H2 axis-naming for everyday adjectives — resolved 2026-06-07: gradable roots denote the neutral quality/axis; magnitude noun = `mezi [Q] X` (mezi generalized); bare `-s` adjective defaults positive; direction via `minu`/`mi-`/`ze-`. Closes trial H2, grounds I6. See decisions.md / history.md 2026-06-07.
+- [x] **Material-property vocabulary** — resolved 2026-06-07. Six base roots (`tes` stress, `dis` strain, `ner` energy, `las` recoverability, `dus` hardness, `rup` fracture); named properties are compositions (toughness/resilience/plastic-energy/strength/stiffness/ductility/brittle/hardness). Plastic energy nameable; brittle (strain) ≠ weak (energy). `kal`/`kol` refactored to single H2 axis `kal`; units default metric/SI. Closes trial H6. Lexicon 218 entries, collision-clean. See decisions.md / history.md 2026-06-07, examples.md §14. Follow-ups parked:
+    - [ ] Unit-expression mechanism (default system is metric/SI; how to *write* units in Lexor is unbuilt).
+    - [ ] Broader physical-property vocab (density, mass, conductivity, viscosity, …) as future batches.
+    - [ ] Legacy antonym-pair sweep — fold remaining pre-H2 paired roots into single H2 axes as found (`kal`/`kol` done).
 - [ ] **Synonym/equivalence grouping** — comma-like marker for "scalar-first, wxyz, Hamilton convention" being three names for one thing (TODO.md:9).
 - [x] **Rotation names** — resolved compositionally: `rot fasa` (roll), `rot lata` (pitch), `rot sura` (yaw). No new roots beyond the verb `rot`. See decisions.md / history.md 2026-05-16.
 - [x] **Sub-constituent grouping** — resolved 2026-05-16: paired markers `bra … keti`. Handles numerical ranges, mixed AND/OR, nested operators. `defi`-binding freed for its original naming role. See decisions.md / history.md 2026-05-16.

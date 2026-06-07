@@ -279,8 +279,21 @@
 - {root: tin, kind: adj,  concept: "small / tiny",                semantic_parent: "size",               source: "English tiny"}
 - {root: nov, kind: adj,  concept: "new",                         semantic_parent: "age",                source: "Latin novus / Spanish nuevo"}
 - {root: mat, kind: adj,  concept: "old / aged",                  semantic_parent: "age",                source: "Latin maturus (sense-shifted)"}
-- {root: kal, kind: adj,  concept: "hot",                         semantic_parent: "temperature",        source: "Latin calor"}
-- {root: kol, kind: adj,  concept: "cold",                        semantic_parent: "temperature",        source: "English cold / Latin gelidus"}
+- {root: kal, kind: adj,  concept: "temperature / warmth (gradable quality)", semantic_parent: "physical_property", source: "Latin calor", notes: "H2 neutral-axis quality (refactored 2026-06-07, replaces the old kal=hot / kol=cold pair). hot = kalasa (positive default); cold = mi-kalasa (opposite pole); cooler = kalasa minu; temperature of X = mezi kal X. Bipolar around a contextual reference."}
+
+# =============================================================================
+# MATERIAL / MECHANICAL PROPERTIES (H2 neutral-axis qualities + base quantities)
+# Named engineering properties are COMPOSITIONS, not roots (decisions.md
+# 2026-06-07). Energy decomposes by deformation regime via the recoverability
+# adjective `las`, so plastic-only energy — which English cannot name in one
+# word — is expressible: `mezi ner ze-lasasa <X>`.
+# =============================================================================
+- {root: tes, kind: noun, concept: "mechanical stress (force per area, sigma)",     semantic_parent: "physical_property", source: "Latin tensio",    notes: "Strength = mezi tes tepa rup <X> (stress at fracture). Stiffness / elastic modulus = mezi tes kexu dis <X> (stress per strain)."}
+- {root: dis, kind: noun, concept: "strain / relative deformation (epsilon)",       semantic_parent: "physical_property", source: "distortion",       notes: "Ductility = mezi dis ze-lasasa <X> (non-recoverable strain capacity); brittle = that, minu."}
+- {root: ner, kind: noun, concept: "energy",                                        semantic_parent: "physical_property", source: "Greek energeia",   notes: "Absorbed-deformation energy = area under stress-strain. Toughness = mezi ner <X> (total to fracture); resilience = mezi ner lasasa <X> (recoverable part); plastic energy = mezi ner ze-lasasa <X>. toughness = resilience + plastic energy."}
+- {root: las, kind: adj,  concept: "deformation recoverability / springiness",      semantic_parent: "physical_property", source: "Greek elastikos",  notes: "H2 neutral axis. elastic = lasasa (recoverable, positive default); plastic = ze-lasasa (non-recoverable, x0). Scopes a quantity to the elastic vs plastic regime (see resilience / ductility)."}
+- {root: dus, kind: adj,  concept: "hardness (resistance to indentation/scratch)",  semantic_parent: "physical_property", source: "Latin durus",      notes: "H2 neutral axis. hard = dusasa; soft = mi-dusasa / dusasa minu; hardness of X = mezi dus X. Distinct from stiffness (mezi tes kexu dis) and from toughness."}
+- {root: rup, kind: noun, concept: "fracture / break / mechanical failure",         semantic_parent: "physical_property", source: "Latin rumpere",     notes: "The failure event. Strength = stress at fracture = mezi tes tepa rup <X>."}
 
 # =============================================================================
 # CONTENT ROOTS — vocab batch 2 (2026-05-18)

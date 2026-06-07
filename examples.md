@@ -179,6 +179,26 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 
 ---
 
+## 14. Material properties (decomposition — see decisions.md 2026-06-07)
+
+Base quantities: `tes` stress, `dis` strain, `ner` energy, `las` recoverability (elastic), `dus` hardness, `rup` fracture. `[steel]` / `[glas]` are placeholder material roots (not yet locked). The named engineering properties are all compositions:
+
+67. `mezi ner bra [steel] keti` — **toughness**: total absorbed energy to fracture.
+68. `mezi ner lasasa bra [steel] keti` — **resilience**: the recoverable (elastic) part of that energy.
+69. `mezi ner ze-lasasa bra [steel] keti` — **plastic energy**: the non-recoverable part. *English has no one-word term for this; Lexor builds it regularly.* Identity: toughness = resilience + plastic energy.
+70. `mezi tes tepa rup bra [steel] keti` — **strength**: stress at fracture (`tepa` = at, `rup` = the fracture point).
+71. `mezi tes kexu dis bra [steel] keti` — **stiffness / elastic modulus**: stress per strain (`kexu` = per, same operator as the H3 pixels-per-mm case).
+72. `mezi dis ze-lasasa bra [steel] keti` — **ductility**: non-recoverable (plastic) strain capacity.
+73. `mezi dis ze-lasasa bra [glas] keti minu` — **brittle**: that same ductility, low (postposed `minu`).
+74. `mezi dus bra [steel] keti` — **hardness**.
+75. `mezi kal bra [steel] keti` — **temperature**; `kalasa` = hot, `mi-kalasa` = cold, `kalasa magu` = hotter (the refactored `kal`/`kol`).
+
+76. **The case that started the thread — resilient *and* brittle, no contradiction:**
+    `mezi ner lasasa bra X keti magu, kune mezi dis ze-lasasa bra X keti minu`
+    — "X's elastic energy is high, **and** its plastic strain is low." A springy-but-shattering material. English's "brittle" obscures this by conflating an energy magnitude with a failure mode; here resilience is built on `ner` (energy) and brittleness on `dis` (strain), so the two ride independent axes and the sentence is plainly consistent.
+
+---
+
 ## Observations and surfaced gaps
 
 Working through these exposed the following:

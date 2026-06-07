@@ -224,3 +224,18 @@
     - **Absence:** `ze-bel` = without beauty (× 0).
     - **Bipolar vs unipolar:** bipolar qualities (beauty, warmth) have both a low end (`minu`) and an opposite (`mi-`); unipolar / ratio qualities (height, mass, toughness) have only a low end (`minu`), no `mi-`. Matches the reference-point convention.
     - Closes trials.md H2; fully grounds I6. No new roots — `mezi` is broadened. See history.md 2026-06-07.
+- **Material / mechanical properties — decomposed, not borrowed (2026-06-07).** Deliberately *not* a copy of English's property vocabulary, whose gap (it names *resilience* and *toughness* but has no one-word *plastic energy*) is exactly what motivated this. Named engineering properties are **compositions** over a few base quantities + the polarity/degree machinery; the decomposition makes every piece nameable. Base roots: `tes` stress (σ), `dis` strain (ε), `ner` energy, `las` deformation-recoverability (elastic), `dus` hardness, `rup` fracture.
+    - **Energy by regime — the completeness win.** `las` (recoverability) scopes absorbed energy to a regime: `lasasa` = elastic/recoverable, `ze-lasasa` = plastic/non-recoverable.
+        - toughness (total to fracture) = `mezi ner bra X keti`
+        - resilience (elastic energy) = `mezi ner lasasa bra X keti`
+        - **plastic energy** (no English word) = `mezi ner ze-lasasa bra X keti`
+        - identity: toughness = resilience + plastic energy.
+    - **Other properties as compositions:**
+        - strength (stress at fracture) = `mezi tes tepa rup bra X keti`
+        - stiffness / elastic modulus (stress per strain) = `mezi tes kexu dis bra X keti` (reuses `kexu` "per", as in H3)
+        - ductility (non-recoverable strain capacity) = `mezi dis ze-lasasa bra X keti`; **brittle** = the same, low: `… minu`
+        - hardness = `mezi dus bra X keti`
+    - **Region-scoping needs no new mechanism:** the regime word (`lasasa` / `ze-lasasa`) is just an adjective modifying the quantity head (`ner`, `dis`) — ordinary modifier-after-head. The energy/magnitude conflation English makes between "low toughness" and "brittle" is structurally impossible here: they are different roots (`ner` vs `dis`-derived ductility).
+    - **`kal`/`kol` refactored to H2:** the old `kal`=hot / `kol`=cold antonym pair is replaced by a single neutral root `kal` = temperature; hot = `kalasa`, cold = `mi-kalasa`, temperature-of-X = `mezi kal X`. `kol` removed. (Brings the one pre-H2 gradable pair into line; other legacy pairs to sweep as found.)
+    - **Units: metric / SI** by default when a magnitude is quantified (energy density J·m⁻³, stress Pa, modulus Pa). The unit-expression *mechanism* is still unbuilt (parked); only the default system is fixed here.
+    - See history.md 2026-06-07 and examples.md "Material properties" for worked phrases.

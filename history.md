@@ -1776,4 +1776,29 @@ Bipolar qualities (beauty, warmth) get both a low end (`minu`) and an opposite-q
 Toughness is unipolar: `mezi [tough] X` = degree of toughness; brittle = low on a *different* axis (plastic-fraction), `mezi [ductile] X` with `minu`. Resilience = `mezi [tough] X` scoped to the elastic region. The "we need 6 words" problem dissolves into two named quality-roots + the degree operators — no antonym roots, no conflation of energy-magnitude with failure-mode.
 
 ### What's still open
-Naming the actual quality roots (vocab buildout) and the elastic/plastic region-scoping words; exact ×N coefficient; absolute intensifiers ("very"/"slightly"). No new roots added here — `mezi` was broadened in place.
+Exact ×N coefficient; absolute intensifiers ("very"/"slightly"). (The material-property roots that follow were the immediate next step.)
+
+## 2026-06-07 (same session) — Material-property vocabulary, by decomposition
+
+The thread opened with a material-science complaint: English names *resilience* (elastic energy) and *toughness* (total energy) but has **no one-word term for plastic-only energy**, and it conflates *brittle* (a failure mode) with *low toughness* (an energy magnitude). The instruction for Lexor was explicit: don't copy that incomplete system — "ours must be good."
+
+### Decision: decompose, don't borrow
+Named engineering properties are **compositions** over a few base quantities, not separate borrowed roots. Six base roots added: `tes` stress (Latin tensio), `dis` strain (distortion), `ner` energy (Greek energeia), `las` deformation-recoverability (Greek elastikos), `dus` hardness (Latin durus), `rup` fracture (Latin rumpere). (`dur` and `lon`, the first picks for hardness/strain, were already taken — endure/long — so re-sourced to `dus`/`dis`.)
+
+The key move is **regime-scoping of energy by the recoverability adjective `las`**:
+- elastic regime = `lasasa` (recoverable), plastic regime = `ze-lasasa` (non-recoverable, ×0 recovery).
+- resilience = `mezi ner lasasa <X>`; plastic energy = `mezi ner ze-lasasa <X>`; toughness = `mezi ner <X>` (total). Identity: toughness = resilience + plastic energy.
+
+That is the completeness win: **plastic energy, which English cannot say in one word, is a regular phrase here**, and it sits in an explicit additive relationship with the other two. No region-scoping *mechanism* had to be invented — `lasasa`/`ze-lasasa` is just an adjective modifying the quantity head (`ner`), ordinary modifier-after-head.
+
+Other properties fall out the same way: strength = stress at fracture (`mezi tes tepa rup <X>`); stiffness/modulus = stress per strain (`mezi tes kexu dis <X>`, reusing `kexu` "per" exactly as the H3 pixels-per-mm trial does); ductility = non-recoverable strain (`mezi dis ze-lasasa <X>`), brittle = that with `minu`; hardness = `mezi dus <X>`.
+
+### Why this beats English structurally
+The brittle/low-toughness conflation is *impossible* to make here, because toughness is built on `ner` (energy) and ductility/brittleness on `dis` (strain) — different roots. English collapses them because it lexicalized points on two different curves into adjacent-sounding words; Lexor keeps the curves (energy vs strain) as separate base quantities and derives the rest.
+
+### Side decisions
+- **`kal`/`kol` refactored to H2.** The pre-H2 hot/cold antonym pair became one neutral root `kal` = temperature (hot = `kalasa`, cold = `mi-kalasa`, temperature = `mezi kal X`); `kol` removed. Only the lexicon referenced them, so the sweep was clean. Flags the general pattern: legacy antonym pairs get folded into single H2 axes as they surface.
+- **Units = metric/SI by default** (energy density J·m⁻³, stress Pa). Only the default system is fixed; the unit-*expression* mechanism stays parked.
+
+### Still open
+Unit-expression mechanism; elastic/plastic as standalone regime *nouns* if ever needed (currently only the adjective forms are used); the broader physical-property vocabulary (density, mass, conductivity, …) as future batches; exact ×N coefficient and absolute intensifiers. Lexicon now 218 entries, collision-clean.
