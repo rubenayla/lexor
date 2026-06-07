@@ -41,6 +41,10 @@ Short, concrete examples of things natural languages get wrong. The "why" behind
   - Parse B (live in other contexts): `[its tube] ends [...]` — `ends` is a verb meaning *terminates*. Compare "its tube ends here." Only the verb agreement on `were` kills B here; with a different head verb, the ambiguity is decided by chance.
   - English lets nouns sit next to nouns and silently flip one into a modifier. Listener disambiguates by inferring which word is the verb.
 
+- **"La necesidad de Europa de Turquía es mayor que la necesidad de Turquía de Europa."**
+  > "Europe's need *of* Turkey — or Turkey, named first?"
+  - One genitive `de` marks two different roles: who needs (subject) and what is needed (object). "La necesidad de Europa" alone garden-paths as "the need *for* Europe." The only disambiguator is word order, and it's so weak the speaker has to restate the whole structure reversed just to compare two needs. The verb *necesitar* keeps needer and needed apart; nominalizing to *necesidad* flattens both into `de`.
+
 ## Negation scope
 
 - **"not (a = b)"** collapses in English to "a is not equal to b" — but often the intended meaning is *"a doesn't have to equal b."* English can't distinguish:
