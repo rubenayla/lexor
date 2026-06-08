@@ -357,8 +357,8 @@ To say something might be true, or must be true, use one of two markers at the s
 
 **Lexor:** `kani luve` — it might rain
 **Lexor:** `musi luve` — it must be raining
-**Lexor:** `no musi samo a b` — a doesn't have to equal b (it's not necessarily true that a equals b)
-**Lexor:** `kani no samo m1 m2` — m1 and m2 might be different (it's possible that they aren't equal)
+**Lexor:** `nomusi samo a b` — a doesn't have to equal b (it's not necessarily true that a equals b)
+**Lexor:** `kani nosamo m1 m2` — m1 and m2 might be different (it's possible that they aren't equal)
 
 **The words:**
 - `kani` = "might," "may," "is possibly." Mnemonic: English/German *can* / *kann*.
@@ -389,7 +389,7 @@ Sometimes you want to attach a specific probability to a claim, like "90% likely
 The number itself is built from digits: `zo demu ne zo` is "zero point nine zero" = 0.90 in decimal. (The `demu` is the decimal point.)
 
 **Relating `chani` to the earlier `kani` and `musi`:**
-- `chani zo X` = "X has probability 0" = impossible. Same as `no kani X`.
+- `chani zo X` = "X has probability 0" = impossible. Same as `nokani X`.
 - `chani pa X` = "X has probability 1" = certain. Same as `musi X`.
 - `kani X` (without a number) is "X is possible to some unspecified degree."
 

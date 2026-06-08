@@ -88,14 +88,14 @@ Grep examples: `grep '\[trap, open\]' trials.md` for traps without a fix yet.
 ### B1. not(a = b) vs a ≠ b [trap, passes]
 **English:** "a is not equal to b" — never equal, or "doesn't have to equal"?
 **Lexor:**
-- Assertion of inequality: `no samo a b` (a ≠ b, claimed).
-- "a doesn't necessarily equal b": `no musi samo a b` (¬□ a=b).
-- "a may or may not equal b": `kani no samo a b` (◇ a≠b).
+- Assertion of inequality: `nosamo a b` (a ≠ b, claimed).
+- "a doesn't necessarily equal b": `nomusi samo a b` (¬□ a=b).
+- "a may or may not equal b": `kani nosamo a b` (◇ a≠b).
 **How:** decisions.md modal operators `kani`/`musi` (2026-05-16).
 
 ### B2. "Masses can be different" [trap, passes]
 **English:** "The masses can be different" — speaker is not committing on whether they actually are.
-**Lexor:** `kani no samo m1 m2` — "possibly m1 ≠ m2." Speaker explicitly does not commit to the inequality holding.
+**Lexor:** `kani nosamo m1 m2` — "possibly m1 ≠ m2." Speaker explicitly does not commit to the inequality holding.
 **How:** decisions.md modal operators (2026-05-16).
 
 ### B3. Tense when uncertain [trap, passes]
@@ -330,7 +330,7 @@ See A6.
 
 ### I2. Quantum superposition [stretch, passes]
 **Goal:** Express "the particle's position is in superposition over X and Y" without smuggling in a definite location.
-**Lexor:** `kani loka-x i kune kani loka-y i kune no mesa` = "possibly at x AND possibly at y AND no measurement." Each location is modal-possible, not asserted-state.
+**Lexor:** `kani loka-x i kune kani loka-y i kune nomesa` = "possibly at x AND possibly at y AND no measurement." Each location is modal-possible, not asserted-state.
 **How:** decisions.md modal operators (2026-05-16).
 
 ### I3. Pronoun-less paragraph [stretch, passes]

@@ -1811,4 +1811,23 @@ Rationale: the dash never carried information. Negation/polarity prefixes were a
 
 Decision: **spaces are the only word separator; bound prefixes attach with no space and no dash.** `noloma`, `mikalasa`, `zelas`, stacked `nomikalasa`. Swept all docs + lexicon root fields (`"no-"`→`"no"`, etc.), preserving English-prose hyphenated compounds (`no-mandatory`, `no-lexical`, `no-time`, the `mono-temporal` substring) since those are English, not Lexor. Collision-clean at 218 entries (the bare `no`/`mi`/`ze` forms are unique against digits, pronouns, and CVC roots).
 
-Recorded as the first writing-system rule in decisions.md; a dedicated orthography section can grow from it. Left untouched (out of scope, flagged): a few examples.md cases write negation as a *spaced* separate word before an operator (`no musi`, `no samo`) — whether negation binds to a following operator with no space, like it does to a root, is a separate question not raised here.
+Recorded as the first writing-system rule in decisions.md; a dedicated orthography section can grow from it. Left untouched (out of scope, flagged): a few examples.md cases write negation as a *spaced* separate word before an operator — whether negation binds to a following operator with no space, like it does to a root, is resolved in the next entry.
+
+## 2026-06-08 — Negation scope = attachment point; no bracket symbols
+
+Two finalizations from the same thread.
+
+### Negation: one operator, attachment = scope
+The spaced `no musi` / `no samo` in the docs looked like a *second* kind of negation (sentential, separate word) alongside the bound prefix. It isn't. The examples already showed the real rule unstated: `noloma e` (`no` on the verb = predicate negation) vs `loma no[apple] e` (`no` on the argument = constituent negation) vs `nosamo` (`no` on the operator = "≠"). The attachment point already carries the scope.
+
+So there is exactly **one** negation — the bound prefix `no` — and *where you attach it is what it scopes*. The spaced forms were legacy inconsistency, now swept to attached (`nomusi`, `nosamo`, `nokani`, `nomesa`).
+
+Multi-word scope: an operator-headed proposition is negated by attaching to the head (`nomusi P` = ¬□P, the modal scopes the rest). A multi-word scope with no single operator head is wrapped in the existing brackets, attaching to `bra`: `nobra … keti`.
+
+Rejected alternative: a separate spaced word for sentential negation (Lojban `na` style). It would double the negation mechanism for no gain — `nobra…keti` already expresses sentential negation with existing parts — and reintroduce the spaced-vs-bound split just eliminated. Minimalism wins.
+
+### No bracket symbols
+User's reasoning: if `bra`/`keti` already behave like brackets, no bracket *symbols* are needed. Correct. `bra` and `keti` are spoken words; a `(`/`[` symbol would be one you'd still pronounce "bra," i.e. a writing-only shorthand that diverges from speech — forbidden by "written like talked." Grouping is therefore lexical, not punctuational, and identical in speech and writing. This is also the answer to the worry "does Lexor lean on written punctuation that fails when spoken?" — no: every disambiguator (grouping, scope, roles) is an audible recoverable word; punctuation is limited to comma/period (pauses) and the radix point (number position). Closes the parked "written form for the brackets" item: no symbol form.
+
+### Still-present dash remnants (flagged, not swept here)
+Independent of negation: role-vowel notation around placeholders (`[apple]-o`, `e-e` → should be `[apple]o`, `ee` per the doubled-vowel rule) and labelled-variable forms (`loka-x`, `loka-y`) still carry dashes and violate the 2026-06-07 no-dash rule. Left for a focused follow-up because `loka-x` needs a small decision on how to write a labelled variable (`loka vari x`?).

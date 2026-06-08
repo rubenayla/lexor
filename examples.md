@@ -93,9 +93,9 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 
 49a. `kani luve` — "It might rain." / "Possibly it rains." (◇)
 49b. `musi luve` — "It must be raining." / "Necessarily." (□)
-49c. `no musi samo m1 m2` — "Not necessarily m1 = m2." (English's elusive "doesn't have to equal" reading)
-49d. `kani no samo m1 m2` — "Possibly m1 ≠ m2." (the "can be different" reading without claiming they actually are)
-49e. `kani loka-x i kune kani loka-y i kune no mesa` — "Possibly at-x AND possibly at-y AND no measurement." (quantum superposition without smuggling in a definite location)
+49c. `nomusi samo m1 m2` — "Not necessarily m1 = m2." (English's elusive "doesn't have to equal" reading)
+49d. `kani nosamo m1 m2` — "Possibly m1 ≠ m2." (the "can be different" reading without claiming they actually are)
+49e. `kani loka-x i kune kani loka-y i kune nomesa` — "Possibly at-x AND possibly at-y AND no measurement." (quantum superposition without smuggling in a definite location)
 49f. `dik e ke kani luve` — "She says that it might rain." (modal inside a complement clause)
 
 ## 9c. Axis system (aksi / tipi / mezi)
@@ -132,7 +132,7 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 49z. `chani zo demu fi samo a b` — "a equals b with probability 0.5." (Coin-flip uncertainty.)
 49aa. `chani zo demu pa luve` — "It'll rain with probability 0.1." (Unlikely.)
 49bb. Equivalences:
-    - `chani zo X` ≡ `no kani X` — P = 0 = impossible.
+    - `chani zo X` ≡ `nokani X` — P = 0 = impossible.
     - `chani pa X` ≡ `musi X` — P = 1 = certain.
     - `kani X` ≈ `chani <unspecified positive> X` — speaker not committing to a specific value.
 49cc. Probability ranges (compose with comparison operators):
