@@ -1829,5 +1829,10 @@ Rejected alternative: a separate spaced word for sentential negation (Lojban `na
 ### No bracket symbols
 User's reasoning: if `bra`/`keti` already behave like brackets, no bracket *symbols* are needed. Correct. `bra` and `keti` are spoken words; a `(`/`[` symbol would be one you'd still pronounce "bra," i.e. a writing-only shorthand that diverges from speech — forbidden by "written like talked." Grouping is therefore lexical, not punctuational, and identical in speech and writing. This is also the answer to the worry "does Lexor lean on written punctuation that fails when spoken?" — no: every disambiguator (grouping, scope, roles) is an audible recoverable word; punctuation is limited to comma/period (pauses) and the radix point (number position). Closes the parked "written form for the brackets" item: no symbol form.
 
-### Still-present dash remnants (flagged, not swept here)
-Independent of negation: role-vowel notation around placeholders (`[apple]-o`, `e-e` → should be `[apple]o`, `ee` per the doubled-vowel rule) and labelled-variable forms (`loka-x`, `loka-y`) still carry dashes and violate the 2026-06-07 no-dash rule. Left for a focused follow-up because `loka-x` needs a small decision on how to write a labelled variable (`loka vari x`?).
+### Dash remnants — swept from live docs (2026-06-08)
+The remaining dashes that violated the 2026-06-07 no-dash rule are now cleaned in the live reference docs (examples.md, walkthrough.md, trials.md, phonetics.md):
+- **Role vowels attach:** `[apple]-o` → `[apple]o`, `[key]-i` → `[key]i`; pronoun + role vowel attaches with the doubled-vowel-as-long-vowel rule (`e-e` → `ee`, `u-u` → `uu`, `y-e` → `ye`); root + role vowel likewise (`europa-e` → `europae`).
+- **Labelled positions/variables** use the existing variable marker: `loka-x` → `loka vari x`, `loka-y` → `loka vari y`.
+- **`dita-tubas` → `dita tubas`:** that was a head-noun + adjective (ends + tube-ish), ordinary modifier-after-head, space-separated — the dash was spurious, not a real compound.
+
+Left as-is on purpose: **history.md's older log entries** keep their original dashed notation as a record of the then-current orthography (e.g. the rejected `fas-e`/`fas-o` discussion, old `var-x` binding syntax); they are historical, not live spec. English-prose hyphenated compounds in glosses/descriptions (`act-noun`, `forward-back`, `bra-ket`, `def-binding`) are English, not Lexor, and stay.

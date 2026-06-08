@@ -168,9 +168,9 @@ The extra letter `x` after one of these adds "in the middle of" (ongoing). So `l
 
 For sentences with two arguments (eater and food), the order is enough — verb, object, subject. But for verbs that take three arguments (like "give X to Y") or where the order could be ambiguous, you can stick a small vowel on the end of each noun to mark its role.
 
-**Lexor:** `loma [apple]-o e-e` — she eats an apple, with explicit roles
-**Lexor:** `dake [apple]-o e-e u-u` — she gives an apple to you
-**Lexor:** `apre [door]-o e-e [key]-i` — she opens the door with a key
+**Lexor:** `loma [apple]o ee` — she eats an apple, with explicit roles
+**Lexor:** `dake [apple]o ee uu` — she gives an apple to you
+**Lexor:** `apre [door]o ee [key]i` — she opens the door with a key
 
 **The role vowels:**
 
@@ -183,7 +183,7 @@ For sentences with two arguments (eater and food), the order is enough — verb,
 
 You only need these when the default order doesn't make the meaning clear. For ordinary two-argument sentences, just rely on word order.
 
-When a pronoun already ends in `e` and you add `-e`, you get a doubled vowel like `e-e`. Pronounce that as one longer vowel.
+When a pronoun already ends in `e` and you add `-e`, you get a doubled vowel like `ee`. Pronounce that as one longer vowel.
 
 ---
 

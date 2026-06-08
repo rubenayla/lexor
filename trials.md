@@ -22,7 +22,7 @@ Grep examples: `grep '\[trap, open\]' trials.md` for traps without a fix yet.
 ### A1. Tube ends [trap, passes]
 **English:** "Its tube ends were round."
 **Trap:** Noun-noun-verb POS ambiguity. `[its tube ends]` (tube modifying ends) vs `[its tube] ends [...]` (ends as verb).
-**Lexor:** `stao rons dita-tubas i-e` — "are-state round, the tube-ish ends, of-it."
+**Lexor:** `stao rons dita tubas ie` — "are-state round, the tube-ish ends, of-it."
 **How:** Adjective suffix `-s` on `tube` is morphological — `tubas` cannot be a verb. Outer role-vowel on `dita` (patient noun from `dit`/end) marks it as a noun. POS is explicit.
 **Related:** decisions.md derivation consonants (`-s` adjective), AGENTS.md roots-are-concept-level.
 
@@ -77,7 +77,7 @@ Grep examples: `grep '\[trap, open\]' trials.md` for traps without a fix yet.
 ### A10. "La necesidad de Europa de Turquía" — genitive role collapse [trap, passes]
 **Spanish:** "La necesidad de Europa de Turquía es mayor que la necesidad de Turquía de Europa."
 **Trap:** Nominalization flattens a verb's subject and object into one genitive. *necesitar* (needs) keeps needer and needed apart; *necesidad de X de Y* marks both with *de*, so only word order — weakly — says who needs whom. "La necesidad de Europa" alone garden-paths as "the need *for* Europe." Disambiguating forces a full reversed restatement.
-**Lexor:** The act-noun keeps its arguments' role vowels instead of collapsing them to a genitive. `devan` (need-event, from `dev`) takes `-e` agent (needer) and `-o` patient (needed): `mag bra devana europa-e turki-o ket bra devana turki-e europa-o ket` — "greater: [Europe-needer, Turkey-needed] than [Turkey-needer, Europe-needed]." Roles ride the arguments, not their order, so there is no genitive overload and no reversed restatement.
+**Lexor:** The act-noun keeps its arguments' role vowels instead of collapsing them to a genitive. `devan` (need-event, from `dev`) takes `-e` agent (needer) and `-o` patient (needed): `mag bra devana europae turkio ket bra devana turkie europao ket` — "greater: [Europe-needer, Turkey-needed] than [Turkey-needer, Europe-needed]." Roles ride the arguments, not their order, so there is no genitive overload and no reversed restatement.
 **How:** decisions.md role-vowel slot (`-e` subject / `-o` object), act-noun derivation `-n`. Nominalization preserves argument roles.
 **Related:** A3 (modifier attachment scope), I9 (actor vs action derivation).
 
@@ -109,7 +109,7 @@ Grep examples: `grep '\[trap, open\]' trials.md` for traps without a fix yet.
 
 ### C1. "The electron is at position x" [trap, passes]
 **English:** "Is at" — claims a definite location, but in quantum contexts location is observation-dependent.
-**Lexor:** `stao loka-x i` (state at-location-x) vs `esto loka-x i` (essence at-location-x). Pre-measurement particles are in superposition — neither holds definitively. Use `kelu` (possibility) over the state predicate.
+**Lexor:** `stao loka vari x i` (state at-location-x) vs `esto loka vari x i` (essence at-location-x). Pre-measurement particles are in superposition — neither holds definitively. Use `kelu` (possibility) over the state predicate.
 **How:** decisions.md "is"-overload split (sam/est/sta/mem/lit-fin).
 
 ### C2. "The password is incorrect" [trap, passes]
@@ -243,7 +243,7 @@ See A5.
 
 ### F5. Unspecified-addressee [feature, open]
 **Capability:** Calling out to someone unnamed (asking for help in a group).
-**Status:** No dedicated vocative; could compose `ka u-i` ("hey you-instrumental"?) or designate a root. Parked.
+**Status:** No dedicated vocative; could compose `ka ui` ("hey you-instrumental"?) or designate a root. Parked.
 
 ---
 
@@ -330,7 +330,7 @@ See A6.
 
 ### I2. Quantum superposition [stretch, passes]
 **Goal:** Express "the particle's position is in superposition over X and Y" without smuggling in a definite location.
-**Lexor:** `kani loka-x i kune kani loka-y i kune nomesa` = "possibly at x AND possibly at y AND no measurement." Each location is modal-possible, not asserted-state.
+**Lexor:** `kani loka vari x i kune kani loka vari y i kune nomesa` = "possibly at x AND possibly at y AND no measurement." Each location is modal-possible, not asserted-state.
 **How:** decisions.md modal operators (2026-05-16).
 
 ### I3. Pronoun-less paragraph [stretch, passes]

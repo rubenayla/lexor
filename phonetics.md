@@ -119,7 +119,7 @@ Examples:
 - `sa dima` (6 days) → `sa` [break] `dima` — `dima` is not a digit, so the digit stream closed before it.
 
 ### Pronouns
-Pronouns are V or CV shape (`y`, `u`, `e`, `la`, etc.), shorter than the standard CVCV word. They still get their own prosodic unit and their own brief break before and after. Pronoun + role vowel (e.g. `y-e`, `u-o`) is one unit (the role vowel is a suffix, not a separate word); doubled vowels (`ee`, `uu`, `loo`) are pronounced as a single long vowel held about twice the duration of a short vowel.
+Pronouns are V or CV shape (`y`, `u`, `e`, `la`, etc.), shorter than the standard CVCV word. They still get their own prosodic unit and their own brief break before and after. Pronoun + role vowel (e.g. `ye`, `uo`) is one unit (the role vowel is a suffix, not a separate word); doubled vowels (`ee`, `uu`, `loo`) are pronounced as a single long vowel held about twice the duration of a short vowel.
 
 ### Clause boundary (comma in writing)
 A clause boundary is marked by **a longer pause (≈200–300 ms) plus a slight pitch reset**. This is the spoken equivalent of the comma. It separates:

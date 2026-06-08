@@ -20,9 +20,9 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 
 ## 2. Role vowels (when position alone is ambiguous)
 
-9. `loma [apple]-o e-e` — same as #8, explicit roles. Use when object/subject swap would be plausible from context.
-10. `dake [apple]-o e-e u-u` — "She gives an apple to you." (recipient `u` marked because three-argument verb)
-11. `pere [door]-o e-e [key]-i` — "She opens the door with a key." (instrument `i`)
+9. `loma [apple]o ee` — same as #8, explicit roles. Use when object/subject swap would be plausible from context.
+10. `dake [apple]o ee uu` — "She gives an apple to you." (recipient `u` marked because three-argument verb)
+11. `pere [door]o ee [key]i` — "She opens the door with a key." (instrument `i`)
 
 ## 3. Negation
 
@@ -95,7 +95,7 @@ Worked sentence translations. Goal: validate the grammar by writing realistic se
 49b. `musi luve` — "It must be raining." / "Necessarily." (□)
 49c. `nomusi samo m1 m2` — "Not necessarily m1 = m2." (English's elusive "doesn't have to equal" reading)
 49d. `kani nosamo m1 m2` — "Possibly m1 ≠ m2." (the "can be different" reading without claiming they actually are)
-49e. `kani loka-x i kune kani loka-y i kune nomesa` — "Possibly at-x AND possibly at-y AND no measurement." (quantum superposition without smuggling in a definite location)
+49e. `kani loka vari x i kune kani loka vari y i kune nomesa` — "Possibly at-x AND possibly at-y AND no measurement." (quantum superposition without smuggling in a definite location)
 49f. `dik e ke kani luve` — "She says that it might rain." (modal inside a complement clause)
 
 ## 9c. Axis system (aksi / tipi / mezi)
