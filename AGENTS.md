@@ -12,7 +12,7 @@ Lexor is a constructed language designed from first principles to maximize preci
 - `comparisons.md` — honest comparisons with prior constructed languages that share design goals. Currently covers Lojban; can grow to cover Esperanto, Toki Pona, Ithkuil, etc. Used to answer "has this been done better?" and to track what Lexor can learn from mature projects.
 - `pain.md` — concrete examples of what current languages get wrong. The "why" behind Lexor.
 - `TODO.md` — older open-questions list. Being merged into `tasks.md` over time.
-- `tasks.md` — current open design questions and work items, parked for later.
+- `tasks.md` — current open design questions and work items, parked for later. Closed items move to `tasks/done-archive.md` (reference only, nothing actionable there); see the convention note at the top of `tasks.md`.
 - `history.md` — append-only log of decisions, reflections, findings. Grep, don't read in full.
 - `lexicon.yaml` — **source of truth for all locked roots.** Machine-readable. Every new root is added here first. Schema documented in the file header. Tree structure emerges from `semantic_parent` links — internal taxonomy nodes only get created when needed.
 - `roots.md` — root inventory rationale + tables. Tables are legacy / human-readable views; `lexicon.yaml` is authoritative if they disagree.
