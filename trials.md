@@ -98,6 +98,16 @@ bra [rental] [truck] keti [without-driver]
 ```
 
 In the first, the modifier is inside the truck constituent and targets the truck. In the second, it follows the closed rental constituent and targets its head, rental. The proposal is a general attachment rule, not an instruction to replace the phrase with explanatory sentences. A worked derivation must also specify how rental takes truck as its argument and how the group retains its head. Separately, the relation expressed by `[without-driver]` needs a defined meaning: attachment must not silently turn absence into autonomous capability. Full lexical forms remain open.
+
+**Alternative under consideration: grammatical pitch (2026-09-24).** Rubén proposed using pitch to encode nesting levels instead of speaking every grouping marker. A minimal candidate assigns rental to a base register and its truck argument to a higher register. The modifier stays at the truck register for truck attachment, or returns to the rental register for rental attachment. Pitch would carry a required grammatical distinction, not merely hint at a reading. These level diagrams use English labels only to display structure:
+
+```text
+Rental attachment: rental₀ truck₁ without-driver₀
+Truck attachment:  rental₀ truck₁ without-driver₁
+```
+
+The candidate adds no syllables for these nesting transitions, potentially saving the three syllables of `bra … keti`; total phrase length is still unknown. It is not a general parser yet: test entry/exit boundaries, adjacent sibling groups at the same depth, deeper nesting, and interactions with emphasis. Rubén proposes retaining written `bra … keti` while realizing their boundaries through pitch in speech; no new written symbols are needed. Keep pronunciation of the words as a candidate alternative when pitch cannot carry the distinction. Adoption would revise scope-by-prosody and the requirement to pronounce written grouping words, while preserving the existing written notation. Compare pitch and spoken grouping on the same meanings; do not count ordinary suggestive intonation as an unambiguous encoding.
+
 **Pass criteria:** Demonstrate unique parses for rental-level and truck-level modification under one general grammar rule, including a modifier after a closed group. Then produce distinct Lexor forms for the three semantic claims above. Check that a conventional truck rented without driver services satisfies the first claim without satisfying the second, and that a parked conventional truck can satisfy the third without satisfying the second. No reading may depend on advertising conventions or assumptions about available technology.
 **Status:** Open pending a precise constituent/head rule, worked Lexor forms, and a defined meaning for the absence relation; no new grammar rule or root is locked.
 **Related:** A3 (modifier scope); [tasks.md](tasks.md#design-decisions-to-resolve), "Rental offer vs truck modifier attachment"; decisions.md strict positional rules, subordinate clauses, and grouping markers.
