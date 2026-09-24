@@ -90,9 +90,16 @@ Grep examples: `grep '\[trap, open\]' trials.md` for traps without a fix yet.
 - The truck can operate without a human driver; it leaves the rental's included services unspecified.
 - Nobody is driving the truck at the stated time; it leaves autonomous capability and included services unspecified.
 
-**Candidate solution:** Reuse explicit grouping and modifier attachment for the target, then express the relation with a predicate: "rental that does not include driver services," "truck that can operate without a human driver," or "truck that nobody is currently driving." These are meaning sketches, not validated Lexor translations. Grouping alone cannot supply the missing relation.
-**Pass criteria:** Produce distinct Lexor forms for all three claims using explicit attachment and predicates. Check that a conventional truck rented without driver services satisfies the first claim without satisfying the second, and that a parked conventional truck can satisfy the third without satisfying the second. No reading may depend on advertising conventions or assumptions about available technology.
-**Status:** Open pending worked Lexor forms and a check of how the existing grouping and relative-clause rules compose here; no new grammar rule or root is locked.
+**Grammar proposal (not locked):** Define the target of a modifier as the preceding complete constituent, with a closed `bra … keti` group acting as one constituent whose head receives the modification. This refines what the existing "immediately adjacent unit" rule must mean for nested noun phrases. Test these structural templates (square-bracketed English labels stand for unfinished lexical material, not Lexor words):
+
+```text
+[rental] bra [truck] [without-driver] keti
+bra [rental] [truck] keti [without-driver]
+```
+
+In the first, the modifier is inside the truck constituent and targets the truck. In the second, it follows the closed rental constituent and targets its head, rental. The proposal is a general attachment rule, not an instruction to replace the phrase with explanatory sentences. A worked derivation must also specify how rental takes truck as its argument and how the group retains its head. Separately, the relation expressed by `[without-driver]` needs a defined meaning: attachment must not silently turn absence into autonomous capability. Full lexical forms remain open.
+**Pass criteria:** Demonstrate unique parses for rental-level and truck-level modification under one general grammar rule, including a modifier after a closed group. Then produce distinct Lexor forms for the three semantic claims above. Check that a conventional truck rented without driver services satisfies the first claim without satisfying the second, and that a parked conventional truck can satisfy the third without satisfying the second. No reading may depend on advertising conventions or assumptions about available technology.
+**Status:** Open pending a precise constituent/head rule, worked Lexor forms, and a defined meaning for the absence relation; no new grammar rule or root is locked.
 **Related:** A3 (modifier scope); [tasks.md](tasks.md#design-decisions-to-resolve), "Rental offer vs truck modifier attachment"; decisions.md strict positional rules, subordinate clauses, and grouping markers.
 
 ---

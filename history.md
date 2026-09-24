@@ -1850,3 +1850,13 @@ Three candidate approaches:
 3. Introduce compact relation-specific modifiers for service exclusion, human-independent operation, and current absence. These might shorten frequent expressions, but would add vocabulary or grammar before the existing construction has been tested.
 
 Recommendation, not a locked decision: try explicit predicates with the existing attachment and grouping rules first. Only consider compact forms after their meanings are demonstrated. The English paraphrases in A11 specify the intended claims; they are not evidence that complete Lexor forms already parse unambiguously. No changes were made to decisions.md or lexicon.yaml.
+
+## 2026-09-24 — Correction: solve the rental construction in Lexor grammar
+
+Rubén rejected the recommendation to replace the ambiguous phrase with explanatory English sentences. The task is to design a language whose grammar determines the intended attachment, not to teach speakers to work around ambiguity in a natural language. The earlier recommendation in this day's truck-rental entry is superseded; A11 and its task now focus on a structural proposal.
+
+The existing adjacent-unit rule and `bra … keti` grouping suggest a candidate refinement: a following modifier targets the preceding complete constituent, and a closed group retains a head that receives the modification. With lexical placeholders, `[rental] bra [truck] [without-driver] keti` would put the modifier on truck; `bra [rental] [truck] keti [without-driver]` would put it on the rental group headed by rental. These are proposed structural templates, not completed Lexor sentences. Argument attachment between rental and truck, head retention, and the ungrouped default still need a worked grammar derivation.
+
+Two alternatives are a marker explicitly naming the target, or agreement marking that links a modifier to its head. They could avoid some grouping but add machinery and require their own unambiguous rules when several heads have the same grammatical form. Prefer testing the existing grouping mechanism first because it already supplies spoken constituent boundaries. This remains a recommendation, not a locked decision.
+
+The absence relation is a separate lexical question. A unique attachment cannot by itself establish that a truck with no driver is autonomous. Keep that check in A11, but do not let it replace the requested attachment problem with a demand for verbose explanatory prose.
