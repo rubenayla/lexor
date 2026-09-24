@@ -81,6 +81,20 @@ Grep examples: `grep '\[trap, open\]' trials.md` for traps without a fix yet.
 **How:** decisions.md role-vowel slot (`-e` subject / `-o` object), act-noun derivation `-n`. Nominalization preserves argument roles.
 **Related:** A3 (modifier attachment scope), I9 (actor vs action derivation).
 
+### A11. "Alquiler de camiones sin conductor" — attachment and omitted relation [trap, open]
+**Spanish:** "alquiler de camiones sin conductor" (reported by Rubén from an advertisement).
+**Trap:** Does "sin conductor" describe the rental offer (driver services are not included) or the trucks (no human driver operates them)? If autonomous trucks are available, practical expectations cannot safely select the intended reading. Even truck-level attachment does not by itself distinguish an absent driver from autonomous capability.
+**Required distinctions:**
+
+- The rental does not include driver services; it leaves the truck's autonomous capability unspecified.
+- The truck can operate without a human driver; it leaves the rental's included services unspecified.
+- Nobody is driving the truck at the stated time; it leaves autonomous capability and included services unspecified.
+
+**Candidate solution:** Reuse explicit grouping and modifier attachment for the target, then express the relation with a predicate: "rental that does not include driver services," "truck that can operate without a human driver," or "truck that nobody is currently driving." These are meaning sketches, not validated Lexor translations. Grouping alone cannot supply the missing relation.
+**Pass criteria:** Produce distinct Lexor forms for all three claims using explicit attachment and predicates. Check that a conventional truck rented without driver services satisfies the first claim without satisfying the second, and that a parked conventional truck can satisfy the third without satisfying the second. No reading may depend on advertising conventions or assumptions about available technology.
+**Status:** Open pending worked Lexor forms and a check of how the existing grouping and relative-clause rules compose here; no new grammar rule or root is locked.
+**Related:** A3 (modifier scope); [tasks.md](tasks.md#design-decisions-to-resolve), "Rental offer vs truck modifier attachment"; decisions.md strict positional rules, subordinate clauses, and grouping markers.
+
 ---
 
 ## B. Negation, modality, possibility — distinguishing what English collapses

@@ -1836,3 +1836,17 @@ The remaining dashes that violated the 2026-06-07 no-dash rule are now cleaned i
 - **`dita-tubas` → `dita tubas`:** that was a head-noun + adjective (ends + tube-ish), ordinary modifier-after-head, space-separated — the dash was spurious, not a real compound.
 
 Left as-is on purpose: **history.md's older log entries** keep their original dashed notation as a record of the then-current orthography (e.g. the rejected `fas-e`/`fas-o` discussion, old `var-x` binding syntax); they are historical, not live spec. English-prose hyphenated compounds in glosses/descriptions (`act-noun`, `forward-back`, `bra-ket`, `def-binding`) are English, not Lexor, and stay.
+
+## 2026-09-24 — Truck rental without a driver: attachment and relation
+
+Rubén reported the advertisement wording "alquiler de camiones sin conductor" and asked whether "sin conductor" describes the trucks or the rental contract, especially if autonomous trucks are available. Trial A11 records the case as open, with follow-up in tasks.md.
+
+The design analysis separates attachment (which thing is modified) from the relation being denied. Excluding driver services from an offer, being able to operate without a human driver, and having nobody currently driving are different claims. An ordinary parked truck can have no current driver without being autonomous. A rental that excludes driver services need not offer autonomous trucks.
+
+Three candidate approaches:
+
+1. Reuse adjacent-unit attachment and `bra … keti` grouping. This identifies the modified constituent using existing machinery, but grouping alone does not distinguish service inclusion, operating capability, and current activity.
+2. Use explicit predicates in relative clauses, or separate statements with named references when nesting becomes awkward. This states both the target and the relation; it costs more words but provides the recommended first worked solution using existing mechanisms.
+3. Introduce compact relation-specific modifiers for service exclusion, human-independent operation, and current absence. These might shorten frequent expressions, but would add vocabulary or grammar before the existing construction has been tested.
+
+Recommendation, not a locked decision: try explicit predicates with the existing attachment and grouping rules first. Only consider compact forms after their meanings are demonstrated. The English paraphrases in A11 specify the intended claims; they are not evidence that complete Lexor forms already parse unambiguously. No changes were made to decisions.md or lexicon.yaml.
