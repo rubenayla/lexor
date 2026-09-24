@@ -1,3 +1,8 @@
+# Design decisions
+
+Chosen mechanisms for meeting [requirements.md](requirements.md). The requirements state the goals; this file records how the current language aims to meet them. Detailed rationale and alternatives live in [history.md](history.md); open proposals live in [tasks.md](tasks.md) and [trials.md](trials.md).
+
+Non-tonality, pitch-independent scope, and spoken grouping remain the recorded choices. Trial A11 reopens their evaluation; no replacement has been adopted. Older entries retain their wording and are refined or superseded by later dated decisions where stated.
 
 - Written like talked - Each character matches a phoneme
     - Almost all languages have complex rules, but end up being almost character-to-phoneme mappings. Just stick with it and make it required. Will make it way easier than competing languages.
@@ -28,7 +33,6 @@
 - Roots are concept-level, not part-of-speech-level. The same root spawns verb / act-noun / agent / patient / adjective via systematic markers. (See history.md 2026-05-15.)
 - Part-of-speech / derivation marker is a **suffix**, not a prefix. Rationale: keeps the root at the word's onset so listeners lock onto the concept first; matches the cross-linguistic suffixing preference (~70%+ of world languages).
 - Universal word shape: **CVC-root + V[C]**. Suffix always starts with a vowel, guaranteeing no consonant clusters and no irregular buffer-vowel cases. Verbs are the "bare" case (root + tense vowel only); other derivations are root + vowel + consonant.
-- **No mandatory grammatical marking.** Lexor never forces speakers to commit to information they haven't decided on. Spanish gender, English number, etc. are anti-features. Every grammatical category is optional and only attached when the speaker actually has and cares about that info.
 - **Plural is not a noun inflection.** Number is dropped from the word shape entirely. Quantity lives in a separate optional modifier system that can express exact counts, ranges, and distributions — not just singular/plural. Frees `s` for the adjective marker slot.
 - Derivation consonants:
     - `r` — agent ("eater"). English `-er`, Latin `-or`.
@@ -97,8 +101,7 @@
     - Causation particle (TBD) + clause = reason ("because…")
 - **Relative-clause gap**: the modified noun fills the missing-position slot in the embedded clause. If the gap's role is non-default, role-vowel marks it; otherwise position handles it.
 - **Subordinate clause position**: after its host. Matches "thing first, modifiers after." Main clause first, subordinate hangs off.
-- **Meta-principle: vague is allowed, ambiguous is forbidden.** Every well-formed Lexor sentence has exactly one meaning. That meaning may include underspecified parameters — *vagueness* (one claim, some details unspecified) is a positive feature and is grammatically cheap (no extra marking). What's forbidden is *ambiguity* (two distinct meanings competing for the same syntactic form). When two readings would otherwise exist, structural rules force one or the speaker must mark / restructure to express the other; the unmarked form has *one* canonical meaning, which is often "speaker is not committing to that parameter." Listeners do not interpret — they take the structurally-given meaning at face value. Misalignment is the speaker's responsibility, not the listener's charity.
-- **Strict positional rules pin scope** (the structural side of the above principle):
+- **Strict positional rules pin scope** (the current mechanism for [requirement R1](requirements.md#r1-unambiguous-meaning-with-vagueness-allowed)):
     - Modifier attachment: a modifier attaches to only the immediately adjacent unit. For wider scope, restructure (front the modifier as topic, or use named binding).
     - Operator scope (`sol`, `no`, `tot`, etc.): scopes over the immediately adjacent argument. Three positions = three distinct meanings.
     - Quantifier scope: linear surface order = logical scope order. First quantifier has widest scope.

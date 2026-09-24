@@ -67,7 +67,7 @@ Ready to pick up, ranked roughly by visible impact:
     - [ ] Broader physical-property vocab (density, mass, conductivity, viscosity, …) as future batches.
     - [ ] Legacy antonym-pair sweep — fold remaining pre-H2 paired roots into single H2 axes as found (`kal`/`kol` done).
 - [ ] **Synonym/equivalence grouping** — comma-like marker for "scalar-first, wxyz, Hamilton convention" being three names for one thing (TODO.md:9).
-- [ ] **Multi-level sentence punctuation** — beyond comma, for nested clauses (decisions.md:26). Partly addressed by `bra/keti` for sub-clause grouping; full multi-level punctuation system still open.
+- [ ] **Multi-level sentence punctuation** — beyond comma, for nested clauses (decisions.md: "TODO: English uses commas"). Partly addressed by `bra/keti` for sub-clause grouping; full multi-level punctuation system still open.
 - [x] **Reasoning-particle set** — locked: `dati` (premise), `ergi` (therefore), `impi` (logical implication, distinct from `isi` causal conditional). Multi-step reasoning uses staged sentences, not nested conditionals. See decisions.md / history.md 2026-05-15. Sub-questions still open:
     - [ ] Scope-of-premise: when does a `dati`-asserted premise expire?
     - [ ] Other proof-structuring particles ("suppose for contradiction", QED-marker, case-splitting).

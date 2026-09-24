@@ -265,7 +265,7 @@ See A5.
 ### F3. Gender-neutral default [feature, passes]
 **Capability:** Refer to a person without gender commitment.
 **Trial:** `e` covers he/she/they regardless of gender. No mandatory gender marker exists in the grammar.
-**How:** AGENTS.md no-mandatory-marking meta-principle.
+**How:** [requirements.md, R2](requirements.md#r2-no-forced-commitment-to-unspecified-information).
 
 ### F4. Pronoun-less impersonal [feature, passes]
 **Capability:** "It has been decided to do this" without dummy subjects.

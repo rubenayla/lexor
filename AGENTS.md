@@ -6,7 +6,8 @@ Lexor is a constructed language designed from first principles to maximize preci
 
 ## Repo layout
 - `README.md` — public-facing intro.
-- `decisions.md` — settled design decisions. Append here once something is locked in.
+- `requirements.md` — authoritative language goals and constraints, with sources and checks. Read before evaluating a design.
+- `decisions.md` — chosen mechanisms for meeting the requirements. Append here once a design choice is locked in.
 - `trials.md` — language design test suite. Each entry is a `[trap]` (known ambiguity from natural languages) or `[feature]`/`[stretch]`/`[stress]` (capability target). Tagged with `passes`/`open`/`parked` status. Grep `[.*, open]` to find every unmet design goal. Replaces the older `checklist.md`. Append a trial when a new capability target or trap surfaces; close one by changing its status when a decision lands.
 - `walkthrough.md` — pedagogical progression. ~18 levels of increasing complexity from bare verb to full paragraph, each level introduces one grammar feature. Audience: learners and evaluators. Different from `examples.md` (dense feature-organized reference) and `trials.md` (capability test suite).
 - `comparisons.md` — honest comparisons with prior constructed languages that share design goals. Currently covers Lojban; can grow to cover Esperanto, Toki Pona, Ithkuil, etc. Used to answer "has this been done better?" and to track what Lexor can learn from mature projects.
@@ -25,7 +26,7 @@ Lexor is a constructed language designed from first principles to maximize preci
 
 ## Working conventions
 - **Plan before building.** For non-trivial design decisions, debate one question at a time. Don't try to settle everything in one pass.
-- **Every decision logs its rationale to `history.md`.** Not just *what* was decided — *why*, what alternatives were considered, what tradeoffs were accepted. `decisions.md` records the call; `history.md` records the reasoning. Future sessions and future-you need the rationale to evaluate edge cases and to know whether a past decision is still load-bearing when circumstances change. This is non-negotiable — if a round of work produced a decision, the rationale must be in `history.md` before the work is "done."
+- **Every decision logs its rationale to `history.md`.** Not just *what* was decided — *why*, what alternatives were considered, what tradeoffs were accepted. `requirements.md` records the goal or constraint; `decisions.md` records the chosen mechanism; `history.md` records the reasoning. Future sessions and future-you need the rationale to evaluate edge cases and to know whether a past decision is still load-bearing when circumstances change. This is non-negotiable — if a round of work produced a decision, the rationale must be in `history.md` before the work is "done."
 - **Park open questions in `tasks.md`.** Don't let unresolved sub-questions clutter the active discussion. Tick boxes when resolved; add sub-questions when a decision spawns new ones.
 - **Update this file when you notice a missing rule.** If you find yourself repeatedly doing something that isn't documented here — re-explaining a convention, re-deriving a principle from prior decisions, or correcting yourself for forgetting a habit — that's a signal the rule belongs in `AGENTS.md`. Add it. The user shouldn't have to remind you twice.
 - **Root sourcing rule.** When picking a root, prefer the language whose everyday word for the concept matches the target meaning. Don't pull a Latin root if real speakers use a Germanic word (and vice-versa).
@@ -40,7 +41,7 @@ Lexor is a constructed language designed from first principles to maximize preci
 
 ## How to make progress
 When resolving an open question:
-1. Read `history.md` for prior reasoning on adjacent decisions.
+1. Read `requirements.md` for the applicable goals and `history.md` for prior reasoning on adjacent decisions.
 2. Lay out 2–4 concrete options with tradeoffs.
 3. Pick one. Append the decision to `decisions.md` and the full rationale (alternatives considered, tradeoffs accepted, links to related decisions) to `history.md`.
 4. Tick the corresponding box in `tasks.md`. Add any new sub-questions the decision spawned.

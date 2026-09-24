@@ -14,7 +14,8 @@ Whenever possible, it will be based on English and Latin roots.
 - [roots](./roots.md): Root words and their meanings.
 - [grammar](./grammar.md): Sentence structure and grammar rules.
 - [TODO](./TODO.md): Tasks and goals for the project.
-- [decisions](./decisions.md): Design choices and rules made during development.
+- [requirements](./requirements.md): Language goals, constraints, and how they are checked.
+- [decisions](./decisions.md): Chosen mechanisms for meeting the requirements.
 - [stuff](./stuff.md): Miscellaneous notes and ideas. No organization here.
 
 ## License
